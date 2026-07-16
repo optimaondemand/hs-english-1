@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 1.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 13px; color: #0e1c42;">Love, Laughter, and Justice in the Age of Chaucer</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 1.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Canterbury Tales, Chaucer</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">CENTRAL QUESTION</div>
+        <div style="font-size: 16px; color: #0e1c42;">What does a traveler reveal about their soul?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 1.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The World Chaucer Walked In</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">How do you gather a knight, a nun, a miller, and a con artist onto one road, and get them to reveal who they really are?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Before we meet Chaucer's pilgrims, meet their world. You will learn who Geoffrey Chaucer was, how medieval people pictured society as three <strong>estates</strong>, and the storytelling trick that lets one book hold every kind of person at once: the <strong>framing device</strong> of a pilgrimage.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe who Chaucer was and the England he wrote in.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> name the three estates and explain how the pilgrimage frame gathers them.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define portrait, irony, and satire as tools Chaucer uses to reveal character.</div></div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module Organizer (the Word document for this module in OneDrive)</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">About 30 minutes and something to write with</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE POET AND HIS ENGLAND</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Think of someone you have judged quickly, just from how they looked or spoke. Later, did the fuller picture confirm your first read, or complicate it?</div>
+            <div class="widget-options">
+                <button data-response="Good. That gap between the surface and the truth is exactly what Chaucer plays with. Hold onto it.">The truth turned out more complicated</button>
+                <button data-response="It happens. Chaucer counts on that: his narrator often trusts the surface so that you, reading closely, can catch what he misses.">My first impression was basically right</button>
+                <button data-response="Fair. Chaucer will make you decide case by case. Some pilgrims are exactly as they seem; others are not.">It depended on the person</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Who was Geoffrey Chaucer?</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Geoffrey Chaucer (about A.D. 1343 to 1400) was not a knight or a lord. He was a working man of the middle rank: the son of a London wine merchant who rose to serve the king as a diplomat, a customs official on the London docks, and a clerk of the royal works. That job sent him up and down the social ladder, from the palace to the wharves, and it shows. Chaucer had met every kind of person he writes about. His great achievement, <em>The Canterbury Tales</em>, was begun in the late 1380s and left unfinished at his death. Most daring of all, he wrote it in <strong>English</strong>. In his day, serious literature was written in Latin or French; English was the rough tongue of ordinary people. By choosing it, Chaucer helped turn English into a language fit for great writing.</p>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A world shaken and sorted: the three estates</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Medieval people pictured society as three great <strong>estates</strong>, or classes, each with a God-given job. Those who <em>pray</em> (the clergy) cared for souls. Those who <em>fight</em> (the nobility) defended the land. Those who <em>work</em> (the peasants and laborers) fed everyone. In theory the three fit together like parts of one body. In Chaucer's lifetime, though, the picture was cracking. The Black Death of 1348 to 1349 had killed roughly a third of England, leaving fewer workers who could suddenly demand better pay, and a rising class of merchants and craftspeople who fit none of the three neat boxes. Chaucer's pilgrims come from all of it, and several of them, like the wealthy Wife of Bath or the grasping Pardoner, refuse to stay in their assigned place.</p>
+
+        <!-- ONE core visual: three-estates diagram (HTML/CSS, palette tokens) -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">HOW MEDIEVAL ENGLAND PICTURED SOCIETY &middot; THE THREE ESTATES</div>
+            <div style="background: #F8F9FC; padding: 20px 18px;">
+                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+                    <div style="flex: 1; min-width: 200px; background: #FFFFFF; border: 2px solid #3B4E8C; border-radius: 10px; padding: 16px; text-align: center;">
+                        <div style="font-size: 26px;">&#128591;</div>
+                        <div style="font-size: 16px; color: #3B4E8C; font-weight: bold; margin-top: 6px;">First Estate</div>
+                        <div style="font-size: 15px; color: #0e1c42; margin-top: 2px;">Those who pray</div>
+                        <div style="font-size: 13px; color: #1a2340; line-height: 1.5; margin-top: 6px;">The clergy: monks, priests, nuns, pardoners. In the Tales: the Prioress, the Monk, the Pardoner.</div>
+                    </div>
+                    <div style="flex: 1; min-width: 200px; background: #FFFFFF; border: 2px solid #C7922C; border-radius: 10px; padding: 16px; text-align: center;">
+                        <div style="font-size: 26px;">&#9876;&#65039;</div>
+                        <div style="font-size: 16px; color: #8A6410; font-weight: bold; margin-top: 6px;">Second Estate</div>
+                        <div style="font-size: 15px; color: #0e1c42; margin-top: 2px;">Those who fight</div>
+                        <div style="font-size: 13px; color: #1a2340; line-height: 1.5; margin-top: 6px;">The nobility and warriors. In the Tales: the Knight and his son the Squire.</div>
+                    </div>
+                    <div style="flex: 1; min-width: 200px; background: #FFFFFF; border: 2px solid #0E1C42; border-radius: 10px; padding: 16px; text-align: center;">
+                        <div style="font-size: 26px;">&#127806;</div>
+                        <div style="font-size: 16px; color: #0e1c42; font-weight: bold; margin-top: 6px;">Third Estate</div>
+                        <div style="font-size: 15px; color: #0e1c42; margin-top: 2px;">Those who work</div>
+                        <div style="font-size: 13px; color: #1a2340; line-height: 1.5; margin-top: 6px;">Peasants, laborers, and the rising trades. In the Tales: the Plowman, the Miller, the Cook.</div>
+                    </div>
+                </div>
+                <div style="background: #FDF3E3; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 16px; margin-top: 14px;">
+                    <div style="font-size: 14px; color: #1a2340; line-height: 1.6;">The neat model left people out. Merchants, guildsmen, and a self-made woman like the <strong>Wife of Bath</strong> belonged to a new middle rank the three estates could not contain. Chaucer's road makes room for them all.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; ONE ROAD, MANY LIVES: THE FRAME</div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 4px 0 8px 0;">The pilgrimage as a framing device</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A <strong>pilgrimage</strong> is a journey to a holy place. Chaucer's pilgrims are traveling to the shrine of Saint Thomas Becket at Canterbury Cathedral. Becket, an archbishop, had been murdered there in A.D. 1170, and for two centuries afterward crowds walked to his tomb to pray for healing. That journey was one of the few occasions when a knight, a nun, a miller, and a merchant might travel side by side for days.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Chaucer turns that journey into a <strong>framing device</strong>: an outer story that holds many inner stories. The pilgrims meet at the Tabard Inn in Southwark, and the innkeeper, the Host, proposes a contest. Each pilgrim will tell tales on the road, and the best storyteller wins a free supper. The frame is a machine for revelation. Because everyone must speak, everyone exposes themselves, and the <em>tale</em> a pilgrim chooses tells us as much about the teller as about the story.</p>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Three tools for reading character: portrait, irony, satire</h3>
+        <div style="overflow-x: auto;"><table style="width: 100%; border-collapse: collapse; min-width: 420px;">
+            <tbody>
+                <tr><td style="padding: 9px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>Portrait</strong></td><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">A vivid word-picture of a person, built from concrete details: dress, habits, speech. Chaucer paints one for each pilgrim in the General Prologue.</td></tr>
+                <tr><td style="padding: 9px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>Irony</strong></td><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">A gap between what is said and what is meant, or between how a person appears and what they truly are. Chaucer's narrator often "praises" a pilgrim in words that quietly expose a flaw.</td></tr>
+                <tr><td style="padding: 9px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>Satire</strong></td><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">Writing that exposes human folly or vice, often through humor, to hold it up for judgment. Chaucer aims his sharpest satire at corruption in the Church.</td></tr>
+            </tbody>
+        </table></div>
+
+        <!-- WIDGET: evaluative single-select (recolored) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="b" data-hint="Look back at the three estates diagram: which group was tasked with defending the land?">
+                <div class="widget-row-prompt">1. In the three-estate model, the nobility belonged to the estate of those who&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a">pray</button>
+                    <button data-choice="b" data-fb="Yes. The Second Estate, those who fight, were the knights and lords, like the Knight and Squire.">fight</button>
+                    <button data-choice="c">work</button>
+                    <button data-choice="d">trade</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="d" data-hint="It is the outer story that gathers the pilgrims and lets each one tell an inner story.">
+                <div class="widget-row-prompt">2. What do we call the pilgrimage-to-Canterbury structure that holds all the separate tales?</div>
+                <div class="widget-options">
+                    <button data-choice="a">a portrait</button>
+                    <button data-choice="b">an estate</button>
+                    <button data-choice="c">satire</button>
+                    <button data-choice="d" data-fb="Right. The journey is a framing device: one outer story that contains many inner stories.">a framing device</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>estates</strong> &middot; the three great classes of medieval society. &nbsp;&middot;&nbsp; <strong>pilgrimage</strong> &middot; a journey to a holy place. &nbsp;&middot;&nbsp; <strong>framing device</strong> &middot; an outer story that contains other stories. &nbsp;&middot;&nbsp; <strong>portrait</strong> &middot; a word-picture of a person made of concrete details. &nbsp;&middot;&nbsp; <strong>irony</strong> &middot; a gap between what is said and what is meant. &nbsp;&middot;&nbsp; <strong>satire</strong> &middot; writing that exposes folly or vice to judgment.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>pilgrimage</em> traces back to Latin <em>peregrinus</em>, "one from abroad, a foreigner" (from <em>per ager</em>, "through the fields"): a pilgrim is literally a traveler far from home. <em>Satire</em> comes from Latin <em>satura</em>, a "full dish" or medley of mixed ingredients, because the form mixes many targets together. <em>Estate</em> comes from Latin <em>status</em>, "standing" or "condition."</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Copia (in your Organizer):</strong> take the plain sentence <em>"The pardoner gave the coins to the church."</em> Rewrite it twice: once so the detail reads as sincere devotion (a flattering <em>portrait</em>), and once so the same act reads as hollow show (dripping with <em>irony</em>). Change only the surrounding words, not the action.</div>
+        </div>
+
+        <!-- AI callout (red frame) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND CONTEXT</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can give you a quick timeline of medieval England or a one-line definition of "the three estates," which can be a fair way to check a fact. It cannot tell you whether Chaucer <em>admires</em> a pilgrim or is quietly mocking him. That judgment comes from reading the details yourself, and it stays your work.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Add today's Word Study terms to your Module Organizer</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Record <em>estates, pilgrimage, framing device, portrait, irony,</em> and <em>satire,</em> then start your Character Tracking Chart. You will meet the pilgrims themselves in Lesson 1.03, and irony and satire will be your sharpest tools for reading them.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Chaucer put every layer of a whole society onto one road and let them talk. Keep the central question close: <em>what does the character of a traveler reveal about their soul?</em> The details in each portrait are the evidence.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.01 &middot; The World Chaucer Walked In</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
