@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 1.04</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 13px; color: #0e1c42;">Justice in Greek Tragedy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 1.04</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Electra: the lament</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What is owed &mdash; to gods, city, family?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 1.04</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Electra's First Monologue</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Can refusing to stop grieving ever be an act of justice?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You read Electra's <strong>opening lament</strong>: the long solo cry of grief that introduces her to us. Listen for <em>how</em> she grieves and <em>what she thinks justice demands</em>. This speech is also the passage you will prepare to recite later in the module, so read it today with your ear as much as your eye.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how Electra defines justice, and whom she blames.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe how Electra's grief becomes a form of protest.</div></div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module Organizer and your own copy of the play (same link as Lesson 1.03)</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">About 35 minutes, and a place where you can read aloud</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; GRIEF AS AN ARGUMENT</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">When has refusing to "get over it" been the right thing to do? Sometimes moving on is healing; sometimes it is surrender.</div>
+            <div class="widget-options">
+                <button data-response="Yes. Some wrongs should not be quietly accepted. Electra decides her grief is exactly that kind of refusal, and she means it as justice.">When forgetting would let a real wrong be accepted</button>
+                <button data-response="Fair. Sometimes holding on costs more than it is worth. Watch whether you find Electra's refusal noble, stubborn, or both.">Rarely; usually it is healthier to move forward</button>
+                <button data-response="True, it depends on what happened. Electra faces the hardest version: the wrong was her father's murder, and the killers live in comfort. Keep that in mind as you read.">It depends entirely on what was done</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Why Electra will not stop mourning</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Electra enters and pours out her grief in a long lament. But her weeping is not only sorrow; it is an <em>argument</em>. In a house where her father's murderers, Clytaemnestra and Aegisthus, live in comfort and even celebrate the day of the killing, Electra's refusal to be silent is the one form of justice left to her. She cannot punish the guilty, so she will not let the crime be forgotten. Her grief keeps the debt visible. As you read, notice that she frames her own suffering in the language of what is <em>owed</em>: a murdered father is owed mourning, owed memory, owed vengeance. By continuing to grieve when everyone tells her to stop, she pays a debt no one else in the house will pay. This is <strong>characterization through speech</strong>: we learn who Electra is not from a narrator but from how she talks about her own pain.</p>
+
+        <!-- ONE core visual: characterization-through-speech notebook -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">CHARACTERIZATION THROUGH SPEECH &middot; WHAT HER OWN WORDS REVEAL</div>
+            <div style="background: #FBFAF5; padding: 22px 22px;">
+                <!-- notebook page -->
+                <div style="background: #FFFFFF; border: 1px solid #E4E0D2; border-left: 4px solid #3B4E8C; border-radius: 4px; padding: 18px 22px; box-shadow: 0 1px 4px rgba(0,0,0,0.06);">
+                    <div style="font-size: 12px; color: #3B4E8C; letter-spacing: .1em; margin-bottom: 12px;">HER FIRST WORDS OF LAMENT (trans. Jebb)</div>
+                    <div style="font-size: 20px; color: #0e1c42; font-style: italic; line-height: 1.7; border-bottom: 1px dashed #D8D3C2; padding-bottom: 14px;">&ldquo;O thou pure sunlight, and thou air, earth's canopy, how often have ye heard the strains of my lament&hellip;&rdquo;</div>
+                    <!-- annotations -->
+                    <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px;">
+                        <div style="flex: 1; min-width: 200px; background: #FDF3E3; border: 1px solid #E4CDA0; border-radius: 8px; padding: 12px 14px;">
+                            <div style="font-size: 12px; color: #8A6410; margin-bottom: 4px;">&#9998; She calls on the whole world</div>
+                            <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">She summons the sunlight and air as witnesses. Her grief is <strong>public</strong>, not hidden: she wants it seen and heard.</div>
+                        </div>
+                        <div style="flex: 1; min-width: 200px; background: #EEF1F8; border: 1px solid #C9D3E8; border-radius: 8px; padding: 12px 14px;">
+                            <div style="font-size: 12px; color: #3B4E8C; margin-bottom: 4px;">&#9998; "how often"</div>
+                            <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">This is not new sorrow. She has grieved <strong>again and again</strong>, on purpose. Her constancy is a choice.</div>
+                        </div>
+                        <div style="flex: 1; min-width: 200px; background: #E7EBF4; border: 1px solid #C2CBE0; border-radius: 8px; padding: 12px 14px;">
+                            <div style="font-size: 12px; color: #0E1C42; margin-bottom: 4px;">&#9998; What it tells us about her</div>
+                            <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">No narrator says "Electra is fierce and unyielding." Her <strong>own words</strong> show it. That is characterization through speech.</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="font-size: 13px; color: #0e1c42; text-align: center; margin-top: 12px;">Read her lament looking for the same three things: whom she addresses, how long she has grieved, and what her words reveal about her will.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; READ, THEN ANNOTATE</div>
+
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.65; margin-bottom: 14px;">Read <strong>Electra's opening lament</strong> and her first exchange with the Chorus, the section right after the Prologue where the Chorus of Mycenaean women arrives and urges her to ease her grief. Read it <em>aloud</em>. You are beginning to prepare this passage for recitation.</div>
+        <div style="text-align: center; margin: 6px 0 12px;">
+            <a href="http://classics.mit.edu/Sophocles/electra.html" style="display: inline-block; background: #0E1C42; color: #fff; text-decoration: none; font-size: 16px; padding: 12px 26px; border-radius: 8px;">&#128279; Open <em>Electra</em> (public-domain text, trans. R. C. Jebb)</a>
+        </div>
+        <div style="font-size: 14px; color: #0e1c42; line-height: 1.55; text-align: center; margin-bottom: 16px;">Same free translation as Lesson 1.03. Begin at Electra's entrance ("O thou pure sunlight&hellip;") and read through the Chorus's first reply to her.</div>
+
+        <!-- Annotate -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 10px;">&#9999; ANNOTATE AS YOU READ</div>
+            <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Mark every line where Electra says or implies something about <strong>justice</strong>: what is owed, and to whom.</div></div>
+            <div style="display: flex; align-items: flex-start; gap: 10px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Mark the moments where her grief turns into <strong>accusation</strong>. Where does mourning become protest?</div></div>
+        </div>
+
+        <!-- WIDGET: evaluative single-select (recolored) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="c" data-hint="Re-read Part 1. Her grief does a job that nothing else in the house can do.">
+                <div class="widget-row-prompt">1. Why does Electra keep grieving when everyone tells her to stop?</div>
+                <div class="widget-options">
+                    <button data-choice="a">she enjoys the attention it brings her</button>
+                    <button data-choice="b">she has been ordered to mourn by the gods</button>
+                    <button data-choice="c" data-fb="Yes. Her mourning is the one justice left to her: it keeps her father's murder from being forgotten or normalized. To stop would be to let the crime stand.">her mourning keeps the murder from being forgotten or accepted</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Ask where the information about her character comes from. Is there a narrator?">
+                <div class="widget-row-prompt">2. How do we learn Electra's character in this speech?</div>
+                <div class="widget-options">
+                    <button data-choice="a">a narrator tells us she is fierce and loyal</button>
+                    <button data-choice="b" data-fb="Right. Through her own words, characterization by speech. No narrator describes her; we hear who she is in how she speaks about her grief and the debt she believes is owed.">through her own words, as she speaks about her grief</button>
+                    <button data-choice="c">the Chorus lists her good qualities for us</button>
+                    <button data-choice="d">a stage direction describes her face</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- AI callout (red frame) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND CHARACTER</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can list Electra's traits for you: grieving, loyal, defiant. It cannot do the reading skill this lesson asks for, which is finding those traits yourself in the exact words she chooses. The evidence you gather here becomes the proof in your essay, and it has to be yours.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next: oral reflection (device-agnostic, recitation prep) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT &middot; SPEAK YOUR THINKING (record 1&ndash;3 minutes)</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.65; margin-bottom: 8px;">Record yourself with any tool (phone, the recorder in Canvas, or your VR space), answering these in order:</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 10px;"><div style="min-width: 30px; height: 30px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">How does Electra define justice? Who or what does she blame?</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 10px;"><div style="min-width: 30px; height: 30px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">What does the Chorus urge her to do, and why does she refuse?</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;"><div style="min-width: 30px; height: 30px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Where is the tension between Electra's ideals and others' caution?</div></div>
+        <div style="font-size: 14px; color: #0e1c42; margin-top: 12px;">End by reading aloud the first two lines of Electra's lament. That is your first rehearsal for the module recitation.</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Electra's grief is an argument about what is owed. She shows you who she is through her own words, not a narrator's. Watch how her mourning keeps becoming protest, because that turn is the heart of her character.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.04 &middot; Electra's First Monologue</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
