@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Grammar 5.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Grammar 5.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">GRAMMAR FOCUS</div>
+        <div style="font-size: 17px; color: #0e1c42;">Complex-compound sentences</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">The Canterbury Tales</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">GRAMMAR 5.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Complex-Compound Sentences: Subordination as Argument</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127919; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">When you put an idea in a subordinate clause, you are telling the reader it matters less. What are you doing when you keep an idea independent?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You will build the most powerful sentence type, the complex-compound sentence, and learn to use subordination as a quiet argument: what you subordinate, you downplay; what you leave standing, you emphasize.</div>
+    </div>
+
+    <!-- Warm-up (reflect check-in widget) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; READ BOTH ALOUD &middot; NO WRONG ANSWER</div>
+            <div class="widget-question"><strong>A.</strong> The Pardoner lies, but the tale is true.<br><strong>B.</strong> Although the Pardoner lies, the tale is true.<br>Which version makes the lying feel like the smaller point?</div>
+            <div class="widget-options">
+                <button data-response="Right. In B, 'Although the Pardoner lies' is tucked into a subordinate clause, so the reader's attention lands on the main clause: the tale is true. Subordination shifted the emphasis.">Version B</button>
+                <button data-response="Look again. In A the two facts are balanced as equals joined by 'but.' It is B, with 'Although,' that pushes the lying into the background.">Version A</button>
+                <button data-response="They carry the same facts, yes, but they weight them differently. B subordinates the lying; A treats both halves as equal. That difference in weight is today's lesson.">They feel the same</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- The Lesson -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 12px 0;">You already know three sentence types. A <strong>simple</strong> sentence has one independent clause. A <strong>compound</strong> sentence joins two independent clauses as equals, usually with a comma and a coordinating conjunction (<em>and, but, or, so, for, nor, yet</em>). A <strong>complex</strong> sentence joins an independent clause to a subordinate clause, one that begins with a word like <em>because, although, when, since,</em> or <em>while</em> and cannot stand alone.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 12px 0;">A <strong>complex-compound</strong> sentence does both at once: it has <strong>at least two independent clauses</strong> and <strong>at least one subordinate clause.</strong> That combination lets you balance two equal ideas while folding a third, lesser idea underneath one of them. It is the natural shape of a claim that has to weigh more than one thing at a time, which is exactly what your essay must do.</p>
+
+        <!-- Pattern card (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">THE RULE TO REMEMBER</div>
+            <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;">Complex-compound = <strong>two or more independent clauses</strong> + <strong>one or more subordinate clauses.</strong> Whatever idea you put in the subordinate clause, you are signaling: "this matters, but less."</div>
+        </div>
+
+        <!-- ONE visual: navy chalkboard of worked examples -->
+        <div style="background: #14213f; border: 10px solid #3a2c1a; border-radius: 10px; padding: 22px 24px; margin: 18px 0; box-shadow: inset 0 0 40px rgba(0,0,0,0.4);">
+            <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .18em; margin-bottom: 16px; text-align: center;">ON THE BOARD &middot; BUILDING A COMPLEX-COMPOUND SENTENCE</div>
+            <div style="font-size: 17px; color: #f4f1e8; line-height: 2.0;">
+                <div style="margin-bottom:14px;"><span style="color:#8ea2c9;">subordinate &rarr;</span> <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">Because the Pardoner confesses his fraud</span><span style="color:#8ea2c9;">,</span> <span style="text-decoration: underline; text-decoration-color:#cdd6ea;">the pilgrims distrust him</span><span style="color:#8ea2c9;">, yet</span> <span style="text-decoration: underline; text-decoration-color:#cdd6ea;">his tale still moves them</span>.</div>
+                <div><span style="text-decoration: underline; text-decoration-color:#cdd6ea;">The three rioters seek Death</span><span style="color:#8ea2c9;">, and</span> <span style="text-decoration: underline; text-decoration-color:#cdd6ea;">they find gold instead</span> <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">when they reach the tree</span>.</div>
+            </div>
+            <div style="font-size: 14px; color: #cdd6ea; margin-top: 18px; line-height: 1.6;">The <span style="color:#e6b955;">gold underline</span> marks the subordinate clause. The two <span style="text-decoration: underline; text-decoration-color:#cdd6ea;">plain underlines</span> mark the two independent clauses joined as equals by <em>yet</em> and <em>and</em>. Two equal ideas, plus one idea folded underneath: that is the complex-compound shape.</div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 12px 0;"><strong>Subordination as argument.</strong> Notice the choice hidden in the first example. By putting "the Pardoner confesses his fraud" in the subordinate clause, the writer treats his honesty as background and puts the weight on the surprise: his tale still moves them. Move that idea into an independent clause and the emphasis changes. The grammar is not neutral. Where you place an idea tells the reader how much to weigh it.</p>
+
+        <!-- Evaluative widget (correct indices differ from L5.01) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; YOUR TURN &middot; CHOOSE THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="b" data-hint="Count the clauses. You need two that can stand alone AND one that cannot.">
+                <div class="widget-row-prompt">1. Which sentence is complex-compound?</div>
+                <div class="widget-options">
+                    <button data-choice="a">The Pardoner preaches, and he profits.</button>
+                    <button data-choice="b" data-fb="Yes. 'Although he warns against greed' is subordinate; 'he sells fake relics' and 'he keeps the coins' are two independent clauses joined by 'so.' Two independent plus one subordinate.">Although he warns against greed, he sells fake relics, so he keeps the coins.</button>
+                    <button data-choice="c">Because he is greedy, the Pardoner lies.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Ask which idea the writer wants in the background. That idea belongs in the subordinate clause.">
+                <div class="widget-row-prompt">2. You want to emphasize that the tale still works, and treat the teller's dishonesty as a side point. Which version does that?</div>
+                <div class="widget-options">
+                    <button data-choice="a">The tale works, but the teller is dishonest, and readers notice.</button>
+                    <button data-choice="b" data-fb="Right. Putting 'though the teller is dishonest' in the subordinate clause pushes it to the background, so the two independent clauses carry the point you want to stress.">Though the teller is dishonest, the tale works, and readers feel its force.</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- Write your own -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#10145;&#65039; NOW WRITE YOUR OWN (IN YOUR ORGANIZER)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Write <strong>two complex-compound sentences</strong> about your Module Project pilgrim. Each must have two independent clauses and one subordinate clause. In the first, subordinate the pilgrim's flaw so the strength stands out; in the second, do the reverse. Underline the subordinate clause in each, and be ready to reuse the stronger one in your thesis this week.</p>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A complex-compound sentence lets you hold two claims as equals while quietly ranking a third. That ranking is an argument. Use it on purpose in your essay: subordinate what you concede, and keep what you want to prove standing on its own feet.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Grammar 5.02 &middot; Complex-Compound Sentences</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
