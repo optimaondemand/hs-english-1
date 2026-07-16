@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 5.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+    /* flip engine */
+    .flip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .flip-card { flex: 1; min-width: 200px; background: #FFFFFF; border: 1.5px solid #3B4E8C; border-radius: 8px; padding: 14px 16px; cursor: pointer; }
+    .flip-card .flip-back { display: none; }
+    .flip-card.flipped { background: #FDF3E3; border-color: #C7922C; }
+    .flip-card.flipped .flip-front { display: none; }
+    .flip-card.flipped .flip-back { display: block; }
+    .flip-front { font-size: 16px; color: #0E1C42; line-height: 1.5; }
+    .flip-back { font-size: 15px; color: #8A6410; line-height: 1.55; }
+    .flip-hint { font-size: 12px; color: #3B4E8C; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 13px; color: #0e1c42;">The Canterbury Tales</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 5.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Pardoner's Prologue &amp; Tale</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE QUESTION</div>
+        <div style="font-size: 16px; color: #0e1c42;">What does a traveler's character reveal about the soul?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 5.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Pardoner's Tale: The Self-Confessed Villain</div>
+        <div style="font-size: 16px; color: #0e1c42;">Reading Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Can a liar tell the truth? Can a corrupt man preach a sermon that actually works?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The Pardoner is the only pilgrim who tells the others, to their faces, exactly how he cheats them. Then he preaches against the very sin he lives by, and the sermon lands anyway. Today you meet Chaucer's self-confessed villain and the question he is placed last to ask.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain the Pardoner's central hypocrisy: he preaches that greed is the root of evil while being ruled by greed himself.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> trace how the tale of the three rioters becomes a perfect example, an <em>exemplum</em>, of the sermon's warning.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use the words <em>pardoner, indulgence, radix malorum,</em> and <em>hypocrisy</em> accurately in my own analysis.</div></div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module Organizer (the Word document for Module 3 in OneDrive), open to your Character Tracking Chart</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">The Pardoner's Prologue &amp; Tale in the public-domain Middle English text (linked in the Reading box below)</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">About 35 minutes and something to write with</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE CONFESSION THAT IS NOT A CONFESSION</div>
+
+        <!-- WIDGET 1: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Imagine a salesperson opens with this: "I am about to trick you, and here is exactly how." Then they give the pitch anyway. Does knowing the trick make the pitch weaker?</div>
+            <div class="widget-options">
+                <button data-response="Maybe. Honesty about the trick can lower your guard in a strange way. Watch the Pardoner do exactly this and still make a sale.">It makes me trust them less, so weaker</button>
+                <button data-response="That is the unsettling possibility Chaucer explores. A warning can become part of the performance. Hold that thought.">Oddly, it might make the pitch land harder</button>
+                <button data-response="Fair. Sometimes the message and the messenger come apart. That gap is the whole puzzle of this tale.">The message could still be true even so</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Who is the Pardoner?</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A <strong>pardoner</strong> was a church official licensed to grant an <strong>indulgence</strong>, a formal remission of the punishment owed for sin, in exchange for a donation meant for hospitals or the poor. The office was open to abuse, and Chaucer's Pardoner has abused it completely. He carries a pillowcase he calls the Virgin's veil and pig bones he sells as the relics of saints, all under the cover of the Pope's seal. What makes him unforgettable is not the fraud; several pilgrims are corrupt. It is that he tells the whole company about it before he begins. His recurring text, the Latin line he preaches from every time, is <em>Radix malorum est Cupiditas</em>: "greed is the root of evil." He uses that warning to pull coins from people who have far less than he does, and he says so plainly.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">In his Prologue he admits his only aim in these words:</p>
+
+        <!-- Middle English quote block (PD) -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 16px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">IN CHAUCER'S MIDDLE ENGLISH</div>
+            <div style="font-size: 18px; color: #0e1c42; line-height: 1.7; font-style: italic;">"For myn entente is nat but for to wynne,<br>And no thyng for correccioun of synne."</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Gloss:</strong> "For my intent is nothing but to profit, and not at all to correct sin." He preaches against greed only to feed his own.</div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">This is a confession in form but not in spirit. A true confession asks for forgiveness and means to change. The Pardoner asks for nothing and intends to change nothing. He confesses to show off his skill. That is why the word for him is not simply "liar" but <strong>hypocrite</strong>: he wears the mask of holiness over a face he freely shows us.</p>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE TALE AS ITS OWN PROOF</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Then the Pardoner tells his tale, and it is superb. Three young men, drunk in a tavern, hear that a thief named Death has been killing their neighbors. In a rage they swear an oath to hunt Death down and kill him. On the road an old, poor man tells them where to look: up a crooked path, under a tree. They race there and find not Death but a heap of gold coins. From that moment they forget Death entirely. They plot instead to keep the gold, and their greed turns them against one another. Two murder the third; the third had already poisoned their wine. All three lie dead under the tree. They found Death exactly where the old man said, because they carried it with them in their greed.</p>
+
+        <!-- ONE core visual: labeled diagram of the tale's ironic structure -->
+        <div style="background: #14213f; border: 10px solid #3a2c1a; border-radius: 10px; padding: 22px 24px; margin: 18px 0; box-shadow: inset 0 0 40px rgba(0,0,0,0.4);">
+            <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .18em; margin-bottom: 6px; text-align: center;">THE SHAPE OF AN EXEMPLUM &middot; THEY SOUGHT DEATH AND FOUND IT IN THEIR OWN GREED</div>
+            <div style="font-size: 13px; color: #cdd6ea; text-align:center; margin-bottom: 18px;">Text of the sermon: <span style="color:#e6b955; font-style:italic;">Radix malorum est Cupiditas</span> &mdash; greed is the root of evil</div>
+            <div style="display:flex; flex-wrap:wrap; gap: 10px; align-items:stretch; justify-content:center;">
+                <div style="flex:1; min-width:150px; background:#1c2c50; border:1px solid #3B4E8C; border-radius:8px; padding:12px 12px; text-align:center;">
+                    <div style="font-size:24px;">&#127866;</div>
+                    <div style="font-size:14px; color:#f4f1e8; margin-top:6px; font-weight:bold;">1. The tavern</div>
+                    <div style="font-size:13px; color:#cdd6ea; margin-top:4px; line-height:1.45;">Three rioters, drunk, swear to kill Death.</div>
+                </div>
+                <div style="align-self:center; color:#e6b955; font-size:22px;">&#8594;</div>
+                <div style="flex:1; min-width:150px; background:#1c2c50; border:1px solid #3B4E8C; border-radius:8px; padding:12px 12px; text-align:center;">
+                    <div style="font-size:24px;">&#128104;&#8205;&#129466;</div>
+                    <div style="font-size:14px; color:#f4f1e8; margin-top:6px; font-weight:bold;">2. The old man</div>
+                    <div style="font-size:13px; color:#cdd6ea; margin-top:4px; line-height:1.45;">Points them up a crooked path, under a tree.</div>
+                </div>
+                <div style="align-self:center; color:#e6b955; font-size:22px;">&#8594;</div>
+                <div style="flex:1; min-width:150px; background:#3a2c1a; border:1px solid #e6b955; border-radius:8px; padding:12px 12px; text-align:center;">
+                    <div style="font-size:24px;">&#128176;</div>
+                    <div style="font-size:14px; color:#f4d78a; margin-top:6px; font-weight:bold;">3. The gold</div>
+                    <div style="font-size:13px; color:#efe3c4; margin-top:4px; line-height:1.45;">Under the tree: not Death, but a hoard of florins.</div>
+                </div>
+                <div style="align-self:center; color:#e6b955; font-size:22px;">&#8594;</div>
+                <div style="flex:1; min-width:150px; background:#1c2c50; border:1px solid #3B4E8C; border-radius:8px; padding:12px 12px; text-align:center;">
+                    <div style="font-size:24px;">&#9760;&#65039;</div>
+                    <div style="font-size:14px; color:#f4f1e8; margin-top:6px; font-weight:bold;">4. Death, found</div>
+                    <div style="font-size:13px; color:#cdd6ea; margin-top:4px; line-height:1.45;">Greed turns them on each other; all three die.</div>
+                </div>
+            </div>
+            <div style="font-size: 14px; color: #cdd6ea; margin-top: 16px; line-height: 1.6; text-align:center;">The gold is the turning point. The instant they see it (<span style="color:#e6b955;">gold underline</span> in your reading), they stop hunting Death and start guarding treasure. That is the moral proving itself inside the story.</div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Here is the trap Chaucer sets. The tale is a flawless <strong>exemplum</strong>, a short story told to prove a moral. Its moral is true. Greed does destroy. Yet the man telling it is destroyed by greed and does not care. So the tale forces a hard question: does the truth of a message depend on the character of the messenger? A reader who knows the Pardoner is a fraud still feels the fable's force. That gap between teller and tale is why Chaucer saves him for the end.</p>
+
+        <!-- WIDGET 2: evaluative single-select (recolored), correct indices vary from other lessons -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="c" data-hint="Look again at his Latin text and how he uses it. It names the sin he warns about and the sin he practices.">
+                <div class="widget-row-prompt">1. What makes the Pardoner a hypocrite rather than just a con man?</div>
+                <div class="widget-options">
+                    <button data-choice="a">He tells a frightening story</button>
+                    <button data-choice="b">He travels with the other pilgrims</button>
+                    <button data-choice="c" data-fb="Yes. He preaches that greed is the root of evil while being ruled by greed himself. The holy mask over the greedy face is hypocrisy.">He condemns the very greed that drives him</button>
+                    <button data-choice="d">He tells the truth about relics</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Trace the turning point in the diagram. What do the rioters do the instant they see the treasure?">
+                <div class="widget-row-prompt">2. How does the tale prove its own moral?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Right. The gold is the moral in action: greed makes the three men destroy each other, so the story demonstrates the very warning the Pardoner preaches.">The rioters' greed for the gold kills them all</button>
+                    <button data-choice="b">The old man defeats Death in a fight</button>
+                    <button data-choice="c">The Pardoner repents at the end</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>pardoner</strong> (and <strong>indulgence</strong>) &nbsp;a church agent who sold indulgences, official pardons remitting the penalty for sin. &nbsp;&middot;&nbsp; <strong>radix malorum</strong> &nbsp;Latin for "the root of evils"; the Pardoner's whole text is <em>Radix malorum est Cupiditas,</em> "greed is the root of evil." &nbsp;&middot;&nbsp; <strong>hypocrisy</strong> &nbsp;pretending to a virtue or belief one does not hold.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>indulgence</em> comes from Latin <em>indulgentia,</em> "leniency, a granting of favor." <em>Radix</em> is Latin for "root" and survives in English <em>radish</em> and <em>radical</em> (going to the root). <em>Hypocrisy</em> comes from the Greek <em>hypokrisis,</em> "acting a part on stage," from <em>hypokrites,</em> "a stage actor"; the word remembers that a hypocrite is a performer, which is exactly what the Pardoner is.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Copia (in your Organizer):</strong> take the plain sentence <em>"The Pardoner is greedy,"</em> and rewrite it twice: once so that the word <em>hypocrisy</em> carries the judgment, and once so that <em>indulgence</em> appears in its exact medieval sense.</div>
+        </div>
+
+        <!-- AI callout (red frame, per components.md) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND THE HONEST-SOUNDING VOICE</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can produce fluent, confident, moral-sounding prose on demand, the way the Pardoner produces a flawless sermon. Fluency is not the same as honesty, and a polished paragraph can still be empty or wrong. When you read AI output, do what this tale trains you to do: judge the claim on its evidence, not on how smooth the voice sounds.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Read the Pardoner's Prologue and Tale, then add him to your Character Tracking Chart</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Record his estate, one or two portrait details, his tale, and a note on his vice. Add today's Word Study terms too.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Note one line where the moral lands despite the teller</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">You will use the Pardoner as a comparison case for your own pilgrim in this week's thesis (Quick Write 5) and in Lesson 5.03.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reading box -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 10px;">&#128209; READING</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.65; margin-bottom: 10px;">Read the <strong>Pardoner's Prologue and Tale</strong> in the public-domain Middle English text (Project Gutenberg edition of <em>The Canterbury Tales,</em> eText #2383). Read the Prologue twice: first for what he admits, then for how he says it.</div>
+        <div style="font-size: 14px; color: #0e1c42;">[Teacher: link the Pardoner's Prologue &amp; Tale by structural landmark in the Project Gutenberg #2383 text. Do not upload copyrighted translations; this module uses public-domain Middle English only.]</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The Pardoner reveals his soul by revealing his fraud. His tale is true; his life makes a mockery of it. Keep that gap in view: a character can show us the most when what they say and what they are pull in opposite directions.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 5.01 &middot; The Pardoner's Tale: The Self-Confessed Villain</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (reflect / select / flip / reset) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.flip-card').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var card = e.target.closest('.ow-flip .flip-card');
+    if (card) { card.classList.toggle('flipped'); return; }
+  });
+})();
+</script>
+</body>
+</html>
