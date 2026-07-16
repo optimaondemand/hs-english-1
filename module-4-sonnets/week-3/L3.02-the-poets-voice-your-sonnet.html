@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 3.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 4</div>
+        <div style="font-size: 13px; color: #0e1c42;">Love, Time, and the Sonnet</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 3.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Your own sonnet draft</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">Love, time, and what fourteen lines can hold</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 3.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Poet's Voice: Your Sonnet</div>
+        <div style="font-size: 16px; color: #0e1c42;">Craft Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">You have imitated Shakespeare's blueprint for three weeks. Today the blueprint starts carrying your voice.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You have three lines from Week 1 and a first quatrain from Week 2. This lesson helps you assemble the full fourteen: it names the three traps that catch almost every first sonnet, gives you a fix for each, and teaches you to write the short <strong>craft statement</strong> that will accompany your finished poem.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> diagnose the three common draft traps: meter fighting meaning, an unearned volta, and a couplet that summarizes.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state my sonnet's argument in one plain prose sentence and use it as a compass while I draft.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> plan a craft statement that names two techniques I used on purpose and why.</div></div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your sonnet draft Word document in OneDrive (the file with your Week 2 quatrain)</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module Organizer, open to the drafting pages</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">About 30 minutes, a quiet place, and a voice: you will be reading aloud</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; FROM IMITATION TO VOICE</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">You are borrowing Shakespeare's form: fourteen lines, his meter, his rhyme scheme. What will make the finished poem yours and not his?</div>
+            <div class="widget-options">
+                <button data-response="Yes. He never wrote about your subject, because he never saw your life. The form is borrowed; what it holds is not. Guard that.">My subject: something only I have seen</button>
+                <button data-response="Right. Word choice is voice. Two poets can fill the same fourteen-line frame and sound nothing alike. Read your draft aloud today and listen for lines that do not sound like you.">The way I actually talk</button>
+                <button data-response="Strong answer. A sonnet argues, and your claim about your subject is the one thing no model can supply. Today you will state that claim in one plain sentence and steer by it.">My argument: the claim the poem makes</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">First, your compass: one plain sentence</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Open your draft and reread your first quatrain. Then, in your Organizer, finish this sentence in plain prose: <em>"My sonnet argues that&hellip;"</em> No meter, no rhyme, no decoration. If you cannot say it plainly, the poem cannot say it beautifully. This sentence is your compass for everything that follows: every line you add either serves it or gets cut. You will also say this sentence aloud at the end of your recorded performance this week, so make it one you can stand behind.</p>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The three traps</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Nearly every first sonnet falls into at least one of three traps. <strong>Trap 1: the meter fights the meaning.</strong> A word gets chosen because it fits the beat, not because it is the right word, and the line sounds metered but hollow. The fix is almost never to abandon the meter; it is to find the right word first, then rearrange the sentence so the natural stress lands where the beat wants it. <strong>Trap 2: the unearned volta.</strong> A pivot word appears at line 9, but nothing actually changes; "Yet still I feel the same" is a flag with no turn behind it. The fix: something the speaker knows or sees after the pivot must be new. <strong>Trap 3: the couplet that summarizes.</strong> The last two lines restate what the quatrains already said, wasting the two most powerful lines in the poem. The fix: make the couplet a verdict, a claim that only makes sense after the argument. Remember what Sonnet 116 does with its last two lines: it does not summarize; it bets.</p>
+
+        <!-- ONE visual: navy chalkboard, three traps with fixes -->
+        <div style="background: #14213f; border: 10px solid #3a2c1a; border-radius: 10px; padding: 22px 24px; margin: 18px 0; box-shadow: inset 0 0 40px rgba(0,0,0,0.4);">
+            <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .18em; margin-bottom: 16px; text-align: center;">ON THE BOARD &middot; THREE DRAFT TRAPS AND THEIR FIXES</div>
+
+            <div style="font-size: 13px; color: #8ea2c9; margin-bottom: 4px;">TRAP 1 &middot; METER FIGHTS MEANING</div>
+            <div style="font-size: 18px; color: #f4f1e8; line-height: 1.9; margin-bottom: 4px;">
+                Trapped: &nbsp;My grandmother's <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">visage</span> shows her years of toil<br>
+                Fixed: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My grandmother's <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">worn hands</span> still knead the dough
+            </div>
+            <div style="font-size: 13px; color: #cdd6ea; margin-bottom: 14px;">"Visage" was chosen for the syllable count, not the meaning. The fix keeps the beat and returns to a word the writer would actually say.</div>
+
+            <div style="font-size: 13px; color: #8ea2c9; margin-bottom: 4px;">TRAP 2 &middot; THE UNEARNED VOLTA</div>
+            <div style="font-size: 18px; color: #f4f1e8; line-height: 1.9; margin-bottom: 4px;">
+                Trapped: &nbsp;<span style="background: #3B4E8C; color: #ffffff; padding: 1px 6px; border-radius: 4px;">Yet</span> still I feel the sorrow of the rain<br>
+                Fixed: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="background: #3B4E8C; color: #ffffff; padding: 1px 6px; border-radius: 4px;">Yet</span> rain is how the buried seed gets found
+            </div>
+            <div style="font-size: 13px; color: #cdd6ea; margin-bottom: 14px;">Both lines fly the pivot flag. Only the second one turns: the speaker now sees something in the rain that lines 1 through 8 could not see.</div>
+
+            <div style="font-size: 13px; color: #8ea2c9; margin-bottom: 4px;">TRAP 3 &middot; THE COUPLET THAT SUMMARIZES</div>
+            <div style="font-size: 18px; color: #f4f1e8; line-height: 1.9; margin-bottom: 4px;">
+                Trapped: &nbsp;So love is strong, and time will pass away, / And that is what I wanted here to say.<br>
+                Fixed: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #e6b955; border-bottom: 2px solid #e6b955;">Then let time swing its blade at what it can: / it never yet has harvested a vow.</span>
+            </div>
+            <div style="font-size: 13px; color: #cdd6ea;">The trapped couplet repeats the argument. The fixed couplet delivers a verdict and risks something, the way "If this be error&hellip;" does.</div>
+        </div>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE READ-ALOUD TEST AND THE CRAFT STATEMENT</div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 4px 0 8px 0;">The one diagnostic that catches all three traps</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Read your draft aloud.</strong> Not once at the end: throughout. The ear catches what the eye misses; a forced stress, a desperate rhyme, and a line that does not sound like you all announce themselves the moment you speak them. Read straight through without stopping, mark every line where you stumbled, then read a second time at half speed and listen hard at your volta and your couplet. The lines you marked are your revision list. If you stumble reading it, your reader will stumble too.</p>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The craft statement: the builder's note beside the building</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Your final project includes a short paragraph called a <strong>craft statement</strong>. It answers three questions in about five to eight sentences: What does your sonnet argue? Which <strong>two techniques</strong> did you use on purpose, and why (name them plainly: a metaphor, anaphora, parallel structure, a deliberate broken parallel, argument by negation)? Where does your volta fall, and what changes there? A craft statement is not an apology and not a plot summary. It is the builder's note beside the building: here is what I made, and here is why the beams are where they are. Here is what one might look like for a poem you know:</p>
+
+        <!-- Model craft statement (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">A MODEL CRAFT STATEMENT (FOR SONNET 116, AS ITS AUTHOR MIGHT WRITE ONE)</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.7; font-style: italic;">"My sonnet argues that love is defined by what it refuses to do: it does not change when circumstances change. I used argument by negation in the first quatrain, ruling out false love before naming true love, so that the positive image would land with more force. I also used an extended navigational metaphor, the fixed star and the wandering ship, to make constancy something the reader can picture. My volta comes early, at line 5, on 'O, no!': the poem shifts there from legal negation to direct assertion, and the early turn is deliberate, because a poem about constancy should plant its flag as soon as possible."</div>
+        </div>
+
+        <!-- WIDGET: evaluative single-select -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; DIAGNOSE THE DRAFT PROBLEM</div>
+            <div class="widget-row" data-correct="b" data-hint="Ask: could these two lines have opened the poem, before any argument was made? If yes, they are not doing the couplet's job.">
+                <div class="widget-row-prompt">1. A classmate's couplet reads: <em>"And so, in short, my love will never end, / it is, as I have said, my truest friend."</em> What is the trap?</div>
+                <div class="widget-options">
+                    <button data-choice="a">The rhyme is too simple</button>
+                    <button data-choice="b" data-fb="Yes. 'In short' and 'as I have said' confess it: this couplet summarizes. It needs a verdict that only the finished argument could earn.">It summarizes instead of delivering a verdict</button>
+                    <button data-choice="c">It is missing a pivot word</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="The problem is almost never the meter itself. What is the smallest thing you could change?">
+                <div class="widget-row-prompt">2. A line only scans if you pronounce it "beau-ti-FUL." The best fix is to&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a">keep it; readers will adjust</button>
+                    <button data-choice="b">drop the meter for that line</button>
+                    <button data-choice="c" data-fb="Right. Find a word whose natural stress fits the beat, or reorder the sentence so the stress falls where speech puts it. The right word, naturally said, is the fix.">swap the word or reorder the sentence</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- AI callout (red frame) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND YOUR SONNET</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can produce a metrically clean fourteen-line poem on request. It cannot choose your subject, decide where your volta falls, or explain why you broke a parallel on purpose. Those decisions are the assignment, and your craft statement is where they show. Work that is not yours cannot be defended in a craft statement, and it reads that way.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Write your compass sentence and your craft-statement notes in the Organizer</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Finish "My sonnet argues that&hellip;" in one plain sentence, and jot the two techniques you are using on purpose. These notes become your craft statement for the final project.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Go on to Grammar 3.02, then Project Feeder 3</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Grammar 3.02 shows you how to engineer a genuine turn at your volta. Then Project Feeder 3 collects your complete fourteen-line draft.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">One plain sentence steers the whole poem: <em>my sonnet argues that&hellip;</em> Say it, draft toward it, read the draft aloud, and let the couplet risk something for it. That is the difference between filling a form and writing a sonnet.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 3.02 &middot; The Poet's Voice: Your Sonnet</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
