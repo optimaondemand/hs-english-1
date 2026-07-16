@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 1.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 13px; color: #0e1c42;">Justice in Greek Tragedy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 1.03</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Electra: the Prologue</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What is owed &mdash; to gods, city, family?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 1.03</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Opening <em>Electra</em>: The Prologue</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson &middot; Today you begin reading</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">What does it feel like to watch someone grieve for a person you know is standing right behind them?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You read the <strong>Prologue</strong> of <em>Electra</em>: the opening scene, from the first speech through Electra's entrance and her first cries of grief. In yesterday's terms, this is where the <em>problem</em> is set and where <strong>dramatic irony</strong> begins its work.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain the plan Orestes brings home, and why it creates dramatic irony.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> annotate the opening for expressions of grief and moments of irony.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> begin a Character Tracking Chart in my Module Organizer.</div></div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module Organizer and your own copy of the play (linked below)</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">About 35 minutes, and a quiet place to read aloud if you can</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE PLAN, AND THE ADVANTAGE IT HANDS YOU</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Picture standing in a room where you know a piece of news that would change everything for the person across from you, and they do not know it yet. What does it feel like to hold that knowledge?</div>
+            <div class="widget-options">
+                <button data-response="Yes. That mix of tension and helplessness is exactly the seat Sophocles puts you in as a reader of the Prologue. Hold that feeling.">Tense, like I am waiting for something to break</button>
+                <button data-response="Right. Knowing more than someone can make you feel powerful and sorry at once. That doubled feeling is what dramatic irony creates.">A little powerful, and a little guilty</button>
+                <button data-response="Fair. Sometimes it just feels heavy. Watch how that weight builds while Electra grieves and you already know the truth.">Heavy, like I am carrying something for them</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">What happens in the Prologue</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The play opens at dawn outside the palace at Mycenae. An old servant, the Tutor who saved Orestes as a child, brings the grown Orestes home to avenge his murdered father, Agamemnon. The god Apollo, through the oracle at Delphi, has told Orestes to take his vengeance not by open force but <em>by stealth</em>. So they settle on a plan: they will spread a false report that Orestes has died in a chariot race, and Orestes will return in disguise carrying an urn said to hold his own ashes. It is a cold, clever plan, and it hands you, the reader, a terrible advantage. Because at that very moment, from inside the house, we hear Electra crying out in grief for a brother she believes is far away and may be dead. She does not know he is standing yards from her, alive. You do. Every word she speaks from here on you will hear twice: once as she means it, and once knowing what she does not. That is dramatic irony, and Sophocles has just switched it on.</p>
+
+        <!-- ONE core visual: the dramatic-irony knowledge gap, labeled diagram -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">DRAMATIC IRONY &middot; THE GAP BETWEEN WHAT YOU KNOW AND WHAT ELECTRA KNOWS</div>
+            <div style="background: #F8F9FC; padding: 22px 20px;">
+                <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: stretch;">
+                    <!-- Reader box (gold) -->
+                    <div style="flex: 1; min-width: 220px; background: #FDF3E3; border: 2px solid #C7922C; border-radius: 10px; padding: 16px 18px;">
+                        <div style="font-size: 13px; color: #8A6410; letter-spacing: .1em; margin-bottom: 8px;">&#128065;&#65039; WHAT YOU (THE READER) KNOW</div>
+                        <div style="font-size: 15px; color: #1a2340; line-height: 1.6;">Orestes is <strong>alive</strong>. He is home in disguise. The report of his death is <strong>false</strong>, part of the plan.</div>
+                    </div>
+                    <!-- Electra box (indigo) -->
+                    <div style="flex: 1; min-width: 220px; background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 16px 18px;">
+                        <div style="font-size: 13px; color: #3B4E8C; letter-spacing: .1em; margin-bottom: 8px;">&#128546; WHAT ELECTRA KNOWS</div>
+                        <div style="font-size: 15px; color: #1a2340; line-height: 1.6;">Her brother is far away, and may be <strong>dead</strong>. She grieves, alone, for a loss that has not happened.</div>
+                    </div>
+                </div>
+                <!-- The gap -->
+                <div style="text-align: center; margin-top: 14px;">
+                    <div style="display: inline-block; background: #0E1C42; border-radius: 10px; padding: 12px 20px;">
+                        <span style="font-size: 13px; color: #55c8e8; letter-spacing: .1em;">THE GAP =</span>
+                        <span style="font-size: 16px; color: #ffffff;"> DRAMATIC IRONY.</span>
+                        <span style="font-size: 15px; color: #C7922C;"> Every line she speaks lands twice.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- The first words (short PD anchor quote) -->
+        <div style="background: #EEF1F8; border-radius: 7px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #0e1c42; letter-spacing: .08em; margin-bottom: 8px;">THE FIRST WORDS OF THE PLAY</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.7; font-style: italic;">&ldquo;Son of him who led our hosts at Troy of old, son of Agamemnon&hellip; deem that thou seest Mycenae rich in gold.&rdquo;</div>
+            <div style="font-size: 14px; color: #0e1c42; margin-top: 8px;">The Tutor, to Orestes (trans. Jebb). The very first line names the dead father whose murder sets everything in motion.</div>
+        </div>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; READ, THEN ANNOTATE</div>
+
+        <!-- READ (PD source linked by landmark) -->
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.65; margin-bottom: 14px;">Read the <strong>opening of <em>Electra</em></strong>, from the Tutor's first speech (the play's first lines) through Electra's first lament, the point where she enters crying out to the light and the air. Read it aloud if you can. These lines were written to be heard.</div>
+        <div style="text-align: center; margin: 6px 0 12px;">
+            <a href="http://classics.mit.edu/Sophocles/electra.html" style="display: inline-block; background: #0E1C42; color: #fff; text-decoration: none; font-size: 16px; padding: 12px 26px; border-radius: 8px;">&#128279; Open <em>Electra</em> (public-domain text, trans. R. C. Jebb)</a>
+        </div>
+        <div style="font-size: 14px; color: #0e1c42; line-height: 1.55; text-align: center; margin-bottom: 16px;">Free, full text at the Internet Classics Archive. Bookmark it: you will read from this same translation all module. Start at the very top and stop when Electra finishes her first burst of grief and the Chorus is about to arrive.</div>
+
+        <!-- ONE more Electra image: the PD painting -->
+        <figure style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">ELECTRA, MOURNING &middot; A NINETEENTH-CENTURY PAINTER'S VISION</div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/1869_Frederic_Leighton_-_Electra_at_the_Tomb_of_Agamemnon.jpg" alt="A painting of Electra standing in grief beside the tomb of her father Agamemnon, her body draped in dark robes, her head bowed and one arm raised toward a tall stone monument." style="display:block; width:100%; height:auto;" />
+            <figcaption style="background: #FFFFFF; padding: 12px 16px;">
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">This is how one painter imagined Electra: alone at her father's tomb, her whole body bent into her grief. As you read the Prologue, keep this image in mind. Notice that her mourning is not private and quiet; it is a public, unmistakable refusal to let the murder be forgotten.</div>
+                <div style="font-size: 12px; color: #0e1c42; margin-top: 8px;">Frederic Leighton, Electra at the Tomb of Agamemnon (1869). Public domain, via Wikimedia Commons.</div>
+            </figcaption>
+        </figure>
+
+        <!-- Annotate -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 4px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 10px;">&#9999; ANNOTATE AS YOU READ</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-bottom: 10px;">Mark up your own copy: a note in the margin, a highlight, or a comment in your Organizer. As you read, flag every place you find:</div>
+            <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">an <strong>expression of grief</strong> (Electra's words are full of them), and</div></div>
+            <div style="display: flex; align-items: flex-start; gap: 10px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">a moment of <strong>dramatic irony</strong>: a line that means one thing to Electra and another to you, because you know Orestes lives.</div></div>
+        </div>
+
+        <!-- WIDGET: evaluative single-select (recolored) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="a" data-hint="Re-read Part 1. Apollo told Orestes to act in a particular way, not by open force.">
+                <div class="widget-row-prompt">1. What is Orestes' plan for taking vengeance?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Yes. He acts by stealth, as the oracle directed: spread a false report that he died in a chariot race, then return in disguise with an urn supposedly holding his ashes.">act by stealth: a false death report, then return in disguise with an urn</button>
+                    <button data-choice="b">gather an army and attack the palace openly</button>
+                    <button data-choice="c">ask the city's court to punish the murderers</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Dramatic irony is a gap in knowledge. Ask what the reader knows that Electra does not.">
+                <div class="widget-row-prompt">2. Where exactly is the dramatic irony in this opening?</div>
+                <div class="widget-options">
+                    <button data-choice="a">the Tutor forgets his lines</button>
+                    <button data-choice="b">Electra tells a lie to the Chorus</button>
+                    <button data-choice="c" data-fb="Right. Electra mourns a brother she fears is lost, while you know Orestes is alive and near. Her grief lands differently on you than it does on her.">Electra mourns a brother the reader knows is alive and nearby</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- AI callout (red frame) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND THE READING ITSELF</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">It is easy to ask AI for "the plot of <em>Electra</em>" and skip the reading. A summary hands you the facts but not the experience of knowing what Electra does not, and that experience is the lesson. Read the Prologue yourself first. If afterward you want to confirm you understood Orestes' plan, that is a fair check.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next: oral reflection (device-agnostic) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT &middot; SPEAK YOUR THINKING (record 1&ndash;3 minutes)</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.65; margin-bottom: 8px;">Record yourself, using any tool you like (your phone, the recorder in Canvas, or your VR space), answering these in order:</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 10px;"><div style="min-width: 30px; height: 30px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">What do we learn about Electra's situation?</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 10px;"><div style="min-width: 30px; height: 30px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">What emotion dominates the opening?</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;"><div style="min-width: 30px; height: 30px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">What do the first lines suggest about justice: what does Electra think is <em>owed</em>?</div></div>
+        <div style="font-size: 14px; color: #0e1c42; margin-top: 12px;">This short recording is your first step in the module's recitation thread: getting comfortable reading and speaking these words aloud.</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">From the first scene, you know more than Electra does. Hold that gap as you read. Her grief will hit you harder than it hits her, precisely because you can see what she cannot.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.03 &middot; Opening Electra: The Prologue</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
