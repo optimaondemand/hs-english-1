@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 3.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 3.02 &middot; Week 3</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">GRAMMAR FOCUS</div>
+        <div style="font-size: 17px; color: #0e1c42;">Anaphora &amp; rhetorical repetition</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">The Canterbury Tales, Chaucer</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 3.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Anaphora and Rhetorical Repetition</div>
+        <div style="font-size: 16px; color: #0e1c42;">Grammar Lesson</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127919; TODAY YOU WILL BE ABLE TO&hellip;</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Recognize anaphora, explain what repeating an opening word does to rhythm and emphasis, tell purposeful repetition from accidental wordiness, and write your own anaphora about this week's reading.</div>
+    </div>
+
+    <!-- Warm-up (reflect widget) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; READ BOTH ALOUD &middot; NO WRONG ANSWER</div>
+            <div class="widget-question"><strong>A.</strong> The Miller mocks the carpenter, marriage, and pious stories. &nbsp;&nbsp;|&nbsp;&nbsp; <strong>B.</strong> The Miller mocks the carpenter. The Miller mocks marriage. The Miller mocks the pious stories themselves.<br>Both say the same thing. What does version B do that version A does not?</div>
+            <div class="widget-options">
+                <button data-response="Right. The repeated opening lands like a drumbeat: each 'The Miller mocks' hits harder than the last. That deliberate repetition at the start of successive sentences is today's device.">It builds like a drumbeat</button>
+                <button data-response="It is longer, but the length is doing a job. The repeated opening gives each target its own full strike. When repetition earns its space like that, it is a device, not padding.">It just repeats itself</button>
+                <button data-response="It does slow the reader down, and that is the point: each repetition makes you pause on a new target of the mockery. Slowing down on purpose is a rhetorical choice.">It slows the sentence down</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- The Lesson -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 12px 0;"><strong>Anaphora</strong> is the deliberate repetition of the same word or phrase at the <strong>beginning</strong> of successive sentences, clauses, or lines. The word comes from Greek: <em>ana-</em> (back, again) plus <em>pherein</em> (to carry), so anaphora literally "carries back" the reader to the same starting point before launching forward again. Writers reach for it when they want a passage to feel like a mounting wave: each repetition raises the pressure. Chaucer's narrators love this move. When the Nun's Priest mourns the fox's attack this week, he piles up cries of <em>"O"</em> line after line, addressing destiny, then Venus, then a famous rhetorician, as if a rooster's bad day were the fall of Troy. The repetition is the joke, and the joke works because the device is real: repetition genuinely does make language sound grander.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 12px 0;">One caution. Repetition is only a device when it is <strong>chosen</strong>. If a paragraph repeats "Then" at the start of five sentences because the writer was not paying attention, that is wordiness, not anaphora. The test is simple: does the repetition build toward something, and would the passage lose force if you removed it? If yes, it is anaphora. If it would read better without the repeats, revise.</p>
+
+        <!-- Pattern card (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">ONE RULE TO REMEMBER</div>
+            <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;">Anaphora = the <strong>same opening</strong>, repeated <strong>on purpose</strong>, building to a <strong>final strike</strong>. Three repetitions is the classic shape: two to set the pattern, one to pay it off.</div>
+        </div>
+
+        <!-- ONE visual: navy chalkboard of anaphora examples (repeated opening in gold) -->
+        <div style="background: #14213f; border: 10px solid #3a2c1a; border-radius: 10px; padding: 22px 24px; margin: 18px 0; box-shadow: inset 0 0 40px rgba(0,0,0,0.4);">
+            <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .18em; margin-bottom: 16px; text-align: center;">ON THE BOARD &middot; ANAPHORA &middot; THE REPEATED OPENING IS UNDERLINED</div>
+            <div style="font-size: 19px; color: #f4f1e8; line-height: 2.1;">
+                <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">The pilgrims ride</span> to be healed. <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">The pilgrims ride</span> to be seen. <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">The pilgrims ride</span>, above all, to tell their tales.<br>
+                <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">One word</span> undoes the carpenter. <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">One word</span> brands Nicholas a fool. <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">One word</span>, "Water!", brings the whole house down.<br>
+                <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">O</span> cursed day! <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">O</span> treacherous fox! <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">O</span> rooster, too easily charmed!
+            </div>
+            <div style="font-size: 14px; color: #cdd6ea; margin-top: 16px; line-height: 1.6;">Each set repeats its <span style="color:#e6b955;">gold opening</span> and saves the strongest item for last. The third example imitates the Nun's Priest's mock-grand cries of "O": grand style, barnyard subject.</div>
+        </div>
+
+        <!-- Evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; YOUR TURN &middot; CHOOSE THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="a" data-hint="Anaphora lives at the BEGINNING of successive clauses or sentences. Find the option where the same opening repeats.">
+                <div class="widget-row-prompt">1. Which sentence uses anaphora?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Yes. 'He trusted' opens all three clauses, and the sequence builds from scheme to stranger to doom.">He trusted the scheme, he trusted the stranger, he trusted his way into ruin.</button>
+                    <button data-choice="b">The carpenter, trusting and jealous, was easily deceived.</button>
+                    <button data-choice="c">Nicholas was clever, and his cleverness ruined him.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Apply the test from the lesson: does the repetition build on purpose, or would the passage read better without it?">
+                <div class="widget-row-prompt">2. A draft repeats "Then" at the start of five sentences in a row while listing plot events. What should the writer do?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Keep it: all repetition is anaphora</button>
+                    <button data-choice="b">Add two more "Then" sentences to strengthen the pattern</button>
+                    <button data-choice="c" data-fb="Right. This repetition builds nothing; it is accidental wordiness. Revise for variety, and save deliberate repetition for a moment that deserves the drumbeat.">Revise for variety: the repetition is accidental, not chosen</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Think about what the repeated grand cries of 'O' are doing to a story about a rooster.">
+                <div class="widget-row-prompt">3. The Nun's Priest repeats grand cries of "O destiny! O Venus!" about a fox catching a rooster. The anaphora here mainly&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a">hides the fact that nothing happened</button>
+                    <button data-choice="b" data-fb="Correct. The device genuinely elevates the style, and the gap between that grandeur and a barnyard subject is exactly what makes it comic.">makes the style grand so the barnyard subject becomes funny</button>
+                    <button data-choice="c">proves the narrator is angry at Venus</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Identify & Practice (instruction-before-reveal) -->
+        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#9998; MORE PRACTICE (IN YOUR NOTEBOOK FIRST)</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-bottom: 10px;">For each item, write down the repeated opening and what the repetition builds toward. Do both in your notebook before you open the check.</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 2;">
+                1. Every pilgrim has a portrait. Every portrait has a telling detail. Every telling detail gives the soul away.<br>
+                2. The fox flatters the rooster's song. The fox flatters the rooster's father. The fox flatters him right off his perch.
+            </div>
+            <details style="border: 1px solid #D0D9E8; border-left: 4px solid #3B4E8C; border-radius: 6px; padding: 12px 16px; margin-top: 14px;">
+                <summary style="font-size: 16px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #3B4E8C;">&#9654;</span>&nbsp; Write your answers, then check</summary>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.8; margin-top: 10px; padding-top: 10px; border-top: 1px solid #EEF1F8;">
+                    1. Repeated opening: <em>"Every&hellip;"</em> (every pilgrim, every portrait, every telling detail). It builds a chain from the whole company down to the single detail that "gives the soul away," which is the module's central question.<br>
+                    2. Repeated opening: <em>"The fox flatters&hellip;"</em>. Each repetition escalates the flattery until the final clause pays it off with the consequence: charmed right off his perch.
+                </div>
+            </details>
+        </div>
+    </div>
+
+    <!-- Write your own -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#10145;&#65039; NOW WRITE YOUR OWN (IN YOUR ORGANIZER)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Write a <strong>three-part anaphora</strong> about any character from this module: same opening word or phrase three times, strongest item last. Then write one sentence explaining what your repetition builds toward. This move will be useful in your Quick Write this week, where you argue what comedy is really doing.</p>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Anaphora is repetition with a destination: the same opening, chosen on purpose, building to a final strike. Chaucer uses it to make a rooster sound like a fallen king. You can use it to make your best point land hardest.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 3.02 &middot; Anaphora and Rhetorical Repetition</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
