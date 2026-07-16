@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 2.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 13px; color: #0e1c42;">Canterbury Tales</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 2.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">The Canterbury Tales, Chaucer (Middle English)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">THIS WEEK</div>
+        <div style="font-size: 16px; color: #0e1c42;">Story as Revelation</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 2.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Knight's Tale: Chivalry and the Epic Frame</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Of all the tales he could tell, why does the Knight tell a grand story of noble love and honorable war?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The pilgrims draw lots, and the Knight tells first. His story is a <strong>chivalric romance</strong> built on an <strong>epic frame</strong>: kings, gods, a tournament, and two noble cousins who love the same woman. Today you will learn what those words mean and see how the Knight's choice of story reveals what he values.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define chivalry and the romance as a literary genre.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what <em>in medias res</em> means and find it in the Knight's Tale.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> argue what the Knight's choice of tale reveals about his character.</div></div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module Organizer (the Word document for this module in OneDrive)</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">The Knight's Tale in the original Middle English (link in the reading box below)</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">About 35 minutes and something to write with</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE STORY THE KNIGHT CHOOSES</div>
+
+        <!-- WIDGET 1: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Suppose you had to tell a story to a group of strangers and you wanted them to respect you. What kind of story would you pick?</div>
+            <div class="widget-options">
+                <button data-response="Reasonable. A story that shows honor and high ideals signals what you admire. That is exactly the move the Knight makes.">Something serious and honorable</button>
+                <button data-response="Fair. A funny story warms a room, but it sends a different signal than a noble one. Keep that in mind when the Miller speaks next lesson.">Something funny to win them over</button>
+                <button data-response="Interesting. A true story about yourself is honest, but it reveals you plainly. Notice that the Knight reveals himself indirectly, through the tale he chooses.">A true story about my own life</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Who tells first, and why it matters</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">On the road to Canterbury the pilgrims agree to a story contest, and they draw lots to decide who begins. The lot falls to the <strong>Knight</strong>, the highest-ranking traveler in the company. He is a seasoned soldier who has fought in holy wars, and he embodies <strong>chivalry</strong>: the medieval code that a knight should be brave, loyal, honorable, courteous, and devoted to a noble cause. What he tells is not a report from his own battles. It is a polished tale of ancient Athens, and its polish is the point. The kind of story a person chooses tells you what that person honors.</p>
+
+        <!-- Reading box (PD Middle English, by tale) -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 16px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#128278; READ ALONG (PUBLIC DOMAIN, MIDDLE ENGLISH)</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Open the Knight's Tale in Chaucer's original Middle English: <a href="https://en.wikisource.org/wiki/Canterbury_Tales_(ed._Skeat)/Knight" style="color:#3B4E8C; font-weight:bold;">Canterbury Tales, ed. Skeat &middot; The Knightes Tale (Wikisource)</a>. Read the opening (the return of Theseus), then the lines where the two young knights are captured, and the moment they first see Emelye. Middle English looks strange at first; read it aloud and the sound will help you.</div>
+        </div>
+
+        <!-- ONE core visual: PD Ellesmere manuscript portrait of the Knight -->
+        <figure style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">THE KNIGHT &middot; PAINTED BESIDE HIS TALE IN A MANUSCRIPT MADE ABOUT 1400</div>
+            <div style="background:#F8F9FC; display:flex; justify-content:center; padding: 18px;"><img src="https://upload.wikimedia.org/wikipedia/commons/7/77/The_Knight_-_Ellesmere_Chaucer.jpg" alt="A medieval illuminated portrait of the Knight on horseback: a bearded rider in armor, seated on a richly harnessed horse, holding a spear, rendered in gold and rich colors in the margin of an old manuscript." style="display:block; max-width:100%; height:auto; border-radius:6px;" /></div>
+            <figcaption style="background: #FFFFFF; padding: 12px 16px;">
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">Early readers of Chaucer saw the Knight like this: armored, mounted, and dignified. The image itself makes a claim about status. Notice how the portrait matches the tale he tells: ordered, formal, and grand.</div>
+                <div style="font-size: 12px; color: #0e1c42; margin-top: 8px;">Image: the Ellesmere Chaucer manuscript (early 1400s), Huntington Library, via Wikimedia Commons. Public domain.</div>
+            </figcaption>
+        </figure>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THREE WORDS FOR A NOBLE STORY</div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 4px 0 8px 0;">Chivalry, romance, and the shape of the tale</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A <strong>romance</strong>, in the literary sense, is a genre: a long adventure story of noble heroes, high ideals, love, and honor, usually set in a world grander than everyday life. The Knight's Tale is a model romance. Two cousins of Thebes, <strong>Palamon</strong> and <strong>Arcite</strong>, are captured in battle by Duke <strong>Theseus</strong> and locked in a tower. From that tower both glimpse the princess <strong>Emelye</strong> walking in a garden, and both fall instantly in love. Their friendship breaks into rivalry, and the conflict is finally settled by a formal tournament staged with kings, temples, and prayers to the gods. Every element (the noble birth, the sworn love, the code of honor, the ceremony) is the machinery of <strong>chivalric romance</strong>.</p>
+
+        <!-- Genre-anatomy visual (labeled diagram, gold/indigo/navy) -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 16px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">ANATOMY OF A CHIVALRIC ROMANCE &middot; MAPPED ONTO THE KNIGHT'S TALE</div>
+            <div style="background:#F8F9FC; padding: 18px; display:flex; flex-wrap:wrap; gap:12px;">
+                <div style="flex:1; min-width:220px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:3px solid #C7922C; border-radius:8px; padding:12px 16px;"><div style="font-size:14px; color:#8A6410; font-weight:bold;">Noble heroes</div><div style="font-size:14px; color:#1a2340; line-height:1.5;">Palamon and Arcite, princes of Thebes</div></div>
+                <div style="flex:1; min-width:220px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:3px solid #C7922C; border-radius:8px; padding:12px 16px;"><div style="font-size:14px; color:#8A6410; font-weight:bold;">Sworn, idealized love</div><div style="font-size:14px; color:#1a2340; line-height:1.5;">Both worship Emelye from afar</div></div>
+                <div style="flex:1; min-width:220px; background:#FFFFFF; border:1px solid #D0D9E8; border-top:3px solid #C7922C; border-radius:8px; padding:12px 16px;"><div style="font-size:14px; color:#8A6410; font-weight:bold;">A code of honor</div><div style="font-size:14px; color:#1a2340; line-height:1.5;">The rivalry is fought by rules, not murder</div></div>
+                <div style="flex:1; min-width:220px; background:#EEF1F8; border:2px solid #3B4E8C; border-radius:8px; padding:12px 16px;"><div style="font-size:14px; color:#3B4E8C; font-weight:bold;">Ceremony and the gods</div><div style="font-size:14px; color:#1a2340; line-height:1.5;">A grand tournament; prayers to Venus, Mars, Diana</div></div>
+                <div style="flex:1; min-width:220px; background:#EEF1F8; border:2px solid #3B4E8C; border-radius:8px; padding:12px 16px;"><div style="font-size:14px; color:#3B4E8C; font-weight:bold;">An orderly world</div><div style="font-size:14px; color:#1a2340; line-height:1.5;">Theseus imposes order on chaos and grief</div></div>
+            </div>
+            <div style="background:#0E1C42; color:#cdd6ea; font-size:13px; padding:10px 16px; line-height:1.55;">Read down the list: this is a story about how a noble society keeps order even when love turns friends into rivals. That is what the Knight admires.</div>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Starting in the middle: <em>in medias res</em></h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><em>In medias res</em> is a Latin phrase meaning "into the middle of things." It names an old epic technique: instead of beginning at the true start of the story, the poet drops you into the action already in motion and fills in the past later. The Knight's Tale opens this way. We do not begin with Palamon and Arcite as children. We arrive as Duke Theseus is already riding home from conquering an entire kingdom, and almost at once a crowd of grieving widows throws itself in his path begging for justice. The war that captures our two heroes is launched before we have caught our breath. Beginning in the thick of great events is itself a signal that this is meant to feel like epic.</p>
+
+        <!-- WIDGET 2: evaluative single-select (recolored; varied correct indices) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="a" data-hint="Think about the genre's ingredients: noble heroes, high love, honor, ceremony.">
+                <div class="widget-row-prompt">1. Which feature best marks the Knight's Tale as a chivalric romance?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Yes. Noble heroes, idealized love, and a code of honor settled by ceremony are the core ingredients of chivalric romance.">Noble cousins whose rivalry over love is settled by an honorable tournament</button>
+                    <button data-choice="b">A rooster who quotes Latin to a fox</button>
+                    <button data-choice="c">A comic trick played on an ordinary carpenter</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="The phrase means 'into the middle of things.' Which opening drops you into events already moving?">
+                <div class="widget-row-prompt">2. Which opening is an example of <em>in medias res</em>?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Starting with the birth of the hero and telling his whole life in order</button>
+                    <button data-choice="b">Ending the story before the conflict is resolved</button>
+                    <button data-choice="c" data-fb="Right. We arrive as Theseus already rides home from war and is at once begged for justice. We are dropped into the middle of the action.">Opening as Theseus rides home from conquest and is immediately begged for justice</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>chivalry:</strong> the medieval code of honor for knights (courage, loyalty, courtesy, service). &nbsp;&middot;&nbsp; <strong>romance</strong> (genre): a long adventure story of noble heroes, high love, and honor. &nbsp;&middot;&nbsp; <strong>in medias res:</strong> beginning a story "in the middle of things," with the action already moving.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>chivalry</em> comes from Old French <em>chevalerie</em>, from <em>cheval</em> (horse): a knight was, first of all, a man on horseback. <em>Romance</em> comes from Old French <em>romanz</em>, meaning a work written in the everyday Romance language rather than Latin; over time it named the adventurous tales told in that language. <em>In medias res</em> is Latin and comes to us from the Roman poet Horace, who used it to describe how epic should begin.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Copia (in your Organizer):</strong> take the plain sentence <em>"The knight told a story,"</em> and rewrite it three times: once so the word <em>chivalry</em> reveals his values, once so the word <em>romance</em> names his genre, and once so the phrase <em>in medias res</em> describes how he opens. Expand each with detail from the tale.</div>
+        </div>
+
+        <!-- AI callout (red frame) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND THE MIDDLE ENGLISH</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can give you a modern paraphrase of a Middle English line, which can help when a word stops you cold. It cannot decide for you what the Knight's choice of a grand, orderly tale <em>reveals</em> about him. That judgment is the reading work, and it stays yours.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Add today's Word Study terms and your copia to your Module Organizer</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Record <em>chivalry, romance,</em> and <em>in medias res,</em> then write your three copia sentences.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Update your Character Tracking Chart: the Knight</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Add the Knight's estate, one portrait detail, his tale, and one note on the virtue his story seems to prize. Next you will meet a very different teller in Grammar 2.02 and Lesson 2.03.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The Knight chooses a chivalric romance, opened <em>in medias res</em>, about order restored to a world of grief and rivalry. The tale is a mirror: it shows us a teller who values honor, ceremony, and control. Hold that idea. When the Miller answers with a very different tale, the contrast will do half your thinking for you.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.01 &middot; The Knight's Tale: Chivalry and the Epic Frame</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
