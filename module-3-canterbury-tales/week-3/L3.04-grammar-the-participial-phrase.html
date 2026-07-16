@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 3.04</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 3.04 &middot; Week 3</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">GRAMMAR FOCUS</div>
+        <div style="font-size: 17px; color: #0e1c42;">The participial phrase</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">The Canterbury Tales, Chaucer</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 3.04</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Participial Phrase</div>
+        <div style="font-size: 16px; color: #0e1c42;">Grammar Lesson</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127919; TODAY YOU WILL BE ABLE TO&hellip;</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Spot a participial phrase, name the noun it describes, punctuate it correctly, avoid the dangling modifier, and use one to combine two short sentences about this week's tales.</div>
+    </div>
+
+    <!-- Warm-up (reflect widget) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; READ BOTH ALOUD &middot; NO WRONG ANSWER</div>
+            <div class="widget-question"><strong>A.</strong> Chanticleer trusted the fox. He shut both eyes to sing. &nbsp;&nbsp;|&nbsp;&nbsp; <strong>B.</strong> Trusting the fox, Chanticleer shut both eyes to sing.<br>Both are correct. What did version B do to the two sentences?</div>
+            <div class="widget-options">
+                <button data-response="Close: it is shorter, but the real move is that 'trusted the fox' became a describing phrase, 'Trusting the fox,' attached to Chanticleer. That describing phrase is today's focus.">It trimmed some words out</button>
+                <button data-response="Right. Version B folded the first sentence into a describing phrase, 'Trusting the fox,' and pinned it to Chanticleer. One smooth sentence now shows the trust and the eyes closing together.">It combined them into one smoother sentence</button>
+                <button data-response="Look again: both ideas survive. The trusting did not disappear; it became the phrase 'Trusting the fox,' which now describes Chanticleer while he sings.">It dropped one of the ideas</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- The Lesson -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 12px 0;">A <strong>participle</strong> is a verb form used as an adjective. Present participles end in <em>-ing</em> (<em>trusting, crowing, laughing</em>); past participles usually end in <em>-ed</em> or <em>-en</em>, or take an irregular form (<em>deceived, hidden, caught</em>). A <strong>participial phrase</strong> is the participle plus the words that travel with it, and the whole phrase works as one big adjective describing a noun: in <em>Trusting the fox, Chanticleer shut both eyes,</em> the phrase <em>Trusting the fox</em> describes Chanticleer. Writers love this structure because it lets a sentence do two things at once: the main clause carries the action while the phrase adds the posture, motive, or condition of the actor.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 12px 0;">Two habits keep the structure clean. First, when the phrase opens the sentence, follow it with a comma. Second, the phrase must sit <strong>beside the noun it describes</strong>, or it "dangles" and grabs the wrong noun: <em>Running from the fox, the tale grows louder</em> is wrong, because a tale cannot run. Put the true runner next to the phrase: <em>Running from the fox, Chanticleer set the whole yard shrieking.</em></p>
+
+        <!-- Pattern card (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">ONE RULE TO REMEMBER</div>
+            <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;">Opening participial phrase &rarr; comma &rarr; <strong>the noun it describes</strong>.<br><em>Charmed by the praise, Chanticleer began to sing.</em> (Chanticleer is the one charmed, so the phrase points at the right noun.)</div>
+        </div>
+
+        <!-- ONE visual: navy chalkboard of participial phrase examples -->
+        <div style="background: #14213f; border: 10px solid #3a2c1a; border-radius: 10px; padding: 22px 24px; margin: 18px 0; box-shadow: inset 0 0 40px rgba(0,0,0,0.4);">
+            <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .18em; margin-bottom: 16px; text-align: center;">ON THE BOARD &middot; PARTICIPIAL PHRASES &middot; EACH DESCRIBES A NOUN</div>
+            <div style="font-size: 19px; color: #f4f1e8; line-height: 2.2;">
+                <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">Fearing a second flood</span><span style="color:#8ea2c9;">,</span> the carpenter slept in a tub beneath the roof.<br>
+                <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">Charmed by the fox&rsquo;s praise</span><span style="color:#8ea2c9;">,</span> Chanticleer stretched his neck and shut both eyes.<br>
+                The fox<span style="color:#8ea2c9;">,</span> <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">opening his mouth to boast</span><span style="color:#8ea2c9;">,</span> lost his prize in an instant.<br>
+                <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">Branded by the red-hot iron</span><span style="color:#8ea2c9;">,</span> Nicholas screamed the one word that ruined them all.
+            </div>
+            <div style="font-size: 14px; color: #cdd6ea; margin-top: 16px; line-height: 1.6;">The <span style="color:#e6b955;">gold participial phrase</span> sits right beside the noun it describes. <em>Fearing</em> and <em>opening</em> are present participles (-ing); <em>charmed</em> and <em>branded</em> are past participles. Notice the commas: one after an opening phrase, a pair around a phrase in the middle.</div>
+        </div>
+
+        <!-- Evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; YOUR TURN &middot; CHOOSE THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="b" data-hint="Find the describing phrase built on a participle, then ask: who is doing the flattering?">
+                <div class="widget-row-prompt">1. What noun does the participial phrase describe? &mdash; <em>Flattering the proud rooster, the fox crept closer to the perch.</em></div>
+                <div class="widget-options">
+                    <button data-choice="a">the rooster</button>
+                    <button data-choice="b" data-fb="Yes. The fox is doing the flattering, and the phrase sits right beside him. The rooster is only the target inside the phrase.">the fox</button>
+                    <button data-choice="c">the perch</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="A dangling modifier names a doer that cannot actually perform the participle. Which subject cannot 'hang from the rafters'?">
+                <div class="widget-row-prompt">2. Which sentence has a dangling modifier?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Right. A plan cannot hang from the rafters. The real hanger is the carpenter: 'Hanging from the rafters, the carpenter waited for the flood.'">Hanging from the rafters, the plan seemed foolproof.</button>
+                    <button data-choice="b">Hanging from the rafters, the carpenter waited for the flood.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Apply the comma rule for an OPENING participial phrase.">
+                <div class="widget-row-prompt">3. Which sentence is punctuated correctly?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Wounded by the insult Absolon plotted his revenge.</button>
+                    <button data-choice="b">Wounded, by the insult Absolon plotted his revenge.</button>
+                    <button data-choice="c" data-fb="Correct. The opening participial phrase 'Wounded by the insult' takes one comma, placed after the whole phrase, right before the noun it describes.">Wounded by the insult, Absolon plotted his revenge.</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Identify & Practice (instruction-before-reveal) -->
+        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#9998; MORE PRACTICE (IN YOUR NOTEBOOK FIRST)</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-bottom: 10px;">In each sentence, find the participial phrase and name the noun it describes. Write your answers before you open the check.</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 2;">
+                1. Warned by his dream, Chanticleer still flew down into the yard.<br>
+                2. Pertelote, dismissing the dream as bad digestion, prescribed a laxative.<br>
+                3. Caught in the fox's jaws, the rooster finally began to think.
+            </div>
+            <details style="border: 1px solid #D0D9E8; border-left: 4px solid #3B4E8C; border-radius: 6px; padding: 12px 16px; margin-top: 14px;">
+                <summary style="font-size: 16px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #3B4E8C;">&#9654;</span>&nbsp; Write your answers, then check</summary>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.8; margin-top: 10px; padding-top: 10px; border-top: 1px solid #EEF1F8;">
+                    1. <em>Warned by his dream</em> &rarr; describes <strong>Chanticleer</strong> (past participle "warned"; comma after the opening phrase).<br>
+                    2. <em>dismissing the dream as bad digestion</em> &rarr; describes <strong>Pertelote</strong> (present participle; set off with commas in the middle).<br>
+                    3. <em>Caught in the fox's jaws</em> &rarr; describes <strong>the rooster</strong> (past participle "caught").
+                </div>
+            </details>
+        </div>
+    </div>
+
+    <!-- Use it -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#10145;&#65039; NOW WRITE YOUR OWN (IN YOUR ORGANIZER)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Take <strong>two short sentences</strong> about the Miller's Tale or the Nun's Priest's Tale and combine them by turning one into an opening participial phrase (remember the comma). Then write <strong>one more</strong> sentence with the phrase in the middle. Check each: does the phrase sit right beside the noun it describes, with no dangling modifier? You will want this move in Quick Write 3, where a phrase like <em>"Hidden inside the comedy,"</em> can carry your whole argument.</p>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A participial phrase is a describing phrase built on a verb. It lets one sentence show action and attitude together, but only if it sits beside the noun it describes. Keep the doer next to the phrase and nothing will dangle.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 3.04 &middot; The Participial Phrase</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
