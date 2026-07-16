@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 1.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 13px; color: #0e1c42;">Honor and Duty</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 1.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Sir Gawain and the Green Knight (trans. Weston)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What does it mean to be truly honorable?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 1.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Music of Alliterative Verse</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">This poem does not rhyme at the ends of its lines. So what holds it together and makes it pound like a drum?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The Pearl Poet writes in an old English rhythm built not on end-rhyme but on <strong>alliteration</strong>: repeated opening sounds hammered across the strong beats of a line. You will learn how the alliterative long line works, meet the poem's surprising <strong>bob-and-wheel</strong> ending, and mark the beats yourself.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define alliteration and explain how the alliterative long line is built.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe how the bob-and-wheel closes a stanza.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> mark the alliterating beats in a line of the poem.</div></div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module Organizer, and a quiet place where you can read a line out loud</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">About 30 minutes</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A DIFFERENT KIND OF RHYME</div>
+
+        <!-- WIDGET: reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; SAY IT OUT LOUD &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Read this aloud: <em>"big brave bold."</em> Now read: <em>"tall strong sure."</em> Which one feels like it hits harder, almost like a drumbeat?</div>
+            <div class="widget-options">
+                <button data-response="Right. The repeated 'b' sound in 'big brave bold' knocks three times on the same note. That repetition of opening sounds is alliteration, and it is the whole engine of this poem's rhythm.">"Big brave bold" hits harder</button>
+                <button data-response="Interesting. 'Tall strong sure' has power too, from strong stresses, but notice it does not repeat one opening sound. The first phrase adds that hammering repetition on top of the beat.">"Tall strong sure" feels stronger to me</button>
+                <button data-response="Fair, they can feel close. Read them once more and listen only to the first sound of each word. One phrase keeps returning to the same sound; that return is what alliteration adds.">They feel about the same</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The alliterative long line</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Most poems we hear today rhyme at the ends of lines. This poem does something older. Each long line is built on <strong>alliteration</strong>: the repetition of the same opening consonant sound across the line's strongest beats. Every line has four heavy beats, called <strong>lifts</strong>, with a short pause called a <strong>caesura</strong> in the middle. Usually the first three lifts share one sound, and the fourth deliberately breaks it, so the line lands with a small thud of change. Read aloud, the effect is muscular and driving, like a hammer striking metal. That pounding sound is not decoration. It carries the force of the story.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Here is a real line from the poem, in its original Middle English, describing the Green Knight himself. Listen for the three beats on the sound of <em>g</em>, the very sound at the front of the word <em>green</em>.</p>
+
+        <!-- ONE core visual: the alliterative long line with lifts marked in gold + bob-and-wheel shape (one figure) -->
+        <figure style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">HEAR THE HAMMER-BEATS &middot; ONE ALLITERATIVE LONG LINE</div>
+            <div style="background: #14213f; padding: 24px 22px; box-shadow: inset 0 0 40px rgba(0,0,0,0.35);">
+                <!-- the line, ME with gold lifts -->
+                <div style="font-size: 22px; color: #f4f1e8; line-height: 1.7; text-align: center;">
+                    Ande al <span style="color:#e6b955; border-bottom: 3px solid #e6b955;">gray&thorn;ed</span> in <span style="color:#e6b955; border-bottom: 3px solid #e6b955;">grene</span> <span style="color:#8ea2c9;">|</span> &thorn;is <span style="color:#e6b955; border-bottom: 3px solid #e6b955;">gome</span> and his wedez
+                </div>
+                <!-- beat dots -->
+                <div style="font-size: 13px; color: #cdd6ea; text-align: center; margin-top: 10px; letter-spacing: .3em;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&#9679;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9679;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#8ea2c9;">(pause)</span>&nbsp;&nbsp;&nbsp;&nbsp;&#9679;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9675;
+                </div>
+                <div style="font-size: 14px; color: #cdd6ea; text-align: center; margin-top: 14px; line-height: 1.6;">Modern English: <em>"And all arrayed in green, this man and his garments."</em></div>
+                <div style="font-size: 14px; color: #cdd6ea; text-align: center; margin-top: 6px; line-height: 1.6;">Three lifts (<span style="color:#e6b955;">gold</span>) beat on <span style="color:#e6b955;">g</span>: <span style="color:#e6b955;">gray&thorn;ed &middot; grene &middot; gome</span>. The fourth beat (<span style="color:#cdd6ea;">&#9675; wedez</span>) breaks the pattern on purpose. The <span style="color:#8ea2c9;">|</span> marks the caesura, the mid-line pause.</div>
+
+                <!-- divider -->
+                <div style="height:1px; background:#2c3d63; margin: 20px 0;"></div>
+
+                <!-- bob-and-wheel shape -->
+                <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .14em; text-align:center; margin-bottom: 12px;">HOW A STANZA CLOSES &middot; THE BOB-AND-WHEEL</div>
+                <div style="max-width: 420px; margin: 0 auto;">
+                    <div style="height: 12px; background: #3a4a72; border-radius: 3px; margin-bottom: 6px;"></div>
+                    <div style="height: 12px; background: #3a4a72; border-radius: 3px; margin-bottom: 6px;"></div>
+                    <div style="height: 12px; background: #3a4a72; border-radius: 3px; margin-bottom: 6px;"></div>
+                    <div style="font-size: 12px; color:#8ea2c9; text-align:right; margin: 2px 0 8px;">&uarr; several long alliterative lines (unrhymed)</div>
+                    <div style="width: 90px; height: 12px; background: #e6b955; border-radius: 3px; margin: 0 auto 4px;"></div>
+                    <div style="font-size: 12px; color:#e6b955; text-align:center; margin-bottom: 8px;">the <strong>bob</strong>: one very short line</div>
+                    <div style="width: 60%; height: 10px; background: #6b7ba6; border-radius: 3px; margin: 0 auto 5px;"></div>
+                    <div style="width: 60%; height: 10px; background: #6b7ba6; border-radius: 3px; margin: 0 auto 5px;"></div>
+                    <div style="width: 60%; height: 10px; background: #6b7ba6; border-radius: 3px; margin: 0 auto 5px;"></div>
+                    <div style="width: 60%; height: 10px; background: #6b7ba6; border-radius: 3px; margin: 0 auto 4px;"></div>
+                    <div style="font-size: 12px; color:#cdd6ea; text-align:center;">the <strong>wheel</strong>: four short lines that <em>do</em> rhyme</div>
+                </div>
+            </div>
+            <figcaption style="background: #FFFFFF; padding: 12px 16px;">
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">Each stanza runs on driving, unrhymed long lines, then suddenly shifts gears: a tiny one-beat <strong>bob</strong>, followed by a four-line <strong>wheel</strong> that rhymes. The switch snaps the stanza shut like a latch.</div>
+                <div style="font-size: 12px; color: #0e1c42; margin-top: 8px;">Middle English line from <em>Sir Gawain and the Green Knight</em>, Fitt I. Public-domain text, Project Gutenberg.</div>
+            </figcaption>
+        </figure>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; NOW YOU MARK THE BEATS</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">You just saw a line worked out for you. Now try one yourself. Here is the poem's very first line, which reaches back to the fall of Troy. Read it aloud slowly, and listen for the beats that share one opening sound.</p>
+
+        <!-- practice line (no answer printed: worked-example, then practice) -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 16px 20px; margin: 6px 0 14px;">
+            <div style="font-size: 20px; color: #0e1c42; text-align:center; line-height:1.6;">&ldquo;Si&thorn;en &thorn;e sege and &thorn;e assaut watz sesed at Troye&rdquo;</div>
+            <div style="font-size: 14px; color: #1a2340; text-align:center; margin-top: 8px;">Modern English: <em>"Since the siege and the assault was ceased at Troy."</em></div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.65; margin-top: 12px;"><strong>In your Organizer:</strong> write the line out and underline the words whose stressed beats share the same opening sound. Then say which sound it is, and whether the last strong beat joins the pattern or breaks it.</div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">When you have marked it, test your ear against the questions below.</p>
+
+        <!-- WIDGET: evaluative single-select; correct indices varied -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; YOUR TURN &middot; CHOOSE THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="a" data-hint="Say the line aloud and listen to the first sound of each strong beat.">
+                <div class="widget-row-prompt">1. In "Si&thorn;en &thorn;e <em>sege</em> and &thorn;e <em>assaut</em> watz <em>sesed</em> at Troye," which sound is repeated on the strong beats?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Yes. The beats fall on 'sege,' 'assaut,' and 'sesed,' all built on the s sound. (In 'assaut,' the beat is on the -saut part, which begins with s.)">the s sound</button>
+                    <button data-choice="b">the t sound</button>
+                    <button data-choice="c">the a sound</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Remember the definition: it is about opening sounds, not about how the lines end.">
+                <div class="widget-row-prompt">2. Alliteration means the repetition of&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a">the same word at the end of each line</button>
+                    <button data-choice="b">rhyming sounds at the ends of lines</button>
+                    <button data-choice="c" data-fb="Correct. Alliteration repeats the opening consonant sound across a line's strong beats, which is what drives this poem instead of end-rhyme.">the opening consonant sound across the strong beats</button>
+                    <button data-choice="d">the number of syllables in a line</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Why it matters (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128161; WHY THE SOUND MATTERS</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;">This meter was made to be <em>heard</em>. Medieval audiences did not read the poem silently; they listened as it was read aloud. The alliteration made lines easier to remember and gave the storytelling a heavy, forward-driving pulse, perfect for a scene where a giant green stranger comes crashing into a feast. When you meet the Green Knight next lesson, read him aloud and feel the beats land.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Keep your marked line in your Organizer</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">You will imitate this alliterative music in your Project Feeder 1 catalog later this week. In Lesson 1.03 you will read Fitt I and hear the beats in the challenge scene itself.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">This poem beats out its rhythm with repeated opening sounds, not end-rhyme, and closes each stanza with a quick bob-and-wheel. Read it aloud, and the sound will do half the work of the meaning for you.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.02 &middot; The Music of Alliterative Verse</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
