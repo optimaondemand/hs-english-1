@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 1.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 13px; color: #0e1c42;">Honor and Duty</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 1.03</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Sir Gawain and the Green Knight (trans. Weston)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What does it mean to be truly honorable?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 1.03</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Green Knight's Challenge</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson &middot; you begin reading Fitt I</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A stranger offers to let you strike him with an axe, on one condition. Why would any honorable knight say yes?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Today you read the heart of Fitt I: the Green Knight bursts into Camelot and proposes a strange game. You will look closely at his challenge, at Gawain's acceptance, and at the <strong>covenant</strong> that binds them, and start asking what honor has to do with keeping a terrifying promise.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> summarize the terms of the beheading game the Green Knight proposes.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why Gawain steps forward, and what his acceptance costs him.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> analyze how the scene tests the court's honor from the very first Fitt.</div></div>
+    </div>
+
+    <!-- READING STEP -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 12px;">&#128214; READ FIRST &middot; FITT I</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Read <strong>Fitt I</strong> (Part 1) of the poem in the public-domain prose translation by Jessie L. Weston (1898): <a href="https://d.lib.rochester.edu/camelot/text/weston-sir-gawain-and-the-green-knight.html" style="color:#3B4E8C;">the Weston translation at the Camelot Project</a>. Read from the New Year feast at Camelot through the Green Knight riding off with his own head. Then come back here to look closely at the challenge.</div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; AN UNINVITED GUEST</div>
+
+        <!-- WIDGET: reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; BEFORE WE LOOK CLOSE &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">A stranger interrupts a celebration and dares anyone present to accept a dangerous game, in front of everyone. If no one steps up, what happens to the group's reputation?</div>
+            <div class="widget-options">
+                <button data-response="Right. A public dare puts the whole court's honor on the line. That pressure is exactly what the Green Knight is counting on when he mocks Arthur's famous knights.">The group looks weak or cowardly if no one answers</button>
+                <button data-response="Fair, staying calm can be wise. But notice how the Green Knight turns the silence itself into an insult, so that doing nothing becomes its own kind of failure.">Maybe it is smarter to stay calm and ignore him</button>
+                <button data-response="Interesting. Whether to answer a dare is a real question of honor. The poem forces the court to decide in public, and watches what that pressure does to them.">It depends on whether the dare is worth the risk</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The scene</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It is New Year's Day at Camelot, in the middle of a fifteen-day feast. Arthur, restless and young, refuses to eat until he has heard some marvel. He gets one. A giant knight rides straight into the hall, "green all over," on a green horse, carrying a holly branch in one hand and a huge axe in the other. He is enormous, richly dressed, and completely calm. He asks for the ruler of the court, and then makes his offer, which he insists is only "a Christmas jest."</p>
+
+        <!-- short PD excerpt (Weston, Fitt I) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 6px 0 14px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">&#10077; FROM THE POEM &middot; THE CHALLENGE (WESTON, FITT I)</div>
+            <div style="font-size: 17px; color: #0e1c42; line-height: 1.7; font-style: italic;">&ldquo;If any one in this hall holds himself so hardy, so bold both of blood and brain, as to dare strike me one stroke for another, I will give him as a gift this axe&hellip; and I will abide the first blow, unarmed as I sit.&rdquo;</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 8px;">The catch comes next: whoever strikes him must seek him out in a year and a day to receive a blow in return. &ldquo;The respite of a year and a day shall he have.&rdquo;</div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">For a long moment, no one moves. The Green Knight sneers at the silence, taunting the court's famous reputation. Arthur himself, stung, seizes the axe, and then Gawain quietly asks to take his place, calling himself the weakest and least important of the knights, so that the loss would be smallest if things went wrong. It is a strikingly humble way to volunteer for something terrifying.</p>
+
+        <!-- short PD excerpt: Gawain's acceptance -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 16px 20px; margin: 6px 0 4px;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#10077; GAWAIN ACCEPTS (WESTON, FITT I)</div>
+            <div style="font-size: 17px; color: #0e1c42; line-height: 1.7; font-style: italic;">&ldquo;Gawain am I, who give thee this buffet, let what may come of it; and at this time twelvemonth will I take another at thine hand with whatsoever weapon thou wilt.&rdquo;</div>
+        </div>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE COVENANT AND THE BLOW</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">What makes this a test of honor and not just a stunt is the <strong>covenant</strong>: a binding agreement, sealed with a promise. Gawain does not merely swing the axe. He gives his word to return, unarmed, for a matching blow. The whole game is really a trap for one virtue: will Gawain keep a promise even when keeping it looks like walking to his own death? Here is the shape of the bargain.</p>
+
+        <!-- ONE core visual: the challenge / beheading-game exchange diagram -->
+        <figure style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">THE BEHEADING GAME &middot; ONE BLOW NOW, ONE BLOW RETURNED</div>
+            <div style="background: #F8F9FC; padding: 22px 18px;">
+                <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: stretch; justify-content: center;">
+                    <!-- Now -->
+                    <div style="flex: 1; min-width: 240px; background: #FDF3E3; border: 2px solid #C7922C; border-radius: 10px; padding: 16px 18px;">
+                        <div style="font-size: 12px; color: #8A6410; letter-spacing: .08em; margin-bottom: 8px;">NOW &middot; NEW YEAR'S DAY, CAMELOT</div>
+                        <div style="font-size: 30px; text-align:center; line-height:1;">&#129683;</div>
+                        <div style="font-size: 16px; color: #0e1c42; text-align:center; font-weight:bold; margin-top:8px;">Gawain strikes one blow</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height:1.55; margin-top:6px;">With the Green Knight's own axe, Gawain beheads him at a single stroke, in front of the whole court.</div>
+                    </div>
+                    <!-- covenant arrow -->
+                    <div style="align-self:center; text-align:center; min-width: 90px;">
+                        <div style="font-size: 12px; color: #3B4E8C; font-weight:bold;">bound by</div>
+                        <div style="font-size: 26px; color:#3B4E8C; line-height:1;">&#8652;</div>
+                        <div style="font-size: 12px; color: #3B4E8C; font-weight:bold;">a covenant</div>
+                        <div style="font-size: 12px; color: #1a2340; margin-top:4px;">a year and a day</div>
+                    </div>
+                    <!-- Later -->
+                    <div style="flex: 1; min-width: 240px; background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 16px 18px;">
+                        <div style="font-size: 12px; color: #3B4E8C; letter-spacing: .08em; margin-bottom: 8px;">LATER &middot; THE GREEN CHAPEL</div>
+                        <div style="font-size: 30px; text-align:center; line-height:1;">&#129691;</div>
+                        <div style="font-size: 16px; color: #0e1c42; text-align:center; font-weight:bold; margin-top:8px;">Gawain must take one blow back</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height:1.55; margin-top:6px;">Gawain must seek out the Green Knight and receive a matching stroke, unarmed and unresisting.</div>
+                    </div>
+                </div>
+                <div style="font-size: 14px; color: #0e1c42; text-align:center; margin-top: 16px; line-height:1.6;">The twist: the Green Knight simply picks up his severed head and rides away, alive, promising to be waiting. Now Gawain owes a debt he cannot escape without breaking his word.</div>
+            </div>
+            <figcaption style="background: #FFFFFF; padding: 12px 16px;">
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">The game only works because a promise is treated as binding as a law. That is the engine of the whole poem: honor measured by whether Gawain will keep a covenant that could kill him.</div>
+            </figcaption>
+        </figure>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Read the aftermath in Weston's words. Notice how the poet refuses to let the horror be simply grim; the headless knight is almost matter-of-fact.</p>
+
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 6px 0 14px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">&#10077; THE BLOW (WESTON, FITT I)</div>
+            <div style="font-size: 17px; color: #0e1c42; line-height: 1.7; font-style: italic;">&ldquo;The blood spurted forth, and glistened on the green raiment, but the knight neither faltered nor fell; he started forward with out-stretched hand, and caught the head, and lifted it up.&rdquo;</div>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 8px 0 8px 0;">A word to weigh: churlish</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Part of what unsettles the court is that the Green Knight is hard to place. He is not simply <strong>churlish</strong>, rude and low-born, though he mocks them; nor is he simply courteous. He seems to be testing whether Camelot's manners are real or just for show.</p>
+
+        <!-- Copia box (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 6px 0 14px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; COPIA (IN YOUR ORGANIZER) &middot; <em>churlish</em></div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;">Take the sentence <em>"The knight spoke to the court."</em> Rewrite it three ways: (1) so the knight sounds <em>churlish</em>; (2) so he sounds coldly courteous; (3) so he sounds openly mocking. Keep the same basic event; change only the tone. Then note which version best fits the Green Knight, and why.</div>
+        </div>
+
+        <!-- WIDGET: evaluative single-select; correct indices varied -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="c" data-hint="Re-read the terms of the game: what does the striker owe in return, and when?">
+                <div class="widget-row-prompt">1. Under the covenant, what must the person who strikes the Green Knight do?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Pay him in gold</button>
+                    <button data-choice="b">Fight him again at once</button>
+                    <button data-choice="c" data-fb="Yes. The striker must seek out the Green Knight in a year and a day and receive a matching blow. The promise is the trap.">Seek him out in a year and a day to take a blow in return</button>
+                    <button data-choice="d">Give up his knighthood</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Look at how Gawain describes himself when he volunteers.">
+                <div class="widget-row-prompt">2. How does Gawain present himself when he steps forward?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Right. Gawain calls himself the weakest and least important, so that his loss would matter least. It is a humble way to take on a deadly risk.">As the weakest, so his loss would matter least</button>
+                    <button data-choice="b">As the strongest knight in the hall</button>
+                    <button data-choice="c">As a stranger to the court</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- AI callout (red frame) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND CLOSE READING</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can give you a quick plot summary of this scene. It cannot feel the strangeness of a headless knight calmly lifting his own head, or decide what that image means for honor. Sitting with a difficult passage until it opens up is the reading work, and it stays yours.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Update your Character Tracking Chart</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Add Arthur, Gawain, and the Green Knight, and note one thing each shows about honor so far. Then bring your thinking to this week's Discussion, and to Grammar 1.04 and 1.05, where you will learn two sentence tools the poet uses on this very scene.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The beheading game is not really about the axe. It is about a promise. From the first Fitt, the poem is asking whether Gawain's honor is strong enough to make him keep his word all the way to the Green Chapel.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.03 &middot; The Green Knight's Challenge</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
