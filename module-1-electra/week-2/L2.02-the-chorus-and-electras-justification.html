@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 2.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 13px; color: #0e1c42;">Justice in Greek Tragedy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 2.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Electra &mdash; the Chorus intervenes</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What is owed &mdash; to gods, city, family?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 2.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Folly, Wisdom, and the Voice of the Community</div>
+        <div style="font-size: 16px; color: #0e1c42;">Reading Lesson &middot; The Chorus weighs in</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">When a whole community watches two people fight, whose side should it take, and what if it refuses to choose?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Today you read the moment just after the sisters' quarrel, where the <strong>Chorus</strong> steps between them, hearing something worth keeping in each argument, and Chrysothemis calls Electra a <em>fool</em> for her open defiance. Watch the words <strong>folly</strong> and <strong>wisdom</strong> pass back and forth.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how the Chorus functions as the voice of the community, not a single character.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> examine Electra's moral justification for her mourning against the charge of folly.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> add the Chorus and Chrysothemis to my Character Tracking Chart.</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">When two friends argue in front of you, what do you usually do?</div>
+            <div class="widget-options">
+                <button data-response="Common, and sometimes right. But picking a winner ends the argument without settling it. Watch how the Chorus resists this today.">Pick the side I agree with</button>
+                <button data-response="Interesting. Saying 'you both have a point' keeps the question open. That is close to what the Chorus does in this scene.">Say they both have a point</button>
+                <button data-response="Fair. Staying out of it is a choice too. Notice that the Chorus does the opposite: it steps in, but without crowning a winner.">Stay out of it</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.75; margin: 0 0 12px 0;">The Chorus is a group of local women who stay on stage and comment on the action. They are not the hero and not the villain; they are closer to the <em>city itself</em> thinking out loud: the ordinary community watching a private family tear itself apart, trying to judge it fairly. That is why their words carry weight. When the Chorus leans toward Electra, Sophocles is telling us the community's sympathy is with her; when it counsels caution, he is voicing the pull of common sense that any onlooker would feel. Here, after the sisters clash, the Chorus does something careful. It does not declare a winner. It says, in effect, that <em>forethought is helpful for those who speak and those who hear</em>: each sister has something the other needs. This is where the play's key pair of words comes into focus: <strong>folly</strong> (rash, unthinking action) and <strong>wisdom</strong> (action guided by foresight). Chrysothemis calls Electra a fool because her defiance seems reckless and self-destructive. Electra would say the real folly is to see a murder go unavenged and call your silence "wise." As you read, keep asking the question the Chorus refuses to close: which sister is being wise, and by whose measure?</p>
+
+        <!-- ONE core visual: labeled diagram of the Chorus BETWEEN the sisters (HTML/CSS) -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 10px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 9px 16px;">WHERE THE CHORUS STANDS &middot; THE COMMUNITY BETWEEN TWO SISTERS</div>
+            <div style="padding: 20px 16px; background: #F8F9FC;">
+                <div style="display: flex; flex-wrap: wrap; align-items: stretch; gap: 12px; justify-content: center;">
+                    <!-- Electra node -->
+                    <div style="flex: 1; min-width: 150px; max-width: 230px; background: #FFFFFF; border: 2px solid #3B4E8C; border-radius: 10px; padding: 14px; text-align: center;">
+                        <div style="font-size: 16px; color: #3B4E8C; font-weight: bold;">ELECTRA</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-top: 6px;">"Open protest is loyalty. Silence would be folly."</div>
+                    </div>
+                    <!-- connector -->
+                    <div style="display: flex; align-items: center; color: #0e1c42; font-size: 22px;">&harr;</div>
+                    <!-- Chorus node (center) -->
+                    <div style="flex: 1.2; min-width: 170px; max-width: 280px; background: #0E1C42; border: 2px solid #55C8E8; border-radius: 10px; padding: 14px; text-align: center;">
+                        <div style="font-size: 16px; color: #55C8E8; font-weight: bold;">THE CHORUS</div>
+                        <div style="font-size: 12px; color: #cdd6ea; margin: 4px 0 6px; letter-spacing: .06em;">THE CITY THINKING OUT LOUD</div>
+                        <div style="font-size: 14px; color: #ffffff; line-height: 1.5;">Hears value in each sister. Names no winner. Urges forethought on both.</div>
+                    </div>
+                    <!-- connector -->
+                    <div style="display: flex; align-items: center; color: #0e1c42; font-size: 22px;">&harr;</div>
+                    <!-- Chrysothemis node -->
+                    <div style="flex: 1; min-width: 150px; max-width: 230px; background: #FFFFFF; border: 2px solid #C7922C; border-radius: 10px; padding: 14px; text-align: center;">
+                        <div style="font-size: 16px; color: #8A6410; font-weight: bold;">CHRYSOTHEMIS</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-top: 6px;">"Powerless protest is folly. Caution is wisdom."</div>
+                    </div>
+                </div>
+            </div>
+            <div style="background: #EEF1F8; padding: 10px 16px; font-size: 14px; color: #0e1c42; line-height: 1.55;">The Chorus stands in the middle on purpose. By refusing to pick a sister, it hands the harder judgment to you, the audience, and keeps the word <em>folly</em> in play for both.</div>
+        </div>
+    </div>
+
+    <!-- READ NOW (PD source) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128218; READ NOW</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.65; margin-bottom: 14px;">Continue in the same scene, through the <strong>Chorus's intervention between the sisters</strong>: the short passage where it addresses both women and urges forethought. Read the Chorus's lines slowly; they are the community's verdict-in-progress.</div>
+        <div style="text-align: center; margin: 6px 0 14px;">
+            <a href="http://classics.mit.edu/Sophocles/electra.html" style="display: inline-block; background: #0E1C42; color: #fff; text-decoration: none; font-size: 16px; padding: 12px 26px; border-radius: 8px;">&#128279; Open <em>Electra</em> (public-domain text, trans. R. C. Jebb)</a>
+        </div>
+        <div style="font-size: 14px; color: #0e1c42; line-height: 1.55; text-align: center;">Free, full text at the Internet Classics Archive.</div>
+
+        <!-- Short PD anchor quote -->
+        <div style="background: #EEF1F8; border-radius: 7px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #0e1c42; margin-bottom: 8px;">THE CHORUS, TO BOTH SISTERS</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.7; font-style: italic;">"In such case as this, forethought is helpful for those who speak and those who hear."</div>
+            <div style="font-size: 14px; color: #0e1c42; margin-top: 8px;">&mdash; the Chorus (trans. Jebb). It refuses to crown a winner; it asks both sisters to think before they act.</div>
+        </div>
+    </div>
+
+    <!-- Annotate (practice) -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#9999;&#65039; ANNOTATE AS YOU READ</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.65; margin-bottom: 10px;">On your own copy, mark up the passage. As you read, flag:</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">every form of <strong>folly</strong> / <strong>fool</strong>, and every form of <strong>wise</strong> / <strong>wisdom</strong>. Note who says each about whom.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">every <strong>reference to justice</strong>, keeping the same thread running from earlier lessons.</div></div>
+    </div>
+
+    <!-- Evaluative widget (check yourself) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 6px;">&#9998;&#65039; DO IT IN YOUR NOTEBOOK FIRST, THEN CHECK YOURSELF</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 0 0 4px;">Write each answer in your Organizer before you pick, so the choice confirms your own reading.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="a" data-hint="Think about who the Chorus stands for. It is not a single hero or villain.">
+                <div class="widget-row-prompt">1. What role does the Chorus play in a Greek tragedy?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Yes. The Chorus is a group that stays on stage and comments, standing in for the community or the city thinking out loud.">A group that comments on the action, standing in for the community.</button>
+                    <button data-choice="b">The main hero who drives the plot.</button>
+                    <button data-choice="c">A messenger who reports events from offstage.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="The Chorus finds something worth keeping in BOTH sisters. What does that lead it to do?">
+                <div class="widget-row-prompt">2. Why does the Chorus refuse to name a winner between the sisters?</div>
+                <div class="widget-options">
+                    <button data-choice="a">It has not been paying attention to the argument.</button>
+                    <button data-choice="b">It secretly favors Clytemnestra.</button>
+                    <button data-choice="c" data-fb="Right. It hears something worth keeping in each and urges forethought on both, leaving the harder judgment to the audience.">It hears value in each and leaves the harder judgment to the audience.</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- AI callout (red frame) -->
+    <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND OPEN QUESTIONS</div>
+        <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">If you ask AI "is Electra wise or foolish?" it will hand you a balanced answer that sounds settled. But this scene is built to leave that question open; the Chorus itself will not close it. Form your own answer from the lines first. Then, if you like, compare it to what a tool says, and notice where you disagree.</div>
+    </div>
+
+    <!-- Speak your thinking (indigo) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 12px;">&#127908; SPEAK YOUR THINKING (RECORD 2&ndash;4 MINUTES)</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.65; margin-bottom: 8px;">Record yourself, using your phone, the Canvas recorder, or your VR space, answering these in order:</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.9;">1. The Chorus hears value in <em>both</em> sisters. What does it seem to value in each? What is the Chorus's purpose in this scene?<br>2. What has the Chorus been urging Electra to do, or to stop doing?<br>3. Why does Chrysothemis call Electra a fool? Do you agree with Electra's charge that Chrysothemis is a coward?</div>
+        <div style="font-size: 14px; color: #3B4E8C; margin-top: 10px;">Keep this recording in your Organizer; it builds toward this week's Evidence Log.</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The Chorus is the city thinking out loud, and it will not settle the sisters' quarrel for you. Carry the open question forward: who is being wise, and by whose measure?</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.02 &middot; Folly, Wisdom, and the Voice of the Community</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
