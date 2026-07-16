@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 2.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+
+    /* Argument-annotated sonnet visual */
+    .arg-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 12px; align-items: stretch; }
+    .arg-poem { flex: 2; min-width: 300px; border-left: 4px solid #3B4E8C; border-radius: 2px; padding-left: 12px; }
+    .arg-note { flex: 1; min-width: 180px; background: #EEF1F8; border: 1px solid #C9D3E8; border-radius: 8px; padding: 10px 14px; font-size: 14px; color: #1a2340; line-height: 1.55; }
+    .arg-note .arg-kicker { font-size: 10px; color: #3B4E8C; letter-spacing: .1em; margin-bottom: 4px; }
+    .sonnet-line { font-family: Georgia, "Times New Roman", serif; font-size: 16px; color: #1a2340; line-height: 1.8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 4</div>
+        <div style="font-size: 13px; color: #0e1c42;">Love, Time, and the Sonnet</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 2.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Sonnet 29, William Shakespeare</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">Can a poem defeat time?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 2.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Sonnet 29: The Volta</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Sonnet 29 spends eight lines at the bottom of a pit and climbs out on a single word. What is that word doing?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Last week you watched Sonnet 18 turn at line 9 on the word "But." Today you meet the most dramatic turn in the whole sequence. Sonnet 29 moves from despair to joy in fourteen lines, and the hinge of that movement, the <strong>volta</strong>, is the sonnet's most powerful piece of machinery. You will map the two movements, watch how the despair is built so the joy can be earned, and study the lark simile that carries the poem from earth to sky.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> locate the volta in Sonnet 29, name the single word that signals it, and describe what changes on each side of it: mood, imagery, and direction.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how lines 1&ndash;8 build the speaker's despair by accumulation, piling wish on wish until the turn becomes necessary.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> analyze how the lark simile in lines 11&ndash;12 does not just describe the speaker's rise; the line itself rises.</div></div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module Organizer with the argument-stage map you made in Week 1</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">About 35 minutes and something to write with</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; EIGHT LINES IN THE PIT</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Think of a time a truly bad mood flipped in a single moment. What flipped it? Write two sentences about that moment in your Organizer first, then choose the closest match.</div>
+            <div class="widget-options">
+                <button data-response="A message, a voice, a person arriving at the right time. Hold on to that: in Sonnet 29 the rescue is a person too, except the person never appears. Only the thought of them does, and it arrives uninvited.">Another person reached me</button>
+                <button data-response="A memory that surfaced on its own is the closest match to this poem. Shakespeare marks that arrival with one small word, 'haply,' meaning by chance. The speaker does not reason his way out of despair; the thought simply comes. Watch for it at line 10.">A memory arrived on its own</button>
+                <button data-response="Music, light, weather: something outside you shifted the inside of you. Sonnet 29 ends its turn with exactly that kind of image, a bird singing at daybreak. Watch how the poem saves that image for the moment the feeling changes.">Something in the world: music, light, weather</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Despair, built by accumulation</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Sonnet 29 opens at the bottom. The speaker is "in disgrace with Fortune and men's eyes": out of luck and out of favor, and he knows it. He weeps alone over his "outcast state," sends up "bootless cries" to a heaven he calls deaf (<strong>bootless</strong> means useless, cries that bring no help), and curses his own fate. That is the first quatrain: shame, isolation, and prayers that bounce off the ceiling. The second quatrain turns the shame into envy, and here the poem starts to pile. The speaker wishes he were "one more rich in hope." He wishes he had another man's looks, "featured like him," and another man's friends, "like him with friends possess'd." He covets "this man's art, and that man's scope": one rival's skill, another rival's range of opportunity. Notice the method. Shakespeare does not state the despair once and move on; he stacks wish on wish, each clause opening the same way, until the weight is almost physical. You will study that stacking move, called anaphora, in this week's first grammar lesson. For now, feel what it does: by line 8 the speaker is so busy wanting other lives that he is "contented least" with the things he actually loves most.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Then line 9. One word, <strong>Yet</strong>, and the whole poem changes direction. In the middle of "these thoughts," almost despising himself, the speaker happens to think of the beloved: "Haply I think on thee." <strong>Haply</strong> means by chance. That small word carries a large honesty: the speaker does not argue himself out of despair, and no one talks him out of it. The saving thought simply arrives, unplanned, the way relief actually arrives in life. And when it does, his "state" (his condition, the very word he used for his misery in line 2) rises "like to the lark at break of day arising / From sullen earth" to sing "hymns at heaven's gate." The heaven that was deaf in line 3 has a gate with singing at it by line 12. The couplet then counts the winnings: remembered love brings "such wealth" that the speaker would refuse to trade places with kings. From disgrace to riches, from sullen earth to heaven's gate, in six lines. That is what a volta can do.</p>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE TWO MOVEMENTS, MAPPED ONTO THE POEM</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Here is the full poem, annotated for its <strong>emotional argument</strong>. Read each section, then its margin note. Sonnet 18 argued in four stages; Sonnet 29 moves in two great movements, down and then up, with the volta as the hinge between them.</p>
+
+        <!-- ===== ONE core visual: the annotated full Sonnet 29, volta boldly marked ===== -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">SONNET 29 &middot; TWO MOVEMENTS AND A HINGE</div>
+            <div style="background: #FDFCF8; padding: 20px 22px;">
+
+                <div class="arg-row">
+                    <div class="arg-poem">
+                        <div style="font-size: 11px; color: #3B4E8C; letter-spacing: .1em; margin-bottom: 4px;">QUATRAIN 1 &middot; LINES 1&ndash;4 &middot; MOVEMENT 1 BEGINS</div>
+                        <div class="sonnet-line">When, in disgrace with Fortune and men's eyes,</div>
+                        <div class="sonnet-line">I all alone beweep my outcast state,</div>
+                        <div class="sonnet-line">And trouble deaf heaven with my bootless cries,</div>
+                        <div class="sonnet-line">And look upon myself, and curse my fate,</div>
+                    </div>
+                    <div class="arg-note"><div class="arg-kicker">MOVEMENT 1 &middot; THE PIT</div>Shame and isolation: out of favor, weeping alone, praying uselessly ("bootless") to a heaven that does not answer, cursing his own fate.</div>
+                </div>
+
+                <div class="arg-row">
+                    <div class="arg-poem">
+                        <div style="font-size: 11px; color: #3B4E8C; letter-spacing: .1em; margin-bottom: 4px;">QUATRAIN 2 &middot; LINES 5&ndash;8 &middot; THE ENVY CATALOG</div>
+                        <div class="sonnet-line">Wishing me like to one more rich in hope,</div>
+                        <div class="sonnet-line">Featured like him, like him with friends possess'd,</div>
+                        <div class="sonnet-line">Desiring this man's art, and that man's scope,</div>
+                        <div class="sonnet-line">With what I most enjoy contented least;</div>
+                    </div>
+                    <div class="arg-note"><div class="arg-kicker">MOVEMENT 1 &middot; DEEPER</div>Envy, stacked clause on clause: another man's hope, looks, friends, skill, and "scope" (range of opportunity). The piling makes the despair heavy enough to need a turn.</div>
+                </div>
+
+                <div class="arg-row">
+                    <div class="arg-poem" style="border-left: 4px solid #3B4E8C; background: #EEF1F8; border-radius: 8px; padding: 10px 14px;">
+                        <div style="font-size: 11px; color: #3B4E8C; letter-spacing: .1em; margin-bottom: 4px;">QUATRAIN 3 &middot; LINES 9&ndash;12 &middot; <span style="background:#3B4E8C; color:#fff; padding: 1px 8px; border-radius: 8px;">&#11014;&#65039; VOLTA AT "YET"</span></div>
+                        <div class="sonnet-line"><strong style="color:#3B4E8C;">Yet</strong> in these thoughts myself almost despising,</div>
+                        <div class="sonnet-line">Haply I think on thee, and then my state,</div>
+                        <div class="sonnet-line">Like to the lark at break of day arising</div>
+                        <div class="sonnet-line">From sullen earth, sings hymns at heaven's gate;</div>
+                    </div>
+                    <div class="arg-note"><div class="arg-kicker">MOVEMENT 2 &middot; THE RISE</div>The hinge. One word, "Yet," reverses the poem's direction, and "haply" (by chance) makes the rescue honest: the thought of the beloved arrives unbidden. The lark simile lifts the line from "sullen earth" to "heaven's gate" in a single breath.</div>
+                </div>
+
+                <div class="arg-row">
+                    <div class="arg-poem" style="border-left: 4px solid #C7922C; background: #FDF3E3; border-radius: 8px; padding: 10px 14px;">
+                        <div style="font-size: 11px; color: #8A6410; letter-spacing: .1em; margin-bottom: 4px;">COUPLET &middot; LINES 13&ndash;14 &middot; THE VERDICT</div>
+                        <div class="sonnet-line">For thy sweet love remember'd such wealth brings</div>
+                        <div class="sonnet-line">That then I scorn to change my state with kings.</div>
+                    </div>
+                    <div class="arg-note" style="background: #FDF3E3; border-color: #C7922C;"><div class="arg-kicker" style="color: #8A6410;">MOVEMENT 2 &middot; THE PAYOFF</div>The ruling, in the language of money the octave used for envy: remembered love is "wealth," and the once-outcast speaker now refuses to trade his "state" with kings. The same word, "state," has been transformed.</div>
+                </div>
+
+                <div style="font-size: 14px; color: #0e1c42; line-height: 1.6; margin-top: 8px;">Public-domain text (modernized). Original 1609 spelling: <a href="https://en.wikisource.org/wiki/Shakespeare%27s_Sonnets" style="color: #3B4E8C;">Wikisource: Shakespeare's Sonnets</a>.</div>
+            </div>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Why this volta feels earned</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Two details make Sonnet 29's turn more than a mood swing. First, the word "state" appears three times: the "outcast state" of line 2, the rising "state" of line 10, and the royal "state" of line 14, where the word also means a king's condition and grandeur. The poem measures its own progress by transforming one word. Second, follow the vertical geography. Movement 1 lives low and closed: an outcast on the ground, cries that cannot get through, eyes turned on the self. Movement 2 opens upward: a lark, break of day, hymns, heaven's gate. The lark simile is the engine of that rise, and it works because of where Shakespeare puts the verb. The bird arises "from sullen earth" (<strong>sullen</strong> means gloomy and heavy), and only at the end of the sentence does the music land: "sings hymns at heaven's gate." Read lines 11 and 12 aloud. The sentence itself withholds its song until the last possible moment, so the reader experiences the lift instead of being told about it. You will study that sentence-building trick, the withheld main clause, in this week's second grammar lesson.</p>
+
+        <!-- WIDGET: evaluative single-select rows (engine rotated from L1.02's flip cards) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; YOUR TURN &middot; ANSWER IN YOUR ORGANIZER FIRST, THEN CHECK</div>
+            <div class="widget-row" data-correct="b" data-hint="Find the line where the poem's direction reverses. Which single word announces that everything after it will move against everything before it?">
+                <div class="widget-row-prompt">1. Where is the volta of Sonnet 29, and what signals it?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Line 5, at "Wishing"</button>
+                    <button data-choice="b" data-fb="Right. 'Yet' at line 9 is the hinge: eight lines of despair before it, six lines of rising joy after it. Sonnet 18 turned on 'But' at the same line; the Shakespearean volta most often lives at line 9.">Line 9, at "Yet"</button>
+                    <button data-choice="c">Line 13, at "For"</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Track the word through lines 2, 10, and 14. What happens to its meaning as the poem moves?">
+                <div class="widget-row-prompt">2. The word "state" appears three times in the poem. What is Shakespeare doing with it?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Repeating it by accident; sonnets recycle words to fill the meter</button>
+                    <button data-choice="b">Using it to describe the government of England</button>
+                    <button data-choice="c" data-fb="Yes. The 'outcast state' of line 2 becomes the rising 'state' of line 10 and the kingly 'state' of line 14. One repeated word measures the whole distance the poem travels, from disgrace to something worth more than a crown.">Transforming one word so it measures the speaker's whole journey</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>volta</strong> &mdash; the turn: the moment a sonnet's argument reverses, qualifies, or opens into something new. &nbsp;&middot;&nbsp; <strong>despair</strong> &mdash; the complete loss of hope. &nbsp;&middot;&nbsp; <strong>scope</strong> &mdash; range of ability or opportunity; "that man's scope" is the room another man has to act and rise. &nbsp;&middot;&nbsp; <strong>sullen</strong> &mdash; gloomy, heavy, sunk in low spirits; the earth the lark leaves behind. &nbsp;&middot;&nbsp; <strong>bootless</strong> &mdash; useless, achieving nothing; "bootless cries" are prayers that bring no help. &nbsp;&middot;&nbsp; <strong>haply</strong> &mdash; by chance; the saving thought arrives uninvited.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>volta</em> is Italian for "turn," from Latin <em>volvere</em>, "to roll or turn" (the same root hiding in <em>revolve</em>). <em>Bootless</em> has nothing to do with boots: Old English <em>bot</em> meant "help, remedy, profit," so bootless cries are literally cries without remedy. <em>Despair</em> comes from Latin <em>de</em> + <em>sperare</em>, "away from hoping." And <em>haply</em> grows from <em>hap</em>, "luck," the same root as <em>happen</em> and <em>perhaps</em>. <strong>Copia (in your Organizer):</strong> take the sentence <em>"The team lost every game that season,"</em> and rewrite it three times: once using <em>despair</em>, once using <em>bootless</em>, and once so that something arrives <em>haply</em> and turns the sentence around at its own small volta.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Map the two movements in your Organizer</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Draw a line between lines 8 and 9 of Sonnet 29. Label the left side and the right side in your own words, and note the one word that swings the door. Your own sonnet will need a hinge like this; start thinking about where yours will fall.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Then continue through the week</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Grammar 2.01 names the stacking move you felt in lines 5&ndash;7. Lesson 2.02 flips the week's mood with Sonnet 130, a love poem built out of insults. VR Activity 2.01 has you build Sonnet 29's emotional map in space. And on Friday, Project Feeder 2 grows your three lines into your sonnet's first quatrain.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A volta is only as powerful as the pressure built before it. Sonnet 29 earns its joy by spending eight full lines constructing the despair, wish by wish, so that one small word, "Yet," can release everything at once. When you draft your own sonnet, remember: build the weight first. The turn does the lifting only if there is something heavy to lift.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.01 &middot; Sonnet 29: The Volta</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
