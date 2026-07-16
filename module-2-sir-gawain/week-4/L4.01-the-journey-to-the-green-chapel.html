@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 4.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 13px; color: #0e1c42;">Honor and Duty in Sir Gawain</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 4.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Sir Gawain and the Green Knight (trans. Weston)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What does it mean to be truly honorable?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 4.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Journey to the Green Chapel</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">If someone offered you a safe, secret way out of keeping your word, and swore no one would ever know, would you take it?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Fitt IV opens with Gawain riding toward almost certain death. On the way, his guide makes him an offer that is harder to refuse than any monster. Today you will read fear as a <strong>moral</strong> event, not just a feeling, and watch how the poet turns a lonely ride into the real test of the poem.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how the poet presents fear as a test of character, not merely an emotion.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> analyze the guide's offer and why Gawain refuses it.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use five new words precisely: <em>execration, dissemble, remiss, notorious, indignant.</em></div></div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module Organizer (the Word document for Module 2 in OneDrive)</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">The opening of <strong>Fitt IV</strong> in the Weston translation (<a href="https://d.lib.rochester.edu/camelot/text/weston-sir-gawain-and-the-green-knight.html" style="color:#3B4E8C;">read here</a>)</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">About 35 minutes and something to write with</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; FEAR AS A MORAL EVENT</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Think of a time you were genuinely afraid of doing something you had promised to do. What did the fear tempt you to do?</div>
+            <div class="widget-options">
+                <button data-response="That is honest. Fear often whispers a reason to quit that sounds sensible in the moment. Watch how Gawain hears exactly that voice today.">It tempted me to back out</button>
+                <button data-response="Right. Some people push through and find the fear shrinks once they move. Gawain tries to be that person, and the poem tests whether he can.">It tempted me to rush and get it over with</button>
+                <button data-response="Interesting. Looking for a loophole is its own kind of temptation, and it is exactly the offer Gawain's guide will make him. Hold that thought.">It tempted me to find a loophole</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A year of dread, then the ride</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A year ago Gawain struck the Green Knight's head from his shoulders, and the Green Knight picked it up and rode away, promising to return the blow. Now the year is spent. On New Year's morning Gawain arms himself, mounts his horse Gringolet, and rides out into a frozen landscape to find the Green Chapel and kneel for a stroke he believes will kill him. Notice what the poet does here: he does not hide Gawain's fear or pretend a true knight feels none. Fear is present the whole way. The question the poem asks is not <em>whether</em> Gawain is afraid. It is <em>what he does</em> while afraid. That is what turns fear from a feeling into a moral event: a place where character is decided.</p>
+
+        <!-- ONE core visual: labeled decision diagram of the guide's offer -->
+        <figure style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">THE GUIDE'S OFFER &middot; TWO ROADS FROM ONE MOMENT OF FEAR</div>
+            <div style="background: #F4F6FA; padding: 22px 18px;">
+                <div style="text-align:center; margin-bottom: 16px;"><div style="display:inline-block; background:#0E1C42; color:#fff; border-radius: 8px; padding: 10px 18px; font-size: 15px;">Gawain, afraid, at the fork in the road</div></div>
+                <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; align-items: stretch;">
+                    <!-- Left road: the offer -->
+                    <div style="flex: 1; min-width: 250px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #C0392B; border-radius: 8px; padding: 16px;">
+                        <div style="font-size: 13px; color: #8A1F16; font-weight: bold; margin-bottom: 10px;">ROAD A &middot; THE GUIDE'S OFFER</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.6;">"Flee now. The man at the chapel is the <strong>worst on earth</strong>. Ride away by another path, and I will <strong>swear I never saw you</strong>."</div>
+                        <div style="font-size: 13px; color: #1a2340; line-height: 1.55; margin-top: 10px; border-top: 1px dashed #D0D9E8; padding-top: 8px;"><strong>What it costs:</strong> nothing anyone would see. <strong>What it breaks:</strong> the word Gawain gave, and the honor no one is watching.</div>
+                    </div>
+                    <!-- Right road: keep the covenant -->
+                    <div style="flex: 1; min-width: 250px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #C7922C; border-radius: 8px; padding: 16px;">
+                        <div style="font-size: 13px; color: #8A6410; font-weight: bold; margin-bottom: 10px;">ROAD B &middot; KEEP THE COVENANT</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.6;">Ride on to the chapel and kneel for the blow, "<strong>whether for weal or for woe as fate may have it</strong>."</div>
+                        <div style="font-size: 13px; color: #1a2340; line-height: 1.55; margin-top: 10px; border-top: 1px dashed #D0D9E8; padding-top: 8px;"><strong>What it costs:</strong> possibly his life. <strong>What it keeps:</strong> his word, and the honor he wears on his shield.</div>
+                    </div>
+                </div>
+                <div style="font-size: 13px; color: #0e1c42; text-align: center; margin-top: 16px; line-height: 1.6;">The guide is a quieter enemy than any giant. He offers Gawain a way to be safe <em>and</em> feel blameless. Gawain chooses Road B.</div>
+            </div>
+            <figcaption style="background: #FFFFFF; padding: 12px 16px;">
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">The guide warns that the chapel's master "is the worst on earth, for he is strong and fierce, and loveth to deal mighty blows," and promises to keep silent if Gawain flees. Gawain answers that he will go on "whether for weal or for woe as fate may have it." A knight who fled to save his skin would keep his life but lose the one thing the whole poem is about.</div>
+                <div style="font-size: 12px; color: #0e1c42; margin-top: 8px;">Quotations: Sir Gawain and the Green Knight, trans. Jessie L. Weston (1898), Fitt IV. Public domain.</div>
+            </figcaption>
+        </figure>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; WHY THE OFFER IS THE REAL TEST</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">A monster tests your strength. The guide tests your honesty when no one is looking. His offer removes every external consequence: no witnesses, no shame, no report carried home. Everything that usually keeps a person honorable is stripped away, and what remains is only Gawain's own sense of who he is. This is why the ride, not the axe, is the poem's turning point. Honor that depends on being watched is not honor. It is reputation. The poem quietly asks whether Gawain's honor is the real thing.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Gawain refuses. He tells the guide he would be a <em>coward knight</em> if he fled, and that he trusts God to do with him as He will. He rides on to the chapel, which turns out to be no church at all: he finds "a mound on a level space of land by a bank beside the stream where it ran swiftly, the water bubbled within as if boiling." He hears a blade being whetted on a grindstone across the water. Keep this moment in view: Gawain has already passed the harder test before the axe is ever raised. Hold that thought for Lesson 4.03, when he judges himself far more harshly than this ride would suggest.</p>
+
+        <!-- WIDGET: evaluative single-select (recolored); vary correct indices -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="c" data-hint="Think about what the guide removes: witnesses, consequences, and shame. What is left to keep Gawain honest?">
+                <div class="widget-row-prompt">1. Why is the guide's offer a harder test than the Green Knight himself?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Because the guide is stronger than the Green Knight</button>
+                    <button data-choice="b">Because Gawain is too tired to fight</button>
+                    <button data-choice="c" data-fb="Yes. The offer removes every witness and consequence, so only Gawain's own honor is left to decide his choice.">Because it lets Gawain escape with no one ever knowing, so only his own honor can stop him</button>
+                    <button data-choice="d">Because the guide knows the way and Gawain does not</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Re-read how Gawain describes what he would become if he ran. He names the fault directly.">
+                <div class="widget-row-prompt">2. When Gawain refuses to flee, he says fleeing would make him &mdash;</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Correct. Gawain says he would be a coward knight, and he will keep his word whatever fate brings.">a coward knight</button>
+                    <button data-choice="b">a wiser man</button>
+                    <button data-choice="c">an outlaw</button>
+                    <button data-choice="d">a stranger to Camelot</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>execration</strong> &mdash; a curse; the act of cursing something bitterly. &nbsp;&middot;&nbsp; <strong>dissemble</strong> &mdash; to hide one's true feelings or intentions; to disguise. &nbsp;&middot;&nbsp; <strong>remiss</strong> &mdash; careless or negligent in a duty. &nbsp;&middot;&nbsp; <strong>notorious</strong> &mdash; widely known, especially for something bad. &nbsp;&middot;&nbsp; <strong>indignant</strong> &mdash; angry at something felt to be unfair or unworthy.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7; margin-top: 10px;"><strong>Word origins:</strong> <em>dissemble</em> comes from Latin <em>dissimulare</em>, "to hide, to make unlike," built from <em>simulare</em>, "to make like" (the root of <em>simulate</em>). To dissemble is to make yourself <em>unlike</em> what you truly are. <em>Notorious</em> comes from Latin <em>notus</em>, "known"; the same root gives us <em>note</em> and <em>notice</em>. The Green Knight is <em>notorious</em> precisely because everyone has taken notice of him.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7; margin-top: 10px;"><strong>Copia (in your Organizer):</strong> take the sentence <em>"Gawain was afraid, but he rode on."</em> Rewrite it three ways: once substituting a stronger synonym for <em>afraid</em>; once changing the syntax so the sentence <em>begins</em> with a subordinate clause; once shifting the register to sound like a formal chronicle. Work one Word Study term into at least one version.</div>
+        </div>
+
+        <!-- AI callout (red frame) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND MORAL READING</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can define "moral courage" or list themes in the poem in seconds, and that can help you check a fact. It cannot decide for you whether Gawain's choice on that lonely road counts as brave, or what you yourself would do in his place. That judgment is the work of this lesson, and it stays yours.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Add this week's Word Study terms and copia to your Organizer</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Record <em>execration, dissemble, remiss, notorious,</em> and <em>indignant</em>, then complete the copia exercise above. You will meet <em>dissemble</em> again in Lesson 4.03, when you learn who the lord of the castle really was.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The poem does not ask whether Gawain feels fear. It asks what he does with it. On the ride to the Green Chapel, offered a safe and secret escape, he keeps his word. Remember that when Gawain later condemns himself: the poem has already shown you a braver man than he will admit to being.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 4.01 &middot; The Journey to the Green Chapel</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
