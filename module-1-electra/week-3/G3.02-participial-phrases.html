@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Grammar 3.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Grammar 3.02 &middot; Week 3</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">GRAMMAR FOCUS</div>
+        <div style="font-size: 17px; color: #0e1c42;">Participial phrases</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Electra, Sophocles</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">GRAMMAR 3.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Participial Phrases</div>
+        <div style="font-size: 16px; color: #0e1c42;">Grammar Lesson</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127919; TODAY YOU WILL BE ABLE TO&hellip;</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Spot a participial phrase, tell what noun it describes, punctuate it correctly, and use one to combine two short sentences of your own about the play, while avoiding the dangling modifier.</div>
+    </div>
+
+    <!-- Warm-up (reflect widget) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; READ BOTH ALOUD &middot; NO WRONG ANSWER</div>
+            <div class="widget-question"><strong>A.</strong> Electra held the urn. She wept over her brother's ashes. &nbsp;&nbsp;|&nbsp;&nbsp; <strong>B.</strong> Holding the urn, Electra wept over her brother's ashes.<br>Both are correct. What did version B do to the two sentences?</div>
+            <div class="widget-options">
+                <button data-response="Right. Version B folded 'held the urn' into a describing phrase, 'Holding the urn,' and joined the two sentences into one smoother line. That describing phrase is today's focus.">It combined them into one smoother sentence</button>
+                <button data-response="Close: it does read faster, but the real change is that 'held the urn' became a describing phrase ('Holding the urn') attached to Electra. That is a participial phrase.">It just made it shorter</button>
+                <button data-response="Look again: version B keeps both ideas but folds one into a describing phrase, 'Holding the urn.' Nothing was dropped, it was combined.">It left one idea out</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- The Lesson -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 12px 0;">A <strong>participle</strong> is a verb form used as an adjective. Present participles end in <em>-ing</em> (<em>weeping, waiting, hearing</em>); past participles usually end in <em>-ed, -en,</em> or an irregular form (<em>cheated, driven, torn</em>). A <strong>participial phrase</strong> is a participle plus the words that go with it, and the whole phrase acts like one adjective describing a noun: in <em>Holding the urn, Electra wept,</em> the phrase <em>Holding the urn</em> describes Electra. These phrases let you combine ideas gracefully and show what a character is doing while something else happens. Two punctuation habits will carry you far. First, when a participial phrase opens a sentence, set it off with a comma: <em>Believing the report, Clytaemnestra rejoiced.</em> Second, and this is the trap, the phrase must sit next to the noun it actually describes, or it "dangles." <em>Believing the report, the news brought relief</em> is wrong, because the news did not believe anything. Keep the doer of the participle right beside it, and the phrase will point where you mean.</p>
+
+        <!-- Pattern card (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">ONE RULE TO REMEMBER</div>
+            <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;">Opening participial phrase &rarr; comma &rarr; <strong>the noun it describes</strong>.<br><em>Disguised as a stranger, the Tutor told his false story.</em> (The Tutor is disguised, so the phrase points to the right noun.)</div>
+        </div>
+
+        <!-- ONE visual: navy chalkboard of participial phrase examples (phrase in gold) -->
+        <div style="background: #14213f; border: 10px solid #3a2c1a; border-radius: 10px; padding: 22px 24px; margin: 18px 0; box-shadow: inset 0 0 40px rgba(0,0,0,0.4);">
+            <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .18em; margin-bottom: 16px; text-align: center;">ON THE BOARD &middot; PARTICIPIAL PHRASES &middot; EACH DESCRIBES A NOUN</div>
+            <div style="font-size: 19px; color: #f4f1e8; line-height: 2.2;">
+                <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">Grieving for her father</span><span style="color:#8ea2c9;">,</span> Electra refuses her mother's rule.<br>
+                <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">Driven by love for Aegisthus</span><span style="color:#8ea2c9;">,</span> Clytaemnestra struck down her husband.<br>
+                The Chorus<span style="color:#8ea2c9;">,</span> <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">moved by Electra's suffering</span><span style="color:#8ea2c9;">,</span> offers her comfort.<br>
+                <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">Thrown from his chariot</span><span style="color:#8ea2c9;">,</span> the runner in the false report is said to be crushed.
+            </div>
+            <div style="font-size: 14px; color: #cdd6ea; margin-top: 16px; line-height: 1.6;">The <span style="color:#e6b955;">gold participial phrase</span> sits right beside the noun it describes. Present participles end in <em>-ing</em> (grieving, moved is past); the last two use past participles (driven, thrown).</div>
+        </div>
+
+        <!-- Evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; YOUR TURN &middot; CHOOSE THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="c" data-hint="Find the describing phrase built on a participle, then ask which noun it points to.">
+                <div class="widget-row-prompt">1. What noun does the participial phrase describe? &mdash; <em>Claiming Justice as her ally, Clytaemnestra defends the killing.</em></div>
+                <div class="widget-options">
+                    <button data-choice="a">Justice</button>
+                    <button data-choice="b">the killing</button>
+                    <button data-choice="c" data-fb="Yes. 'Claiming Justice as her ally' describes Clytaemnestra, the one doing the claiming, and it sits right next to her.">Clytaemnestra</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="A dangling modifier names a doer that cannot actually perform the participle. Which sentence does that?">
+                <div class="widget-row-prompt">2. Which sentence has a dangling modifier (the phrase points to the wrong noun)?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Right. 'the news' cannot believe anything, so the opening phrase dangles. Put the real believer next to it: 'Believing the report, Clytaemnestra felt relief.'">Believing the report, the news brought relief.</button>
+                    <button data-choice="b">Believing the report, Clytaemnestra felt relief.</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Identify & Practice (instruction-before-reveal) -->
+        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#9998; MORE PRACTICE (IN YOUR NOTEBOOK FIRST)</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-bottom: 10px;">In each sentence, find the participial phrase and name the noun it describes. Write your answers before you open the check.</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 2;">
+                1. Grieving for her father, Electra refuses to accept her mother's rule.<br>
+                2. The Chorus, moved by Electra's suffering, offers her comfort.<br>
+                3. Thrown from his chariot, the runner in the false report was said to be crushed.
+            </div>
+            <details style="border: 1px solid #D0D9E8; border-left: 4px solid #3B4E8C; border-radius: 6px; padding: 12px 16px; margin-top: 14px;">
+                <summary style="font-size: 16px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #3B4E8C;">&#9654;</span>&nbsp; Write your answers, then check</summary>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.8; margin-top: 10px; padding-top: 10px; border-top: 1px solid #EEF1F8;">
+                    1. <em>Grieving for her father</em> &rarr; describes <strong>Electra</strong> (comma after the opening phrase).<br>
+                    2. <em>moved by Electra's suffering</em> &rarr; describes <strong>the Chorus</strong> (set off with commas).<br>
+                    3. <em>Thrown from his chariot</em> &rarr; describes <strong>the runner</strong> (past participle "thrown").
+                </div>
+            </details>
+        </div>
+    </div>
+
+    <!-- Use it -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#10145;&#65039; NOW WRITE YOUR OWN (IN YOUR ORGANIZER)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Take <strong>two short sentences</strong> about this week's reading and combine them by turning one into an opening participial phrase (remember the comma). Then write <strong>one more</strong> sentence with the participial phrase in the middle. Check each one: does the phrase sit right next to the noun it describes, with no dangling modifier?</p>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A participial phrase is one describing phrase built on a verb. It combines ideas gracefully, but only if it sits right beside the noun it describes. Keep the doer next to the phrase and you will never dangle a modifier.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Grammar 3.02 &middot; Participial Phrases</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
