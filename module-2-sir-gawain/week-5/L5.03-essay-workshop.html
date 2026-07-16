@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 5.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 13px; color: #0e1c42;">Honor and Duty in <em>Sir Gawain</em></div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 5.03</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">FOCUS</div>
+        <div style="font-size: 17px; color: #0e1c42;">Essay workshop &middot; the disputatio</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE QUESTION</div>
+        <div style="font-size: 16px; color: #0e1c42;">What does it mean to be truly honorable?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 5.03</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Essay Workshop: Drafting and Revising the Disputatio</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">You have the parts. How do you assemble them into one honest argument that answers its own objections?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Across four weeks you drafted a position, gathered evidence, wrote objections, and built an opening. Today you assemble the whole <strong>disputatio</strong>: state the question, raise the strongest objections, answer them, and defend your verdict. You will learn the two hardest moves, the <strong>respondeo</strong> and the <strong>replies</strong>, and use peer-review questions to sharpen your draft.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> name the parts of a disputatio and put my drafts in order.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> write a respondeo that reasons from evidence and replies that answer objections fairly.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use the peer-review questions to revise my draft before I submit.</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE SHAPE OF A DISPUTATIO</div>
+
+        <!-- WIDGET: reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Which feels more convincing when someone argues with you?</div>
+            <div class="widget-options">
+                <button data-response="Many readers agree. An argument that first states your side fairly, then answers it, is harder to dismiss. That is exactly what a disputatio does.">Someone who first says my view fairly, then explains why they still disagree</button>
+                <button data-response="It can feel strong in the moment, but ignoring your view often just makes you dig in. The disputatio takes the other route on purpose.">Someone who just repeats their own view louder</button>
+                <button data-response="Honesty is disarming. Naming the strongest objection before answering it is a sign of confidence, not weakness. Build your essay that way.">Someone who admits the strongest point against them, then answers it</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 14px 0 12px 0;">A <strong>disputatio</strong> is the medieval scholar&rsquo;s way of chasing the truth of a hard question. It does not hide from disagreement; it invites it in, states it at full strength, and then answers it. Study the structure below. You have already drafted most of these parts across Weeks 1 to 4; today you order and connect them.</p>
+
+        <!-- ONE core visual: disputatio structure diagram -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 10px; overflow: hidden; margin: 6px 0 4px;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">THE FIVE MOVES OF A DISPUTATIO &middot; IN ORDER</div>
+            <div style="padding: 18px 20px; background: #FFFFFF;">
+                <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px;"><div style="min-width: 30px; height: 30px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="background: #EEF1F8; border-radius: 6px; padding: 10px 14px; flex: 1;"><span style="color: #0e1c42; font-weight: bold;">Quaestio (the question).</span> <span style="color: #1a2340;">Open with your alliterative catalog paragraph, then state the disputed question: <em>Is Sir Gawain a man of honor?</em> End the paragraph with your thesis, your direct answer.</span></div></div>
+                <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px;"><div style="min-width: 30px; height: 30px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="background: #FDF3E3; border-radius: 6px; padding: 10px 14px; flex: 1;"><span style="color: #0e1c42; font-weight: bold;">Objectiones (objections).</span> <span style="color: #1a2340;">State at least two objections to your thesis, each in its strongest, fairest form. Argue against yourself here.</span></div></div>
+                <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px;"><div style="min-width: 30px; height: 30px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="background: #EEF1F8; border-radius: 6px; padding: 10px 14px; flex: 1;"><span style="color: #0e1c42; font-weight: bold;">Sed contra (on the contrary).</span> <span style="color: #1a2340;">Anchor your side with one passage or structural observation from the poem that grounds your argument.</span></div></div>
+                <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px;"><div style="min-width: 30px; height: 30px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div><div style="background: #FDF3E3; border-radius: 6px; padding: 10px 14px; flex: 1;"><span style="color: #0e1c42; font-weight: bold;">Respondeo (I answer that).</span> <span style="color: #1a2340;">The heart of the essay, four to six paragraphs. Reason from your three pieces of evidence to your verdict, drawing on all four Fitts.</span></div></div>
+                <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 30px; height: 30px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">5</div><div style="background: #EEF1F8; border-radius: 6px; padding: 10px 14px; flex: 1;"><span style="color: #0e1c42; font-weight: bold;">Replies to objections.</span> <span style="color: #1a2340;">Return to each objection and answer it specifically and respectfully. Show why it falls short, without pretending it was never strong.</span></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ PART 2: Word Study ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE VOCABULARY OF ARGUMENT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">This week&rsquo;s five words are the tools of a good disputatio. You will use them to talk <em>about</em> your argument, and to make the moves they name.</p>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 0 0 14px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">&#128218; WORD STUDY &middot; WEEK 5</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.9;">
+                <strong>epitome</strong> &mdash; a perfect example of a quality; the thing that sums it up. <em>Gawain is meant to be the epitome of the chivalric knight.</em><br>
+                <strong>concession</strong> &mdash; admitting a point your opponent gets right, before answering it. <em>A good reply often opens with a concession.</em><br>
+                <strong>refutation</strong> &mdash; proving an objection wrong or incomplete. <em>Each reply is a small refutation.</em><br>
+                <strong>equivocation</strong> &mdash; using a word in two different senses to slide past a problem; a move to avoid. <em>Do not let &ldquo;honor&rdquo; quietly change meaning mid-essay; that is equivocation.</em><br>
+                <strong>exemplar</strong> &mdash; a model held up for imitation. <em>The poem offers Gawain as an exemplar, then tests him.</em>
+            </div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>epitome</em> comes from Greek roots meaning &ldquo;to cut short,&rdquo; a summing-up in one figure; <em>exemplar</em> and <em>example</em> share the Latin <em>exemplum</em>, &ldquo;a sample.&rdquo;</div>
+        </div>
+
+        <!-- Copia -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 16px 20px;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#9998; COPIA PRACTICE (IN YOUR ORGANIZER)</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.7;">Take the sentence <em>&ldquo;Gawain is the epitome of a knight.&rdquo;</em> Rewrite it three ways: (1) substitute a synonym for <em>epitome</em>; (2) alter the syntax so the sentence opens differently; (3) change the register so it sounds formal enough for your essay&rsquo;s opening. Keep the meaning; change the shape.</div>
+        </div>
+    </div>
+
+    <!-- ============ PART 3: respondeo + replies close-up ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE TWO HARDEST MOVES</div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 4px 0 8px 0;">Writing the respondeo</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">The respondeo is not a summary of the plot. It is a chain of reasoning. A strong pattern for each paragraph: <strong>claim</strong> (a step in your argument), <strong>evidence</strong> (a quoted or cited moment), <strong>reasoning</strong> (why that evidence proves the claim), and a <strong>link</strong> to the next step. Do this three or four times and your verdict arrives earned, not announced.</p>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 14px 0 8px 0;">Writing a reply</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A reply is a small refutation, and the best ones begin with a <strong>concession</strong>. First grant what the objection gets right; then show what it misses. That order proves you are honest and still convinces. Watch the difference:</p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 6px;">
+            <div style="flex: 1; min-width: 240px; background: #FDECEC; border: 1px solid #E7B7B2; border-top: 3px solid #C0392B; border-radius: 8px; padding: 14px 16px;">
+                <div style="font-size: 12px; color: #8A1F16; letter-spacing: .06em; margin-bottom: 6px;">WEAK REPLY (JUST CONTRADICTS)</div>
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.55; font-style: italic;">&ldquo;This objection is wrong. Gawain is clearly honorable and anyone who says otherwise did not read the poem.&rdquo;</div>
+            </div>
+            <div style="flex: 1; min-width: 240px; background: #FDF3E3; border: 1px solid #E6B955; border-top: 3px solid #C7922C; border-radius: 8px; padding: 14px 16px;">
+                <div style="font-size: 12px; color: #8A6410; letter-spacing: .06em; margin-bottom: 6px;">STRONG REPLY (CONCEDES, THEN REFUTES)</div>
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.55; font-style: italic;">&ldquo;It is true that Gawain hides the girdle, and that is a real breach of the exchange. But a single lapse under fear of death does not cancel the four virtues the pentangle names; Bertilak himself faults him only &lsquo;a little.&rsquo;&rdquo;</div>
+            </div>
+        </div>
+
+        <!-- WIDGET: evaluative single-select (vocab + argument) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="c" data-hint="Which word names admitting a point the other side gets right?">
+                <div class="widget-row-prompt">1. Opening a reply by granting what the objection gets right is called a&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a">refutation</button>
+                    <button data-choice="b">equivocation</button>
+                    <button data-choice="c" data-fb="Yes. A concession admits a valid point before you answer it.">concession</button>
+                    <button data-choice="d">quaestio</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Which word warns against letting a key term secretly change meaning?">
+                <div class="widget-row-prompt">2. Letting the word &ldquo;honor&rdquo; mean one thing early and a different thing later is&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Right. Equivocation slides between two senses of a word to dodge a problem. Define your terms and keep them steady.">equivocation</button>
+                    <button data-choice="b">concession</button>
+                    <button data-choice="c">exemplar</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Which paragraph reasons from evidence to a verdict, rather than raising or answering objections?">
+                <div class="widget-row-prompt">3. Which section is the &ldquo;I answer that&rdquo; core of the essay?</div>
+                <div class="widget-options">
+                    <button data-choice="a">the objectiones</button>
+                    <button data-choice="b" data-fb="Yes. The respondeo is where you reason from your evidence to your verdict.">the respondeo</button>
+                    <button data-choice="c">the replies</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ============ PART 4: peer review ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#129309; PART 4 &middot; PEER-REVIEW QUESTIONS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Trade drafts with a partner (or read your own aloud as if it were a stranger&rsquo;s). Answer these six questions in writing. Point to a specific line for each answer; &ldquo;it&rsquo;s good&rdquo; is not feedback.</p>
+        <div style="background: #EEF1F8; border-radius: 8px; padding: 16px 20px;">
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.95;">
+                &#9744; <strong>Thesis:</strong> Underline the thesis. Does it give a clear, direct answer to the quaestio? Could someone disagree with it?<br>
+                &#9744; <strong>Objections:</strong> Are there at least two, and is each stated fairly, at full strength? Or are they &ldquo;straw&rdquo; versions that are easy to knock down?<br>
+                &#9744; <strong>Evidence:</strong> Is each major claim backed by a specific quoted or cited moment from the poem? Circle any claim with no evidence.<br>
+                &#9744; <strong>Reasoning:</strong> After each quote, is there a sentence explaining <em>why</em> it proves the claim? Or does the quote just sit there?<br>
+                &#9744; <strong>Replies:</strong> Does each reply begin with a concession and then refute? Does any reply just repeat the thesis louder?<br>
+                &#9744; <strong>Terms:</strong> Is &ldquo;honor&rdquo; defined once and used consistently? Flag any equivocation.
+            </div>
+        </div>
+
+        <!-- AI callout (red frame) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND REVISION</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">A grammar or spell checker (some are AI-powered) can flag typos and clumsy sentences, and that is a fair use. But an AI cannot decide whether your objection is really the strongest one, or whether your reply actually answers it. Those are reasoning judgments, and they are what this assignment grades. Keep the thinking yours.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 12px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Assemble and revise your full draft</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Combine your four weekly drafts into one document in the disputatio order above. Write your respondeo and your replies. Then run the peer-review questions and revise.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Submit through the Module Project assignment</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Your finished essay is turned in on the <em>Disputatio Essay</em> assignment page (named <strong>LastName_FirstName_GawainDisputatio_ELA9_Final</strong>). That page has the full directions and rubric.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A disputatio wins by fairness, not volume. State the other side at full strength, concede what is true, and then show why your verdict still stands. That is what it means to argue honorably about honor.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 5.03 &middot; Essay Workshop</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
