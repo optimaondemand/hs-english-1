@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 1.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+
+    /* Annotated sonnet visual */
+    .sonnet-line { display: flex; align-items: baseline; gap: 10px; font-family: Georgia, "Times New Roman", serif; font-size: 17px; color: #1a2340; line-height: 1.85; }
+    .sonnet-line .rhyme { margin-left: auto; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13px; font-weight: bold; color: #C7922C; min-width: 18px; text-align: center; }
+    .sonnet-line .lnum { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; color: #3B4E8C; min-width: 20px; text-align: right; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 4</div>
+        <div style="font-size: 13px; color: #0e1c42;">Love, Time, and the Sonnet</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 1.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Sonnet 18, William Shakespeare</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">Can a poem defeat time?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 1.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">What Is a Sonnet?</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Why would a poet accept a cage of fourteen lines, ten syllables each, with the rhymes decided in advance?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">This module you will read four of Shakespeare's sonnets, and by Week 3 you will have written one of your own. Today you learn the machine itself: fourteen lines of <strong>iambic pentameter</strong>, three <strong>quatrains</strong>, a closing <strong>couplet</strong>, and the hidden hinge called the <strong>volta</strong>. Then you will watch all of it working in Sonnet 18.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe the structure of a Shakespearean sonnet: fourteen lines, three quatrains, a couplet, and the rhyme scheme ABAB CDCD EFEF GG.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define iambic pentameter and hear it in a line read aloud.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what a volta is and locate the quatrains, volta, and couplet in Sonnet 18.</div></div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module Organizer (the Word document for this module in OneDrive)</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">About 35 minutes and something to write with</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A LITTLE SONG WITH STRICT RULES</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Think of a song whose final seconds change how the whole song feels: a last chord, a sudden silence, one repeated line. What do great endings do to everything that came before them?</div>
+            <div class="widget-options">
+                <button data-response="Good instinct. A strong ending re-frames the whole piece; you hear the earlier parts differently once you know where they were going. Hold that idea: the sonnet saves its strongest two lines for last.">They re-frame everything before them</button>
+                <button data-response="True, some endings simply stop. Watch whether Shakespeare's endings ever just stop, or whether the last two lines always do a job. That closing pair of lines is the part of the form we will study today.">Some songs just stop</button>
+                <button data-response="Then today is a good day to start noticing. The sonnet is a form built around its ending: everything in the first twelve lines exists to set up the last two.">I have never paid attention to endings</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Where the sonnet came from</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The sonnet was not Shakespeare's invention. It began in 13th-century Sicily, was perfected by the Italian poet Petrarch in his 14th-century <em>Canzoniere</em> (a sequence of 366 poems addressed to a woman named Laura), and was carried to England by the diplomat and poet Sir Thomas Wyatt in the 1530s. By the 1590s, when Shakespeare wrote his sequence of 154 sonnets, writing sonnets was a competitive, prestigious literary game in England: poets vied to sound surprising while obeying the same tight rules everyone knew. The older <strong>Petrarchan</strong> (Italian) form splits its fourteen lines into an eight-line <strong>octave</strong> that poses a problem and a six-line <strong>sestet</strong> that answers it. Shakespeare worked in a different architecture, the one we now call the <strong>Shakespearean</strong> (English) sonnet: three <strong>quatrains</strong>, each a four-line unit with alternating rhymes, followed by a closing two-line <strong>couplet</strong>. The full rhyme scheme is ABAB CDCD EFEF GG.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A sonnet is not simply a short poem. It is a machine for making an argument, and its shape decides how the argument can unfold. The three quatrains approach a subject from three angles, building pressure stanza by stanza; the couplet then delivers the verdict in two compressed, memorable lines. The hinge between building and delivering is the <strong>volta</strong>, an Italian word meaning "turn": the moment where the poem pivots from developing its situation to resolving it. In the Petrarchan form the volta usually falls after line 8; in the Shakespearean form it most often arrives at line 9, or at the couplet itself.</p>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The heartbeat: iambic pentameter</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Every line of a sonnet runs on the same rhythm. An <strong>iamb</strong> is one unstressed syllable followed by one stressed syllable: da-DUM. <strong>Pentameter</strong> means five of them per line: da-DUM da-DUM da-DUM da-DUM da-DUM, ten syllables in all. Say the first line of Sonnet 18 aloud and feel where the weight falls: "Shall I com-PARE thee TO a SUM-mer's DAY?" That steady beat is close to the natural rhythm of spoken English, which is why a sonnet can sound like a person thinking out loud even while it obeys strict rules. You will write in this rhythm yourself this Friday.</p>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE WHOLE MACHINE, LABELED: SONNET 18</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Here is Sonnet 18 in full, with the architecture marked. Read it aloud once straight through before you study the labels. Then read it again, watching the rhyme letters in gold and the turn at line 9.</p>
+
+        <!-- ===== ONE core visual: the annotated full sonnet ===== -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">SONNET 18 &middot; WILLIAM SHAKESPEARE &middot; THE ARCHITECTURE, ANNOTATED</div>
+            <div style="background: #FDFCF8; padding: 20px 22px;">
+
+                <!-- Quatrain 1 -->
+                <div style="display: flex; gap: 14px; margin-bottom: 4px;">
+                    <div style="border-left: 4px solid #3B4E8C; border-radius: 2px; padding-left: 12px; flex: 1;">
+                        <div style="font-size: 11px; color: #3B4E8C; letter-spacing: .1em; margin-bottom: 4px;">QUATRAIN 1 &middot; LINES 1&ndash;4 &middot; PROPOSES THE COMPARISON</div>
+                        <div class="sonnet-line"><span class="lnum">1</span>Shall I compare thee to a summer's day?<span class="rhyme">A</span></div>
+                        <div class="sonnet-line"><span class="lnum">2</span>Thou art more lovely and more temperate:<span class="rhyme">B</span></div>
+                        <div class="sonnet-line"><span class="lnum">3</span>Rough winds do shake the darling buds of May,<span class="rhyme">A</span></div>
+                        <div class="sonnet-line"><span class="lnum">4</span>And summer's lease hath all too short a date:<span class="rhyme">B</span></div>
+                    </div>
+                </div>
+
+                <!-- Quatrain 2 -->
+                <div style="display: flex; gap: 14px; margin: 10px 0 4px;">
+                    <div style="border-left: 4px solid #3B4E8C; border-radius: 2px; padding-left: 12px; flex: 1;">
+                        <div style="font-size: 11px; color: #3B4E8C; letter-spacing: .1em; margin-bottom: 4px;">QUATRAIN 2 &middot; LINES 5&ndash;8 &middot; TESTS THE COMPARISON</div>
+                        <div class="sonnet-line"><span class="lnum">5</span>Sometime too hot the eye of heaven shines,<span class="rhyme">C</span></div>
+                        <div class="sonnet-line"><span class="lnum">6</span>And often is his gold complexion dimm'd;<span class="rhyme">D</span></div>
+                        <div class="sonnet-line"><span class="lnum">7</span>And every fair from fair sometime declines,<span class="rhyme">C</span></div>
+                        <div class="sonnet-line"><span class="lnum">8</span>By chance, or nature's changing course, untrimm'd;<span class="rhyme">D</span></div>
+                    </div>
+                </div>
+
+                <!-- Volta marker -->
+                <div style="display: flex; align-items: center; gap: 10px; margin: 12px 0;">
+                    <div style="flex: 1; height: 2px; background: #3B4E8C;"></div>
+                    <div style="background: #3B4E8C; color: #ffffff; font-size: 12px; letter-spacing: .12em; padding: 4px 14px; border-radius: 12px;">&#8635; THE VOLTA &middot; THE TURN ARRIVES WITH "BUT"</div>
+                    <div style="flex: 1; height: 2px; background: #3B4E8C;"></div>
+                </div>
+
+                <!-- Quatrain 3 -->
+                <div style="display: flex; gap: 14px; margin-bottom: 4px;">
+                    <div style="border-left: 4px solid #3B4E8C; border-radius: 2px; padding-left: 12px; flex: 1;">
+                        <div style="font-size: 11px; color: #3B4E8C; letter-spacing: .1em; margin-bottom: 4px;">QUATRAIN 3 &middot; LINES 9&ndash;12 &middot; THE COUNTER-CLAIM</div>
+                        <div class="sonnet-line"><span class="lnum">9</span><strong>But</strong> thy eternal summer shall not fade,<span class="rhyme">E</span></div>
+                        <div class="sonnet-line"><span class="lnum">10</span>Nor lose possession of that fair thou owest;<span class="rhyme">F</span></div>
+                        <div class="sonnet-line"><span class="lnum">11</span>Nor shall Death brag thou wander'st in his shade,<span class="rhyme">E</span></div>
+                        <div class="sonnet-line"><span class="lnum">12</span>When in eternal lines to time thou growest;<span class="rhyme">F</span></div>
+                    </div>
+                </div>
+
+                <!-- Couplet (gilded) -->
+                <div style="background: #FDF3E3; border: 2px solid #C7922C; border-radius: 8px; padding: 12px 16px 12px 26px; margin-top: 12px;">
+                    <div style="font-size: 11px; color: #8A6410; letter-spacing: .1em; margin-bottom: 4px;">THE COUPLET &middot; LINES 13&ndash;14 &middot; THE VERDICT, IN TWO GILDED LINES</div>
+                    <div class="sonnet-line"><span class="lnum">13</span>So long as men can breathe, or eyes can see,<span class="rhyme">G</span></div>
+                    <div class="sonnet-line"><span class="lnum">14</span>So long lives this, and this gives life to thee.<span class="rhyme">G</span></div>
+                </div>
+
+                <div style="font-size: 14px; color: #0e1c42; line-height: 1.6; margin-top: 14px;">Indigo brackets mark the three quatrains; the gold letters at the right trace the rhyme scheme ABAB CDCD EFEF GG; the gilded box is the couplet. This poem is in the public domain. The text above follows the widely used modernized text; you can compare the original 1609 spelling at <a href="https://en.wikisource.org/wiki/Shakespeare%27s_Sonnets" style="color: #3B4E8C;">Wikisource: Shakespeare's Sonnets</a>.</div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Now copy the map into your own hands: in your Module Organizer, write the numbers 1 through 14 down the margin and label which lines belong to Q1, Q2, Q3, and the couplet. Draw an arrow at line 9 and label it <em>volta</em>. Then write one sentence: what is the first thing you notice about how Shakespeare ends the poem?</p>
+
+        <!-- WIDGET: evaluative single-select (recolored) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="d" data-hint="Look at the gold letters in the visual above: alternating rhymes in each quatrain, then a rhyming pair at the end.">
+                <div class="widget-row-prompt">1. Which is the rhyme scheme of a Shakespearean sonnet?</div>
+                <div class="widget-options">
+                    <button data-choice="a">ABBA ABBA CDC DCD</button>
+                    <button data-choice="b">AABB CCDD EEFF GG</button>
+                    <button data-choice="c">ABAB ABAB ABAB CC</button>
+                    <button data-choice="d" data-fb="Yes. Three quatrains with alternating rhymes (ABAB CDCD EFEF), sealed by the couplet (GG). The ABBA pattern belongs to the older Petrarchan form.">ABAB CDCD EFEF GG</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Volta is Italian for 'turn.' Find the word that swings Sonnet 18 in a new direction at line 9.">
+                <div class="widget-row-prompt">2. The volta is best described as&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Right. The volta is the pivot where the poem's argument changes direction. In Sonnet 18 it arrives at line 9 with the single word 'But.'">the moment the poem's argument turns</button>
+                    <button data-choice="b">the final rhyming pair of lines</button>
+                    <button data-choice="c">a four-line unit with alternating rhymes</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>sonnet</strong> &mdash; a fourteen-line poem in iambic pentameter with a fixed rhyme scheme. &nbsp;&middot;&nbsp; <strong>iambic pentameter</strong> &mdash; a line of five iambs: da-DUM five times, ten syllables. &nbsp;&middot;&nbsp; <strong>quatrain</strong> &mdash; a four-line unit that develops one stage of the argument. &nbsp;&middot;&nbsp; <strong>couplet</strong> &mdash; the closing pair of rhyming lines that delivers the verdict. &nbsp;&middot;&nbsp; <strong>volta</strong> &mdash; the turn: the moment the poem's argument changes direction.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>sonnet</em> comes from the Italian <em>sonetto</em>, "little song," from <em>suono</em>, "sound." A sonnet is small enough to sing and strict enough to memorize. <em>Volta</em> is the Italian word for "turn"; you still hear it in <em>revolve</em> and <em>revolt</em>. <strong>Copia (in your Organizer):</strong> take the sentence <em>"The poem changes direction at line 9,"</em> and rewrite it twice: once using <em>volta</em> accurately, and once so the sentence describes a turn in a song, film, or game instead of a poem.</div>
+        </div>
+
+        <!-- AI callout (red frame) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND FORM</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can recite the rules of the sonnet form and even count syllables in a line for you. It cannot hear the turn at line 9 land in your own voice when you read the poem aloud. That hearing is the skill this module trains, and it is built by reading, not by asking.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Record the five Word Study terms and your labeled line map in your Module Organizer</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Add <em>sonnet, iambic pentameter, quatrain, couplet,</em> and <em>volta</em> with your copia rewrites. In Lesson 1.02 you will trace the argument those fourteen lines carry, and on Friday you will write three lines of iambic pentameter of your own.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A sonnet is an argument wearing a strict little suit: three quatrains build the case, the volta turns it, and the couplet closes it. Keep the map of Sonnet 18 in mind; every sonnet you read this module runs on the same machine.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.01 &middot; What Is a Sonnet?</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
