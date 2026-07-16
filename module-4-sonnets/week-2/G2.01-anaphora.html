@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Grammar 2.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 4</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Grammar 2.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">GRAMMAR FOCUS</div>
+        <div style="font-size: 17px; color: #0e1c42;">Anaphora</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Sonnet 29, Shakespeare</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">GRAMMAR 2.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Anaphora: Repetition That Builds</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127919; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Why does starting three sentences the same way feel powerful, when repeating a word anywhere else just feels repetitive?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You will learn to define anaphora precisely, tell it apart from ordinary repetition, find it doing heavy lifting in Sonnet 29, and build a three-clause anaphoric sequence of your own.</div>
+    </div>
+
+    <!-- Warm-up (reflect check-in widget) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; DO THIS IN YOUR ORGANIZER FIRST &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Think of a speech, song, or chant where the same phrase keeps returning at the start of each line. Write down the phrase you remembered. What does the repetition do to the feeling of the piece?</div>
+            <div class="widget-options">
+                <button data-response="Building is the classic effect: each return of the phrase inherits the weight of the ones before it, like stacking weights on a bar. That structured, front-of-the-clause repetition is today's device: anaphora.">It builds, getting heavier each time</button>
+                <button data-response="Insisting is anaphora doing its argumentative work. When a speaker returns to the same opening again and again, refusal to move on becomes the message. Shakespeare uses the same insistence in Sonnet 29, and it is today's device: anaphora.">It insists, hammering one point</button>
+                <button data-response="A groove or a spell is what happens when repetition sets a rhythm the listener starts to expect. That expectation is a tool: the writer can satisfy it or break it. Breaking it is exactly what Sonnet 29 does at line 9. The device is today's lesson: anaphora.">It hypnotizes, like a groove or a spell</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- The Lesson -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 12px 0;"><strong>Anaphora</strong> is the repetition of a word or phrase at the <em>beginning</em> of successive clauses or lines. The position is the whole definition. A word that shows up several times scattered through a paragraph, in different spots and different jobs, is just a repeated word. Anaphora is structural: the same opening, again and again, on parallel units, so that each new clause inherits the weight of the ones before it. In Sonnet 29, the despair of lines 5&ndash;7 is manufactured this way. "Wishing me like to one more rich in hope, / Featured like him, like him with friends possess'd, / Desiring this man's art, and that man's scope." The parallel openings "Wishing" and "Desiring," with "like him, like him" doubling in between, pile longing on longing until the reader carries the weight physically. And the piling has a purpose: when "Yet" finally arrives at line 9, the relief is proportional to the pressure the repetition built. In your own analytical writing, anaphora is a precision tool for building an argument's force. Use it deliberately and sparingly: three parallel openings feel commanding, while six feel mechanical.</p>
+
+        <!-- Pattern card (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">ONE RULE TO REMEMBER</div>
+            <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;">Anaphora lives at the front door. If the repeated phrase opens each parallel clause or line &rarr; anaphora. If the word merely reappears somewhere inside the sentence &rarr; ordinary repetition, no matter how often it occurs.</div>
+        </div>
+
+        <!-- ONE visual: navy chalkboard of worked examples (verse + prose) -->
+        <div style="background: #14213f; border: 10px solid #3a2c1a; border-radius: 10px; padding: 22px 24px; margin: 18px 0; box-shadow: inset 0 0 40px rgba(0,0,0,0.4);">
+            <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .18em; margin-bottom: 16px; text-align: center;">ON THE BOARD &middot; SPOT THE OPENINGS, IN VERSE AND IN PROSE</div>
+            <div style="font-size: 19px; color: #f4f1e8; line-height: 2.1;">
+                <span style="color:#8ea2c9;">Verse (Sonnet 29, lines 5&ndash;7):</span>&nbsp; <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">Wishing</span> me like to one more rich in hope,<br>
+                <span style="color:#8ea2c9;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Featured <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">like him</span>, <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">like him</span> with friends possess'd,<br>
+                <span style="color:#8ea2c9;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">Desiring</span> this man's art, and that man's scope&hellip;<br>
+                <span style="color:#8ea2c9;">Prose (anaphora):</span>&nbsp; <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">We shall fight</span> on the beaches, <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">we shall fight</span> on the landing grounds, <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">we shall fight</span> in the fields&hellip; <span style="color:#8ea2c9; font-size: 14px;">(Churchill, 1940)</span><br>
+                <span style="color:#8ea2c9;">Prose (NOT anaphora):</span>&nbsp; The song was about love, and love, the singer insisted, was worth any price love asked.
+            </div>
+            <div style="font-size: 14px; color: #cdd6ea; margin-top: 16px; line-height: 1.6;">The <span style="color:#e6b955;">gold underline</span> marks repetition at the opening of parallel units. In the last line, "love" repeats three times but never opens a parallel clause: that is ordinary repetition, not anaphora. Position, not frequency, makes the device.</div>
+        </div>
+
+        <!-- Evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; YOUR TURN &middot; CHOOSE THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="c" data-hint="Apply the rule: anaphora lives at the front door. Which option repeats a phrase at the opening of parallel clauses?">
+                <div class="widget-row-prompt">1. Which of these is anaphora?</div>
+                <div class="widget-options">
+                    <button data-choice="a">A poem that uses the word "time" in six different lines</button>
+                    <button data-choice="b">A sentence that ends three paragraphs with the same word</button>
+                    <button data-choice="c" data-fb="Right. 'It does not envy, it does not boast, it is not proud' repeats its opening across parallel clauses. Repetition at the start of parallel units is the definition.">"It does not envy, it does not boast, it is not proud"</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Think about what happens at line 9. What has the repetition been doing to the reader before 'Yet' arrives?">
+                <div class="widget-row-prompt">2. In Sonnet 29, what job does the anaphora of lines 5&ndash;7 do for the poem's argument?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Yes. Each repeated opening stacks another wish onto the pile, so the despair gains real weight, and the volta's release at 'Yet' is earned by everything the repetition built.">It piles up the speaker's longing so the volta has weight to reverse</button>
+                    <button data-choice="b">It fills out the syllable count so the meter works</button>
+                    <button data-choice="c">It shows the speaker cannot think of new words</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- Write your own -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#10145;&#65039; NOW WRITE YOUR OWN (IN YOUR ORGANIZER)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Write a <strong>three-clause anaphoric sequence</strong> beginning each clause with <strong>"This sonnet argues that&hellip;"</strong> about either Sonnet 29 or Sonnet 130, whichever you know better right now. Each clause must make a different, specific claim: cite a line, name a device, or point to an exact moment. "This sonnet argues that love is good" is too vague to count; "This sonnet argues that one chance thought can outweigh eight lines of envy" earns its place. Read your finished sequence aloud and listen for the build. You will use this exact sentence engine in your analytical writing all module, and a line of deliberate anaphora would not be out of place in the sonnet you draft on Friday.</p>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Anaphora is repetition with an address: the front of the clause. Used there, and only there, repetition stops being an echo and becomes an engine, stacking weight clause by clause until the sentence, or the sonnet, has something worth turning against.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Grammar 2.01 &middot; Anaphora: Repetition That Builds</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
