@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 3.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 13px; color: #0e1c42;">Canterbury Tales</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 3.01 &middot; Week 3</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">The Canterbury Tales (Middle English)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">CENTRAL QUESTION</div>
+        <div style="font-size: 16px; color: #0e1c42;">What does a traveler reveal about their soul?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 3.01 &middot; THE DARK SIDE OF THE ROAD</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Comedy and Class: What the Miller's Tale Gets Away With</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Why does a story about a broken arm and a scream for water make people laugh, and what is Chaucer allowed to say through that laughter that he could not say straight?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Last week you met the Miller's Tale. Today you watch its ending snap shut like a trap, and you learn the name for a tale like this: the <strong>fabliau</strong>. Then you look at who is telling it, and why comedy lets a drunk miller mock a wealthy carpenter, marriage, and piety all at once, and walk away grinning.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define a <em>fabliau</em> and name its usual features.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how the tale's ending delivers <em>comic justice</em>, matching each punishment to a fault.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> argue what the choice of a low, comic tale reveals about the Miller and about social class.</div></div>
+    </div>
+
+    <!-- Reading link -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin-bottom: 20px; border-left: 4px solid #3B4E8C;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#128278; THIS WEEK'S READING</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Finish <strong>The Miller's Tale</strong> (the conclusion). Read it in the original Middle English, public domain: <a href="https://www.gutenberg.org/ebooks/2383" style="color:#3B4E8C;">The Canterbury Tales, Project Gutenberg #2383</a>. Middle English looks strange at first; read a line aloud and let the sound carry you. Keep your Character Tracking Chart open for the Miller and the carpenter.</div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHY WE LAUGH WHEN IT GOES WRONG</div>
+
+        <!-- WIDGET 1: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Think of a comedy where a character who has been scheming, bragging, or bullying finally gets exactly what is coming to them. When the payback lands, how does it feel?</div>
+            <div class="widget-options">
+                <button data-response="Right. That flash of satisfaction has a name: comic justice. The punishment fits the fault, so the laugh feels earned, not cruel. Chaucer builds his whole ending on it.">Satisfying, like they earned it</button>
+                <button data-response="Fair. Sometimes payback can feel too harsh, and comedy has to keep it light enough that we still laugh. Watch how Chaucer keeps it just short of cruel.">A little uncomfortable</button>
+                <button data-response="Interesting. Some payback is so over the top that the size of it is the joke. Chaucer stacks three payoffs at once for exactly that effect.">Funny because it is so extreme</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A tale built to spring shut</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Early in the tale Chaucer plants three separate loose threads, and you almost forget they are loose. The clever student Nicholas has convinced John, a jealous and well-off old carpenter, that a second Noah's flood is coming, so John spends the night hanging from the roof in a tub, waiting to float away. Meanwhile Absolon, a vain parish clerk, is humiliated at the couple's window and swears revenge. Each thread has been set up. Then, in a few fast lines, all three pay off at the same instant. Absolon returns with a red-hot iron and brands Nicholas. Nicholas, in shock, screams a single word: <strong>"Water!"</strong> The carpenter, jolted awake, hears only that word, believes the flood has finally come, and cuts the rope on his tub. He crashes to the floor and breaks his arm. The whole street pours in, and they do not comfort him. They laugh.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is the shape of a <strong>fabliau</strong>: a short, bawdy comic tale about ordinary people, driven by trickery, appetite, and a clever plot that pays everyone back at once. Fabliaux (the plural) do not deal in noble knights and pure love. They deal in landlords, students, tradesmen, lust, money, and revenge, and they end with a punchline of rough poetic justice.</p>
+
+        <!-- ONE core visual: labeled diagram of the comic machine -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">THE COMIC MACHINE &middot; THREE SET-UPS, ONE PUNCHLINE, EACH FAULT REPAID</div>
+            <div style="background: #F8F9FC; padding: 22px 18px;">
+                <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: stretch;">
+                    <div style="flex: 1; min-width: 210px; background: #FDF3E3; border: 2px solid #C7922C; border-radius: 10px; padding: 14px 16px;">
+                        <div style="font-size: 12px; color: #8A6410; letter-spacing: .06em; margin-bottom: 4px;">THREAD 1 &middot; THE CARPENTER</div>
+                        <div style="font-size: 15px; color: #0e1c42; margin-bottom: 6px;"><strong>Fault:</strong> jealous, controlling, gullible</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.5;"><strong>Payback:</strong> hears "Water!", cuts the rope, falls, breaks his arm, is mocked by the town.</div>
+                    </div>
+                    <div style="flex: 1; min-width: 210px; background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 14px 16px;">
+                        <div style="font-size: 12px; color: #3B4E8C; letter-spacing: .06em; margin-bottom: 4px;">THREAD 2 &middot; NICHOLAS</div>
+                        <div style="font-size: 15px; color: #0e1c42; margin-bottom: 6px;"><strong>Fault:</strong> too clever, too pleased with his own scheme</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.5;"><strong>Payback:</strong> branded by the hot iron at the very moment he expects to win.</div>
+                    </div>
+                    <div style="flex: 1; min-width: 210px; background: #FDF3E3; border: 2px solid #C7922C; border-radius: 10px; padding: 14px 16px;">
+                        <div style="font-size: 12px; color: #8A6410; letter-spacing: .06em; margin-bottom: 4px;">THREAD 3 &middot; ABSOLON</div>
+                        <div style="font-size: 15px; color: #0e1c42; margin-bottom: 6px;"><strong>Fault:</strong> vain, squeamish, easily wounded pride</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.5;"><strong>Payback:</strong> gets his revenge, but only after a humiliation he can never live down.</div>
+                    </div>
+                </div>
+                <div style="background: #0E1C42; border-radius: 8px; padding: 12px 16px; margin-top: 14px; text-align: center;">
+                    <div style="font-size: 14px; color: #f4f1e8; line-height: 1.6;">One word, <span style="color:#55c8e8;">"Water!"</span>, trips all three threads at once. The plot pays back every character in the exact currency of his own flaw. <em>That</em> is comic justice.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; COMEDY AND CLASS: WHAT THE TALE GETS AWAY WITH</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Now ask the question that runs through this whole module: what does the choice of tale reveal about the teller? The Knight, the highest-ranked pilgrim, told a lofty romance about noble love and honor. The Miller, drunk and low-born, refuses to wait his turn and insists on going next. His tale is the opposite of the Knight's in every way: instead of princes, a carpenter and a student; instead of pure love, appetite and a trick; instead of a solemn ending, a broken arm and a street full of laughter. In the language of the period, the Miller <strong>quites</strong> the Knight. To <em>quite</em> is to pay back or answer, and the Miller answers the Knight's high ideals by dragging them down to earth.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is what comedy <em>gets away with</em>. Under the cover of a joke, the tale mocks a wealthy tradesman, pokes at marriage, and even plays with the sacred story of Noah's flood, and yet it feels like harmless fun. Chaucer knows exactly what he is doing. He steps in as narrator and warns you that the Miller is a <strong>churl</strong>, a coarse low-born man, and tells you to blame the Miller, not the poet, and to turn the page if you are easily offended. That disclaimer is itself a joke. It lets Chaucer print the whole tale while pretending to disown it. Comedy gives the powerless a licensed way to laugh at the powerful, and it gives the poet a way to say the unsayable and call it entertainment.</p>
+
+        <!-- WIDGET 2: evaluative single-select (recolored) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="d" data-hint="Re-read the definition: think about the characters, the plot engine, and the kind of ending.">
+                <div class="widget-row-prompt">1. Which of these is NOT a usual feature of a fabliau?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Ordinary, low-born characters</button>
+                    <button data-choice="b">A clever trick that drives the plot</button>
+                    <button data-choice="c">A punchline of rough poetic justice</button>
+                    <button data-choice="d" data-fb="Right. Noble knights and idealized courtly love belong to romance, the Knight's kind of tale, not to the down-to-earth fabliau.">Noble knights and idealized love</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Comic justice means the punishment fits the fault. Which answer explains why the ending feels earned rather than random?">
+                <div class="widget-row-prompt">2. Why does the ending count as comic justice rather than random chaos?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Because everyone ends up happy</button>
+                    <button data-choice="b" data-fb="Yes. Each character is repaid in the currency of his own flaw: the jealous controller is brought down, the schemer is caught, the vain clerk is shamed.">Because each punishment matches that character's fault</button>
+                    <button data-choice="c">Because a god steps in to judge them</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Think about who the Miller is and whose tale he is answering.">
+                <div class="widget-row-prompt">3. When the Miller "quites" the Knight, he is&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a">quitting the pilgrimage in protest</button>
+                    <button data-choice="b">agreeing with the Knight's view of love</button>
+                    <button data-choice="c" data-fb="Correct. To quite is to pay back or answer. The low-born Miller answers the Knight's lofty romance with a bawdy tale that pulls those ideals down to earth.">answering the Knight's lofty tale by pulling it down to earth</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>fabliau</strong> &mdash; a short, bawdy comic tale of ordinary people and clever tricks. &nbsp;&middot;&nbsp; <strong>churl</strong> &mdash; a coarse, low-born person. &nbsp;&middot;&nbsp; <strong>comeuppance</strong> &mdash; a deserved punishment or downfall. &nbsp;&middot;&nbsp; <strong>quite</strong> (Middle English) &mdash; to pay back or answer.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Copia (in your Organizer):</strong> take the sentence <em>"The carpenter got what he deserved,"</em> and rewrite it twice: once using <em>comeuppance</em>, and once using <em>quite</em> so it names <em>who</em> is paying <em>whom</em> back.</div>
+        </div>
+
+        <!-- AI callout (red frame) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND WHAT COUNTS AS FUNNY</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can list the features of a fabliau or summarize the plot in seconds, which can be a fine way to check a definition. It cannot tell you <em>why</em> a six-hundred-year-old joke still lands, or decide what a modern reader should find fair or cruel about it. Judging what a text is really doing to you as you read stays your work.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Update your Character Tracking Chart and record today's Word Study</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Add the Miller and the carpenter, and note the Miller's estate and what his choice of tale reveals. Record <em>fabliau, churl, comeuppance,</em> and <em>quite.</em> Next comes Grammar 3.02, where you will study the rhetorical repetition that Chaucer's characters use to sound grand.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A fabliau hides a sharp argument inside a joke. The Miller's ending is not just slapstick: it pays every character back in the currency of his own flaw, and it lets a low-born teller answer a noble one. Comedy is how Chaucer says the dangerous thing and smiles.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 3.01 &middot; Comedy and Class: What the Miller's Tale Gets Away With</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
