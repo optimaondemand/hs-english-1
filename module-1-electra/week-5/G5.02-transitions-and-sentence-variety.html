@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Grammar 5.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 13px; color: #0e1c42;">Week 5 &middot; Project Week</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Grammar 5.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">GRAMMAR FOCUS</div>
+        <div style="font-size: 17px; color: #0e1c42;">Transitions &amp; sentence variety</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Electra, Sophocles</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">GRAMMAR 5.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Transitions and Sentence Variety</div>
+        <div style="font-size: 16px; color: #0e1c42;">Grammar Lesson &middot; Week 5</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127919; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Why does one paragraph read like reasoning and another like a list of facts?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You will choose transitions that name the real relationship between your ideas, and vary how your sentences begin and how long they run, so your essay reads like an argument moving forward, not a list.</div>
+    </div>
+
+    <!-- Warm-up (reflect) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; READ BOTH ALOUD &middot; NO WRONG ANSWER</div>
+            <div class="widget-question"><strong>A.</strong> <em>Electra wants revenge. Chrysothemis wants safety. They argue. Electra decides to act alone.</em><br><strong>B.</strong> <em>Electra wants revenge, but Chrysothemis wants safety. Because they cannot agree, Electra decides to act alone.</em><br>Both say the same facts. Why does B feel like reasoning and A like a list?</div>
+            <div class="widget-options">
+                <button data-response="Right. Words like &lsquo;but&rsquo; and &lsquo;because&rsquo; name how the ideas relate, so B shows contrast and cause instead of just stacking facts.">B names how the ideas connect</button>
+                <button data-response="Yes. A repeats the same short, subject-first shape, which turns flat. B varies its openings and lengths, so the ideas stand out.">B varies its sentence shapes</button>
+                <button data-response="Both are true, and they work together: transitions plus varied sentences are exactly what today's lesson builds.">Both of those together</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- The Lesson -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.75; margin: 0 0 12px 0;">Two habits make writing read as connected thinking rather than a pile of facts: transitions and sentence variety. A <strong>transition</strong> is a word or phrase that names the relationship between two ideas, and the relationship has to be true. Use <em>because, since,</em> and <em>therefore</em> for cause; <em>however, but,</em> and <em>although</em> for contrast; <em>for example</em> and <em>in particular</em> for evidence; <em>finally</em> and <em>in the end</em> for sequence. A wrong transition is worse than none, because it promises a relationship the sentences do not deliver. <strong>Sentence variety</strong> is the second habit. When every sentence is the same length and starts the same way, usually with the subject, a paragraph turns flat and readers stop noticing it. Fix this two ways. Vary your <em>openings</em> by starting some sentences with a subordinate clause or a transition (<em>Although the plan succeeds</em>&hellip;) instead of the subject. Vary your <em>lengths</em> by placing a short, direct sentence after a long one; the short sentence lands hard because of the contrast. You already know how to build complex sentences from earlier this module, so here you use that skill on purpose, mixing simple and complex sentences so the important ideas stand out. Read your draft aloud one last time: the places where you stumble are usually the places that need a transition or a change of rhythm.</p>
+
+        <!-- ONE visual: navy chalkboard of example sentences, transitions in gold -->
+        <div style="background: #14213f; border: 10px solid #3a2c1a; border-radius: 10px; padding: 22px 24px; margin: 18px 0; box-shadow: inset 0 0 40px rgba(0,0,0,0.4);">
+            <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .18em; margin-bottom: 16px; text-align: center;">ON THE BOARD &middot; SPOT THE TRANSITION</div>
+            <div style="font-size: 19px; color: #f4f1e8; line-height: 2.1;">
+                Electra grieves for years<span style="color:#8ea2c9;">;</span> <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">however</span><span style="color:#8ea2c9;">,</span> her mother celebrates the death.<br>
+                Orestes must act by stealth <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">because</span> the oracle commanded it.<br>
+                The revenge succeeds. <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">In the end</span><span style="color:#8ea2c9;">,</span> its cost is left unresolved.
+            </div>
+            <div style="font-size: 14px; color: #cdd6ea; margin-top: 16px; line-height: 1.6;">The <span style="color:#e6b955;">gold words</span> are the transitions. Each one names a real relationship: contrast, then cause, then sequence.</div>
+        </div>
+
+        <!-- Transition menu (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 10px;">TRANSITIONS BY THE JOB THEY DO</div>
+            <div style="overflow-x: auto;"><table style="width: 100%; border-collapse: collapse; min-width: 420px;">
+                <tbody>
+                    <tr><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #0e1c42; white-space: nowrap; background:#FFFFFF;"><strong>Cause / effect</strong></td><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340; background:#FFFFFF;">because, since, therefore, as a result</td></tr>
+                    <tr><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #0e1c42; white-space: nowrap; background:#FFFFFF;"><strong>Contrast</strong></td><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340; background:#FFFFFF;">however, but, although, on the other hand</td></tr>
+                    <tr><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #0e1c42; white-space: nowrap; background:#FFFFFF;"><strong>Evidence</strong></td><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340; background:#FFFFFF;">for example, for instance, in particular</td></tr>
+                    <tr><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #0e1c42; white-space: nowrap; background:#FFFFFF;"><strong>Sequence / close</strong></td><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340; background:#FFFFFF;">first, then, finally, in the end</td></tr>
+                </tbody>
+            </table></div>
+        </div>
+    </div>
+
+    <!-- Identify & Practice (widget) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 8px;">&#9998; IDENTIFY &amp; PRACTICE</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-bottom: 6px;">Choose the transition that names the true relationship in each sentence.</div>
+
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; PICK THE TRANSITION THAT FITS</div>
+            <div class="widget-row" data-correct="a" data-hint="Grief and celebration point in opposite directions: that is contrast.">
+                <div class="widget-row-prompt">1. Electra grieves for years; ______ her mother celebrates the death.</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Yes. &lsquo;However&rsquo; marks the contrast between grief and celebration.">however</button>
+                    <button data-choice="b">therefore</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="The oracle's command is the reason for the stealth: that is cause.">
+                <div class="widget-row-prompt">2. Orestes must act by stealth ______ the oracle commanded it.</div>
+                <div class="widget-options">
+                    <button data-choice="a">but</button>
+                    <button data-choice="b" data-fb="Right. &lsquo;Because&rsquo; names the cause: the oracle's command.">because</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="This sentence closes out the sequence of events.">
+                <div class="widget-row-prompt">3. The revenge succeeds. ______, the cost of it is left unresolved.</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Yes. &lsquo;In the end&rsquo; closes the sequence.">In the end</button>
+                    <button data-choice="b">For example</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="A sound argument and a refusal to listen pull against each other: that is contrast.">
+                <div class="widget-row-prompt">4. Chrysothemis offers a sound argument; ______ Electra refuses to listen.</div>
+                <div class="widget-options">
+                    <button data-choice="a">in particular</button>
+                    <button data-choice="b" data-fb="Right. &lsquo;However&rsquo; marks the contrast between a sound argument and her refusal.">however</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- Use it (indigo do) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px;">&#10145;&#65039; NOW WRITE YOUR OWN (IN YOUR ORGANIZER)</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Reread one paragraph of your essay draft. Add or fix <strong>one transition</strong> so it names a real relationship, and rewrite <strong>one sentence</strong> so it begins differently from the sentence before it. Then place a short sentence right after your longest one and notice the effect.</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Transitions name how your ideas relate; varied sentences keep a reader awake. Use both on purpose, and your paragraphs read like an argument moving forward.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Grammar 5.02 &middot; Transitions and Sentence Variety</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
