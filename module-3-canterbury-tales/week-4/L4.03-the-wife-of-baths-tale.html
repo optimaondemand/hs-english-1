@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 4.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 13px; color: #0e1c42;">The Canterbury Tales</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 4.03</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">The Wife of Bath's Tale (Chaucer)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What a traveler reveals about the soul</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 4.03</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Wife of Bath's Tale: The Question Worth Asking</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Reading link (PD Middle English) -->
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 14px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#128214; READ ALONGSIDE THIS LESSON (FREE, PUBLIC DOMAIN)</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">The Wife of Bath's Tale in Chaucer's original Middle English: Project Gutenberg #2383, <a href="https://www.gutenberg.org/ebooks/2383" style="color:#3B4E8C;">gutenberg.org/ebooks/2383</a> (scroll to "The Tale of the Wyf of Bathe"). Read the full tale; this lesson glosses the passages that carry the argument.</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A knight's life hangs on one question: what do women most desire? And the woman telling the story already knows her answer.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">After a Prologue in her own voice, the Wife tells a story: an Arthurian tale of a crime, a quest, and a bargain with an old woman. Today you will follow the tale to its answer, <strong>sovereignty</strong>, and then ask the harder question this week has been building toward: is the tale a sincere argument, or a story rigged to prove its teller right?</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> trace the tale's plot: the crime, the quest, the answer, and the bargain.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what sovereignty means in the tale and how the gentilesse speech complicates it.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> weigh evidence on both sides of the question: sincere argument, or self-serving story?</div></div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module Organizer, open to the Character Tracking Chart</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">The Tale open in another tab (Gutenberg #2383) and about 35 minutes</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE QUEST AND THE ANSWER</div>
+
+        <!-- WIDGET 1: reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; BEFORE YOU READ &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Before Chaucer answers it, answer it yourself: what do you think people most deeply want in a relationship: to be adored, to be understood, or to have a real say?</div>
+            <div class="widget-options">
+                <button data-response="A common first answer, and the tale's knight might have guessed it too. Watch how quickly the tale sets adoration aside.">To be adored</button>
+                <button data-response="A strong answer. Notice, as you read, whether the tale treats understanding as enough on its own, or as something that follows from its actual answer.">To be understood</button>
+                <button data-response="You are close to the tale's own answer. Chaucer's word for a real say is sovereignty. Now watch what the story does with it.">To have a real say</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The setup: a crime and a strange mercy</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The tale opens in King Arthur's days. A young knight of the court commits a terrible crime against a maiden, and the law condemns him to die. But the queen and her ladies intervene, and the king hands the judgment to them. The queen sets the knight a riddle instead of a sentence: he has a year and a day to discover <em>what women most desire</em>. If his answer fails, he dies. Notice who holds the power in this frame from the very first scene: the men pronounce the sentence, but the women decide what justice will be.</p>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The answer: sovereignty</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The knight searches for a year and finds no two people agree: some say wealth, some honor, some pleasure, some flattery. On the last day he meets an old woman, poor and, the tale insists, remarkably ugly. She offers him the true answer in exchange for a promise: he must grant whatever she asks next. Cornered, he pledges his <strong>trouthe</strong>, his sworn word. The answer she gives him saves his life before the queen's court:</p>
+
+        <!-- Short glossed ME quote -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">FROM THE TALE &middot; MIDDLE ENGLISH</div>
+            <div style="font-size: 18px; color: #0e1c42; line-height: 1.7; font-style: italic;">"Wommen desyren to have sovereyntee<br>As wel over hir housbond as hir love&hellip;"</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Gloss:</strong> Women desire to have sovereignty over their husband as well as their love. (<em>sovereyntee</em> = supreme rule, the final say; <em>hir</em> = their.)</div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Then the old woman calls in the debt: the knight must marry her. He begs her to take his goods and let his body go; she refuses. The promise was his <em>trouthe</em>, and in this tale a pledged word binds absolutely. The knight who broke faith with a woman by force must now keep faith with a woman by law.</p>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE GENTILESSE SPEECH, THE CHOICE, AND THE QUESTION</div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 4px 0 8px 0;">The wedding-night sermon</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">On their wedding night the knight turns away in disgust: she is old, poor, and low-born. Her reply is the moral center of the tale, a long speech on <strong>gentilesse</strong>, true nobility. Rank and inherited wealth, she argues, cannot make a person noble. If gentilesse came with blood, the children of noble houses could never act shamefully, and they plainly do. Nobility is conduct, and its source is not ancestry:</p>
+
+        <!-- Short glossed ME quote -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">FROM THE TALE &middot; MIDDLE ENGLISH</div>
+            <div style="font-size: 18px; color: #0e1c42; line-height: 1.7; font-style: italic;">"Thy gentillesse cometh fro God allone&hellip;<br>Than comth our verray gentillesse of grace"</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Gloss:</strong> Your gentility comes from God alone; our true (<em>verray</em>) gentility comes of grace, not of old riches or noble birth.</div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Then she offers him a choice: she can remain old and ugly but faithful and true, or become young and beautiful and take her chances with what follows. The knight, apparently having learned the lesson of the year, gives the choice back to her: <em>"I put me in your wyse governance"</em> (I put myself under your wise governance). He yields the sovereignty. And the moment he does, the tale rewards him: she becomes both beautiful <em>and</em> faithful, and they live in perfect joy.</p>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Sincere, or self-serving? Weigh it both ways</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Here is where a careful reader slows down. The case that the tale is <strong>sincere</strong>: its argument is serious and consistent. The knight's crime was taking by force; his redemption is learning to yield. The gentilesse speech is real moral philosophy, and the tale's happy ending flows logically from the lesson. The case that it is <strong>self-serving</strong>: the teller is a woman who spent her whole Prologue boasting about winning the upper hand over five husbands. She invents a story in which a woman's rule is the answer to a royal riddle, an old wife gets a young husband, and yielding to one's wife is rewarded with a perfect marriage. The story proves exactly what its teller wants proved, down to the wish-fulfillment ending.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Both readings use real evidence, and Chaucer refuses to settle it for you. That refusal is the craft. In your notebook, before the widget below, write one piece of evidence for each side. You will need both for Discussion 4 and Quick Write 4.</p>
+
+        <!-- WIDGET 2: evaluative scale (ow-scale; engine varies from L4.01 select and L4.02 flip) -->
+        <div class="optima-widget ow-scale">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PLACE EACH ITEM ON THE SCALE</div>
+            <div class="widget-question">Which reading does each piece of evidence support most strongly?</div>
+            <div class="widget-row" data-correct="a" data-hint="Ask who benefits if this idea wins. Is it an idea the Prologue's speaker has been campaigning for?">
+                <div class="widget-row-prompt">1. The tale's answer to the riddle is sovereignty, the very thing the Wife bragged about winning from her own husbands.</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Right. The answer mirrors the teller's own agenda so exactly that it reads as the story serving its speaker.">Supports "self-serving"</button>
+                    <button data-choice="b">Supports "sincere"</button>
+                    <button data-choice="c">Neutral detail</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Does this element push the Wife's personal agenda, or does it stand as an argument that would hold even without her?">
+                <div class="widget-row-prompt">2. The gentilesse speech argues that nobility comes from conduct and grace, not birth or wealth, and gains the Wife nothing personally.</div>
+                <div class="widget-options">
+                    <button data-choice="a">Supports "self-serving"</button>
+                    <button data-choice="b" data-fb="Yes. The speech is serious moral argument that stands on its own; it is the strongest evidence that the tale means what it says.">Supports "sincere"</button>
+                    <button data-choice="c">Neutral detail</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Some details set the scene without tipping the argument either way.">
+                <div class="widget-row-prompt">3. The tale is set in King Arthur's days, in a world of courts and quests.</div>
+                <div class="widget-options">
+                    <button data-choice="a">Supports "self-serving"</button>
+                    <button data-choice="b">Supports "sincere"</button>
+                    <button data-choice="c" data-fb="Right. The Arthurian setting is the genre's furniture; by itself it does not tip the scale either way.">Neutral detail</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- AI callout (red frame) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND OPEN QUESTIONS</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Ask an AI tool "Is the Wife of Bath's Tale sincere?" and it will give you an answer, usually a balanced-sounding one. What it cannot do is weigh the evidence the way you just did, line by line, and commit to a reading you can defend. Six centuries of readers disagree about this tale. Your position, argued from the text, is the work.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Update your Character Tracking Chart</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Add the Wife of Bath: her estate, two portrait details, her tale, and your first note on her virtue or vice.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Post to Discussion 4, then go to Grammar 4.04</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Take a side on sincere vs. self-serving with evidence from both the Prologue and the Tale. Then learn the two sentence shapes you will use in Quick Write 4.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A tale can make a true argument and still serve its teller. The question is not which reading feels nicer; it is which one your evidence can carry. Hold your answer loosely until you have written both paragraphs of Quick Write 4, one inside her voice, one outside it.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 4.03 &middot; The Wife of Bath's Tale: The Question Worth Asking</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+</script>
+</body>
+</html>
