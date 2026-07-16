@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 4.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 13px; color: #0e1c42;">The Canterbury Tales</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 4.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">The Wife of Bath's Prologue (Chaucer)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What a traveler reveals about the soul</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 4.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Wife of Bath's Prologue: Rhetoric in the First Person</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Reading link (PD Middle English) -->
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 14px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#128214; READ ALONGSIDE THIS LESSON (FREE, PUBLIC DOMAIN)</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">The Wife of Bath's Prologue in Chaucer's original Middle English: Project Gutenberg #2383, <a href="https://www.gutenberg.org/ebooks/2383" style="color:#3B4E8C;">gutenberg.org/ebooks/2383</a> (scroll to "The Wife of Bath's Prologue"). This lesson glosses the short passages you need.</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">When a person argues about her own life, who do we trust: the books, or the woman who has lived it?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Most of Chaucer's pilgrims are described from the outside. The Wife of Bath describes herself, at length, and builds a case. Today you will meet a narrator who is also an <strong>arguer</strong>: you will see how she pits <em>experience</em> against <em>authority</em>, and you will start weighing whether her rhetoric convinces you or merely dazzles you.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define rhetoric and identify the Wife's central move: experience set against authority.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what a first-person narrator gains, and risks, when the speaker is also the one being judged.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use this week's key terms accurately: rhetoric, auctoritee, sovereignty, gentilesse, and trouthe.</div></div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module Organizer (the Word document for this module in OneDrive)</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">The Prologue open in another tab (Gutenberg #2383)</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">About 35 minutes and something to write with</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A NARRATOR WHO ARGUES</div>
+
+        <!-- WIDGET 1: reflective check-in (indigo, no wrong answer) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Imagine two people telling you how to succeed. One quotes a stack of expert books. The other says, "I have done this five times; let me tell you what actually happens." Whose advice do you lean toward first?</div>
+            <div class="widget-options">
+                <button data-response="Fair. The books carry authority: tested, written down, trusted by many. Chaucer calls this kind of proof auctoritee. Hold that word.">The one with the expert books</button>
+                <button data-response="Right. Lived experience feels direct and hard to argue with. That is exactly the ground the Wife of Bath claims first. Watch how she uses it.">The one who has lived it</button>
+                <button data-response="Good instinct. The strongest cases use both, and part of today's work is watching whether the Wife earns both or leans on just one.">I would want to hear both</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">What is rhetoric?</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Rhetoric</strong> is the art of persuasion: the deliberate choices a speaker makes to move an audience. It is not a bad word. Every lawyer, preacher, and advertisement uses rhetoric. What makes rhetoric worth studying is that it can serve truth <em>or</em> disguise its absence, and the same techniques do both. So the reader's job is double: notice the moves, then decide whether the case underneath them holds. The Wife of Bath gives you a master class in both halves.</p>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Her opening move: experience against authority</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Wife does not ease in. Her very first lines stake a claim, and the claim is about where knowledge comes from. In the medieval world, <strong>auctoritee</strong> meant the settled wisdom of books, scripture, and learned men. Against that, she sets her own <strong>experience</strong>. Read her opening, then look at what she has done with it.</p>
+
+        <!-- Short glossed ME quote -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">FROM THE PROLOGUE &middot; MIDDLE ENGLISH, LINES 1&ndash;3</div>
+            <div style="font-size: 18px; color: #0e1c42; line-height: 1.7; font-style: italic;">"Experience, though noon auctoritee<br>Were in this world, is right ynogh for me<br>To speke of wo that is in mariage&hellip;"</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Gloss:</strong> Experience, even if no written authority existed in the world, is fully enough for me to speak about the woe that marriage brings. (<em>noon auctoritee</em> = no written authority; <em>right ynogh</em> = quite enough; <em>wo</em> = woe.)</div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice the confidence. She does not ask permission to speak; she declares that her life outranks the library. A few lines later she names her credential plainly: <em>"Housbondes at chirche dore I have had fyve"</em> (I have had five husbands at the church door). Five marriages become her evidence. That is a rhetorical move: turning a life into proof.</p>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE POWER, AND THE RISK, OF THE FIRST PERSON</div>
+
+        <!-- ONE core visual: PD Ellesmere manuscript image -->
+        <figure style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 4px 0 18px;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">THE WIFE OF BATH &middot; ELLESMERE MANUSCRIPT, EARLY 1400s</div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Wife-of-Bath-ms.jpg" alt="A medieval illuminated manuscript page: a woman in a wide hat and red riding gown sits astride a horse in the left margin, painted beside the opening lines of the Wife of Bath's Prologue in Chaucer's hand-copied Middle English." style="display:block; width:100%; height:auto;" />
+            <figcaption style="background: #FFFFFF; padding: 12px 16px;">
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">A scribe painted the Wife right next to her own words, mounted, hat wide, gaze forward. Even the illustration argues: she is going somewhere, and she means to be seen. This is the opening page of her Prologue in the <strong>Ellesmere Chaucer</strong>, one of the earliest surviving copies of the <em>Canterbury Tales</em>, made within a few years of Chaucer's death.</div>
+                <div style="font-size: 12px; color: #0e1c42; margin-top: 8px;">The Ellesmere manuscript (Huntington Library), via Wikimedia Commons. Public domain.</div>
+            </figcaption>
+        </figure>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Letting a character narrate her own life is a gift and a trap, and Chaucer knows it. The <strong>gift</strong>: her voice is vivid, funny, and impossible to ignore. We hear her think. The <strong>trap</strong>: she is not a neutral witness. She is defending herself. Every fact she offers is a fact she has chosen to offer, shaped to win the argument she wants to win. When a speaker is also the person on trial, the reader has to hold two questions at once: <em>What is she claiming?</em> and <em>What does she have to gain by claiming it?</em></p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is the heart of reading rhetoric well. You are not deciding whether the Wife is likeable (she is). You are deciding whether her case is sound. A brilliant speaker can be right, wrong, or somewhere in between, and the brilliance itself tells you nothing about which. Keep that separation sharp all week.</p>
+
+        <!-- WIDGET 2: evaluative single-select (recolored), placed AFTER the teaching -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="c" data-hint="Re-read her opening: she sets one source of knowledge against another.">
+                <div class="widget-row-prompt">1. In her first lines, the Wife argues that her right to speak about marriage rests on&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a">the approval of learned men</button>
+                    <button data-choice="b">scripture and the Church</button>
+                    <button data-choice="c" data-fb="Yes. She sets her lived experience above written authority (auctoritee). That is her opening rhetorical move.">her own experience</button>
+                    <button data-choice="d">the Host's permission</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Think about what a first-person speaker who is defending herself cannot be counted on to do.">
+                <div class="widget-row-prompt">2. The main risk of a first-person narrator who is arguing for herself is that&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a">she uses too many long words</button>
+                    <button data-choice="b" data-fb="Right. She chooses which facts to share and how to frame them, so the reader must weigh what she has to gain.">she selects and shapes the evidence to serve her case</button>
+                    <button data-choice="c">she cannot describe other characters</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>rhetoric</strong> &mdash; the art of persuasion; a speaker's deliberate choices to move an audience. &nbsp;&middot;&nbsp; <strong>auctoritee</strong> (authority) &mdash; the settled wisdom of books, scripture, and learned men. &nbsp;&middot;&nbsp; <strong>sovereignty</strong> &mdash; supreme power or self-rule; the right to decide for oneself. &nbsp;&middot;&nbsp; <strong>gentilesse</strong> (gentility) &mdash; true nobility of character. &nbsp;&middot;&nbsp; <strong>trouthe</strong> (faithfulness) &mdash; a pledged word; keeping faith.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>auctoritee</em> comes from Latin <em>auctor</em> (originator), which also gives us <em>author</em> and <em>authority</em>. <em>Gentilesse</em> comes from Latin <em>gentilis</em> (of the family/clan) through French <em>gentil</em>, and gives us <em>gentle, genteel,</em> and <em>gentleman</em>. <em>Trouthe</em> is Old English <em>treowth</em>, the root of both <em>truth</em> and <em>troth</em> (as in "betroth").</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Copia (in your Organizer):</strong> take the sentence <em>"She won the argument."</em> and rewrite it three times: once so the win comes from <em>rhetoric</em>, once so it comes from <em>experience</em>, and once so it comes from <em>auctoritee</em>. Notice how the source of the win changes what kind of victory it is.</div>
+        </div>
+
+        <!-- AI callout (red frame) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND PERSUASION</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can generate a fluent, confident paragraph arguing almost any position, including a weak one. That is worth remembering here: fluency is not proof. AI can help you paraphrase a hard Middle English line or list rhetorical devices, but deciding whether the Wife's case actually holds is judgment, and that stays with you.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Add this week's Word Study terms to your Organizer</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Record <em>rhetoric, auctoritee, sovereignty, gentilesse,</em> and <em>trouthe</em> with your copia rewrites. You will use all five in Quick Write 4.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Go to Grammar 4.02: Irony and Paradox</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Next you will learn the two devices the Wife uses most, so you can name the contradictions inside her argument.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A speaker can be vivid, funny, and completely convincing, and still be arguing for herself. Read the Wife's rhetoric closely, then step back and ask the second question: does the case hold? Keep both questions open until her Tale is done.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 4.01 &middot; The Wife of Bath's Prologue: Rhetoric in the First Person</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+</script>
+</body>
+</html>
