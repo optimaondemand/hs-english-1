@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 4.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 13px; color: #0e1c42;">Justice in Greek Tragedy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">WEEK / LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 4 &middot; Lesson 4.03</div>
+        <div style="font-size: 13px; color: #0e1c42;">The climax of dramatic irony</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Electra, Sophocles (trans. Jebb)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What is owed &mdash; to gods, city, family?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 4.03</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Mourning the Urn</div>
+        <div style="font-size: 16px; color: #0e1c42;">Reading Lesson &middot; The climax of dramatic irony</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; WHAT YOU ARE READING TODAY</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">What happens when a character grieves over the very thing you know is not true?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The scene where Electra <strong>holds the urn she believes carries her brother's ashes</strong> and pours out her grief over it. Orestes, alive, stands before her in disguise and listens. This is the most powerful moment of dramatic irony in the play. Read for the gap between what Electra knows and what you know.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how dramatic irony reaches its climax in this scene.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> analyze how the scene deepens Electra's bond with Orestes.</div></div>
+    </div>
+
+    <!-- WIDGET: reflective check-in (indigo) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; NO WRONG ANSWER</div>
+            <div class="widget-question">Imagine watching someone weep over news that you know is false, and you cannot yet tell them. What do you feel?</div>
+            <div class="widget-options">
+                <button data-response="That is one half of it. The relief is real, and so is the ache of watching grief that does not need to be. The scene hands you both.">Relief, because the truth is actually better</button>
+                <button data-response="That is the other half. Their pain is real to them even though you know it will be undone. Hold that feeling as you read.">Pain, because the grief is happening for nothing</button>
+                <button data-response="Exactly. Sophocles gives you relief and pain in the same moment. That doubled feeling is what makes this scene almost unbearable.">Honestly, both at once</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- The Lesson -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.75; margin: 0 0 14px 0;">You have met dramatic irony already: it is when the audience knows something a character does not. In this scene that technique reaches its peak. Electra cradles the urn and grieves for a brother she thinks is ashes, while Orestes, alive and whole, stands close enough to touch her. Everything she says is true to her knowledge and false to the facts, and that split is exactly what makes the moment almost unbearable to watch. Notice how the irony works on our feelings from two directions at once: we ache for her because her grief is real, and we ache differently because we know the grief is unnecessary and about to be undone. Watch Orestes, too. His silence is not indifference; the depth of his sister's sorrow is what finally moves him to break his own plan and reveal himself. The urn, an object meant to hold death, becomes the very thing that brings the truth of life back into the room.</p>
+
+        <!-- ONE core visual: verified public-domain painting -->
+        <figure style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">ELECTRA IN MOURNING &middot; A PAINTING OF HER GRIEF</div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/1869_Frederic_Leighton_-_Electra_at_the_Tomb_of_Agamemnon.jpg" alt="Frederic Leighton's painting of Electra standing in mourning at the tomb of her father Agamemnon, her body bowed with grief, draped in dark robes beside the stone monument." style="display:block; width:100%; height:auto;" />
+            <figcaption style="background: #FFFFFF; padding: 12px 16px;">
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">A Victorian painter imagines Electra consumed by mourning at her father's tomb. Sophocles gives that grief its sharpest form in the urn scene: she weeps over ashes while her living brother stands beside her. Notice how the whole figure is bent by sorrow, exactly the feeling the play asks you to hold.</div>
+                <div style="font-size: 12px; color: #0e1c42; margin-top: 8px;">Frederic Leighton, <em>Electra at the Tomb of Agamemnon</em> (1869). Public domain, via Wikimedia Commons.</div>
+            </figcaption>
+        </figure>
+
+        <!-- WIDGET: evaluative single-select (recolored) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="b" data-hint="Think about the size of the gap between what Electra knows and what you know, right here.">
+                <div class="widget-row-prompt">1. Why is this the climax of the play's dramatic irony?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Because the Chorus finally explains the plot</button>
+                    <button data-choice="b" data-fb="Yes. The gap between Electra's knowledge and ours is at its widest and most painful. She grieves her brother as dead while he stands beside her alive.">The gap between what she knows and what we know is widest and most painful</button>
+                    <button data-choice="c">Because Aegisthus dies in this scene</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Look at what he is watching, and how much of it his disguise can bear.">
+                <div class="widget-row-prompt">2. What finally makes Orestes break his silence?</div>
+                <div class="widget-options">
+                    <button data-choice="a">The Tutor commands him to speak</button>
+                    <button data-choice="b">He is afraid of being discovered</button>
+                    <button data-choice="c" data-fb="Right. The depth of her grief becomes more than his disguise can bear, and it moves him to set the plan aside and reveal that he is alive.">The depth of her grief moves him past his own plan</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- READ NOW -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128218; READ NOW</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.65; margin-bottom: 14px;">Read <strong>Electra's lament over the urn</strong>: from the moment the urn is placed in her hands, through her speech of grief, up to the point where Orestes begins to react. Read slowly; this is a speech to feel, not to skim.</div>
+        <div style="text-align: center; margin: 6px 0 12px;">
+            <a href="http://classics.mit.edu/Sophocles/electra.html" style="display: inline-block; background: #0E1C42; color: #fff; text-decoration: none; font-size: 16px; padding: 12px 26px; border-radius: 8px;">&#128279; Open <em>Electra</em> (public-domain text, trans. R. C. Jebb)</a>
+        </div>
+        <div style="font-size: 14px; color: #0e1c42; line-height: 1.55; text-align: center;">Find the passage where Electra receives the urn and speaks to it as though to Orestes himself.</div>
+    </div>
+
+    <!-- PD anchor quote -->
+    <div style="background: #EEF1F8; border-radius: 7px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 8px;">HOW HER LAMENT BEGINS</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.7; font-style: italic;">&ldquo;Ah, memorial of him whom I loved best on earth!&rdquo;</div>
+        <div style="font-size: 14px; color: #0e1c42; margin-top: 8px;">&mdash; Electra (trans. Jebb), speaking to the urn. Every tender word she says is aimed at ashes that are not there.</div>
+    </div>
+
+    <!-- Annotate -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#9999; ANNOTATE AS YOU READ</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Mark each line where what Electra says is <strong>true for her but false for us</strong>: the working of the irony.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Note her <strong>memories and regrets</strong>: what they show about how she loved Orestes.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Keep marking references to <strong>justice</strong>, and mark the line where Orestes can hold his silence no longer.</div></div>
+    </div>
+
+    <!-- AI callout (red frame, per components.md) -->
+    <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND CLOSE READING</div>
+        <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can give you the definition of dramatic irony in a sentence. It cannot tell you <em>which lines in this scene</em> the irony makes painful, or why Electra's specific words land the way they do. Locating the irony in the text, and putting your response to it into your own words, is the reading work this lesson asks of you.</div>
+    </div>
+
+    <!-- Oral reflection (indigo) -->
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#127908; SPEAK YOUR THINKING (record 1&ndash;3 minutes)</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.8;">1. How does knowing what Electra does not make her speech more powerful, and more painful?<br>2. What do her memories and regrets reveal about the depth of her bond with Orestes?<br>3. Orestes stays silent for most of the speech. What does his silence, and its breaking, tell you about him?</div>
+        <div style="font-size: 14px; color: #3B4E8C; margin-top: 10px;">Record with any tool, then save your notes for your essay on whether the revenge is just.</div>
+    </div>
+
+    <!-- Check -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#9989; CHECK YOUR UNDERSTANDING &middot; ANSWER IN YOUR HEAD FIRST, THEN OPEN</div>
+        <details style="border: 1px solid #D0D9E8; border-left: 4px solid #3B4E8C; border-radius: 6px; padding: 12px 16px; margin-bottom: 10px;">
+            <summary style="font-size: 16px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #3B4E8C;">&#9654;</span>&nbsp; 1. Say your own answer first: why is this the climax of the play's dramatic irony?</summary>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-top: 10px; padding-top: 10px; border-top: 1px solid #EEF1F8;">Because the gap between Electra's knowledge and ours is at its widest and its most painful. She grieves her brother as dead while he stands beside her alive, so every loving word she speaks is both true to her heart and false to the facts we can see.</div>
+        </details>
+        <details style="border: 1px solid #D0D9E8; border-left: 4px solid #3B4E8C; border-radius: 6px; padding: 12px 16px;">
+            <summary style="font-size: 16px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #3B4E8C;">&#9654;</span>&nbsp; 2. Say your own answer first: what finally makes Orestes break his silence?</summary>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-top: 10px; padding-top: 10px; border-top: 1px solid #EEF1F8;">The depth of her grief. Watching his sister mourn so completely for him becomes more than his disguise can bear, and it moves him to set the plan aside and reveal that he is alive.</div>
+        </details>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-top: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Dramatic irony makes you feel two things at once. Here it turns an object of death, the urn, into the thing that brings the truth of life back into the room. Track how that doubled feeling shapes your view of the revenge to come.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 4.03 &middot; Mourning the Urn</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
