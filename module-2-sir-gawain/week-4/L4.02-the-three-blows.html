@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 4.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 13px; color: #0e1c42;">Honor and Duty in Sir Gawain</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 4.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Sir Gawain and the Green Knight (trans. Weston)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What does it mean to be truly honorable?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 4.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Three Blows</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">The Green Knight owes Gawain one blow. Why does he swing three times?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The scene at the Green Chapel looks like an execution. It is actually a verdict. Today you will see that the three axe strokes are not suspense for its own sake: each one is the Green Knight's report card on one of the three days back at the castle. Read the blows correctly and the whole poem reorganizes itself in front of you.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> narrate the three blows and Gawain's reaction to each.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how each blow answers one day of the exchange-of-winnings game.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> analyze why the poet reveals the test's meaning through structure, not a speech.</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHAT HAPPENS AT THE BLOCK</div>
+
+        <!-- WIDGET: reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Think of a teacher, coach, or referee who tests you by pretending, faking a throw, holding back to see if you flinch. Why do people test that way instead of just asking?</div>
+            <div class="widget-options">
+                <button data-response="Right. A feint shows what you do when you think it is real. The Green Knight's first two swings work exactly like that.">To see your honest reaction under pressure</button>
+                <button data-response="True. Actions are harder to fake than words. The poet trusts the axe to reveal Gawain more truthfully than any question could.">Because what you do is more honest than what you say</button>
+                <button data-response="Fair. It can feel unkind. Notice, though, that the Green Knight's test ends in mercy, not punishment. Watch why.">To be a little cruel about it</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 18px 0 12px 0;">Gawain kneels and bows his neck to the block. The Green Knight raises the axe. On the <strong>first</strong> swing, Gawain flinches, his shoulders shrink from the blade, and the Green Knight halts and mocks him: this cannot be the Gawain whose courage is famous. Stung, Gawain promises he will not flinch again, and adds that unlike the Green Knight, he cannot put his head back on once it falls. On the <strong>second</strong> swing, the Green Knight brings the axe down and stops it on purpose, testing whether Gawain will hold still. He does. Now the Green Knight praises his steady heart and prepares the true stroke. On the <strong>third</strong> swing, the axe finally falls, and it only nicks the side of Gawain's neck, cutting the skin so that a little blood drops to the snow. Gawain leaps up, seizes his sword, and declares the covenant fulfilled: one blow was the whole bargain, and he will take no more.</p>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; WHY THREE? EACH BLOW IS A DAY</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Here is the reveal that reorganizes the poem. Back at the castle, Gawain and his host struck a bargain: for three days the lord would hunt and give Gawain his winnings, and Gawain would give the lord whatever he gained inside the castle. On Days 1 and 2, Gawain honestly handed over the kisses the lady had given him. On Day 3, she also gave him a green girdle she claimed would protect his life, and Gawain kept it and hid it. The Green Knight is that same lord. His three swings are an exact accounting of those three days: two harmless feints for the two days Gawain was faithful, and one cut for the one day he was not.</p>
+
+        <!-- ONE core visual: the three blows diagram (required) -->
+        <figure style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">THE THREE BLOWS &middot; EACH SWING SETTLES ONE DAY OF THE GAME</div>
+            <div style="background: #F4F6FA; padding: 20px 16px;">
+                <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: stretch;">
+                    <!-- Blow 1 -->
+                    <div style="flex: 1; min-width: 240px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #C7922C; border-radius: 8px; padding: 16px;">
+                        <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;"><div style="min-width: 30px; height: 30px; border-radius: 50%; background: #C7922C; color:#fff; font-size:15px; display:flex; align-items:center; justify-content:center;">1</div><div style="font-size: 14px; color: #8A6410; font-weight: bold;">A FEINT &middot; NO WOUND</div></div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.6;"><strong>At the chapel:</strong> Gawain flinches; the Green Knight halts and mocks his fear.</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.6; margin-top:8px; border-top:1px dashed #D0D9E8; padding-top:8px;"><strong>Settles Day 1:</strong> Gawain honestly gave up the kiss he received. Faithful, so no cut.</div>
+                    </div>
+                    <!-- Blow 2 -->
+                    <div style="flex: 1; min-width: 240px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #C7922C; border-radius: 8px; padding: 16px;">
+                        <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;"><div style="min-width: 30px; height: 30px; border-radius: 50%; background: #C7922C; color:#fff; font-size:15px; display:flex; align-items:center; justify-content:center;">2</div><div style="font-size: 14px; color: #8A6410; font-weight: bold;">A FEINT &middot; NO WOUND</div></div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.6;"><strong>At the chapel:</strong> the axe stops on purpose; Gawain holds still and does not flinch.</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.6; margin-top:8px; border-top:1px dashed #D0D9E8; padding-top:8px;"><strong>Settles Day 2:</strong> Gawain again gave up what he won. Faithful, so again no cut.</div>
+                    </div>
+                    <!-- Blow 3 -->
+                    <div style="flex: 1; min-width: 240px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #C0392B; border-radius: 8px; padding: 16px;">
+                        <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;"><div style="min-width: 30px; height: 30px; border-radius: 50%; background: #C0392B; color:#fff; font-size:15px; display:flex; align-items:center; justify-content:center;">3</div><div style="font-size: 14px; color: #8A1F16; font-weight: bold;">THE CUT &middot; A NICK, BLOOD ON SNOW</div></div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.6;"><strong>At the chapel:</strong> the blade falls and slices the skin of Gawain's neck.</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.6; margin-top:8px; border-top:1px dashed #D0D9E8; padding-top:8px;"><strong>Settles Day 3:</strong> Gawain kept the green girdle and hid it. One small failure, one small wound.</div>
+                    </div>
+                </div>
+                <div style="font-size: 13px; color: #0e1c42; text-align: center; margin-top: 16px; line-height: 1.6;">The punishment fits the crime to the exact scale: near-perfect faith earns only a nick, not a beheading. The blood on the snow is the visible mark of one hidden failure.</div>
+            </div>
+            <figcaption style="background: #FFFFFF; padding: 12px 16px;">
+                <div style="font-size: 12px; color: #0e1c42;">Sequence and mapping drawn from Sir Gawain and the Green Knight, trans. Jessie L. Weston (1898), Fitt IV. Public domain.</div>
+            </figcaption>
+        </figure>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 12px 0;">Notice what the poet chooses <em>not</em> to do. He does not stop the action to have a narrator explain the moral. He lets the <strong>structure</strong> carry the meaning: three blows for three days, two spared and one paid. This is the same design you traced in Week 3, when the hunts and temptations ran in parallel. The poem rewards the reader who counts. If you saw the pattern of three, the verdict is already legible in the swings themselves, before anyone says a word.</p>
+
+        <!-- WIDGET: evaluative single-select; vary correct indices (b, d) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="b" data-hint="The two harmless swings correspond to the two days Gawain was honest. What did he do wrong on the third day?">
+                <div class="widget-row-prompt">1. Why does only the third blow draw blood?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Because the Green Knight finally got angry</button>
+                    <button data-choice="b" data-fb="Yes. The first two days Gawain gave up all he won; on the third day he kept the girdle, and the cut answers that one failure.">Because on the third day Gawain kept the girdle instead of handing it over</button>
+                    <button data-choice="c">Because Gawain flinched on the third swing</button>
+                    <button data-choice="d">Because the axe slipped by accident</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="d" data-hint="Think about how the poem delivered the meaning of the temptation scenes back in Week 3. It let you see the design rather than lecturing you.">
+                <div class="widget-row-prompt">2. The poet reveals the meaning of the test mainly through &mdash;</div>
+                <div class="widget-options">
+                    <button data-choice="a">a long speech by the narrator</button>
+                    <button data-choice="b">a note left on the block</button>
+                    <button data-choice="c">a dream Gawain has</button>
+                    <button data-choice="d" data-fb="Correct. The three-blows-for-three-days structure carries the verdict; the reader who counted the pattern already understands it.">the structure of three blows matching three days</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- AI callout (red frame) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND STRUCTURE</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can tell you that the poem repeats the number three, which is a real and checkable fact. It cannot feel the click of recognition when you realize the third swing is Day 3 coming due. Noticing how a structure delivers meaning is a reader's skill, and it is the one you are building right now.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Add a "three blows / three days" note to your Organizer</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">In one or two sentences, record how each blow settles one day of the game. You will use this in Lesson 4.03, where Gawain and the Green Knight disagree about how much that one nick really means.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The Green Knight owed one blow and delivered a verdict in three. Two feints and a nick tell the whole story of the three days: Gawain was almost perfectly faithful, and the small cut is the exact measure of his one small failure. The poem argues with its shape, not its speeches.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 4.02 &middot; The Three Blows</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
