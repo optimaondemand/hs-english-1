@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 4.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 13px; color: #0e1c42;">Justice in Greek Tragedy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">WEEK / LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 4 &middot; Lesson 4.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Electra, Sophocles (trans. Jebb)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What is owed &mdash; to gods, city, family?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 4.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Second Debate with Chrysothemis</div>
+        <div style="font-size: 16px; color: #0e1c42;">Reading Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; WHAT YOU ARE READING TODAY</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">When the right thing is also the dangerous thing, who decides what justice is worth?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Electra's <strong>second confrontation with her sister Chrysothemis</strong>. Chrysothemis returns to the palace with hope; Electra, believing Orestes dead, answers with a plan. Read for the clash of two positions: <em>act now</em> against <em>stay safe</em>. By the end of the scene, Electra decides to strike alone.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> contrast the sisters' arguments about action, caution, and risk.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what pushes Electra to resolve to act alone.</div></div>
+    </div>
+
+    <!-- WIDGET: reflective check-in (indigo) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; NO WRONG ANSWER</div>
+            <div class="widget-question">Someone tells you the right thing to do is also the dangerous thing to do. What is your first instinct?</div>
+            <div class="widget-options">
+                <button data-response="That is Electra's instinct exactly. Watch what it costs her, and whether the play rewards it.">Do it anyway. The wrong is real.</button>
+                <button data-response="That is Chrysothemis's instinct. Sophocles gives it real wisdom, so hold onto it as you read the debate.">Protect myself and wait for a safer moment.</button>
+                <button data-response="Fair. Most people feel torn. The two sisters are about to argue that exact split, one on each side.">I honestly do not know. It depends.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- The Lesson -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.75; margin: 0 0 14px 0;">This scene sets two kinds of reasoning side by side, and Sophocles does not let either one win easily. Chrysothemis argues from prudence: she is powerless, the attempt is likely to fail, and a failed revenge helps no one and may cost them their lives. Electra argues from duty: the wrong is real, the debt is real, and to calculate the odds before acting is itself a kind of surrender. What makes the scene great is that Chrysothemis is not written as a coward or a fool. Her caution is genuinely wise, and Sophocles gives her the stronger practical case, so that Electra's choice costs something to admire. When Chrysothemis refuses to join her, Electra does not back down; she resolves to do the deed herself, alone. Notice how the playwright uses the disagreement to reveal character: the same facts produce opposite conclusions, and each sister is defined by which risk she is willing to bear.</p>
+
+        <!-- ONE core visual: action vs. caution contrast diagram (indigo / gold / navy) -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">TWO SISTERS, ONE SET OF FACTS &middot; ACTION vs. CAUTION</div>
+            <div style="display: flex; flex-wrap: wrap; align-items: stretch; background: #FFFFFF;">
+                <!-- Electra: ACT -->
+                <div style="flex: 1; min-width: 240px; background: #EEF1F8; border-top: 4px solid #3B4E8C; padding: 18px 20px;">
+                    <div style="font-size: 16px; color: #3B4E8C; font-weight: bold; margin-bottom: 4px;">ELECTRA &middot; ACT NOW</div>
+                    <div style="font-size: 13px; color: #3B4E8C; font-style: italic; margin-bottom: 12px;">reasons from duty</div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 1.6;">
+                        &#9679; The wrong is real and the debt is owed.<br>
+                        &#9679; To weigh the odds first is to surrender.<br>
+                        &#9679; If no one else will act, she will act alone.
+                    </div>
+                </div>
+                <!-- center VS -->
+                <div style="display: flex; align-items: center; justify-content: center; background: #0E1C42; color: #C7922C; font-size: 18px; font-weight: bold; padding: 6px 14px; min-width: 46px;">vs.</div>
+                <!-- Chrysothemis: CAUTION -->
+                <div style="flex: 1; min-width: 240px; background: #FDF3E3; border-top: 4px solid #C7922C; padding: 18px 20px;">
+                    <div style="font-size: 16px; color: #8A6410; font-weight: bold; margin-bottom: 4px;">CHRYSOTHEMIS &middot; STAY SAFE</div>
+                    <div style="font-size: 13px; color: #8A6410; font-style: italic; margin-bottom: 12px;">reasons from prudence</div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 1.6;">
+                        &#9679; They are powerless; the attempt will likely fail.<br>
+                        &#9679; A failed revenge helps no one.<br>
+                        &#9679; Survival is worth more than a doomed gesture.
+                    </div>
+                </div>
+            </div>
+            <div style="background: #F4F6FA; padding: 12px 16px; font-size: 14px; color: #1a2340; line-height: 1.55; border-top: 1px solid #D0D9E8;">Both sisters look at the same situation. Sophocles gives the cautious side genuine wisdom, so Electra's choice to act is a real choice, not an obvious one.</div>
+        </div>
+
+        <!-- WIDGET: evaluative single-select (recolored) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="b" data-hint="Think about why a choice feels brave only when the other option is genuinely tempting.">
+                <div class="widget-row-prompt">1. Why does Sophocles make Chrysothemis's argument so reasonable?</div>
+                <div class="widget-options">
+                    <button data-choice="a">To show that Chrysothemis is the true hero</button>
+                    <button data-choice="b" data-fb="Yes. If caution were clearly foolish, Electra's courage would cost nothing. Real wisdom on the cautious side makes her choice a genuine one.">So that Electra's choice is a real choice, not an obvious one</button>
+                    <button data-choice="c">To prove that revenge is always wrong</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Look at what changes right before she says she will do the deed herself.">
+                <div class="widget-row-prompt">2. What finally pushes Electra to resolve to act alone?</div>
+                <div class="widget-options">
+                    <button data-choice="a">The Chorus orders her to</button>
+                    <button data-choice="b">Aegisthus threatens her directly</button>
+                    <button data-choice="c" data-fb="Right. Chrysothemis refuses to help, and Electra believes Orestes is dead, so no ally is left. She decides to pay the debt herself.">Chrysothemis refuses, and she believes Orestes is dead</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- READ NOW -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128218; READ NOW</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.65; margin-bottom: 14px;">Read the <strong>second exchange between Electra and Chrysothemis</strong>: from Chrysothemis's return with news of the offerings at the tomb, through Electra's proposal to strike, to her decision to act alone. This scene follows the false report of Orestes' death.</div>
+        <div style="text-align: center; margin: 6px 0 12px;">
+            <a href="http://classics.mit.edu/Sophocles/electra.html" style="display: inline-block; background: #0E1C42; color: #fff; text-decoration: none; font-size: 16px; padding: 12px 26px; border-radius: 8px;">&#128279; Open <em>Electra</em> (public-domain text, trans. R. C. Jebb)</a>
+        </div>
+        <div style="font-size: 14px; color: #0e1c42; line-height: 1.55; text-align: center;">The same free translation you have used all module. Read the sisters' long dialogue after Chrysothemis reports what she found at Agamemnon's grave.</div>
+    </div>
+
+    <!-- PD anchor quote -->
+    <div style="background: #EEF1F8; border-radius: 7px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 8px;">HER DECISION, IN HER OWN WORDS</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.7; font-style: italic;">&ldquo;I will do this deed with mine own hand, and alone&hellip;&rdquo;</div>
+        <div style="font-size: 14px; color: #0e1c42; margin-top: 8px;">&mdash; Electra (trans. Jebb), when Chrysothemis refuses to join her. Chrysothemis's counter-position is blunt: justice, pursued this way, is dangerous.</div>
+    </div>
+
+    <!-- Annotate -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#9999; ANNOTATE AS YOU READ</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Mark every word about <strong>safety and risk</strong>: caution, danger, weakness, powerlessness, prudence.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Keep marking every reference to <strong>justice</strong>: what is owed, and to whom.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Find the exact line where the argument breaks and Electra turns to acting <strong>alone</strong>.</div></div>
+    </div>
+
+    <!-- Oral reflection (indigo) -->
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#127908; SPEAK YOUR THINKING (record 1&ndash;3 minutes)</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.8;">1. How do the sisters differ in the way they weigh fear, hope, and duty?<br>2. Chrysothemis suggests that justice can be dangerous. Do you agree that doing the right thing can be the wrong choice?<br>3. Electra chooses to act alone. What does that decision say about her, and what might it cost her?</div>
+        <div style="font-size: 14px; color: #3B4E8C; margin-top: 10px;">Record with any tool. This scene sits at the heart of your essay question: <em>is the revenge just?</em></div>
+    </div>
+
+    <!-- Check -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 20px 24px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#9989; CHECK YOUR UNDERSTANDING &middot; ANSWER IN YOUR HEAD FIRST, THEN OPEN</div>
+        <details style="border: 1px solid #D0D9E8; border-left: 4px solid #3B4E8C; border-radius: 6px; padding: 12px 16px; margin-bottom: 10px;">
+            <summary style="font-size: 16px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #3B4E8C;">&#9654;</span>&nbsp; 1. Say your own answer first: why does Sophocles make Chrysothemis's argument so reasonable?</summary>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-top: 10px; padding-top: 10px; border-top: 1px solid #EEF1F8;">So that Electra's choice is a real choice, not an obvious one. If caution were clearly foolish, Electra's courage would cost nothing. By giving the cautious side genuine wisdom, the play forces us to weigh whether her act of justice is admirable or reckless.</div>
+        </details>
+        <details style="border: 1px solid #D0D9E8; border-left: 4px solid #3B4E8C; border-radius: 6px; padding: 12px 16px;">
+            <summary style="font-size: 16px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #3B4E8C;">&#9654;</span>&nbsp; 2. Say your own answer first: what finally pushes Electra to act alone?</summary>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-top: 10px; padding-top: 10px; border-top: 1px solid #EEF1F8;">Chrysothemis refuses to help, and Electra believes Orestes is dead, so no one else will act. With no ally left, she decides the debt must still be paid, and that she will pay it herself.</div>
+        </details>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-top: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The same facts can lead two people to opposite choices. When you argue about whether Electra's revenge is just, remember that the cautious side had real wisdom too. That tension is your essay.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 4.01 &middot; The Second Debate with Chrysothemis</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
