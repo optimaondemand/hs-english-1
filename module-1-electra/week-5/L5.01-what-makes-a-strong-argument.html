@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 5.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 13px; color: #0e1c42;">Justice in Greek Tragedy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 5.01</div>
+        <div style="font-size: 13px; color: #0e1c42;">Week 5 &middot; Project Week</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Electra, Sophocles (trans. Jebb)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What is owed &mdash; to gods, city, family?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 5.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">What Makes a Strong Argument</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson &middot; Week 5 (Project Week)</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; WHAT YOU ARE LEARNING TODAY</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You have read the whole play and asked the same question five times over: <strong>what is justice, and what is owed to gods, city, and family?</strong> This week you turn that thinking into an essay. Today you learn what an argument is made of: a <strong>claim</strong>, its <strong>evidence</strong>, and the <strong>reasoning</strong> that ties the two together.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> name the three parts of an argument and tell them apart.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> judge whether a piece of writing states a real position or only summarizes the plot.</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; FROM A FEELING TO A CLAIM</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Finish this sentence about the end of the play: &ldquo;The revenge Electra and Orestes take is ______.&rdquo; Which word fits your reading right now?</div>
+            <div class="widget-options">
+                <button data-response="Good. You have just written a claim: a reasonable reader could argue the revenge was owed and finally paid. The rest of the week is spent proving it.">just</button>
+                <button data-response="Good. That is a claim: a reasonable reader could argue the killing only begins a new wrong. The rest of the week is spent proving it.">unjust</button>
+                <button data-response="Good. That is a claim too: a reasonable reader could argue Sophocles leaves justice and its cost held together on purpose. The rest of the week is spent proving it.">both</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.75; margin: 8px 0 12px 0;">An argument is not the same as a summary. A summary tells a reader what happened; an argument tells a reader <em>what you think is true and why they should think so too.</em> Every strong argument has three parts, and they always work in the same order. First comes the <strong>claim</strong>: a position someone could reasonably disagree with. &ldquo;Electra suffers&rdquo; is not a claim, because no one disputes it. &ldquo;Sophocles makes Electra&rsquo;s revenge feel just even though it costs her everything&rdquo; is a claim, because a thoughtful reader could push back. Second comes the <strong>evidence</strong>: the specific proof you point to, usually a line or moment from the text. Evidence is not decoration; it is the ground your claim stands on, so it must be exact. Third, and most often skipped, comes the <strong>reasoning</strong>: the sentences where you explain <em>how</em> the evidence supports the claim. Evidence never speaks for itself. A quotation dropped into a paragraph proves nothing until you say what it shows and why it matters. When Clytaemnestra insists she killed Agamemnon with &ldquo;Justice&rdquo; as her ally, that line is evidence; but only your reasoning can turn it into a point about how Sophocles lets both mother and daughter claim the same word. Claim, evidence, reasoning: a paragraph that has all three persuades; a paragraph missing any one of them does not.</p>
+
+        <!-- ONE core visual: labeled claim / evidence / reasoning diagram -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">THE ANATOMY OF AN ARGUMENT</div>
+            <div style="padding: 20px 18px; background: #FFFFFF;">
+                <div style="display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; justify-content: center;">
+                    <div style="flex: 1; min-width: 190px; background: #FDF3E3; border: 2px solid #C7922C; border-radius: 8px; padding: 14px 16px;">
+                        <div style="display:inline-block; background:#C7922C; color:#fff; font-size:11px; padding:2px 10px; border-radius:4px; letter-spacing:.08em;">CLAIM</div>
+                        <div style="font-size: 15px; color: #1a2340; line-height: 1.55; margin-top: 8px;">A position a reasonable person could dispute. Your answer to the question.</div>
+                    </div>
+                    <div style="align-self: center; color: #3B4E8C; font-size: 24px;">&rarr;</div>
+                    <div style="flex: 1; min-width: 190px; background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 8px; padding: 14px 16px;">
+                        <div style="display:inline-block; background:#3B4E8C; color:#fff; font-size:11px; padding:2px 10px; border-radius:4px; letter-spacing:.08em;">EVIDENCE</div>
+                        <div style="font-size: 15px; color: #1a2340; line-height: 1.55; margin-top: 8px;">An exact line or moment from the text that supports the claim.</div>
+                    </div>
+                    <div style="align-self: center; color: #3B4E8C; font-size: 24px;">&rarr;</div>
+                    <div style="flex: 1; min-width: 190px; background: #FFFFFF; border: 2px solid #0E1C42; border-radius: 8px; padding: 14px 16px;">
+                        <div style="display:inline-block; background:#0E1C42; color:#fff; font-size:11px; padding:2px 10px; border-radius:4px; letter-spacing:.08em;">REASONING</div>
+                        <div style="font-size: 15px; color: #1a2340; line-height: 1.55; margin-top: 8px;">Your explanation of how the evidence proves the claim. The part readers remember.</div>
+                    </div>
+                </div>
+                <div style="font-size: 14px; color: #1a2340; text-align: center; margin-top: 14px; line-height: 1.55;">Read left to right: a claim needs evidence, and evidence is only worth something once your reasoning explains it.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE THREE PARTS AT WORK</div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 4px 0 10px 0;">A model paragraph (watch the three parts)</h3>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.75; background: #F4F6FA; border-radius: 6px; padding: 14px 18px;">
+            <span style="background:#FDF3E3; color:#0e1c42;">Sophocles refuses to let revenge feel like a clean victory.</span> <span style="background:#EEF1F8; color:#0e1c42;">Even as the killing succeeds, Chrysothemis warns her sister that &ldquo;Justice is sometimes dangerous,&rdquo; and the play never proves her wrong.</span> <span style="color:#0e1c42;">That warning matters because it plants doubt at the exact moment Electra is most certain: the audience is asked to celebrate a just outcome and to fear its cost at the same time, so the ending reads as both deliverance and warning rather than simple triumph.</span>
+        </div>
+        <div style="font-size: 14px; color: #1a2340; line-height: 1.9; margin-top: 12px;">
+            <span style="background:#FDF3E3; padding:1px 7px; border-radius:4px;">gold = claim</span>&nbsp;&nbsp;
+            <span style="background:#EEF1F8; padding:1px 7px; border-radius:4px;">lavender = evidence</span>&nbsp;&nbsp;
+            <span style="border:1px solid #D0D9E8; padding:1px 7px; border-radius:4px;">plain = reasoning</span>
+        </div>
+
+        <!-- WIDGET: evaluative single-select (recolored) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="b" data-hint="A claim has to be a position someone could dispute.">
+                <div class="widget-row-prompt">1. Why is &ldquo;Electra mourns her father&rdquo; not a claim?</div>
+                <div class="widget-options">
+                    <button data-choice="a">It is too short to be a claim</button>
+                    <button data-choice="b" data-fb="Right. No reasonable reader would disagree with it, so there is nothing to argue. A claim is a position someone could dispute.">No reasonable reader would disagree with it</button>
+                    <button data-choice="c">It does not include a quotation</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Think about which part explains how a quotation proves the point.">
+                <div class="widget-row-prompt">2. Which part of an argument do writers most often leave out?</div>
+                <div class="widget-options">
+                    <button data-choice="a">the claim</button>
+                    <button data-choice="b">the evidence</button>
+                    <button data-choice="c" data-fb="Yes. Writers give a claim and drop in a quote, but never explain how the quote proves the claim. Evidence does not speak for itself.">the reasoning</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- AI callout (red frame, per components.md) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; A NOTE ON AI</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can list the parts of an argument and can even name a claim in a passage. It cannot decide what <em>you</em> believe about the justice of Electra&rsquo;s revenge, and it cannot supply the reasoning that connects a line from the play to your position. That connection is the thinking your essay is graded on, and it has to be yours.</div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A summary reports; an argument persuades. Keep claim, evidence, and reasoning together in every paragraph you write this week, and your essay will do more than retell the play.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 5.01 &middot; What Makes a Strong Argument</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
