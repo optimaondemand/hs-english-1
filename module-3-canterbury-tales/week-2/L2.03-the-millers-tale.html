@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 2.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 13px; color: #0e1c42;">Canterbury Tales</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 2.03</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">The Canterbury Tales, Chaucer (Middle English)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">THIS WEEK</div>
+        <div style="font-size: 16px; color: #0e1c42;">Story as Revelation</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 2.03</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Miller's Tale: Satire, Fabliaux, and the Vulgar</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">The Knight has just finished his noble tale. Why does a drunk miller shove his way in to answer it with a crude one?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The Host invites the Monk, the next-highest pilgrim, to speak. Instead the Miller, so drunk he can barely sit his horse, insists on going now. His tale is a <strong>fabliau</strong>: fast, low, and vulgar, and it deliberately parodies the noble story that came before. Today you will see how the tale mocks the Knight's, and what that choice reveals about its teller.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define fabliau, satire, and parody, and tell them apart.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> show how the Miller's Tale parodies the Knight's Tale point by point.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> argue what the Miller's choice of tale reveals about his character.</div></div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module Organizer (the Word document for this module in OneDrive)</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">The Miller's Prologue and Tale in the original Middle English (link in the reading box below)</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">About 35 minutes and something to write with</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE INTERRUPTION</div>
+
+        <!-- WIDGET 1: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Someone has just told a long, serious, impressive story, and the room applauds. What does it say about the next person if they jump in, uninvited, with a rude joke on the same subject?</div>
+            <div class="widget-options">
+                <button data-response="Maybe so. Refusing to be impressed can be a way of saying the impressive thing was overrated. Watch the Miller do exactly that to the Knight's world.">They refuse to be impressed</button>
+                <button data-response="Possibly. Interrupting is a grab for attention. But notice that the Miller does not just want attention; he wants to answer the Knight, story for story.">They just want attention</button>
+                <button data-response="Fair reading. Mockery can carry real criticism inside the joke. Keep that in mind: the Miller's crude tale makes a serious point about the Knight's polished one.">They are criticizing the first story</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">"I wol now quyte the Knightes tale"</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Chaucer stages the moment carefully. The Host, keeping order by rank, turns to the Monk. But the Miller, "that for-dronken was al pale, / So that unnethe up-on his hors he sat" (so drunk he could barely sit his horse), barges in. He announces: <em>"I can a noble tale for the nones, / With which I wol now quyte the Knightes tale."</em> The key word is <strong>quyte</strong>: to repay, to answer, to pay back. The Host tries to stop him ("abyd, Robin, my leve brother, / Som bettre man shal telle us first another"), and the Miller refuses. He will speak now or leave. A miller, one of the lowest-ranking pilgrims, demands the floor right after the highest. The interruption is itself a little rebellion against the social order the Knight's Tale just celebrated.</p>
+
+        <!-- Reading box (PD Middle English, by tale) -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 16px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#128278; READ ALONG (PUBLIC DOMAIN, MIDDLE ENGLISH)</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Open the Miller's Prologue and Tale in Chaucer's original Middle English: <a href="https://en.wikisource.org/wiki/Canterbury_Tales_(ed._Skeat)/Miller" style="color:#3B4E8C; font-weight:bold;">Canterbury Tales, ed. Skeat &middot; The Milleres Tale (Wikisource)</a>. Read the Prologue (the interruption), then the tale's opening, where we meet the old carpenter, his young wife Alisoun, the clerk "hende Nicholas," and Absolon the parish clerk. A note before you read: this is a bawdy tale, and Chaucer knew it. He warns squeamish readers to "turne over the leef, and chese another tale." Our focus is on what the vulgarity is <em>doing</em>, not on relishing it.</div>
+        </div>
+
+        <!-- ONE core visual: PD Ellesmere manuscript portrait of the Miller -->
+        <figure style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">THE MILLER &middot; PAINTED BESIDE HIS TALE IN A MANUSCRIPT MADE ABOUT 1400</div>
+            <div style="background:#F8F9FC; display:flex; justify-content:center; padding: 18px;"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Canterbury_Tales_-_The_Miller_-_f._34v_detail_-_Robin_with_the_Bagpype_-_early_1400s_Chaucer.png" alt="A medieval illuminated portrait of the Miller riding a horse and playing bagpipes: a stout figure in ordinary clothes, blowing into the pipes as he rides, painted in the margin of an old manuscript." style="display:block; max-width:100%; height:auto; border-radius:6px;" /></div>
+            <figcaption style="background: #FFFFFF; padding: 12px 16px;">
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">Compare this with the Knight's portrait from Lesson 2.01. No armor, no spear, no dignity of bearing: the Miller rides playing the bagpipes, the loud instrument of taverns and fairs. The General Prologue tells us he led the pilgrims out of town with this same noise. The picture, like his tale, refuses to be solemn.</div>
+                <div style="font-size: 12px; color: #0e1c42; margin-top: 8px;">Image: the Ellesmere Chaucer manuscript (early 1400s), Huntington Library, via Wikimedia Commons. Public domain.</div>
+            </figcaption>
+        </figure>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; FOUR WORDS FOR A LOW STORY</div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 4px 0 8px 0;">Fabliau: the anti-romance</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A <strong>fabliau</strong> (plural <strong>fabliaux</strong>) is a short, comic, often crude verse tale, usually about ordinary townspeople: tradesmen, clerks, and cunning wives. Where romance runs on honor, fabliaux run on trickery; where romance rewards nobility, fabliaux reward cleverness. The Miller's Tale is the most famous fabliau in English. An old carpenter named John has married a young wife, <strong>Alisoun</strong> ("Fair was this yonge wyf... As any wesele hir body gent and smal": slim and graceful as a weasel, a townsman's compliment, not a courtly one). Their boarder, the clever clerk <strong>hende Nicholas</strong>, schemes to win her, while the fussy parish clerk <strong>Absolon</strong> courts her from the street. The plot is a machine of tricks that ends with everyone except Alisoun humiliated: a far cry from a tournament judged by a duke.</p>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Parody and satire: what the mockery is for</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A <strong>parody</strong> imitates the form of another work in order to mock it. The Miller's Tale is a point-by-point parody of the Knight's: again two young men pursue one woman, again there is a "courtship," again fate seems to hang overhead. But the tower is a carpenter's house, the goddess is a tradesman's wife, and destiny is a fake flood dreamed up to fool a gullible husband. <strong>Satire</strong> is the broader weapon: comedy aimed at exposing folly or vice. Through the parody, the Miller's satire lands on pretension itself: on solemn ideals that ignore how ordinary people actually behave. The vulgarity is not decoration. It is the argument: <em>your noble world, seen from below, looks like this.</em></p>
+
+        <!-- Parody-map visual support is the table; the ONE illustrative visual on this page is the manuscript portrait above -->
+        <div style="overflow-x: auto; margin: 14px 0;"><table style="width: 100%; border-collapse: collapse; min-width: 460px;">
+            <thead><tr style="background: #0E1C42;"><th style="padding: 10px 12px; font-size: 13px; color: #fff; text-align: left; border: 1px solid #3B4E8C;">The Knight's Tale gives us&hellip;</th><th style="padding: 10px 12px; font-size: 13px; color: #fff; text-align: left; border: 1px solid #3B4E8C;">The Miller's Tale answers with&hellip;</th></tr></thead>
+            <tbody>
+                <tr><td style="padding: 9px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42;">Two noble cousins, Palamon and Arcite</td><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">Two scheming clerks, Nicholas and Absolon</td></tr>
+                <tr><td style="padding: 9px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42;">Emelye, worshiped from a tower window</td><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">Alisoun, flirted with across a carpenter's house</td></tr>
+                <tr><td style="padding: 9px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42;">The gods and destiny steer events</td><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">A fake prophecy of a second Flood steers a fool</td></tr>
+                <tr><td style="padding: 9px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42;">A formal tournament settles the rivalry</td><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">A midnight prank settles it, painfully</td></tr>
+                <tr><td style="padding: 9px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42;">Order restored by a wise duke</td><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">Chaos: a broken arm, a branded backside, a town laughing</td></tr>
+            </tbody>
+        </table></div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Register: the sound of social class</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Register</strong> is the level of formality in a speaker's language: the difference between "I shall endeavor to attend" and "I'll try to come." The Knight's Tale speaks in a high register: ceremonious, Latinate, formal. The Miller's Tale speaks low: blunt, physical, packed with the words of workshops and barnyards. Chaucer matches each teller's register to his station and his character, which is exactly why the tales reveal their tellers. You will study this tool up close in Grammar 2.04.</p>
+
+        <!-- WIDGET 2: evaluative single-select (recolored; varied correct indices) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="b" data-hint="Think about who the characters are and what the story rewards.">
+                <div class="widget-row-prompt">1. Which feature marks the Miller's Tale as a fabliau rather than a romance?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Noble heroes competing under a code of honor</button>
+                    <button data-choice="b" data-fb="Yes. Ordinary townspeople, trickery instead of honor, and cleverness rewarded: that is the fabliau formula.">Ordinary townspeople in a plot of trickery, where the cleverest wins</button>
+                    <button data-choice="c">Gods deciding the outcome through formal prayers</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Parody imitates a specific work's form to mock it. Which answer points at the Knight's Tale itself?">
+                <div class="widget-row-prompt">2. The Miller's Tale counts as a parody because it&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a">uses rude words for their own sake</button>
+                    <button data-choice="b">tells a completely unrelated story</button>
+                    <button data-choice="c" data-fb="Right. It borrows the Knight's structure (two rivals, one woman, fate overhead) and swaps every noble part for a low one. Imitating a form to mock it is parody.">copies the shape of the Knight's Tale but swaps every noble element for a low one</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Register is about the level of formality in language.">
+                <div class="widget-row-prompt">3. Which pair correctly matches teller to register?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Correct. High, ceremonious language for the Knight; blunt, physical language for the Miller. The register is part of the portrait.">Knight: high, formal &middot; Miller: low, blunt</button>
+                    <button data-choice="b">Knight: low, blunt &middot; Miller: high, formal</button>
+                    <button data-choice="c">Both speak in exactly the same register</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>fabliau</strong> (pl. <strong>fabliaux</strong>): a short, comic, often crude medieval verse tale of ordinary people and trickery. &nbsp;&middot;&nbsp; <strong>satire:</strong> comedy that exposes folly or vice in order to criticize it. &nbsp;&middot;&nbsp; <strong>parody:</strong> a mocking imitation of another work's style or form. &nbsp;&middot;&nbsp; <strong>register:</strong> the level of formality of a speaker's language.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>fabliau</em> is Old French, a "little fable," from Latin <em>fabula</em> (story), the same root as <em>fable</em>. <em>Satire</em> comes from Latin <em>satura</em>, a "medley" or full dish of mixed things. <em>Parody</em> is from Greek <em>paroidia</em>, a "song sung beside" another, an imitation set next to the original. <em>Register</em> comes from Latin <em>regesta</em>, "things recorded": a list, and later, the range or level something is set at.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Copia (in your Organizer):</strong> take the plain sentence <em>"The Miller told a rude story,"</em> and rewrite it three times: once using <em>fabliau</em> to name its genre, once using <em>parody</em> to show its target, and once using <em>satire</em> to name what it exposes. Expand each with a detail from the tale.</div>
+        </div>
+
+        <!-- AI callout (red frame) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND SATIRE</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">AI tools can summarize a plot and label a genre. They are much less reliable at judging <em>tone</em>: whether a passage is mocking, affectionate, or both at once. Deciding whether the Miller is attacking the Knight, or just refusing to bow to him, requires your own reading of the tone. Do that judging yourself.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Add today's Word Study terms and your copia to your Module Organizer</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Record <em>fabliau, satire, parody,</em> and <em>register,</em> then write your three copia sentences.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Update your Character Tracking Chart: the Miller</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Add the Miller's estate, one portrait detail, his tale, and one note on the vice or virtue his story shows. Then go on to Grammar 2.04 to study register up close.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The Miller "quytes" the Knight: he repays a noble romance with a vulgar fabliau built on the same skeleton. The choice reveals the man: irreverent, clever, contemptuous of pretension. Set the two tellers side by side and you have the heart of this week's Quick Write: what a chosen story reveals about the soul that chose it.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.03 &middot; The Miller's Tale: Satire, Fabliaux, and the Vulgar</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
