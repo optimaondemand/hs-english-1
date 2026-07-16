@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 3.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 13px; color: #0e1c42;">Justice in Greek Tragedy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">WEEK / LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 3 &middot; Lesson 3.03</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Electra, Sophocles (trans. Jebb)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What is owed &mdash; to gods, city, family?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 3.03</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The False Report of Orestes' Death</div>
+        <div style="font-size: 16px; color: #0e1c42;">Reading Lesson &middot; One lie, two opposite reactions</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; WHAT YOU ARE READING TODAY</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">What does one piece of false news reveal about the two women who hear it?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The <strong>Tutor's false report</strong>: he arrives disguised as a stranger and tells Clytaemnestra that Orestes has been killed in a chariot crash at the Pythian games. You know it is a lie: it is the very plan from the Prologue. Watch what one piece of false news does to the two women who hear it.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how the Tutor says Orestes "died," and why the speech is so long and vivid.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> contrast Clytaemnestra's and Electra's reactions to the same news.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how dramatic irony sharpens the whole scene.</div></div>
+    </div>
+
+    <!-- ============ PART 1 · WARM-UP (reflect widget) ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; NO WRONG ANSWER</div>
+            <div class="widget-question">Imagine hearing the same piece of news, and one person in the room quietly relaxes while another falls apart. What would that instant teach you?</div>
+            <div class="widget-options">
+                <button data-response="Right. The same words reveal opposite hearts. One report is about to do exactly that to Clytaemnestra and Electra.">It would tell me what each person truly wanted</button>
+                <button data-response="Good instinct. The gap between the two reactions is the real story. Watch that gap open in this scene.">It would show me who feared what</button>
+                <button data-response="Fair. And now add this twist: you, the audience, know the news is false. That extra knowledge is what makes the scene unbearable to watch.">It would depend on what the news actually was</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ============ PART 2 · THE LESSON ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.75; margin: 0 0 12px 0;">The Tutor delivers one of the longest speeches in the play: a detailed account of Orestes winning race after race at the Pythian games, then being thrown from his chariot, tangled in the reins, and dragged until he is so mangled that no friend would know the body. It is completely false, and you know it. So why does Sophocles let it run so long? Partly because a lie must be convincing: the more circumstantial detail the Tutor gives, the more Clytaemnestra will believe it, and the report has to work. But there is a deeper reason. The length forces <strong>you</strong> to sit inside the dramatic irony, listening to a vivid death you know did not happen, while you watch its effect land on two very different women. Clytaemnestra hears it and feels relief: the son who threatened her is gone, and she is "rid of terror." Electra hears the same words and is destroyed: "I am lost&hellip; I am undone." The single report becomes a test that reveals each woman's heart. And because you hold the truth the whole time, every line of the mother's relief and the daughter's despair is doubled in meaning.</p>
+
+        <!-- ONE core visual: dramatic-irony diagram (navy / gold / indigo) -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">DRAMATIC IRONY &middot; THE GAP BETWEEN WHAT YOU KNOW AND WHAT THE STAGE BELIEVES</div>
+            <div style="background: #F8F9FC; padding: 20px 18px;">
+
+                <!-- TOP: what the audience knows (navy truth bar) -->
+                <div style="background: #0E1C42; border-radius: 10px; padding: 14px 18px; text-align: center; margin-bottom: 6px;">
+                    <div style="font-size: 12px; color: #55c8e8; letter-spacing: .08em; margin-bottom: 4px;">&#128064; WHAT YOU, THE AUDIENCE, KNOW</div>
+                    <div style="font-size: 18px; color: #fff;">Orestes is <strong>alive</strong> and nearby. The report is the planned lie from the Prologue.</div>
+                </div>
+                <div style="text-align: center; color: #3B4E8C; font-size: 22px; line-height: 1.1;">&#8595;&nbsp;&nbsp;the same false words fall on two hearts&nbsp;&nbsp;&#8595;</div>
+
+                <!-- BOTTOM: the two believers -->
+                <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 6px;">
+                    <div style="flex: 1; min-width: 240px; background: #FDF3E3; border: 2px solid #C7922C; border-radius: 10px; padding: 14px 16px;">
+                        <div style="font-size: 12px; color: #8A6410; letter-spacing: .06em; margin-bottom: 4px;">CLYTAEMNESTRA HEARS IT AS&hellip;</div>
+                        <div style="font-size: 17px; color: #0e1c42; margin-bottom: 6px;">Relief</div>
+                        <div style="font-size: 15px; color: #1a2340; line-height: 1.6;">The threat to her rule is gone. She is "rid of terror." Her first instinct is safety, not grief.</div>
+                    </div>
+                    <div style="flex: 1; min-width: 240px; background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 14px 16px;">
+                        <div style="font-size: 12px; color: #3B4E8C; letter-spacing: .06em; margin-bottom: 4px;">ELECTRA HEARS IT AS&hellip;</div>
+                        <div style="font-size: 17px; color: #0e1c42; margin-bottom: 6px;">The end of hope</div>
+                        <div style="font-size: 15px; color: #1a2340; line-height: 1.6;">Her last champion is dead. "I am lost&hellip; I am undone." Every reason to keep going is gone.</div>
+                    </div>
+                </div>
+                <div style="font-size: 13px; color: #0e1c42; text-align: center; margin-top: 16px; line-height: 1.6;">Both reactions are built on a lie you can see through. That gap is what makes the mother's relief chilling and the daughter's grief unbearable to watch.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- READ NOW -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128218; READ NOW</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.65; margin-bottom: 14px;">Read the <strong>Tutor's report of the chariot race</strong> and the exchanges that follow it: Clytaemnestra's response and Electra's. Read the messenger speech at a steady pace; notice how the detail piles up.</div>
+        <div style="text-align: center; margin: 6px 0 14px;">
+            <a href="http://classics.mit.edu/Sophocles/electra.html" style="display: inline-block; background: #0E1C42; color: #fff; text-decoration: none; font-size: 16px; padding: 12px 26px; border-radius: 8px;">&#128279; Open <em>Electra</em> (public-domain text, trans. R. C. Jebb)</a>
+        </div>
+        <div style="font-size: 14px; color: #0e1c42; line-height: 1.55; text-align: center;">Free, full text at the Internet Classics Archive. Find the long speech describing the chariot race at the Pythian games.</div>
+    </div>
+
+    <!-- Short PD anchor quote -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; letter-spacing: .08em; margin-bottom: 8px;">ELECTRA, AT THE NEWS</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.7; font-style: italic;">&ldquo;I am lost, hapless one, I am undone!&rdquo;</div>
+        <div style="font-size: 14px; color: #0e1c42; margin-top: 8px;">&mdash; Electra (trans. Jebb). Remember: the death she mourns never happened.</div>
+    </div>
+
+    <!-- Annotate (practice) -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#9999; ANNOTATE AS YOU READ</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.65; margin-bottom: 10px;">Mark up your own copy. As you read:</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">continue to highlight every reference to <strong>justice</strong>,</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">underline the <strong>details</strong> in the Tutor's story that make the lie sound believable, and</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">bracket Clytaemnestra's and Electra's <strong>reactions</strong>, so you can compare them side by side.</div></div>
+    </div>
+
+    <!-- WIDGET: evaluative single-select -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 6px;">&#9989; CHECK YOURSELF</div>
+        <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom: 4px;">Work out each answer on your own first, then choose.</div>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="c" data-hint="Look at the top bar of the diagram: what do you know that the stage does not?">
+                <div class="widget-row-prompt">1. Is Orestes actually dead? How do you know?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Yes; the Tutor saw the crash himself</button>
+                    <button data-choice="b">Yes; the detail proves it</button>
+                    <button data-choice="c" data-fb="Right. The report is the false story from the Prologue, part of Orestes' plan to return by stealth. You know he is alive and near: that gap is the dramatic irony.">No; it is the planned lie from the Prologue, and we know he is alive</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="One woman gains safety from the news; the other loses her last hope.">
+                <div class="widget-row-prompt">2. How do the two women's reactions differ?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Yes. Clytaemnestra feels relief because the threat to her is gone; Electra is crushed, believing her last hope of justice has died with her brother.">Clytaemnestra feels relief; Electra is crushed</button>
+                    <button data-choice="b">Both grieve exactly the same way</button>
+                    <button data-choice="c">Clytaemnestra grieves; Electra rejoices</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Think about what the piled-up detail does both to Clytaemnestra and to you.">
+                <div class="widget-row-prompt">3. Why might Sophocles make the messenger speech so long?</div>
+                <div class="widget-options">
+                    <button data-choice="a">To slow the plot down for no reason</button>
+                    <button data-choice="b" data-fb="Right. The detail makes the lie believable to Clytaemnestra, and it holds you inside the dramatic irony, listening to a death you know is false while it lands on both women.">The detail sells the lie and holds us inside the dramatic irony</button>
+                    <button data-choice="c">To describe the real rules of the games</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- AI callout (red frame) -->
+    <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; WORKING WITH AI</div>
+        <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">AI can tell you, correctly, that this speech is "an example of dramatic irony." That is a label, not an understanding. The label cannot feel the strain of hearing a long, detailed death that you know is false, or notice the exact line where Clytaemnestra's relief turns cold. Naming the device is easy; experiencing what it <em>does</em> to this scene is the reading only you can do.</div>
+    </div>
+
+    <!-- Oral reflection (indigo, device-agnostic) -->
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; letter-spacing: .08em; margin-bottom: 8px;">&#127908; SPEAK YOUR THINKING (record 1&ndash;3 minutes)</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.65; margin-bottom: 8px;">Record yourself (phone, Canvas recorder, or VR space) answering these in order:</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.8;">1. How did Orestes "die," and why do you think the story is so long and detailed?<br>2. What is Electra's response to the news?<br>3. What is Clytaemnestra's response?<br>4. How do you think Clytaemnestra's response makes Electra feel?</div>
+        <div style="font-size: 14px; color: #3B4E8C; margin-top: 10px;">Add this recording to your ongoing recitation thread.</div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Note Electra's lowest point</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">In your Organizer, record where Electra stands now: believing her brother dead and her cause lost. The next lesson reads the scene where the Chorus meets her in that despair.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">One false report, two opposite hearts, and you holding the truth the whole time. That is dramatic irony doing its work: it turns a plain messenger speech into the most revealing scene in the play.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 3.03 &middot; The False Report of Orestes' Death</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
