@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Grammar 4.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">WEEK / LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 4 &middot; Grammar 4.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">GRAMMAR FOCUS</div>
+        <div style="font-size: 17px; color: #0e1c42;">Dashes &amp; colons</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Electra, Sophocles</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">GRAMMAR 4.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Dashes and Colons for Emphasis</div>
+        <div style="font-size: 16px; color: #0e1c42;">Grammar Lesson</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127919; TODAY YOU WILL BE ABLE TO&hellip;</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Use a colon to introduce and a dash to interrupt or drive home &mdash; two marks that let you point a reader's attention exactly where you want it &mdash; and punctuate both correctly.</div>
+    </div>
+
+    <!-- Warm-up widget (reflect, indigo) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; READ BOTH ALOUD &middot; NO WRONG ANSWER</div>
+            <div class="widget-question"><strong>A.</strong> <em>Electra wanted one thing and it was justice.</em> &nbsp;|&nbsp; <strong>B.</strong> <em>Electra wanted one thing: justice.</em><br>The colon in B makes you pause, then delivers the word like an answer. What does that pause do that the word &ldquo;and&rdquo; cannot?</div>
+            <div class="widget-options">
+                <button data-response="Right. The colon creates a beat of anticipation, then lands the word with force. That is the effect we are studying.">It builds a pause, then lands the word hard</button>
+                <button data-response="True, B is tighter. It also uses the colon to point straight at the key word, which "and" cannot do.">It is shorter and cleaner</button>
+                <button data-response="Fair, both are correct. But only B uses punctuation to spotlight the word "justice," and that is the move to learn.">Honestly, both read fine to me</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- The Lesson -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.75; margin: 0 0 14px 0;">A <strong>colon</strong> says to the reader, &ldquo;here it comes.&rdquo; It follows a complete sentence and introduces what completes or explains it: a word, a list, or a second statement. The rule to remember is that a complete sentence must come <em>before</em> the colon. A <strong>dash</strong> is more flexible. A single dash can drive a point home by tacking an emphatic ending onto a sentence &mdash; and a pair of dashes can interrupt a sentence to slip in extra information, the way commas do but with more force. Both marks are tools of emphasis, so both lose their power if you overuse them. A colon works best when the thing it introduces truly deserves the drumroll. A dash works best when you want a sharper break than a comma gives. Used with restraint, these marks let you control a reader's pace and steer attention to the idea that matters most, which is exactly what you want in the key sentences of an essay.</p>
+
+        <!-- Pattern card (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">TWO PATTERNS TO REMEMBER</div>
+            <div style="font-size: 17px; color: #0e1c42; line-height: 1.9;">Complete sentence<strong>:</strong> the thing it points to.<br>Sentence <strong>&mdash;</strong> an emphatic add-on.</div>
+        </div>
+
+        <!-- ONE visual: navy chalkboard of real examples, the mark in gold -->
+        <div style="background: #14213f; border: 10px solid #3a2c1a; border-radius: 10px; padding: 22px 24px; margin: 18px 0; box-shadow: inset 0 0 40px rgba(0,0,0,0.4);">
+            <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .18em; margin-bottom: 16px; text-align: center;">ON THE BOARD &middot; THE MARK IN GOLD POINTS THE READER</div>
+            <div style="font-size: 19px; color: #f4f1e8; line-height: 2.2;">
+                The play ends on a single claim<span style="color: #e6b955; font-weight: bold;">:</span> the house is free.<br>
+                The Chorus named her double honor<span style="color: #e6b955; font-weight: bold;">:</span> wisdom and piety.<br>
+                Orestes stood beside her the whole time <span style="color: #e6b955; font-weight: bold;">&mdash;</span> alive.<br>
+                The proof was undeniable <span style="color: #e6b955; font-weight: bold;">&mdash;</span> their father&rsquo;s own signet ring.
+            </div>
+            <div style="font-size: 14px; color: #cdd6ea; margin-top: 16px; line-height: 1.6;">The <span style="color:#e6b955;">gold colon</span> follows a full sentence and introduces what completes it. The <span style="color:#e6b955;">gold dash</span> tacks on an emphatic ending. Each mark spotlights the idea that matters most.</div>
+        </div>
+
+        <!-- Evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; IDENTIFY &middot; CORRECT OR NOT?</div>
+            <div class="widget-row" data-correct="a" data-hint="Check: is there a complete sentence before the colon?">
+                <div class="widget-row-prompt">1. <em>Electra faced a hard choice: act alone or do nothing.</em></div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Yes. A complete sentence precedes the colon, and the colon introduces the two options. Correct.">Correct</button>
+                    <button data-choice="b">Wrong</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Read only the words before the colon. Do they form a complete sentence on their own?">
+                <div class="widget-row-prompt">2. <em>Chrysothemis wanted to: survive, wait, and stay safe.</em></div>
+                <div class="widget-options">
+                    <button data-choice="a">Correct</button>
+                    <button data-choice="b" data-fb="Right. There is no complete sentence before the colon. Remove it: 'wanted to survive, wait, and stay safe.'">Wrong</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="A pair of dashes must open and close. Can a single dash do the job of two here?">
+                <div class="widget-row-prompt">3. <em>Electra, grieving for years &mdash; refused to be silent.</em></div>
+                <div class="widget-options">
+                    <button data-choice="a">Correct</button>
+                    <button data-choice="b" data-fb="Right. A single dash cannot close an interruption that a pair was meant to hold. Use two dashes or two commas around 'grieving for years.'">Wrong</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- Write your own (indigo) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#10145;&#65039; NOW WRITE YOUR OWN (IN YOUR ORGANIZER)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Write <strong>two sentences</strong> about this week's reading: one that uses a <strong>colon</strong> to introduce an idea, and one that uses a <strong>dash</strong> for emphasis. You will use both moves to sharpen the key claims in your module essay.</p>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A colon introduces; a dash drives home. Both need a complete sentence to lean on, and both lose their power if you overuse them. Save them for the sentences you most want the reader to feel.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Grammar 4.02 &middot; Dashes and Colons for Emphasis</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
