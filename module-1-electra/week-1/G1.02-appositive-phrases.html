@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Grammar 1.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Grammar 1.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">GRAMMAR FOCUS</div>
+        <div style="font-size: 17px; color: #0e1c42;">Appositive phrases</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Electra, Sophocles</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">GRAMMAR 1.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Appositive Phrases</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127919; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">How can you fold two facts about a character into one smooth sentence, without adding a single new idea?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You will recognize an appositive phrase, punctuate it with commas, and use one to pack more information into a sentence smoothly. It is a move you will use to introduce evidence in your essay.</div>
+    </div>
+
+    <!-- Warm-up (reflect check-in widget) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; READ BOTH ALOUD &middot; NO WRONG ANSWER</div>
+            <div class="widget-question"><strong>A.</strong> Clytaemnestra killed Agamemnon. Clytaemnestra was his wife. &nbsp;&nbsp;|&nbsp;&nbsp; <strong>B.</strong> Clytaemnestra, his wife, killed Agamemnon.<br>Version B folds two facts into one smooth sentence. How did it do that?</div>
+            <div class="widget-options">
+                <button data-response="Right. Version B tucks the second fact ('his wife') right next to the name it describes, so no second sentence is needed. That tucked-in phrase is today's lesson.">It slipped one fact in beside the name</button>
+                <button data-response="Look again: Version B adds no new idea. It only rearranges the same two facts so one describes the other inside a single sentence.">It added a new detail about her</button>
+                <button data-response="Not quite. They say the same things, but only Version B combines them, by placing 'his wife' next to 'Clytaemnestra' to rename her. That move is the appositive.">They are basically identical</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- The Lesson -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 12px 0;">An <strong>appositive</strong> is a noun or noun phrase placed right beside another noun to <em>rename or explain it</em>. In "Clytaemnestra, his wife, killed Agamemnon," the phrase <em>his wife</em> is an appositive renaming Clytaemnestra. Appositives let a writer add identifying detail without starting a new sentence; they are one of the most useful tools you have for writing with economy and grace. When the appositive simply adds <em>extra</em> information (information the sentence would survive without), set it off with <strong>commas</strong>: <em>Orestes, Electra's brother, returns in secret.</em> You can drop "Electra's brother" and the sentence still stands, so it takes commas. Appositives can be short (a word) or long (a whole phrase), and skilled writers use them to define a term the moment they introduce it.</p>
+
+        <!-- Pattern card (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">ONE PATTERN TO REMEMBER</div>
+            <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;">Noun<strong>,</strong> <em>renaming phrase</em><strong>,</strong> &hellip; rest of sentence. &nbsp;A comma on each side of the extra information.</div>
+        </div>
+
+        <!-- ONE visual: navy chalkboard of worked examples, appositive marked in gold -->
+        <div style="background: #14213f; border: 10px solid #3a2c1a; border-radius: 10px; padding: 22px 24px; margin: 18px 0; box-shadow: inset 0 0 40px rgba(0,0,0,0.4);">
+            <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .18em; margin-bottom: 16px; text-align: center;">ON THE BOARD &middot; SPOT THE APPOSITIVE</div>
+            <div style="font-size: 19px; color: #f4f1e8; line-height: 2.2;">
+                Clytaemnestra<span style="color:#8ea2c9;">,</span> <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">his wife</span><span style="color:#8ea2c9;">,</span> killed Agamemnon.<br>
+                Orestes<span style="color:#8ea2c9;">,</span> <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">Electra&rsquo;s brother</span><span style="color:#8ea2c9;">,</span> returns in secret.<br>
+                Aegisthus<span style="color:#8ea2c9;">,</span> <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">the usurper</span><span style="color:#8ea2c9;">,</span> sits on the throne.
+            </div>
+            <div style="font-size: 14px; color: #cdd6ea; margin-top: 16px; line-height: 1.6;">The <span style="color:#e6b955;">gold underline</span> marks the appositive: a phrase that renames the noun just before it. Notice a comma sits on <em>each</em> side of it.</div>
+        </div>
+
+        <!-- Evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; YOUR TURN &middot; CHOOSE THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="c" data-hint="Find the phrase that renames the noun right before it and could be lifted out without breaking the sentence.">
+                <div class="widget-row-prompt">1. Which part is the appositive? &mdash; <em>Sophocles, a playwright of Athens, wrote Electra.</em></div>
+                <div class="widget-options">
+                    <button data-choice="a">Sophocles</button>
+                    <button data-choice="b">wrote Electra</button>
+                    <button data-choice="c" data-fb="Yes. 'a playwright of Athens' renames Sophocles and is set off with commas. Drop it and the sentence still stands.">a playwright of Athens</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="The extra, renaming phrase needs a comma on each side of it.">
+                <div class="widget-row-prompt">2. Which sentence punctuates the appositive correctly?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Correct. 'the grieving daughter' renames Electra and is fenced with a comma on both sides.">Electra, the grieving daughter, refuses to be silent.</button>
+                    <button data-choice="b">Electra the grieving daughter, refuses to be silent.</button>
+                    <button data-choice="c">Electra, the grieving daughter refuses to be silent.</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Identify & practice (self-check, help up front) -->
+        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #C7922C; border-radius: 8px; padding: 18px 22px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#9998; IDENTIFY &amp; PRACTICE</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-bottom: 10px;">In your notebook, find the appositive in each sentence (the phrase that renames the noun before it). Then open the check.</div>
+            <div style="font-size: 16px; color: #0e1c42; line-height: 2;">
+                1. Sophocles, a playwright of Athens, wrote <em>Electra</em>.<br>
+                2. Electra, the grieving daughter, refuses to be silent.<br>
+                3. The Tutor, an old and trusted servant, guides Orestes home.<br>
+                4. Mycenae, a city rich in gold, is the setting of the play.<br>
+                5. Justice, the debt we owe one another, drives every character.
+            </div>
+            <details style="border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 16px; margin-top: 14px;">
+                <summary style="font-size: 16px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #C7922C;">&#9654;</span>&nbsp; Try all five in your notebook first, then check your answers</summary>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.8; margin-top: 10px; padding-top: 10px; border-top: 1px solid #EEF1F8;">1. <em>a playwright of Athens</em> &middot; 2. <em>the grieving daughter</em> &middot; 3. <em>an old and trusted servant</em> &middot; 4. <em>a city rich in gold</em> &middot; 5. <em>the debt we owe one another</em>. Each renames the noun just before it, and each is set off by commas.</div>
+            </details>
+        </div>
+    </div>
+
+    <!-- Write your own -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#10145;&#65039; NOW WRITE YOUR OWN (IN YOUR ORGANIZER)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Write <strong>three sentences</strong> about characters in <em>Electra</em>, each using an appositive to introduce and define the character (like sentences 2 and 3 above). Remember the comma on each side. You will reuse this move to introduce evidence in your essay.</p>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">An appositive renames a noun right where it stands, and extra information gets a comma on each side. It is how you introduce a character or a term in one clean sentence instead of two.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Grammar 1.02 &middot; Appositive Phrases</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
