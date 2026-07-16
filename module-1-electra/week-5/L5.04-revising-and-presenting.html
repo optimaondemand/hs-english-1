@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 5.04</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 13px; color: #0e1c42;">Justice in Greek Tragedy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 5.04</div>
+        <div style="font-size: 13px; color: #0e1c42;">Week 5 &middot; Project Week</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Electra, Sophocles (trans. Jebb)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What is owed &mdash; to gods, city, family?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 5.04</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Revising and Presenting</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson &middot; Week 5 (Project Week)</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; WHAT YOU ARE LEARNING TODAY</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">A first draft is not a finished essay. Today you <strong>revise</strong> yours using feedback and a checklist, then prepare a short, optional <strong>spoken presentation</strong> of your thesis. Revising is where good writers do most of their real work.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> revise a draft in response to feedback, strengthening claim, evidence, and reasoning.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> present my thesis aloud clearly and support it with one piece of evidence.</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; REVISE, THEN PROOFREAD</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Read only your first and last sentences out loud. Do they name the same position?</div>
+            <div class="widget-options">
+                <button data-response="Good. A thesis and conclusion that match tell the reader your argument held together. Move on to hunting for your weakest paragraph.">Yes, they match</button>
+                <button data-response="That is the first thing to fix, and it is a good sign: it usually means your thinking grew as you wrote. Reshape the thesis to fit where you landed.">No, my conclusion drifted</button>
+                <button data-response="Read them again slowly. If you cannot tell, your position may be stated too vaguely in one place or the other. Sharpen both.">I cannot tell</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.75; margin: 8px 0 12px 0;">Revising is not the same as proofreading. Proofreading fixes surface errors: spelling, a missing comma. Revising asks the harder question: does the argument actually work? Start by reading your draft as if you disagreed with it, hunting for the weakest paragraph. Feedback helps here, because a reader notices gaps you cannot: a claim that turned out to be a summary, a quotation left unexplained, a paragraph whose smaller claim never connected back to the thesis. When you receive feedback, sort it before you act. Some notes are about the argument (a body paragraph needs stronger reasoning) and some are about mechanics (a run-on sentence); handle the argument first, because there is no point polishing a sentence you may cut. Move, add, and delete whole sentences freely; that is what revision means. Only when the case is sound do you turn to conventions: sentence variety, transitions, and a final proofread. The last stage of the week is optional but worth doing: preparing to say your thesis aloud. Speaking an argument forces a clarity that hiding behind a page does not. If you cannot state your position and one reason for it in twenty seconds of plain speech, the written version is probably not clear yet either.</p>
+
+        <!-- ONE core visual: revision-log (what the note said / what I changed) -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">A REVISION LOG &middot; TURN EACH NOTE INTO A CHANGE</div>
+            <div style="overflow-x: auto;"><table style="width: 100%; border-collapse: collapse; min-width: 480px;">
+                <thead>
+                    <tr>
+                        <th style="text-align:left; padding: 10px 14px; background:#EEF1F8; border:1px solid #D0D9E8; font-size: 13px; color:#3B4E8C; width:50%;">&#128221; WHAT THE NOTE SAID</th>
+                        <th style="text-align:left; padding: 10px 14px; background:#FDF3E3; border:1px solid #D0D9E8; font-size: 13px; color:#8A6410; width:50%;">&#9998; WHAT I CHANGED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 11px 14px; border:1px solid #D0D9E8; font-size: 15px; color:#1a2340; line-height:1.5; background:#FFFFFF;">&ldquo;Your second paragraph just retells the scene.&rdquo;</td>
+                        <td style="padding: 11px 14px; border:1px solid #D0D9E8; font-size: 15px; color:#1a2340; line-height:1.5; background:#FFFFFF;">Added two sentences of reasoning that explain how the line proves my claim.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 11px 14px; border:1px solid #D0D9E8; font-size: 15px; color:#1a2340; line-height:1.5; background:#F4F6FA;">&ldquo;This quotation appears with no set-up.&rdquo;</td>
+                        <td style="padding: 11px 14px; border:1px solid #D0D9E8; font-size: 15px; color:#1a2340; line-height:1.5; background:#F4F6FA;">Wrote a run-up sentence naming Chrysothemis and the moment before the quote.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 11px 14px; border:1px solid #D0D9E8; font-size: 15px; color:#1a2340; line-height:1.5; background:#FFFFFF;">&ldquo;Your conclusion says something new.&rdquo;</td>
+                        <td style="padding: 11px 14px; border:1px solid #D0D9E8; font-size: 15px; color:#1a2340; line-height:1.5; background:#FFFFFF;">Rewrote the last paragraph to restate my actual position in fresh words.</td>
+                    </tr>
+                </tbody>
+            </table></div>
+            <div style="font-size: 13px; color: #1a2340; padding: 10px 14px; background:#FFFFFF; line-height:1.55;">Keep your own version of this log in your Organizer: for each comment, record what the note said and what you changed. If you chose not to change something, say why.</div>
+        </div>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; CHECK, THEN SPEAK</div>
+
+        <!-- Revision checklist (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-bottom: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 10px;">&#9989; REVISION CHECKLIST</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.95;">
+                &#9744; My thesis states a position a reader could dispute.<br>
+                &#9744; Every body paragraph has a claim, evidence, and reasoning.<br>
+                &#9744; Each quotation is introduced and then explained; none stands alone.<br>
+                &#9744; I used at least three Word Study terms accurately.<br>
+                &#9744; My conclusion matches the position I ended up defending.<br>
+                &#9744; I read it aloud once and fixed what sounded wrong.
+            </div>
+        </div>
+
+        <!-- Optional oral presentation (indigo do) -->
+        <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin-bottom: 16px;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px;">&#127908; OPTIONAL &middot; PRESENT YOUR THESIS ALOUD (about 60 seconds)</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.75;">Prepare a short spoken version of your argument and, if you choose, record it on any device you have: a phone, the Canvas media tool, or a VR space. Say it in three moves:</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.9; margin-top: 10px;">
+                1. State the question and your <strong>thesis</strong> in one clear sentence.<br>
+                2. Give <strong>one</strong> piece of evidence from the play.<br>
+                3. Explain in a sentence or two <strong>why</strong> it supports your position.
+            </div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 12px;">Speak slowly enough to be understood and look up from your notes. This is practice for the graded recitation and for presenting ideas in any setting.</div>
+        </div>
+
+        <!-- WIDGET: evaluative single-select -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="b" data-hint="One reworks the argument itself; one only fixes surface errors.">
+                <div class="widget-row-prompt">1. How is revising different from proofreading?</div>
+                <div class="widget-options">
+                    <button data-choice="a">They are two names for the same task</button>
+                    <button data-choice="b" data-fb="Right. Revising reworks the argument itself by adding, cutting, and moving whole ideas; proofreading only fixes surface errors like spelling. Revise first, proofread last.">Revising reworks the argument; proofreading fixes surface errors</button>
+                    <button data-choice="c">Proofreading comes before writing the draft</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Think about what saying an argument out loud reveals.">
+                <div class="widget-row-prompt">2. Why present your thesis out loud?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Yes. Saying an argument plainly reveals whether it is really clear. If you cannot state your position and one reason briefly, the written version probably needs more work.">Saying it plainly reveals whether it is really clear</button>
+                    <button data-choice="b">Because speaking replaces the written essay</button>
+                    <button data-choice="c">Because it is faster than revising</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Revise the argument before you polish the words. Fix the thinking, then the sentences. When you can say your thesis and one reason out loud in plain speech, your essay is ready.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 5.04 &middot; Revising and Presenting</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
