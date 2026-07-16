@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 2.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 13px; color: #0e1c42;">Honor and Duty in Sir Gawain</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 2.03</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Sir Gawain and the Green Knight, Fitt II (trans. Weston)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What does it mean to be truly honorable?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 2.03</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Arrival at Hautdesert</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Gawain finds warmth, feasting, and a smiling host. So why should a careful reader feel nervous?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">At the end of his winter ride, Gawain reaches a dazzling castle. Its lord welcomes him warmly and, in a moment that seems like harmless holiday fun, proposes a game: they will trade whatever each of them wins in the coming days. Today you will read the castle's arrival and see how this "exchange-of-winnings" bargain sets the trap for Fitt III.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe how the poet presents the castle of Hautdesert.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain the terms of the exchange-of-winnings game.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use "surpassing" precisely and practice copia with it.</div></div>
+    </div>
+
+    <!-- Reading link (PD Weston, Fitt II) -->
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 16px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#128218; FINISH FITT II</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.65; margin-bottom: 10px;">Read to the end of Fitt II: the castle's appearance, Gawain's welcome, the feasting, and the lord's proposal of the exchange bargain.</div>
+        <div style="text-align: center;">
+            <a href="https://d.lib.rochester.edu/camelot/text/weston-sir-gawain-and-the-green-knight.html" style="display: inline-block; background: #0E1C42; color: #fff; text-decoration: none; font-size: 16px; padding: 11px 24px; border-radius: 8px;">&#128279; Open the poem (public-domain text, trans. Jessie L. Weston)</a>
+        </div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A CASTLE TOO GOOD TO BE TRUE</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">You are cold, exhausted, and lost, and a stranger offers you a warm place to stay and a game to pass the time. What is your first instinct?</div>
+            <div class="widget-options">
+                <button data-response="A natural response. Gratitude is exactly what Gawain feels, and it is exactly what makes him slower to see the trap in the friendly game.">Relief and gratitude, no questions asked</button>
+                <button data-response="Wise. A reader who stays a little wary catches the warning signs the poet plants under all that hospitality.">Grateful, but a little cautious</button>
+                <button data-response="Interesting. Some of us would probe the offer. Watch how the poem rewards readers who ask what the host really wants.">Curious about what the stranger wants</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The castle appears</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The moment Gawain finishes his prayer, the poet gives us "the fairest castle that ever a knight owned," set "in a meadow with a park all about it." Its towers are so delicate that its "pinnacles" seem "as if it were all wrought out of paper." That last image is worth pausing on. Paper is beautiful and fragile; it looks solid but tears easily. The castle is a place of comfort and courtesy, yet the poet has quietly warned us that appearances here may not be as firm as they seem. Inside, the lord of the castle greets Gawain with open warmth, and the halls fill with feasting and good cheer.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">This is <strong>hospitality</strong>, one of the great values of the medieval world: the sacred duty to welcome and protect a guest. But hospitality runs two ways. A guest, too, owes his host courtesy and good faith. That mutual bond is exactly what the lord is about to turn into a game.</p>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE EXCHANGE-OF-WINNINGS GAME</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">The lord tells Gawain to rest in the castle while he rides out to hunt each day. Then he proposes a bargain, framed as festive fun: "Whatsoever I win in the wood shall be yours, and whatever may fall to your share, that shall ye exchange for it." In plain terms, each evening the two men will swap whatever they have gained that day. The lord will hand over his hunt; Gawain will hand over whatever comes to him inside the castle. Gawain, ever courteous, agrees. It sounds like a harmless holiday deal. It is, in fact, the mechanism of his central test.</p>
+
+        <!-- ONE core visual: exchange-of-winnings diagram -->
+        <figure style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">THE BARGAIN &middot; EACH EVENING, THEY TRADE THE DAY'S WINNINGS</div>
+            <div style="background: #F4F6FA; padding: 18px;">
+                <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: stretch; justify-content: center;">
+                    <!-- Host side -->
+                    <div style="flex: 1; min-width: 230px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #C7922C; border-radius: 10px; padding: 16px;">
+                        <div style="font-size: 13px; color: #8A6410; font-weight: bold; letter-spacing:.04em; margin-bottom:6px;">THE LORD (HOST)</div>
+                        <div style="font-size: 15px; color: #0e1c42; font-weight: bold;">Rides out to hunt</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.55; margin-top:6px;">Whatever he wins in the wood (the deer, the boar, the fox) he promises to give to Gawain.</div>
+                    </div>
+                    <!-- Exchange arrows -->
+                    <div style="flex: 0 0 auto; display:flex; flex-direction:column; align-items:center; justify-content:center; min-width: 70px;">
+                        <div style="font-size: 26px; color:#3B4E8C; line-height:1;">&#8646;</div>
+                        <div style="font-size: 12px; color:#3B4E8C; text-align:center; margin-top:6px; font-weight:bold;">TRADE<br>EACH<br>NIGHT</div>
+                    </div>
+                    <!-- Guest side -->
+                    <div style="flex: 1; min-width: 230px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #3B4E8C; border-radius: 10px; padding: 16px;">
+                        <div style="font-size: 13px; color: #3B4E8C; font-weight: bold; letter-spacing:.04em; margin-bottom:6px;">GAWAIN (GUEST)</div>
+                        <div style="font-size: 15px; color: #0e1c42; font-weight: bold;">Rests in the castle</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.55; margin-top:6px;">Whatever he wins indoors he promises to give to the lord, in full and honestly.</div>
+                    </div>
+                </div>
+                <div style="background:#0E1C42; color:#f4f1e8; border-radius:8px; padding: 12px 16px; font-size: 14px; text-align:center; line-height:1.6; margin-top:14px;">The rule is simple and total: hand over <em>everything</em> you win, honestly, every evening. Keep this rule in mind. In Fitt III, something Gawain wins indoors will be very hard to hand over.</div>
+            </div>
+            <figcaption style="background: #FFFFFF; padding: 12px 16px;">
+                <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">Diagram built for this lesson from the bargain in Fitt II. The quoted terms are from the Weston translation.</div>
+            </figcaption>
+        </figure>
+
+        <!-- WIDGET: evaluative single-select (recolored) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="d" data-hint="Look again at the 'wrought out of paper' image and why the poet chose it.">
+                <div class="widget-row-prompt">1. Why does the "wrought out of paper" image quietly unsettle a careful reader?</div>
+                <div class="widget-options">
+                    <button data-choice="a">It shows the castle is poor</button>
+                    <button data-choice="b">It means the castle is far away</button>
+                    <button data-choice="c">It proves the castle is a dream</button>
+                    <button data-choice="d" data-fb="Yes. Paper looks fine but tears easily, hinting that this beautiful, comfortable place may not be as safe as it appears.">Paper is beautiful but fragile, hinting things are not as solid as they look</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Recall the exact bargain: each man gives the other his day's winnings.">
+                <div class="widget-row-prompt">2. Under the exchange-of-winnings game, Gawain agrees to&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a">hunt with the lord every day</button>
+                    <button data-choice="b" data-fb="Right. Each evening they trade: the lord gives Gawain his hunt, and Gawain gives the lord whatever he won inside the castle.">give the lord whatever he wins in the castle, in exchange for the lord's hunt</button>
+                    <button data-choice="c">pay the lord in gold for his stay</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Word Study / Copia (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY &middot; COPIA WITH "SURPASSING"</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>surpassing:</strong> exceeding all others; going beyond the ordinary. The castle's beauty is <em>surpassing</em>: it is the fairest Gawain has ever seen.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Copia (in your Organizer):</strong> start from <em>"The castle's beauty was surpassing."</em> Rewrite it three ways: (1) swap in a synonym for "surpassing"; (2) change the syntax so the sentence opens differently (for example, "Beyond any hall Gawain knew&hellip;"); (3) shift the register so it sounds plain and modern, then again so it sounds like the poet. Keep all three versions in your notes.</div>
+        </div>
+
+        <!-- AI callout (red frame) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND PLOT</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can tell you the rules of the exchange-of-winnings game accurately. Predicting how it will trap Gawain, and why the poet planted a "paper" castle right before it, is the reading work. Notice the setup yourself, and Fitt III will pay off.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Add Hautdesert and its lord to your Character Chart</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Note the lord's role and what he seems to want, and write one sentence predicting what could make the exchange game hard for Gawain. You now have everything you need for this week's Quick Write and quiz.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The warmth of Hautdesert is the poem's cleverest disguise. A "paper" castle and a friendly game are how the real test slips in. Comfort, here, is where honor will be tried.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.03 &middot; Arrival at Hautdesert</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
