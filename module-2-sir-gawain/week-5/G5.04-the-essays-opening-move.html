@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Grammar 5.04</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Grammar 5.04</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">GRAMMAR FOCUS</div>
+        <div style="font-size: 17px; color: #0e1c42;">The opening move</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Sir Gawain and the Green Knight</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">GRAMMAR 5.04</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Essay&rsquo;s Opening Move</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127919; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">How do you turn a beautiful, Pearl-Poet-style catalog paragraph into the opening of a real argument?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Your essay opens with an alliterative catalog paragraph, the same imitation move you have practiced all module. Today you learn to make that paragraph <strong>do work</strong>: it must set a scene, then pivot to your disputed question and land on your thesis. You will study a worked opening and revise your own against clear criteria.</div>
+    </div>
+
+    <!-- Warm-up (reflect check-in widget) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; NO WRONG ANSWER</div>
+            <div class="widget-question">A movie opens with a slow, gorgeous shot of a castle. What does that opening owe the rest of the film?</div>
+            <div class="widget-options">
+                <button data-response="Right. A striking opening earns attention, but it has to hand that attention off to the story. Your catalog paragraph must hand off to your thesis.">It should lead somewhere, not just look nice</button>
+                <button data-response="True, mood matters. But a good opening also sets up the question the film will explore. Your paragraph should do both: mood and setup.">It should set the mood</button>
+                <button data-response="Fair. Beauty alone can feel empty if it goes nowhere. The fix is a pivot: from the image to the point.">Nothing, if it is beautiful enough</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- The Lesson -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 12px 0;">A strong opening paragraph makes three moves in order. First, the <strong>catalog</strong>: a vivid, alliterative list in the Pearl Poet&rsquo;s style that paints the scene or the knight. Second, the <strong>pivot</strong>: a transition sentence that turns from the picture to the problem, naming the disputed question. Third, the <strong>thesis</strong>: your one-sentence, direct answer to that question. The catalog earns the reader; the pivot points them; the thesis commits you.</p>
+
+        <!-- Pattern card (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">THE OPENING, IN THREE MOVES</div>
+            <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;">Catalog (paint it) &rarr; Pivot (name the question) &rarr; Thesis (answer it).</div>
+        </div>
+
+        <!-- ONE visual: navy chalkboard of a worked opening -->
+        <div style="background: #14213f; border: 10px solid #3a2c1a; border-radius: 10px; padding: 22px 24px; margin: 18px 0; box-shadow: inset 0 0 40px rgba(0,0,0,0.4);">
+            <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .18em; margin-bottom: 16px; text-align: center;">ON THE BOARD &middot; A WORKED OPENING PARAGRAPH</div>
+            <div style="font-size: 17px; color: #f4f1e8; line-height: 1.95;">
+                <span style="color: #e6b955;">Green as glass and grim as winter, the strange knight strides into Camelot, bearing a bright axe and a bold bargain.</span> <span style="color:#a9b8d8;">The court that feasts in gold will, by the tale&rsquo;s end, wear a girdle of shame turned to honor.</span> <span style="color:#f4f1e8;">Between that entrance and that ending lies a question the poem never settles:</span> <span style="color:#e79aa0;">is Sir Gawain a man of honor?</span> <span style="color:#f4f1e8; font-weight:bold;">He is: the pentangle&rsquo;s five virtues survive a single, forgivable lapse, and the poem&rsquo;s own mercy proves it.</span>
+            </div>
+            <div style="font-size: 14px; color: #cdd6ea; margin-top: 18px; line-height: 1.7;">
+                <span style="color:#e6b955;">&#9632; gold</span> = the alliterative <strong>catalog</strong> &nbsp;&middot;&nbsp;
+                <span style="color:#a9b8d8;">&#9632; light blue</span> = the <strong>pivot</strong> toward the question &nbsp;&middot;&nbsp;
+                <span style="color:#e79aa0;">&#9632; rose</span> = the disputed <strong>question</strong> &nbsp;&middot;&nbsp;
+                <span style="color:#f4f1e8;">&#9632; white (bold)</span> = the <strong>thesis</strong>
+            </div>
+        </div>
+        <div style="font-size: 14px; color: #1a2340; line-height: 1.6; background: #EEF1F8; border-radius: 6px; padding: 12px 16px;">Notice the alliteration in the catalog (&ldquo;green as glass and grim,&rdquo; &ldquo;bright axe and a bold bargain&rdquo;) and how the paragraph narrows, sentence by sentence, from a picture to a single claim.</div>
+
+        <!-- Evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; YOUR TURN &middot; CHOOSE THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="b" data-hint="Which sentence turns from the scene to the actual disputed question?">
+                <div class="widget-row-prompt">1. In the worked paragraph, which move is the <em>pivot</em>?</div>
+                <div class="widget-options">
+                    <button data-choice="a">&ldquo;Green as glass and grim as winter&hellip;&rdquo;</button>
+                    <button data-choice="b" data-fb="Yes. That sentence turns from the picture toward the unsettled question, setting up the thesis.">the sentence pointing to &ldquo;a question the poem never settles&rdquo;</button>
+                    <button data-choice="c">&ldquo;He is: the pentangle&rsquo;s five virtues survive&hellip;&rdquo;</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="A thesis takes a side. Which option answers the question directly?">
+                <div class="widget-row-prompt">2. Which sentence works as a <em>thesis</em>?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Sir Gawain and the Green Knight is a famous medieval poem.</button>
+                    <button data-choice="b">This essay will discuss whether Gawain is honorable.</button>
+                    <button data-choice="c" data-fb="Right. It answers the question and takes a defensible position, which a reader could dispute.">Gawain remains a man of honor because one lapse under fear does not undo his proven virtues.</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- Revise your own -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#10145;&#65039; NOW REVISE YOUR OWN OPENING (IN YOUR ORGANIZER)</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Take the opening paragraph you drafted in Week 4 and revise it against these criteria. Check each box when your paragraph meets it.</p>
+        <div style="background: #EEF1F8; border-radius: 8px; padding: 16px 20px;">
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.95;">
+                &#9744; The <strong>catalog</strong> is at least three items, vivid, with at least two alliterative pairs.<br>
+                &#9744; A clear <strong>pivot</strong> sentence turns from the image to the disputed question.<br>
+                &#9744; The paragraph names the <strong>question</strong>: <em>Is Sir Gawain a man of honor?</em><br>
+                &#9744; It ends on a one-sentence <strong>thesis</strong> that takes a side someone could dispute.<br>
+                &#9744; No em dashes; the paragraph narrows from picture to point.
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A great opening is not just beautiful; it is beautiful <em>and</em> pointed. Let the catalog draw the reader in, then make the pivot, then commit to your thesis. Beauty that leads somewhere is the Pearl Poet&rsquo;s own trick.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Grammar 5.04 &middot; The Essay&rsquo;s Opening Move</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
