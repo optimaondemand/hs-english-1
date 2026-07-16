@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Grammar 1.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Grammar 1.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">GRAMMAR FOCUS</div>
+        <div style="font-size: 17px; color: #0e1c42;">The appositive phrase</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">The Canterbury Tales, Chaucer</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">GRAMMAR 1.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Appositive Phrase</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127919; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">How can you tell your reader exactly who a person is, without stopping to add a whole new sentence?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You will learn what an appositive phrase is, how it renames the noun beside it, how to punctuate it, and how to use it the way Chaucer does: to pack a portrait full of identifying detail in a single smooth sentence.</div>
+    </div>
+
+    <!-- Warm-up (reflect check-in widget) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; READ BOTH ALOUD &middot; NO WRONG ANSWER</div>
+            <div class="widget-question"><strong>A.</strong> The Pardoner rode with the group. He was a seller of false relics. &nbsp;&nbsp;|&nbsp;&nbsp; <strong>B.</strong> The Pardoner, a seller of false relics, rode with the group.<br>Which version tells you who he is without pausing for a second sentence?</div>
+            <div class="widget-options">
+                <button data-response="Right. Version B folds the description smoothly into one sentence. That renaming phrase, set off by commas, is the appositive.">Version B</button>
+                <button data-response="Look again: Version A splits the idea into two short sentences. It is Version B that tucks the description in without stopping.">Version A</button>
+                <button data-response="They give the same information, but only Version B delivers it in a single, unbroken sentence. That is the move we are learning.">They read the same</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- The Lesson -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 12px 0;">An <strong>appositive</strong> is a noun or noun phrase placed right beside another noun to <strong>rename or explain</strong> it. In <em>"The Knight, a true and noble soldier, had fought in many lands,"</em> the phrase <em>a true and noble soldier</em> renames <em>the Knight</em>. It is an <strong>appositive phrase</strong>. Chaucer builds his portraits this way, dropping an identifying phrase beside each pilgrim's name so we learn who they are as the sentence moves.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 12px 0;">Most appositives are <strong>nonrestrictive</strong>: they add extra information you could remove and still have a complete sentence, so you set them off with <strong>commas</strong>. A few are <strong>restrictive</strong>, essential to the meaning, and take no commas, as in <em>"the poet Chaucer"</em> (which poet? the one named Chaucer).</p>
+
+        <!-- Pattern card (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">ONE RULE TO REMEMBER</div>
+            <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;">If the renaming phrase adds <strong>extra</strong> detail you could lift out, wrap it in <strong>commas</strong>. If removing it would change which person you mean, use <strong>no commas</strong>.</div>
+        </div>
+
+        <!-- ONE visual: navy chalkboard of worked examples -->
+        <div style="background: #14213f; border: 10px solid #3a2c1a; border-radius: 10px; padding: 22px 24px; margin: 18px 0; box-shadow: inset 0 0 40px rgba(0,0,0,0.4);">
+            <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .18em; margin-bottom: 16px; text-align: center;">ON THE BOARD &middot; SPOT THE APPOSITIVE</div>
+            <div style="font-size: 19px; color: #f4f1e8; line-height: 2.1;">
+                The Knight<span style="color:#8ea2c9;">,</span> <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">a true and noble soldier</span><span style="color:#8ea2c9;">,</span> had fought in many lands.<br>
+                Chaucer<span style="color:#8ea2c9;">,</span> <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">a poet of the royal court</span><span style="color:#8ea2c9;">,</span> wrote in English.<br>
+                The Pardoner<span style="color:#8ea2c9;">,</span> <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">a seller of false relics</span><span style="color:#8ea2c9;">,</span> sang sweetly in church.
+            </div>
+            <div style="font-size: 14px; color: #cdd6ea; margin-top: 16px; line-height: 1.6;">The <span style="color:#e6b955;">gold underline</span> marks the appositive phrase; the <span style="color:#8ea2c9;">commas</span> fence it off. Lift the gold out and each sentence still stands: that is why it takes commas.</div>
+        </div>
+
+        <!-- Evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; YOUR TURN &middot; CHOOSE THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="c" data-hint="Find the noun phrase that renames the pilgrim and could be lifted out.">
+                <div class="widget-row-prompt">1. Which part is the appositive phrase? &mdash; <em>The Wife of Bath, a woman of five marriages, spoke boldly.</em></div>
+                <div class="widget-options">
+                    <button data-choice="a">The Wife of Bath</button>
+                    <button data-choice="b">spoke boldly</button>
+                    <button data-choice="c" data-fb="Yes. 'a woman of five marriages' renames the Wife of Bath and could be removed. That is the appositive.">a woman of five marriages</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Apply the rule: the renaming phrase adds extra detail, so it needs to be fenced off.">
+                <div class="widget-row-prompt">2. Which sentence is punctuated correctly?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Correct. The extra renaming phrase is wrapped in commas on both sides.">The Prioress, the head of a convent, cared for her little dogs.</button>
+                    <button data-choice="b">The Prioress the head of a convent, cared for her little dogs.</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- Write your own -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#10145;&#65039; NOW WRITE YOUR OWN (IN YOUR ORGANIZER)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Write <strong>two sentences</strong> about pilgrims from the General Prologue, each using a nonrestrictive appositive phrase set off by commas. You will use this exact move in Quick Write 1 this week, where two appositives are required.</p>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">An appositive lets you name a person and describe them in the same breath. Fence off the extra detail with commas, and your portraits gain Chaucer's density without losing their flow.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Grammar 1.02 &middot; The Appositive Phrase</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
