@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Grammar 1.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+
+    /* Flip cards (engine rotated from G1.01's ow-select) */
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 4</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Grammar 1.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">GRAMMAR FOCUS</div>
+        <div style="font-size: 17px; color: #0e1c42;">The semicolon</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Sonnet 18, Shakespeare</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">GRAMMAR 1.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Semicolon Pivot</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127919; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">What punctuation mark says "stay with me; this next thought belongs to the last one"?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You will learn when a semicolon can join two sentences, how it differs from a comma and a period, and why Shakespeare uses one to keep the pressure building in the middle of Sonnet 18.</div>
+    </div>
+
+    <!-- Warm-up (reflect check-in widget) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; DO THIS IN YOUR ORGANIZER FIRST &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Write two short sentences that belong together, like: <em>"The sky turned gray before noon. The picnic went on anyway."</em> Read them aloud. What would you use to make them one sentence, without "and" or "but"?</div>
+            <div class="widget-options">
+                <button data-response="That is the move most writers reach for, and today you learn its rules: the semicolon joins two complete sentences whose connection is obvious without a joining word.">A punctuation mark could join them</button>
+                <button data-response="Keeping them apart is legal, but listen to the cost: the period lets the reader pause and reset, and the connection between the two thoughts goes cold. Today's mark keeps it warm.">Nothing; keep them separate</button>
+                <button data-response="A joining word works, but it spells the relationship out. Today's lesson is about the mark that trusts the reader to see the connection without being told.">Honestly, I would just use a joining word</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- The Lesson -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 12px 0;">On the scale of pause, the <strong>semicolon</strong> sits between the comma and the period. A comma joins related pieces inside one sentence; a period ends a thought completely. The semicolon does what neither can: it joins <strong>two independent clauses</strong>, each able to stand alone as a sentence, while insisting they belong together. It can signal contrast (<em>She arrived early; the room was already full</em>), consequence (<em>He ignored the warnings; the roof came off by midnight</em>), or elaboration (<em>The sonnet is not merely a pretty form; it is a machine for making an argument</em>). What you never get with a semicolon is a joining word spelling the relationship out. The semicolon trusts the reader to see the connection. The test is simple: if you could put a period there and be left with two complete sentences, a semicolon is legal. If either side cannot stand alone, it is not.</p>
+
+        <!-- Pattern card (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">THE THREE-QUESTION TEST</div>
+            <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;">1. Are both sides complete sentences? &nbsp;2. Are they so closely related that a period would feel abrupt? &nbsp;3. Is the connection obvious without a joining word? &nbsp;Three yeses &rarr; the semicolon earns its place.</div>
+        </div>
+
+        <!-- ONE visual: navy chalkboard of worked examples -->
+        <div style="background: #14213f; border: 10px solid #3a2c1a; border-radius: 10px; padding: 22px 24px; margin: 18px 0; box-shadow: inset 0 0 40px rgba(0,0,0,0.4);">
+            <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .18em; margin-bottom: 16px; text-align: center;">ON THE BOARD &middot; THE SEMICOLON AT WORK</div>
+            <div style="font-size: 19px; color: #f4f1e8; line-height: 2.1;">
+                <span style="color:#8ea2c9;">Shakespeare (Sonnet 18, lines 5&ndash;6):</span><br>
+                Sometime too hot the eye of heaven shines,<br>
+                And often is his gold complexion dimm'd<span style="color: #e6b955; font-size: 24px; border-bottom: 2px solid #e6b955;">;</span><br>
+                <span style="color:#8ea2c9;">Contrast:</span>&nbsp; Summer is beautiful<span style="color: #e6b955; font-size: 24px; border-bottom: 2px solid #e6b955;">;</span> it never lasts.<br>
+                <span style="color:#8ea2c9;">Elaboration:</span>&nbsp; The couplet is short<span style="color: #e6b955; font-size: 24px; border-bottom: 2px solid #e6b955;">;</span> it carries the whole verdict.
+            </div>
+            <div style="font-size: 14px; color: #cdd6ea; margin-top: 16px; line-height: 1.6;">The <span style="color:#e6b955;">gold semicolon</span> holds two complete statements together. In lines 5&ndash;6 it closes one pair of complaints about the sun and keeps the reader inside the growing list of summer's failures; a period would let the pressure escape.</div>
+        </div>
+
+        <!-- Evaluative widget: flip cards (engine rotated from G1.01) -->
+        <div style="font-size: 11px; color: #3B4E8C; margin: 6px 0 6px; letter-spacing: .04em;">&#9998; YOUR TURN &middot; DECIDE IN YOUR ORGANIZER FIRST, THEN CLICK EACH CARD TO CHECK</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+            <div class="optima-widget ow-flip" style="flex: 1; min-width: 240px;">
+                <div class="ow-flip-front">
+                    <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">CARD 1 &middot; SEMICOLON: YES OR NO?</div>
+                    <div style="font-size: 16px; color: #0E1C42; line-height: 1.55; font-style: italic;">"The beloved will not fade" + "the poem preserves what time would take."</div>
+                    <div style="font-size: 12px; color: #3B4E8C; margin-top: 10px;">Tap to reveal</div>
+                </div>
+                <div class="ow-flip-back">
+                    <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">ANSWER</div>
+                    <div style="font-size: 16px; color: #1a2340; line-height: 1.6;"><strong>Yes.</strong> Both sides are complete sentences, tightly related, and the connection (cause) is obvious: <em>The beloved will not fade; the poem preserves what time would take.</em> A comma alone here would be a comma splice.</div>
+                </div>
+            </div>
+            <div class="optima-widget ow-flip" style="flex: 1; min-width: 240px;">
+                <div class="ow-flip-front">
+                    <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">CARD 2 &middot; SEMICOLON: YES OR NO?</div>
+                    <div style="font-size: 16px; color: #0E1C42; line-height: 1.55; font-style: italic;">"She studied the poem for an hour" + "running out of ink halfway through her notes."</div>
+                    <div style="font-size: 12px; color: #3B4E8C; margin-top: 10px;">Tap to reveal</div>
+                </div>
+                <div class="ow-flip-back">
+                    <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">ANSWER</div>
+                    <div style="font-size: 16px; color: #1a2340; line-height: 1.6;"><strong>No.</strong> The second part is not a complete sentence; it is a phrase with no subject and no main verb. Attach it with a comma instead: <em>She studied the poem for an hour, running out of ink halfway through her notes.</em></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Write your own -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#10145;&#65039; NOW WRITE YOUR OWN (IN YOUR ORGANIZER)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Rewrite the couplet of Sonnet 18 ("So long as men can breathe, or eyes can see, / So long lives this, and this gives life to thee") as <strong>one prose sentence containing a correctly used semicolon</strong>. Make explicit what "this" refers to. Then write <strong>one original sentence</strong> about your own sonnet subject that uses a semicolon to set up a contrast. Run both through the three-question test before you call them done.</p>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The period says <em>I am done</em>. The semicolon says <em>stay with me; this matters to what I just said</em>. Both sides must be complete sentences. Use it when the connection is strong enough to feel, and clear enough that no joining word is needed.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Grammar 1.02 &middot; The Semicolon Pivot</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+</script>
+</body>
+</html>
