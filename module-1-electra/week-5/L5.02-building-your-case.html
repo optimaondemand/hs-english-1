@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 5.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 13px; color: #0e1c42;">Justice in Greek Tragedy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 5.02</div>
+        <div style="font-size: 13px; color: #0e1c42;">Week 5 &middot; Project Week</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Electra, Sophocles (trans. Jebb)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What is owed &mdash; to gods, city, family?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 5.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Building Your Case</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson &middot; Week 5 (Project Week)</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; WHAT YOU ARE LEARNING TODAY</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Yesterday you learned the parts of an argument. Today you choose <strong>your position</strong> on the module question and build an <strong>outline</strong>: a plan that lines up your claim, the evidence from the play that supports it, and the reasoning that connects them. Your outline is due at the end of this lesson.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state a working thesis that takes a clear position on justice in the play.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> choose evidence from the text and organize it into an outline.</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; SETTLE YOUR POSITION</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Reread your four Quick Writes. Finish this line in your head, then pick the shape it takes: &ldquo;By the end of the play, I think justice in <em>Electra</em> is ______.&rdquo;</div>
+            <div class="widget-options">
+                <button data-response="Good. A firm position is easy to defend and easy to line up evidence behind. Turn that sentence into your working thesis.">something I feel sure about</button>
+                <button data-response="That is honest, and useful. Write down what pulls you each way; a thesis that acknowledges the tension can be one of the strongest.">something I feel torn about</button>
+                <button data-response="Fine. Start from the moment in the play you cannot stop thinking about and ask what it says about justice. Your position often begins there.">still forming</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.75; margin: 8px 0 12px 0;">A thesis is a claim with the stakes made clear. The module question asks how <em>Electra</em> dramatizes what is owed to gods, city, and family, and whether the revenge that ends the play is just. Your job is not to summarize the answer the play gives, since the play deliberately refuses a tidy one, but to argue for the reading <em>you</em> find most convincing and to defend it with the text. Start by settling your position in a single sentence you could defend to someone who disagrees. Then work backward: what in the play made you believe it? A strong case usually rests on two or three distinct moments rather than one, and the strongest cases reach for evidence from different points in the drama: Clytaemnestra&rsquo;s defense of her own act, Chrysothemis&rsquo;s warnings, the Chorus&rsquo;s verdict, the recognition scene, the final claim that &ldquo;freedom is won.&rdquo; Group your evidence before you write. Each group becomes one body paragraph, and each paragraph needs its own smaller claim that supports the thesis, its own line from the text, and its own reasoning. An outline is where you check that the whole case holds together before you spend your energy on sentences. If you cannot say in your outline how a quotation proves your point, that quotation is not yet evidence; it is just a line you liked.</p>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE SHAPE OF THE ESSAY</div>
+
+        <!-- ONE core visual: outline structure diagram -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 4px 0 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">THE SHAPE OF YOUR ESSAY &middot; TOP TO BOTTOM</div>
+            <div style="padding: 18px; background: #FFFFFF;">
+                <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 12px 16px; margin-bottom: 10px;">
+                    <div style="font-size: 13px; color: #3B4E8C; letter-spacing:.06em;">INTRODUCTION</div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 1.5; margin-top: 4px;">Name the play and its central question. End with your <span style="display:inline-block; background:#C7922C; color:#fff; font-size:11px; padding:1px 8px; border-radius:4px;">THESIS</span> (your position).</div>
+                </div>
+                <div style="text-align:center; color:#3B4E8C; font-size:18px; margin: 2px 0;">&darr;</div>
+                <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px;">
+                    <div style="font-size: 13px; color: #0e1c42;">BODY PARAGRAPH 1</div>
+                    <div style="margin-top: 6px;"><span style="display:inline-block; background:#C7922C; color:#fff; font-size:11px; padding:1px 8px; border-radius:4px;">CLAIM</span> <span style="display:inline-block; background:#3B4E8C; color:#fff; font-size:11px; padding:1px 8px; border-radius:4px;">EVIDENCE</span> <span style="display:inline-block; background:#0E1C42; color:#fff; font-size:11px; padding:1px 8px; border-radius:4px;">REASONING</span></div>
+                </div>
+                <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px;">
+                    <div style="font-size: 13px; color: #0e1c42;">BODY PARAGRAPH 2</div>
+                    <div style="margin-top: 6px;"><span style="display:inline-block; background:#C7922C; color:#fff; font-size:11px; padding:1px 8px; border-radius:4px;">CLAIM</span> <span style="display:inline-block; background:#3B4E8C; color:#fff; font-size:11px; padding:1px 8px; border-radius:4px;">EVIDENCE</span> <span style="display:inline-block; background:#0E1C42; color:#fff; font-size:11px; padding:1px 8px; border-radius:4px;">REASONING</span></div>
+                </div>
+                <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px;">
+                    <div style="font-size: 13px; color: #0e1c42;">BODY PARAGRAPH 3 <span style="color:#3B4E8C;">(or a counter-view you answer)</span></div>
+                    <div style="margin-top: 6px;"><span style="display:inline-block; background:#C7922C; color:#fff; font-size:11px; padding:1px 8px; border-radius:4px;">CLAIM</span> <span style="display:inline-block; background:#3B4E8C; color:#fff; font-size:11px; padding:1px 8px; border-radius:4px;">EVIDENCE</span> <span style="display:inline-block; background:#0E1C42; color:#fff; font-size:11px; padding:1px 8px; border-radius:4px;">REASONING</span></div>
+                </div>
+                <div style="text-align:center; color:#3B4E8C; font-size:18px; margin: 2px 0;">&darr;</div>
+                <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 12px 16px;">
+                    <div style="font-size: 13px; color: #3B4E8C; letter-spacing:.06em;">CONCLUSION</div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 1.5; margin-top: 4px;">Restate your position in fresh words. Say what it reveals about justice.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Outline scaffold (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-bottom: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 10px;">&#128220; OUTLINE TEMPLATE (COPY INTO YOUR ORGANIZER)</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.9;">
+                <strong>Introduction.</strong> Name the play and its central question; end with your <strong>thesis</strong> (your position).<br>
+                <strong>Body Paragraph 1.</strong> Smaller claim &middot; evidence (a line from the text) &middot; reasoning.<br>
+                <strong>Body Paragraph 2.</strong> Smaller claim &middot; evidence &middot; reasoning.<br>
+                <strong>Body Paragraph 3.</strong> Smaller claim &middot; evidence &middot; reasoning (or a counter-view you answer).<br>
+                <strong>Conclusion.</strong> Restate your position in fresh words; say what it reveals about justice.
+            </div>
+        </div>
+
+        <!-- Choosing a position (recolored to lavender/indigo) -->
+        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128221; THREE POSITIONS YOU MIGHT DEFEND</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-bottom: 10px;">These are starting points, not the only options. Pick one, or shape your own.</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+                <div style="flex: 1; min-width: 180px; background: #EEF1F8; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 15px; color: #1a2340; line-height: 1.55;">Sophocles presents the revenge as <strong>just</strong>: a debt owed to a murdered father and finally paid.</div></div>
+                <div style="flex: 1; min-width: 180px; background: #EEF1F8; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 15px; color: #1a2340; line-height: 1.55;">Sophocles shows the revenge as a <strong>new injustice</strong>, a cycle of blood that freedom cannot end.</div></div>
+                <div style="flex: 1; min-width: 180px; background: #EEF1F8; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 15px; color: #1a2340; line-height: 1.55;">Sophocles leaves it <strong>deliberately unresolved</strong>, so that justice and cost are felt together.</div></div>
+            </div>
+        </div>
+
+        <!-- WIDGET: evaluative single-select -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="a" data-hint="One reports what happens; the other takes a position a reader could argue with.">
+                <div class="widget-row-prompt">1. What is the difference between a thesis and a summary of the play?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Right. A summary reports what happens; a thesis takes a position on what the play means, something a reader could argue with, and the essay defends it.">A thesis takes an arguable position; a summary only reports what happens</button>
+                    <button data-choice="b">A thesis is longer than a summary</button>
+                    <button data-choice="c">A thesis always comes at the end of the essay</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Think about what makes a case harder for a reader to brush aside.">
+                <div class="widget-row-prompt">2. Why choose evidence from different parts of the play?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Because longer essays earn higher grades</button>
+                    <button data-choice="b" data-fb="Yes. A case built on several moments across the drama is harder to dismiss than one built on a single line. It shows the pattern is really there.">A pattern across several moments is harder to dismiss than one line</button>
+                    <button data-choice="c">Because the teacher counts the quotations</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- Submission (gold) -->
+    <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">&#128228; DUE TODAY &middot; ESSAY OUTLINE</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.65;">Fill in the outline template with your thesis and at least <strong>three</strong> pieces of evidence from the public-domain text, each paired with a note on your reasoning. Save it in your Organizer and submit it where your teacher directs. This outline is the plan you will draft from tomorrow.</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A good outline settles the argument before you write a single polished sentence. If your plan shows how each quotation proves your point, tomorrow&rsquo;s draft is mostly filling in words.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 5.02 &middot; Building Your Case</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
