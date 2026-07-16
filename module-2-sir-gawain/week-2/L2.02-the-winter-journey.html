@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 2.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 13px; color: #0e1c42;">Honor and Duty in Sir Gawain</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 2.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Sir Gawain and the Green Knight, Fitt II (trans. Weston)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What does it mean to be truly honorable?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 2.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Winter Journey</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">When a poet spends dozens of lines on cold rock and freezing sleet, is he only describing the weather?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">After the pentangle, Gawain rides out alone into a brutal winter. The poet lingers on the sleet, the wild beasts, and the endless miles. Today you will read the landscape as a <strong>moral space</strong>: a place that mirrors what is happening inside the hero as he approaches his test.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what "landscape as moral space" means.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> point to moments where the winter reflects Gawain's inner state.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe how imagery builds the mood of a passage.</div></div>
+    </div>
+
+    <!-- Reading link (PD Weston, Fitt II) -->
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 16px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#128218; KEEP READING &middot; FITT II</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.65; margin-bottom: 10px;">Read the section of Fitt II that follows the arming: Gawain's ride from Camelot through the wild country of Wirral, the cold nights, the beasts, and his prayer.</div>
+        <div style="text-align: center;">
+            <a href="https://d.lib.rochester.edu/camelot/text/weston-sir-gawain-and-the-green-knight.html" style="display: inline-block; background: #0E1C42; color: #fff; text-decoration: none; font-size: 16px; padding: 11px 24px; border-radius: 8px;">&#128279; Open the poem (public-domain text, trans. Jessie L. Weston)</a>
+        </div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A LANDSCAPE THAT MEANS SOMETHING</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Think of a film or show where a character walks alone through rain, snow, or an empty road. What did that setting make you feel about the character, before anyone spoke?</div>
+            <div class="widget-options">
+                <button data-response="Exactly. A cold, empty setting can make a character feel small and alone. Watch the Pearl Poet do the same to Gawain with winter.">Alone, or cut off from other people</button>
+                <button data-response="Right. Harsh weather often signals danger ahead. Gawain's sleet and beasts do this work too, warning us that the test is near.">Like something bad was coming</button>
+                <button data-response="Good eye. Sometimes the struggle against weather makes a character seem tougher, or more determined. Gawain's endurance is part of the picture as well.">Determined, pushing through hardship</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Setting as a mirror</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Writers often use a setting to show, without saying it outright, what a character feels or faces. We call this <strong>landscape as moral space</strong>: the outside world stands in for the inside world. When Gawain rides "more nights than enough" sleeping "in his harness on the bare rocks, near slain with the sleet," the poet is not padding the poem. The freezing, lonely country tells us that Gawain is truly on his own now, far from the warm hall of Camelot, and that the trial ahead will be cold and hard. The <strong>imagery</strong>, the sharp sensory details of ice, stone, and hunger, builds a <strong>mood</strong> of isolation and dread before Gawain ever reaches the Green Chapel.</p>
+
+        <!-- ONE core visual: labeled diagram — three moments, landscape mirrors inner state -->
+        <figure style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">THE WINTER JOURNEY &middot; WHAT THE LAND SHOWS ABOUT THE MAN</div>
+            <div style="background: #F4F6FA; padding: 18px;">
+                <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: stretch;">
+                    <!-- Moment 1 -->
+                    <div style="flex: 1; min-width: 220px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #3B4E8C; border-radius: 10px; padding: 16px;">
+                        <div style="display:inline-block; min-width: 24px; height: 24px; border-radius: 50%; background: #3B4E8C; color:#fff; font-size: 13px; line-height: 24px; text-align: center;">1</div>
+                        <div style="font-size: 15px; color: #0e1c42; font-weight: bold; margin: 8px 0 4px;">On the land</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">Bare rocks, sleet, and cold. Gawain sleeps in his armor, "near slain with the sleet."</div>
+                        <div style="height:1px; background:#D0D9E8; margin:12px 0;"></div>
+                        <div style="font-size: 13px; color: #8A6410; font-weight: bold; letter-spacing:.04em;">IN THE MAN</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">Exposure and isolation. The warmth and safety of Camelot are gone.</div>
+                    </div>
+                    <!-- Moment 2 -->
+                    <div style="flex: 1; min-width: 220px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #3B4E8C; border-radius: 10px; padding: 16px;">
+                        <div style="display:inline-block; min-width: 24px; height: 24px; border-radius: 50%; background: #3B4E8C; color:#fff; font-size: 13px; line-height: 24px; text-align: center;">2</div>
+                        <div style="font-size: 15px; color: #0e1c42; font-weight: bold; margin: 8px 0 4px;">On the land</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">Wild beasts and wild men: "dragons and wolves," "bulls, and bears, and wild boars," and giants.</div>
+                        <div style="height:1px; background:#D0D9E8; margin:12px 0;"></div>
+                        <div style="font-size: 13px; color: #8A6410; font-weight: bold; letter-spacing:.04em;">IN THE MAN</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">Constant danger and fear. Every mile tests his courage and endurance.</div>
+                    </div>
+                    <!-- Moment 3 -->
+                    <div style="flex: 1; min-width: 220px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #C7922C; border-radius: 10px; padding: 16px;">
+                        <div style="display:inline-block; min-width: 24px; height: 24px; border-radius: 50%; background: #C7922C; color:#fff; font-size: 13px; line-height: 24px; text-align: center;">3</div>
+                        <div style="font-size: 15px; color: #0e1c42; font-weight: bold; margin: 8px 0 4px;">On the land</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">Alone on Christmas Eve, he prays for shelter, and a castle appears in the trees.</div>
+                        <div style="height:1px; background:#D0D9E8; margin:12px 0;"></div>
+                        <div style="font-size: 13px; color: #8A6410; font-weight: bold; letter-spacing:.04em;">IN THE MAN</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">Faith and relief. The mood turns from dread toward hope, and toward the next trap.</div>
+                    </div>
+                </div>
+                <div style="text-align:center; color:#3B4E8C; font-size: 22px; margin-top: 6px;">&darr;&nbsp;&darr;&nbsp;&darr;</div>
+                <div style="background:#0E1C42; color:#f4f1e8; border-radius:8px; padding: 12px 16px; font-size: 14px; text-align:center; line-height:1.6;">The winter is not just weather. It carries Gawain from the safety of the court, through danger and fear, to the doorstep of a castle that will test him in a very different way.</div>
+            </div>
+            <figcaption style="background: #FFFFFF; padding: 12px 16px;">
+                <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">Diagram built for this lesson from the winter-journey passage in Fitt II. Short quoted phrases are from the Weston translation.</div>
+            </figcaption>
+        </figure>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; READING THE COLD CLOSELY</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Look again at the poet's choices. He does not simply say "the journey was hard." He piles up specific images: sleet, bare rock, hunger, and a parade of beasts. This piling up is a technique you will study more in Grammar 2.05, the <strong>catalog</strong>. For now, notice its effect: the sheer number of hardships makes the winter feel endless, and Gawain's steady endurance through all of it quietly proves the very virtues the pentangle promised. He does not turn back. He keeps his word and rides on.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Then the mood shifts. Cold and near despair, Gawain prays for a place to hear Mass on Christmas morning, and almost at once a shining castle rises out of the trees. After all that gray sleet, the sudden warmth reads as an answer to prayer. But readers who remember how this poem works will feel a flicker of unease: comfort, in <em>Sir Gawain</em>, is exactly where the danger hides.</p>
+
+        <!-- WIDGET: evaluative single-select (recolored) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="b" data-hint="Re-read the definition near the top: the outside world standing in for the inside world.">
+                <div class="widget-row-prompt">1. "Landscape as moral space" means that&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a">the poem gives an accurate weather report</button>
+                    <button data-choice="b" data-fb="Yes. The outer setting mirrors the character's inner state, so the harsh land reflects Gawain's isolation and trial.">the setting reflects the character's inner state and situation</button>
+                    <button data-choice="c">the story takes place outdoors</button>
+                    <button data-choice="d">the landscape has no meaning at all</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Think about the many sharp sensory details of ice, stone, and beasts stacked together.">
+                <div class="widget-row-prompt">2. Piling up sleet, bare rock, hunger, and wild beasts mainly creates a mood of&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a">comedy and warmth</button>
+                    <button data-choice="b">calm and boredom</button>
+                    <button data-choice="c" data-fb="Right. The stacked images build isolation and dread, and they let Gawain's endurance show.">isolation and dread</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY IN USE</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;">This week's words fit the winter journey well. Gawain's dangers are <strong>manifold</strong>: many and of many kinds. His <strong>mien</strong>, his steady bearing through the sleet, never breaks. And his <strong>piety</strong> shows when he prays on Christmas Eve. Try to use one of these in your notes on this passage.</div>
+        </div>
+
+        <!-- AI callout (red frame) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND IMAGERY</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can list the images in the winter passage if you paste it in. What it cannot do is feel the chill of that sleet and connect it to Gawain's loneliness the way you can as you read. Naming an image is easy; sensing why the poet chose it is the reading skill you are building.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Mark three winter images in your Organizer</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Copy three short images from the journey (for example, the sleet, a beast, the sudden castle) and write one sentence for each: what does this image show about Gawain's inner state? You will use these in your VR activity this week.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">In this poem, the weather is never only weather. The winter carries Gawain from safety into danger and then, deceptively, into comfort. Read the land, and you read the man.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.02 &middot; The Winter Journey</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
