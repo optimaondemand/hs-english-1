@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 2.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 13px; color: #0e1c42;">Justice in Greek Tragedy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 2.03</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Electra &mdash; the dream &amp; the offerings</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What is owed &mdash; to gods, city, family?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 2.03</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">A Dream, an Omen, and Hope as Resistance</div>
+        <div style="font-size: 16px; color: #0e1c42;">Reading Lesson &middot; The offerings at the tomb</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Can grief become an act, and can an act of mourning be an act of justice?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Today you read two joined moments: <strong>Chrysothemis reports Clytemnestra's dream</strong>, a scepter that sprouts into a shading branch, and then Electra, seizing on it, <strong>redirects the funeral offerings</strong>, telling her sister to reject their mother's gifts and lay their own hair at the tomb instead. This is the week's quiet turning point.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain the role of dreams and omens in Greek tragedy and what Clytemnestra's dream suggests about divine justice.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> analyze how Electra turns hope into action, grief becoming resistance, through the offerings.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> complete this week's Word Study and finish the Character Tracking Chart entries.</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">When someone who has done wrong suddenly grows frightened by a bad dream, what does that fear tell you?</div>
+            <div class="widget-options">
+                <button data-response="That is Electra's reading exactly. She takes Clytemnestra's fear as a sign that justice is closing in. Watch what she does with that belief.">That justice may be catching up with them</button>
+                <button data-response="A careful answer. A dream is not proof. But in Greek tragedy a frightening dream often is a signal, and Electra treats it as one.">Nothing certain, just a bad night</button>
+                <button data-response="Fair. Guilt and fear are close cousins. In this scene, Electra reads the guilty mother's fear as the gods stirring on the side of the dead.">That their own guilt is surfacing</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.75; margin: 0 0 12px 0;">In Greek tragedy a dream is rarely just a dream. The Greeks treated dreams and <strong>omens</strong> as messages that could carry the will of the gods, so a frightening dream in a play is often a signal that a reckoning is on its way. Chrysothemis brings word of one: Clytemnestra dreamed that the murdered Agamemnon returned, planted his scepter at the hearth, and from it a branch grew up and shaded all of Mycenae. To Electra the meaning is plain: the dead father's line will rise again and cover the land, and the gods are stirring on the side of justice. Watch what this news does to her. She does not simply feel comforted; she <em>acts</em>. She tells Chrysothemis to throw away the gifts their mother is sending to the tomb, because offerings from the woman who killed him are an insult, not an honor, and to lay down instead a lock of their own hair and a plain girdle: poor gifts, but honest ones. This is the week's quiet turning point. Electra's grief, which has looked like pure suffering, becomes a form of resistance. Honoring the dead correctly is itself a claim about justice: a refusal to let the murderers decide what the father is owed.</p>
+
+        <!-- ONE core visual: dream / omen notebook (HTML/CSS) -->
+        <div style="background: #fbfaf5; border: 1px solid #D0D9E8; border-radius: 10px; overflow: hidden; margin: 18px 0; box-shadow: 0 1px 4px rgba(0,0,0,0.06);">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 9px 16px;">READER'S NOTEBOOK &middot; THE DREAM AND WHAT ELECTRA DOES WITH IT</div>
+            <div style="display: flex; flex-wrap: wrap;">
+                <!-- Left page: the dream -->
+                <div style="flex: 1; min-width: 240px; padding: 16px 20px; border-right: 2px solid #C7922C; background-image: repeating-linear-gradient(#fbfaf5, #fbfaf5 30px, #ece3cf 31px);">
+                    <div style="font-size: 12px; color: #8A6410; letter-spacing: .08em; margin-bottom: 10px;">THE OMEN &middot; CLYTEMNESTRA'S DREAM</div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 31px;">
+                        &#128081; Agamemnon returns from the dead<br>
+                        &#8595;<br>
+                        He plants his <strong>scepter</strong> at the hearth<br>
+                        &#8595;<br>
+                        &#127807; A <strong>branch</strong> grows and shades all Mycenae<br>
+                        &#8595;<br>
+                        <span style="color:#8A6410;"><strong>Electra reads it:</strong></span> the father's line will rise; the gods favor justice.
+                    </div>
+                </div>
+                <!-- Right page: the offerings -->
+                <div style="flex: 1; min-width: 240px; padding: 16px 20px; background-image: repeating-linear-gradient(#fbfaf5, #fbfaf5 30px, #ece3cf 31px);">
+                    <div style="font-size: 12px; color: #3B4E8C; letter-spacing: .08em; margin-bottom: 10px;">THE ACT &middot; ELECTRA REDIRECTS THE GIFTS</div>
+                    <div style="font-size: 15px; color: #1a2340; line-height: 31px;">
+                        <span style="text-decoration: line-through; color:#8A1F16;">Rich gifts from Clytemnestra</span> &mdash; rejected<br>
+                        <span style="color:#8A1F16;">(a gift from the killer dishonors the dead)</span><br>
+                        <br>
+                        &#9989; In their place, honest gifts:<br>
+                        &nbsp;&nbsp;&bull; a lock of hair from each sister<br>
+                        &nbsp;&nbsp;&bull; Electra's plain girdle<br>
+                        <span style="color:#3B4E8C;"><strong>"scant gifts these, but my best."</strong></span>
+                    </div>
+                </div>
+            </div>
+            <div style="background: #EEF1F8; padding: 10px 16px; font-size: 14px; color: #0e1c42; line-height: 1.55;">Follow the arrows: a dream (hope) becomes a decision (action). Grieving <em>correctly</em> is how Electra claims what her father is owed.</div>
+        </div>
+    </div>
+
+    <!-- READ NOW (PD source) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128218; READ NOW</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.65; margin-bottom: 14px;">Read from <strong>Chrysothemis's account of Clytemnestra's dream</strong> through <strong>Electra's instructions about the offerings</strong>: where she tells her sister what to lay at the tomb and why. Read Electra's instructions aloud; her urgency is the point.</div>
+        <div style="text-align: center; margin: 6px 0 14px;">
+            <a href="http://classics.mit.edu/Sophocles/electra.html" style="display: inline-block; background: #0E1C42; color: #fff; text-decoration: none; font-size: 16px; padding: 12px 26px; border-radius: 8px;">&#128279; Open <em>Electra</em> (public-domain text, trans. R. C. Jebb)</a>
+        </div>
+        <div style="font-size: 14px; color: #0e1c42; line-height: 1.55; text-align: center;">Free, full text at the Internet Classics Archive.</div>
+
+        <!-- Short PD anchor quote -->
+        <div style="background: #EEF1F8; border-radius: 7px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #0e1c42; margin-bottom: 8px;">ELECTRA REDIRECTS THE OFFERINGS</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.7; font-style: italic;">"Give him rather a lock cut from thine own tresses, and on my part, hapless that I am, scant gifts these, but my best, this hair, not glossy with unguents, and this girdle, decked with no rich ornament."</div>
+            <div style="font-size: 14px; color: #0e1c42; margin-top: 8px;">&mdash; Electra (trans. Jebb). Poor gifts, honestly given, against rich gifts from the guilty.</div>
+        </div>
+    </div>
+
+    <!-- Annotate (practice) -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#9999;&#65039; ANNOTATE AS YOU READ</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.65; margin-bottom: 10px;">On your own copy, mark up the passage. As you read, flag:</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">every reference to a <strong>dream, omen, or prophecy</strong>;</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">each <strong>physical object</strong> Electra names for the offering, and any line that shows <strong>hope</strong> for Orestes or the gods to act (mark it with a star);</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">every <strong>reference to justice</strong>, and any shift in Electra's tone from before.</div></div>
+    </div>
+
+    <!-- ===== WEEKLY WORD STUDY (gold) ===== -->
+    <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #8A6410; letter-spacing: .08em; margin-bottom: 12px;">&#128214; WEEKLY WORD STUDY &middot; WEEK 2</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.65; margin-bottom: 14px;">Five words from this week's reading, defined in context. Add them to your Organizer's vocabulary page. You will need at least <strong>three</strong> of them in this week's Evidence Log and your module essay.</div>
+
+        <div style="background: #FFFFFF; border: 1px solid #EAD9B6; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px;"><span style="color: #8A6410; font-weight: 600;">libation</span> <span style="color: #0e1c42; font-size: 15px;">(noun)</span> &mdash; a pouring out of liquid, or an offering left, in honor of the dead or the gods. <em>Electra rejects her mother's libation at the tomb.</em></div>
+        <div style="background: #FFFFFF; border: 1px solid #EAD9B6; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px;"><span style="color: #8A6410; font-weight: 600;">omen</span> <span style="color: #0e1c42; font-size: 15px;">(noun)</span> &mdash; a sign believed to reveal what is coming, good or ill. <em>The dream is read as an omen that justice is near.</em></div>
+        <div style="background: #FFFFFF; border: 1px solid #EAD9B6; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px;"><span style="color: #8A6410; font-weight: 600;">prudence</span> <span style="color: #0e1c42; font-size: 15px;">(noun)</span> &mdash; careful good sense in judging how to act; caution guided by foresight. <em>Chrysothemis calls her submission prudence; Electra calls it fear.</em></div>
+        <div style="background: #FFFFFF; border: 1px solid #EAD9B6; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px;"><span style="color: #8A6410; font-weight: 600;">requite</span> <span style="color: #0e1c42; font-size: 15px;">(verb)</span> &mdash; to pay back, to return like for like, whether a kindness or a wrong. <em>Electra means to see her father's murder requited.</em></div>
+        <div style="background: #FFFFFF; border: 1px solid #EAD9B6; border-radius: 6px; padding: 12px 16px; margin-bottom: 14px;"><span style="color: #8A6410; font-weight: 600;">lament</span> <span style="color: #0e1c42; font-size: 15px;">(noun / verb)</span> &mdash; an open expression of grief; to mourn aloud. <em>Chrysothemis begs her sister to end her daily lament.</em></div>
+
+        <!-- Etymology beat -->
+        <div style="background: #FFF; border-top: 3px solid #C7922C; border: 1px solid #EAD9B6; border-radius: 6px; padding: 14px 18px; margin-bottom: 14px;">
+            <div style="font-size: 11px; color: #8A6410; letter-spacing: .08em; margin-bottom: 8px;">&#128336; WHERE THE WORD COMES FROM</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.65;"><strong>Prudence</strong> comes from the Latin <em>prudentia</em>, a worn-down form of <em>providentia</em>: <em>pro-</em> ("ahead") plus <em>videre</em> ("to see"). At its root, prudence means <em>seeing ahead</em>. That buried image is exactly Chrysothemis's argument: she claims to be looking down the road at the danger Electra ignores. When you meet the word <em>providence</em> or <em>provide</em>, listen for the same "seeing ahead."</div>
+        </div>
+
+        <!-- Copia practice (indigo accent inside gold box) -->
+        <div style="background: #EEF1F8; border-left: 4px solid #3B4E8C; border-radius: 6px; padding: 14px 18px;">
+            <div style="font-size: 11px; color: #3B4E8C; letter-spacing: .08em; margin-bottom: 8px;">&#9998;&#65039; COPIA PRACTICE (IN YOUR ORGANIZER)</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.65;">Take this bare sentence: <em>"Electra grieves."</em> Rewrite the same idea <strong>four</strong> different ways, using a different Word Study term or a fresh comparison each time. Vary the length and the picture: make one short and blunt, one a full simile, one that uses <em>lament</em>, one that uses <em>requite</em>. Copia means abundance; the goal is to prove one idea can be said many ways, each with a different effect.</div>
+        </div>
+    </div>
+
+    <!-- Evaluative widget (check yourself) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 6px;">&#9998;&#65039; DO IT IN YOUR NOTEBOOK FIRST, THEN CHECK YOURSELF</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 0 0 4px;">Answer each in your Organizer before you pick, so the choice confirms your own reading.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="b" data-hint="Recall the notebook: what grows from the planted scepter, and what does Electra take it to mean?">
+                <div class="widget-row-prompt">1. How does Electra read Clytemnestra's dream?</div>
+                <div class="widget-options">
+                    <button data-choice="a">As proof that her mother is innocent.</button>
+                    <button data-choice="b" data-fb="Yes. The scepter's branch shading Mycenae tells her the father's line will rise and the gods favor justice.">As a sign the father's line will rise and the gods favor justice.</button>
+                    <button data-choice="c">As a warning that Orestes is dead.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Think about WHO the rich gifts come from, and why that would insult rather than honor the dead.">
+                <div class="widget-row-prompt">2. Why does Electra reject Clytemnestra's gifts for the tomb?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Right. A gift from the woman who murdered him dishonors the dead, so the sisters offer their own hair and a plain girdle instead.">A gift from the murderer dishonors the dead, so she sends honest, humble gifts instead.</button>
+                    <button data-choice="b">The gifts are too cheap to be worth offering.</button>
+                    <button data-choice="c">Chrysothemis asked her to keep them for herself.</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- AI callout (red frame) -->
+    <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND INTERPRETATION</div>
+        <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">AI can give you a tidy summary of "the role of dreams in Greek tragedy," and it can define a word for you. What it cannot do is tell you what <em>this</em> dream means to <em>this</em> character in this moment, or why Electra grows bolder right after hearing it. Use a tool for background if you wish, but cite what you find, and do the interpreting yourself.</div>
+    </div>
+
+    <!-- Speak your thinking (indigo) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 12px;">&#127908; SPEAK YOUR THINKING (RECORD ABOUT 3 MINUTES)</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.65; margin-bottom: 8px;">Record yourself, using your phone, the Canvas recorder, or your VR space, answering these in order:</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.9;">1. What does the dream suggest about divine justice?<br>2. How does this moment change Electra's resolve?<br>3. Why is Electra so insistent about what Chrysothemis does with the offerings, and do you see that act as symbolic, practical, or both?</div>
+        <div style="font-size: 14px; color: #3B4E8C; margin-top: 10px;">Store this recording in your Organizer; it feeds your Evidence Log and essay.</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A dream became a decision. Electra's grief turns into resistance the moment she decides how her father will be honored. Carry that forward: in this play, mourning correctly is itself a claim about justice.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.03 &middot; A Dream, an Omen, and Hope as Resistance</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
