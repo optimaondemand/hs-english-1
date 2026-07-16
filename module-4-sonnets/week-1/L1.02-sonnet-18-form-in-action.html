@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 1.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+
+    /* Flip cards (engine rotated from L1.01's ow-select) */
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* Argument-annotated sonnet visual */
+    .arg-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 12px; align-items: stretch; }
+    .arg-poem { flex: 2; min-width: 300px; border-left: 4px solid #3B4E8C; border-radius: 2px; padding-left: 12px; }
+    .arg-note { flex: 1; min-width: 180px; background: #EEF1F8; border: 1px solid #C9D3E8; border-radius: 8px; padding: 10px 14px; font-size: 14px; color: #1a2340; line-height: 1.55; }
+    .arg-note .arg-kicker { font-size: 10px; color: #3B4E8C; letter-spacing: .1em; margin-bottom: 4px; }
+    .sonnet-line { font-family: Georgia, "Times New Roman", serif; font-size: 16px; color: #1a2340; line-height: 1.8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 4</div>
+        <div style="font-size: 13px; color: #0e1c42;">Love, Time, and the Sonnet</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 1.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Sonnet 18, William Shakespeare</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">Can a poem defeat time?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 1.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Sonnet 18: Form in Action</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Sonnet 18 opens with a compliment and then spends eight lines taking it apart. Why?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Yesterday you learned the machine: quatrains, volta, couplet. Today you watch it run. Sonnet 18 is not a list of pretty images; it is a step-by-step argument about beauty, time, and what a poem can do about both. You will trace that argument stage by stage and meet two devices that carry it: <strong>apostrophe</strong> and <strong>extended metaphor</strong>.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> trace Shakespeare's argument about beauty and time through all three quatrains and the couplet of Sonnet 18.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify the volta at line 9 and explain what changes there.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define apostrophe and extended metaphor and locate both in Sonnet 18.</div></div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module Organizer with the line map you made in Lesson 1.01</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">About 35 minutes and something to write with</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE QUESTION THE POEM ASKS</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Is it possible to preserve something beautiful forever? What would have to be true for that to work?</div>
+            <div class="widget-options">
+                <button data-response="That is exactly Shakespeare's bet: art and memory outlast bodies and seasons. Watch how far he pushes the claim by line 14, and what he says the preserving actually depends on.">Yes, in art or memory</button>
+                <button data-response="A fair position, and Shakespeare spends the first eight lines agreeing with you: everything fair declines. Then he claims one exception. Read closely to decide whether the exception convinces you.">No, everything fades eventually</button>
+                <button data-response="Careful thinking. Sonnet 18 lands close to your answer: the beloved's body is not preserved, but something about the beloved is, and only under one condition named in the couplet.">Only partly, and only some things</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A compliment that starts as a question</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Sonnet 18 opens with what sounds like praise but is actually a proposal under review: "Shall I compare thee to a summer's day?" Shakespeare raises the comparison and then immediately begins testing it. The first quatrain proposes the analogy and registers the first doubts; the second quatrain methodically lists summer's failures. The sun (called "the eye of heaven") is sometimes too hot; its "gold complexion" is often dimmed by clouds; and "every fair from fair sometime declines," meaning every beautiful thing eventually loses its beauty, by accident or simply by nature running its course. This is argument by elimination: Shakespeare makes the standard of comparison look inadequate before he replaces it. Summer cannot hold the job of describing the beloved, because summer itself does not last.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Then the volta. Line 9 opens with the single pivot word "But," and the counter-claim arrives fully formed: "But thy eternal summer shall not fade." The beloved is declared exempt from everything the previous eight lines proved about the world. Exempt how? The third quatrain answers: the beloved grows "in eternal lines," the lines of this poem. The couplet seals it with two conditions and a verdict: "So long as men can breathe, or eyes can see, / So long lives this, and this gives life to thee." As long as people live and read, the poem lives, and the poem keeps the beloved alive. The answer to time is not nature and not luck. It is the poem itself.</p>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE ARGUMENT, MAPPED ONTO THE POEM</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Here is the full poem again, this time annotated for its <strong>argument</strong> rather than its rhyme. Read each section, then its margin note. The form and the argument are the same map: each quatrain is one stage of the case, and the couplet is the ruling.</p>
+
+        <!-- ===== ONE core visual: the argument-annotated full sonnet ===== -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">SONNET 18 &middot; THE ARGUMENT, STAGE BY STAGE</div>
+            <div style="background: #FDFCF8; padding: 20px 22px;">
+
+                <div class="arg-row">
+                    <div class="arg-poem">
+                        <div style="font-size: 11px; color: #3B4E8C; letter-spacing: .1em; margin-bottom: 4px;">QUATRAIN 1 &middot; LINES 1&ndash;4</div>
+                        <div class="sonnet-line">Shall I compare thee to a summer's day?</div>
+                        <div class="sonnet-line">Thou art more lovely and more temperate:</div>
+                        <div class="sonnet-line">Rough winds do shake the darling buds of May,</div>
+                        <div class="sonnet-line">And summer's lease hath all too short a date:</div>
+                    </div>
+                    <div class="arg-note"><div class="arg-kicker">STAGE 1 &middot; PROPOSE</div>The comparison is raised as a question, and doubts appear at once: you are lovelier and steadier than summer, which is windy and brief.</div>
+                </div>
+
+                <div class="arg-row">
+                    <div class="arg-poem">
+                        <div style="font-size: 11px; color: #3B4E8C; letter-spacing: .1em; margin-bottom: 4px;">QUATRAIN 2 &middot; LINES 5&ndash;8</div>
+                        <div class="sonnet-line">Sometime too hot the eye of heaven shines,</div>
+                        <div class="sonnet-line">And often is his gold complexion dimm'd;</div>
+                        <div class="sonnet-line">And every fair from fair sometime declines,</div>
+                        <div class="sonnet-line">By chance, or nature's changing course, untrimm'd;</div>
+                    </div>
+                    <div class="arg-note"><div class="arg-kicker">STAGE 2 &middot; DISMANTLE</div>Summer's failures, cataloged: too hot, too dim, and doomed like every fair thing. The comparison collapses under evidence.</div>
+                </div>
+
+                <div class="arg-row">
+                    <div class="arg-poem">
+                        <div style="font-size: 11px; color: #3B4E8C; letter-spacing: .1em; margin-bottom: 4px;">QUATRAIN 3 &middot; LINES 9&ndash;12 &middot; <span style="background:#3B4E8C; color:#fff; padding: 1px 8px; border-radius: 8px;">VOLTA AT "BUT"</span></div>
+                        <div class="sonnet-line"><strong>But</strong> thy eternal summer shall not fade,</div>
+                        <div class="sonnet-line">Nor lose possession of that fair thou owest;</div>
+                        <div class="sonnet-line">Nor shall Death brag thou wander'st in his shade,</div>
+                        <div class="sonnet-line">When in eternal lines to time thou growest;</div>
+                    </div>
+                    <div class="arg-note"><div class="arg-kicker">STAGE 3 &middot; COUNTER-CLAIM</div>The turn. The beloved is declared exempt: not fading, not losing beauty, not claimed by Death, because the beloved lives in "eternal lines."</div>
+                </div>
+
+                <div class="arg-row">
+                    <div class="arg-poem" style="border-left: 4px solid #C7922C; background: #FDF3E3; border-radius: 8px; padding: 10px 14px;">
+                        <div style="font-size: 11px; color: #8A6410; letter-spacing: .1em; margin-bottom: 4px;">COUPLET &middot; LINES 13&ndash;14</div>
+                        <div class="sonnet-line">So long as men can breathe, or eyes can see,</div>
+                        <div class="sonnet-line">So long lives this, and this gives life to thee.</div>
+                    </div>
+                    <div class="arg-note" style="background: #FDF3E3; border-color: #C7922C;"><div class="arg-kicker" style="color: #8A6410;">STAGE 4 &middot; VERDICT</div>The ruling: as long as people breathe and read, "this" (the poem) lives, and the poem keeps the beloved alive. Writing is an act of preservation.</div>
+                </div>
+
+                <div style="font-size: 14px; color: #0e1c42; line-height: 1.6; margin-top: 8px;">Public-domain text (modernized). Original 1609 spelling: <a href="https://en.wikisource.org/wiki/Shakespeare%27s_Sonnets" style="color: #3B4E8C;">Wikisource: Shakespeare's Sonnets</a>.</div>
+            </div>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Two devices that carry the argument</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">First, <strong>apostrophe</strong>: Shakespeare addresses the beloved directly as "thee" throughout, even though the beloved is not present. Direct address makes the argument feel like an urgent personal declaration rather than an essay about beauty. Second, <strong>extended metaphor</strong>: the comparison to summer is not a one-line flourish; it is sustained across eight full lines, long enough for Shakespeare to build and then demolish a complete case. Notice also the word <strong>temperate</strong> in line 2: it means moderate and steady, free of extremes, and it quietly sets up everything quatrain 2 says about summer's wild swings of heat and dimness. One more thing worth knowing: the beloved is never named or described. Scholars have debated for centuries who the poem addresses. The poem preserves a person about whom it tells us almost nothing, which makes its claim about preservation stranger and bolder than it first appears.</p>
+
+        <!-- WIDGET: evaluative flip cards (engine rotated from L1.01) -->
+        <div style="font-size: 11px; color: #3B4E8C; margin: 16px 0 6px; letter-spacing: .04em;">&#9998; YOUR TURN &middot; ANSWER IN YOUR ORGANIZER FIRST, THEN CLICK EACH CARD TO CHECK</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+            <div class="optima-widget ow-flip" style="flex: 1; min-width: 240px;">
+                <div class="ow-flip-front">
+                    <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">CARD 1 &middot; WHICH STAGE OF THE ARGUMENT?</div>
+                    <div style="font-size: 16px; color: #0E1C42; line-height: 1.55; font-style: italic;">"And every fair from fair sometime declines, / By chance, or nature's changing course, untrimm'd;"</div>
+                    <div style="font-size: 12px; color: #3B4E8C; margin-top: 10px;">Tap to reveal</div>
+                </div>
+                <div class="ow-flip-back">
+                    <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">ANSWER</div>
+                    <div style="font-size: 16px; color: #1a2340; line-height: 1.6;"><strong>Stage 2: dismantling the comparison.</strong> These are lines 7 and 8, the climax of quatrain 2's evidence: every beautiful thing declines, so summer, and everything like it, fails as praise. The volta has not arrived yet.</div>
+                </div>
+            </div>
+            <div class="optima-widget ow-flip" style="flex: 1; min-width: 240px;">
+                <div class="ow-flip-front">
+                    <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">CARD 2 &middot; WHAT IS "THIS"?</div>
+                    <div style="font-size: 16px; color: #0E1C42; line-height: 1.55; font-style: italic;">"So long lives this, and this gives life to thee."</div>
+                    <div style="font-size: 12px; color: #3B4E8C; margin-top: 10px;">Tap to reveal</div>
+                </div>
+                <div class="ow-flip-back">
+                    <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">ANSWER</div>
+                    <div style="font-size: 16px; color: #1a2340; line-height: 1.6;"><strong>"This" is the poem itself.</strong> The couplet's claim is about poetry's preserving power, not about the beloved's qualities: as long as the poem is read, the beloved lives in it. You proved the claim true by reading the line just now, four centuries later.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>apostrophe</strong> &mdash; addressing an absent person or an abstraction directly, as if present. &nbsp;&middot;&nbsp; <strong>extended metaphor</strong> &mdash; a comparison sustained across many lines rather than dropped after one. &nbsp;&middot;&nbsp; <strong>temperate</strong> &mdash; moderate and steady; free of extremes.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>apostrophe</em> comes from Greek <em>apostrephein</em>, "to turn away": the speaker turns from the audience to address someone who is not there. <strong>Copia (in your Organizer):</strong> take the sentence <em>"The writer compares life to a journey,"</em> and rewrite it twice: once so the comparison is clearly an extended metaphor, and once so the sentence uses apostrophe (address the journey directly).</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Write the four argument stages beside your line map in the Organizer</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Label them in your own words: propose, dismantle, counter-claim, verdict. This map is the skeleton your own sonnet will use in Weeks 2 and 3.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Then head to the practice and activities</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Read the meter aloud in Practice 1, build your annotated Sonnet 18 in VR Activity 1.01, and join this week's discussion on the poem's argument. On Friday, Project Feeder 1 asks for your first three lines of iambic pentameter.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Sonnet 18 wins its argument by using its shape: two quatrains of evidence against summer, a volta that flips the case, and a couplet that names the true preserver. When a sonnet's form and argument move together like this, the form is not decoration. It is the argument.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.02 &middot; Sonnet 18: Form in Action</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html; includes flip handler) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+</script>
+</body>
+</html>
