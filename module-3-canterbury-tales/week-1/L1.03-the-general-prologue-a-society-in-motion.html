@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 1.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — ELA palette ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 13px; color: #0e1c42;">Love, Laughter, and Justice in the Age of Chaucer</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 1.03</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">READING</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">General Prologue (opening + portraits)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">CENTRAL QUESTION</div>
+        <div style="font-size: 16px; color: #0e1c42;">What does a traveler reveal about their soul?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 1.03</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The General Prologue: A Society in Motion</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson &middot; you begin reading</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">When a narrator praises everyone he meets, how do you find out who is actually worth admiring?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Today you meet Chaucer's pilgrims. You will hear the famous opening of the General Prologue in Chaucer's own Middle English, then study five portraits (the Knight, the Prioress, the Wife of Bath, the Miller, and the Pardoner) and learn to catch the <strong>irony</strong> hiding inside a compliment.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> read the opening of the General Prologue and explain what it describes.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe how Chaucer builds a portrait out of concrete details.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> find the ironic detail in a portrait and explain what it exposes.</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE OPENING: SPRING SETS THE ROAD IN MOTION</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Think of the last time warm weather made you restless to go somewhere. What is it about spring that pushes people out the door?</div>
+            <div class="widget-options">
+                <button data-response="Chaucer would agree. His opening spends eleven lines on spring precisely to show that the pull to travel feels as natural as the season itself.">Everything feels alive and it is hard to stay still</button>
+                <button data-response="A fair instinct. Chaucer links that restlessness to something deeper: when nature stirs, people long to make a journey that means something.">A change of scene after being cooped up</button>
+                <button data-response="Notice that Chaucer turns that ordinary itch to travel into the very engine of his whole book. Watch how he does it below.">The freedom to just go</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 14px 0 10px 0;">Chaucer opens not with a person but with the <em>season</em>. In one long, unspooling sentence, he describes April rains waking the earth, the west wind breathing life into the fields, birds singing through the night, and only then arrives at his real subject: when spring stirs the world, people long to go on pilgrimages. The rhythm of the verse is <strong>iambic pentameter</strong>, ten beats to a line, and the lines fall into rhymed pairs called couplets. Read the original below, then use the modern gloss beside it.</p>
+
+        <!-- ONE core visual: the Middle English opening on a chalkboard, rhyme marked in gold, with modern gloss -->
+        <div style="background: #14213f; border: 10px solid #3a2c1a; border-radius: 10px; padding: 22px 24px; margin: 18px 0; box-shadow: inset 0 0 40px rgba(0,0,0,0.4);">
+            <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .16em; margin-bottom: 16px; text-align: center;">ON THE BOARD &middot; THE GENERAL PROLOGUE, LINES 1&ndash;18 (MIDDLE ENGLISH)</div>
+            <div style="font-size: 17px; color: #f4f1e8; line-height: 2.0;">
+                Whan that Aprille with his shoures <span style="color:#e6b955;">soote</span><br>
+                The droghte of March hath perced to the <span style="color:#e6b955;">roote</span>,<br>
+                And bathed every veyne in swich <span style="color:#e6b955;">licour</span><br>
+                Of which vertu engendred is the <span style="color:#e6b955;">flour</span>;<br>
+                Whan Zephirus eek with his sweete <span style="color:#e6b955;">breeth</span><br>
+                Inspired hath in every holt and <span style="color:#e6b955;">heeth</span><br>
+                The tendre croppes, and the yonge <span style="color:#e6b955;">sonne</span><br>
+                Hath in the Ram his halfe cours <span style="color:#e6b955;">yronne</span>,<br>
+                And smale foweles maken <span style="color:#e6b955;">melodye</span>,<br>
+                That slepen al the nyght with open <span style="color:#e6b955;">ye</span><br>
+                (So priketh hem Nature in hir <span style="color:#e6b955;">corages</span>),<br>
+                Thanne longen folk to goon on <span style="color:#e6b955;">pilgrimages</span>,<br>
+                And palmeres for to seken straunge <span style="color:#e6b955;">strondes</span>,<br>
+                To ferne halwes, kowthe in sondry <span style="color:#e6b955;">londes</span>;<br>
+                And specially, from every shires <span style="color:#e6b955;">ende</span><br>
+                Of Engelond, to Caunterbury they <span style="color:#e6b955;">wende</span>,<br>
+                The hooly blisful martir for to <span style="color:#e6b955;">seke</span>,<br>
+                That hem hath holpen whan that they were <span style="color:#e6b955;">seeke</span>.
+            </div>
+            <div style="font-size: 14px; color: #cdd6ea; margin-top: 16px; line-height: 1.7; border-top: 1px solid #3B4E8C; padding-top: 12px;">
+                <strong style="color:#8ea2c9;">Modern gloss:</strong> When April with its sweet showers has pierced the drought of March to the root, and bathed every vein of the plants in the moisture whose power brings forth the flower; when the west wind too, with his sweet breath, has breathed life into the tender shoots in every wood and field, and the young sun has run half its course through the sign of the Ram, and small birds make melody who sleep all night with open eyes (so Nature stirs them in their hearts), then people long to go on pilgrimages, and pilgrims to seek far-off shores and distant shrines known in various lands; and especially, from every shire's end of England, they travel to Canterbury to seek the holy blessed martyr who helped them when they were sick.
+            </div>
+            <div style="font-size: 13px; color: #8ea2c9; margin-top: 12px; line-height: 1.6;">The <span style="color:#e6b955;">gold words</span> at the line ends are the rhymes: the lines pair off two by two into couplets (<em>soote / roote, licour / flour, breeth / heeth</em>&hellip;), each line carrying five beats of iambic pentameter.</div>
+        </div>
+
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 14px 20px; margin: 6px 0 4px;">
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.65;">Read the full General Prologue in the public-domain Middle English edition (Project Gutenberg, edited by W. W. Skeat): <a href="https://www.gutenberg.org/ebooks/2383" style="color:#3B4E8C;">gutenberg.org/ebooks/2383</a>. A modern-English reading edition may be provided in your Canvas module; use it alongside the original.</div>
+        </div>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; FIVE PORTRAITS, AND THE IRONY INSIDE THEM</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">After the opening, Chaucer the narrator introduces the company one by one. He sounds impressed by nearly everyone. That is the trap. A careful reader watches the <em>details</em>, because the details often reveal a truth the cheerful narrator seems to miss. Here are five pilgrims and the single detail worth pausing on in each.</p>
+
+        <!-- Portrait cards -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin: 12px 0;">
+            <div style="font-size: 16px; color: #8A6410; font-weight: bold; margin-bottom: 4px;">The Knight &middot; the genuine article</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.65;">Chaucer calls him <em>"a verray, parfit gentil knyght"</em> (a true, perfect, noble knight). He has fought honorably in many campaigns, speaks little, and wears a tunic still stained from his armor. Here the praise is straight: this portrait carries little or no irony. Chaucer shows you the real thing first, so you can measure the others against it.</div>
+        </div>
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 14px 18px; margin: 12px 0;">
+            <div style="font-size: 16px; color: #3B4E8C; font-weight: bold; margin-bottom: 4px;">The Prioress &middot; devotion, or manners?</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.65;">A prioress is the head of a convent, sworn to humility. Yet Chaucer lingers on her table manners, her French, her pet dogs, and a gold brooch reading <em>"Amor vincit omnia"</em> (Love conquers all). Every detail is worldly refinement where we expect spiritual devotion. The gap is gentle irony: she is charming, but is she holy?</div>
+        </div>
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin: 12px 0;">
+            <div style="font-size: 16px; color: #8A6410; font-weight: bold; margin-bottom: 4px;">The Wife of Bath &middot; experience over authority</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.65;">Chaucer notes she has had <em>"housbondes at chirche dore&hellip; fyve"</em> (five husbands, married at the church door), dresses richly, is gap-toothed, and has traveled on many pilgrimages herself. She is bold, worldly, and utterly sure of her own experience: a woman who refuses the quiet place her society assigns her.</div>
+        </div>
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 14px 18px; margin: 12px 0;">
+            <div style="font-size: 16px; color: #3B4E8C; font-weight: bold; margin-bottom: 4px;">The Miller &middot; coarse and dishonest</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.65;">Brawny and loud, with a beard <em>"reed"</em> as a sow or fox and a wart on his nose, the Miller cheats his customers, taking more grain than he is owed. Chaucer barely hides the judgment here: the ugly outside matches the dishonest inside, and the satire is close to the surface.</div>
+        </div>
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 18px; margin: 12px 0;">
+            <div style="font-size: 16px; color: #8A6410; font-weight: bold; margin-bottom: 4px;">The Pardoner &middot; Chaucer's sharpest satire</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.65;">A pardoner sold official Church pardons. This one also peddles fake relics (pig bones passed off as saints' bones) and sings sweetly in church to loosen people's purses. Chaucer aims his most cutting satire at him: a man who sells forgiveness he does not possess. Corruption dressed as holiness.</div>
+        </div>
+
+        <!-- WIDGET: evaluative single-select (recolored) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="a" data-hint="Look for the portrait where Chaucer's praise is straightforward, with no hidden flaw.">
+                <div class="widget-row-prompt">1. Which pilgrim does Chaucer praise almost without irony, as a genuine ideal?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Yes. The Knight is the true article, and Chaucer sets him first as a standard for the rest.">The Knight</button>
+                    <button data-choice="b">The Pardoner</button>
+                    <button data-choice="c">The Miller</button>
+                    <button data-choice="d">The Prioress</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="The gap is between her holy office and the worldly details Chaucer keeps noticing.">
+                <div class="widget-row-prompt">2. The Prioress's gold brooch reading "Amor vincit omnia" is ironic because&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a">it proves she is a devoted nun</button>
+                    <button data-choice="b">it is written in Latin</button>
+                    <button data-choice="c" data-fb="Right. A worldly motto about love sits oddly on a woman sworn to humble devotion. The detail quietly questions her.">a worldly love motto is odd on a nun sworn to humility</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>prioress</strong> &middot; the woman who leads a convent of nuns. &nbsp;&middot;&nbsp; <strong>relic</strong> &middot; a holy object, such as a saint's bone, honored by the faithful. &nbsp;&middot;&nbsp; <strong>couplet</strong> &middot; a pair of rhymed lines. &nbsp;&middot;&nbsp; <strong>gloss</strong> &middot; a translation or explanation placed beside a hard text.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>relic</em> comes from Latin <em>reliquiae</em>, "remains, things left behind." <em>Gloss</em> comes from Greek <em>glossa</em>, "tongue, language": a gloss lends its tongue to a text you cannot yet read.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Copia (in your Organizer):</strong> take one flattering line about a pilgrim, such as <em>"She was a most refined and gracious lady."</em> Rewrite it once so the refinement reads as true virtue, and once so it reads as empty polish, the way Chaucer tilts the Prioress. Then add each of today's pilgrims to your Character Tracking Chart.</div>
+        </div>
+
+        <!-- AI callout (red frame) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND MIDDLE ENGLISH</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can translate a Middle English line into modern English quickly, which can help when a word stumps you. It cannot decide for you whether a detail is a sincere compliment or a quiet jab. That reading is a judgment, and judgment is the skill this module is building in you.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Update your Character Tracking Chart, then take this to the Discussion</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Add all five pilgrims with one telling detail each. Then, in Discussion Post 1, pick one portrait and argue for the irony you find in a single line. This week you will also write Quick Write 1, describing a modern pilgrim using Chaucer's method of telling detail without stated judgment.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Chaucer rarely tells you what to think. He shows you a detail and lets it do the work. Learn to read the detail, and you can read the soul it exposes. That is the whole method of the General Prologue.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.03 &middot; The General Prologue: A Society in Motion</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
