@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Theatre of Dionysus &mdash; Grammar &amp; Vocabulary</title>
+<style>
+  :root{
+    --navy:#0E1C42; --navy-2:#22335c; --cyan:#55C8E8;
+    --gold:#C7922C; --gold-2:#e6b955; --gold-deep:#8a6410;
+    --plum:#3B4E8C; --plum-2:#6D7FB8; --plum-deep:#2A3A6B;  /* ELA accent 2 = INDIGO (var names kept) */
+    --crimson:#C0392B;            /* functional "incorrect" feedback only */
+    --ink:#1a2340; --paper:#f4f2f7;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:transparent;}
+  .stage-wrap{font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);max-width:840px;margin:0 auto;padding:16px;}
+  .stage-card{border-radius:16px;overflow:hidden;background:var(--navy);
+    box-shadow:0 18px 46px -14px rgba(9,15,30,.55),0 3px 12px rgba(9,15,30,.3);border:1px solid rgba(255,255,255,.08);}
+
+  /* HUD */
+  .hud{position:relative;padding:16px 20px 16px;color:#fff;
+    background:radial-gradient(130% 150% at 15% -40%,rgba(85,200,232,.20),transparent 55%),linear-gradient(180deg,var(--navy-2),var(--navy));
+    border-bottom:1px solid rgba(255,255,255,.08);}
+  .hud-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;}
+  .badge{display:inline-flex;align-items:center;gap:7px;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-2);font-weight:700;}
+  .attempts{font-size:.72rem;color:#aebbd6;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);padding:5px 11px;border-radius:999px;white-space:nowrap;}
+  .attempts b{color:#fff;}
+  .question{font-size:1.16rem;font-weight:700;line-height:1.45;margin:0;text-wrap:balance;}
+  .qcount{color:var(--cyan);font-weight:800;margin-right:4px;}
+  .meters{display:flex;align-items:center;gap:12px;margin-top:14px;}
+  .score-chip{display:inline-flex;align-items:center;gap:6px;background:rgba(199,146,44,.16);border:1px solid rgba(199,146,44,.45);padding:5px 12px 5px 9px;border-radius:999px;}
+  .score-chip .ic{font-size:.95rem;}
+  .score-num{font-variant-numeric:tabular-nums;font-weight:800;color:var(--gold-2);min-width:14px;text-align:center;}
+  .timerbar-track{flex:1;height:10px;border-radius:999px;background:rgba(255,255,255,.12);box-shadow:inset 0 1px 2px rgba(0,0,0,.35);overflow:hidden;}
+  .timerbar-fill{height:100%;width:100%;border-radius:999px;background:linear-gradient(90deg,var(--gold),var(--plum-2));transition:width .25s linear;}
+  .timer-num{font-variant-numeric:tabular-nums;font-weight:800;min-width:54px;text-align:right;font-size:1rem;}
+  .timer-num.low{color:#ff9082;}
+
+  /* Orchestra (play area) */
+  .orchestra{position:relative;padding:24px 20px 26px;
+    background:radial-gradient(70% 55% at 50% -10%,rgba(230,185,85,.18),transparent 60%),linear-gradient(180deg,#182murder,#141d38 0%,#0d1730 100%);}
+  .orchestra{background:radial-gradient(70% 55% at 50% -8%,rgba(230,185,85,.16),transparent 60%),linear-gradient(180deg,#1b2murder,#16203f 0%,#0d1730 100%);}
+  /* seating arcs backdrop */
+  .arcs{position:absolute;top:8px;left:0;right:0;text-align:center;pointer-events:none;opacity:.55;}
+  .arc{height:16px;border-radius:200px 200px 0 0;border:2px solid var(--plum);border-bottom:none;margin:0 auto -8px;}
+
+  .masks{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:620px;margin:26px auto 0;}
+  .mask{position:relative;display:flex;align-items:center;gap:12px;text-align:left;cursor:pointer;
+    background:linear-gradient(150deg,#fbf6ea,#efe4c8);border:2px solid var(--gold-deep);border-radius:12px;
+    padding:14px 16px;font-size:1rem;font-weight:600;color:var(--ink);
+    box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 6px 14px rgba(0,0,0,.3);
+    transition:transform .12s,box-shadow .12s,background .2s;animation:float 3.2s ease-in-out infinite;}
+  .masks .mask:nth-child(2){animation-delay:.5s;} .masks .mask:nth-child(3){animation-delay:1s;} .masks .mask:nth-child(4){animation-delay:1.5s;}
+  @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-5px);}}
+  .mask .face{flex:0 0 auto;width:34px;height:34px;}
+  .mask:hover{transform:translateY(-2px) scale(1.015);box-shadow:0 10px 20px -6px rgba(0,0,0,.4);}
+  .mask:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;}
+  .mask.correct{background:linear-gradient(150deg,var(--gold-2),var(--gold));border-color:var(--gold-deep);color:#3a2c05;transform:scale(1.05);box-shadow:0 0 22px rgba(230,185,85,.75);}
+  .mask.wrong{background:linear-gradient(150deg,#d98a7e,var(--crimson));border-color:#7d2419;color:#fff;animation:shake .35s;}
+  .mask:disabled{cursor:default;}
+  @keyframes shake{0%,100%{transform:translateX(0);}25%{transform:translateX(-6px);}75%{transform:translateX(6px);}}
+
+  .toast{position:absolute;top:12px;left:50%;transform:translateX(-50%) translateY(-14px);background:var(--plum-deep);color:#fff;
+    padding:8px 18px;border-radius:999px;font-weight:700;font-size:.9rem;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;border:1px solid rgba(255,255,255,.14);}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+  .toast.good{background:var(--gold-deep);} .toast.bad{background:var(--crimson);}
+
+  /* Overlays */
+  .overlay{position:absolute;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;overflow-y:auto;padding:22px;
+    background:radial-gradient(120% 100% at 50% 0%,rgba(34,51,92,.85),rgba(9,15,30,.94));}
+  .overlay.hidden{display:none;}
+  .panel{width:100%;max-width:460px;background:linear-gradient(170deg,rgba(38,56,98,.97),rgba(17,27,50,.98));
+    border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:26px 24px;color:#fff;text-align:center;
+    display:flex;flex-direction:column;align-items:center;gap:14px;box-shadow:0 24px 56px -14px rgba(0,0,0,.6);}
+  .panel h2{margin:0;font-family:Georgia,serif;font-size:1.7rem;}
+  .panel h2 .accent{color:var(--gold-2);}
+  .panel p{margin:0;max-width:42ch;line-height:1.55;color:#cdd6ea;font-size:.94rem;}
+  .rules{width:100%;text-align:left;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px 16px;font-size:.9rem;line-height:1.6;color:#e7ecf7;display:flex;flex-direction:column;gap:7px;}
+  .rules .r{display:flex;gap:10px;} .rules .ic{flex:0 0 auto;}
+  .accom{display:flex;align-items:center;gap:12px;font-size:.86rem;width:100%;background:rgba(110,74,135,.18);border:1px solid rgba(150,112,176,.5);padding:11px 14px;border-radius:12px;cursor:pointer;color:#efe6f5;text-align:left;line-height:1.45;}
+  .accom input{width:20px;height:20px;flex:0 0 auto;accent-color:var(--plum-2);cursor:pointer;}
+  .btn{font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;border:none;border-radius:12px;padding:13px 32px;color:#3a2c05;
+    background:linear-gradient(180deg,var(--gold-2),var(--gold));box-shadow:0 5px 0 var(--gold-deep),0 10px 18px -6px rgba(199,146,44,.55);transition:transform .1s,box-shadow .1s;}
+  .btn:hover{transform:translateY(2px);box-shadow:0 3px 0 var(--gold-deep);}
+  .btn:active{transform:translateY(5px);box-shadow:0 0 0 var(--gold-deep);}
+  .btn:disabled{background:#5c6579;color:#c7ccd6;box-shadow:0 5px 0 #3c4356;cursor:not-allowed;}
+  .btn:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;}
+  .final-stats{display:flex;gap:12px;width:100%;}
+  .stat{flex:1;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px 8px;display:flex;flex-direction:column;gap:4px;align-items:center;}
+  .stat .n{font-size:1.9rem;font-weight:800;color:var(--gold-2);font-variant-numeric:tabular-nums;line-height:1;}
+  .stat .l{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#a9b4cc;}
+  .stars{font-size:1.8rem;letter-spacing:8px;color:var(--gold-2);}
+  .footnote{background:#0b1428;color:#8695b5;font-size:.72rem;padding:9px 16px;text-align:center;border-top:1px solid rgba(255,255,255,.05);}
+  .mode-tag{color:var(--plum-2);font-weight:700;}
+  @media (prefers-reduced-motion:reduce){.mask{animation:none;}}
+  @media (max-width:560px){.masks{grid-template-columns:1fr;}.question{font-size:1.04rem;}.panel h2{font-size:1.4rem;}}
+</style>
+</head>
+<body>
+<div class="stage-wrap">
+  <div class="stage-card">
+
+    <div class="hud">
+      <div class="hud-top">
+        <span class="badge">&#127917; Theatre of Dionysus &middot; Grammar &amp; Vocabulary</span>
+        <span class="attempts" id="attempts">Round <b id="attemptNum">1</b></span>
+      </div>
+      <p class="question"><span class="qcount" id="qCount">Q1.</span><span id="qText">Take your seat in the theatre&hellip;</span></p>
+      <div class="meters">
+        <span class="score-chip"><span class="ic">&#127942;</span><span class="score-num" id="scoreNum">0</span></span>
+        <div class="timerbar-track"><div class="timerbar-fill" id="timerFill"></div></div>
+        <span class="timer-num" id="timerNum">0.0s</span>
+      </div>
+    </div>
+
+    <div class="orchestra" id="orchestra">
+      <div class="arcs"><div class="arc" style="width:60%"></div><div class="arc" style="width:74%"></div><div class="arc" style="width:88%"></div></div>
+      <div class="toast" id="toast"></div>
+      <div class="masks" id="masks"></div>
+
+      <div class="overlay" id="startOverlay">
+        <div class="panel">
+          <h2>The Theatre of <span class="accent">Dionysus</span></h2>
+          <p>Four masks face you across the orchestra. Each round, a question appears &mdash; choose the mask with the <b>correct</b> answer before the clock runs out.</p>
+          <div class="rules">
+            <div class="r"><span class="ic">&#9201;&#65039;</span><span><b>Beat the clock.</b> A correct answer keeps your streak; a wrong one costs 3 seconds.</span></div>
+            <div class="r"><span class="ic">&#127917;</span><span><b>Grammar &amp; vocabulary</b> from Module 1: <em>Electra</em> and the language of justice.</span></div>
+            <div class="r"><span class="ic">&#128218;</span><span id="modeRule">Answer all questions to finish the round.</span></div>
+          </div>
+          <label class="accom"><input type="checkbox" id="accomBox"><span><b>Extended time (IEP / 504):</b> 1.5&times; the time limit. Check this before you begin if your plan allows it.</span></label>
+          <button class="btn" id="startBtn">Begin</button>
+        </div>
+      </div>
+
+      <div class="overlay hidden" id="endOverlay">
+        <div class="panel">
+          <h2 id="endTitle">Curtain!</h2>
+          <div class="stars" id="endStars"></div>
+          <div class="final-stats">
+            <div class="stat"><span class="n" id="finalScore">0</span><span class="l">Correct</span></div>
+            <div class="stat"><span class="n" id="finalPct">0%</span><span class="l">Score</span></div>
+          </div>
+          <p id="endMsg"></p>
+          <button class="btn" id="againBtn">Play again</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footnote" id="footnote">Optima Academy Online &middot; English 1 &middot; Module 1 &mdash; <span class="mode-tag" id="modeTag">practice mode</span></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------------- Content: Module 1 grammar + vocabulary ---------------- */
+  var QUESTIONS = [
+    {q:"Which sentence contains a <b>subordinate clause</b>?",
+     a:["Electra mourns her father.","Orestes returns in secret.","Although Aegisthus rules, Electra refuses to be silent.","The chorus sings and dances."],c:2},
+    {q:"<b>Justice</b>, in our working definition, means &mdash;",
+     a:["revenge for a wrong","giving what is owed","the will of the stronger","whatever the city decides"],c:1},
+    {q:"Which sentence uses an <b>appositive</b> correctly?",
+     a:["Clytaemnestra killed Agamemnon because she was angry.","Clytaemnestra, his wife, killed Agamemnon.","Clytaemnestra killed Agamemnon and Aegisthus helped.","When Clytaemnestra killed Agamemnon, Electra wept."],c:1},
+    {q:"<b>Hubris</b> is best defined as &mdash;",
+     a:["hospitality to guests","destructive pride that overreaches","glory won by great deeds","reverence for the gods"],c:1},
+    {q:"<b>Dramatic irony</b> occurs when &mdash;",
+     a:["a character makes a joke","the audience knows something a character does not","the plot has a sad ending","two characters argue"],c:1},
+    {q:"Which sentence shows correct <b>parallel structure</b>?",
+     a:["Electra grieves, accuses, and is refusing to yield.","Electra grieves, accuses, and refuses to yield.","Electra is grieving, accuses, and refused to yield.","Electra grieves, is accusing, and refuses yielding."],c:1},
+    {q:"<b>Anagnorisis</b> is &mdash;",
+     a:["a choral song","a moment of recognition or discovery","excessive pride","a funeral offering"],c:1},
+    {q:"The <b>polis</b> is &mdash;",
+     a:["a Greek temple","the city organized into a governed state","a type of mask","the chorus leader"],c:1},
+    {q:"Which is a <b>rhetorical question</b> (asked for effect, not an answer)?",
+     a:["What time does the play begin?","How could I stay silent while my father lies unavenged?","Where is the theatre?","Who wrote Electra?"],c:1},
+    {q:"<b>Piety</b> refers to &mdash;",
+     a:["duty and reverence toward the gods","loyalty to one's friends","courage in battle","skill in speaking"],c:0}
+  ];
+
+  var BASE_TIME=90, WRONG_PENALTY=3;
+  var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------------- SCORM 1.2 (optional) ---------------- */
+  var scorm=(function(){
+    var api=null;
+    function find(win,d){ try{ while(win){ if(win.API) return win.API; if(win.parent===win) break; win=win.parent; } }catch(e){} return null; }
+    try{ api=find(window); if(!api && window.opener) api=find(window.opener); }catch(e){}
+    var on=false;
+    return {
+      present:function(){return !!api;},
+      init:function(){ if(!api) return false; try{ on = api.LMSInitialize("")==="true"; }catch(e){on=false;} return on; },
+      score:function(raw){ if(!api||!on) return; try{ api.LMSSetValue("cmi.core.score.min","0"); api.LMSSetValue("cmi.core.score.max","100"); api.LMSSetValue("cmi.core.score.raw",String(raw)); }catch(e){} },
+      status:function(s){ if(!api||!on) return; try{ api.LMSSetValue("cmi.core.lesson_status",s); }catch(e){} },
+      commit:function(){ if(!api||!on) return; try{ api.LMSCommit(""); }catch(e){} },
+      finish:function(){ if(!api||!on) return; try{ api.LMSFinish(""); on=false; }catch(e){} }
+    };
+  })();
+  var GRADED = scorm.present();
+  if(GRADED){ scorm.init(); scorm.status("incomplete"); }
+
+  /* ---------------- DOM ---------------- */
+  var $=function(id){return document.getElementById(id);};
+  var masksEl=$("masks"),toast=$("toast"),qText=$("qText"),qCount=$("qCount"),scoreNum=$("scoreNum"),
+      timerNum=$("timerNum"),timerFill=$("timerFill"),attemptNum=$("attemptNum"),
+      startOverlay=$("startOverlay"),endOverlay=$("endOverlay"),startBtn=$("startBtn"),againBtn=$("againBtn"),accomBox=$("accomBox");
+
+  // Mode labelling
+  $("modeTag").textContent = GRADED ? "graded (SCORM)" : "practice mode — unlimited tries";
+  $("modeRule").innerHTML = GRADED
+    ? "This round is <b>graded</b>: your score is sent to the gradebook when you finish."
+    : "Unlimited tries — replay to raise your score. Nothing is recorded.";
+
+  var order=[],qIndex=0,score=0,timeLeft=0,totalTime=0,running=false,rafId=null,lastTs=0,accommodate=false,attempt=1,locked=false;
+
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  var faceGold='<svg class="face" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#e6b955" stroke="#8a6410" stroke-width="2"/><circle cx="14" cy="17" r="2.4" fill="#2A3A6B"/><circle cx="26" cy="17" r="2.4" fill="#2A3A6B"/><path d="M13 26 Q20 32 27 26" fill="none" stroke="#2A3A6B" stroke-width="2.4" stroke-linecap="round"/></svg>';
+  var facePlum='<svg class="face" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#6D7FB8" stroke="#2A3A6B" stroke-width="2"/><circle cx="14" cy="17" r="2.4" fill="#1e2547"/><circle cx="26" cy="17" r="2.4" fill="#1e2547"/><path d="M13 29 Q20 23 27 29" fill="none" stroke="#1e2547" stroke-width="2.4" stroke-linecap="round"/></svg>';
+
+  function loadQuestion(){
+    var Q=QUESTIONS[order[qIndex]];
+    qCount.textContent="Q"+(qIndex+1)+".";
+    qText.innerHTML=Q.q;
+    masksEl.innerHTML="";
+    var idxs=shuffle([0,1,2,3]);
+    idxs.forEach(function(ai,pos){
+      var b=document.createElement("button");
+      b.className="mask";
+      b.type="button";
+      b.innerHTML=(pos%2?facePlum:faceGold)+"<span>"+Q.a[ai]+"</span>";
+      b.setAttribute("aria-label",Q.a[ai]);
+      b.addEventListener("click",function(){ choose(b, ai===Q.c); });
+      masksEl.appendChild(b);
+    });
+  }
+
+  function choose(btn,correct){
+    if(!running) return;
+    if(correct){
+      btn.classList.add("correct"); score++; scoreNum.textContent=score;
+      showToast("Bravo! +1","good"); running=false;
+      Array.prototype.forEach.call(masksEl.children,function(m){m.disabled=true;});
+      setTimeout(next,420);
+    } else {
+      btn.classList.add("wrong");
+      timeLeft=Math.max(0,timeLeft-WRONG_PENALTY);
+      showToast("Not that one — −3s","bad");
+      setTimeout(function(){btn.classList.remove("wrong");},380);
+    }
+  }
+
+  function next(){ qIndex++; if(qIndex>=QUESTIONS.length){ return endGame(true); } loadQuestion(); running=true; lastTs=0; rafId=requestAnimationFrame(tick); }
+
+  var toastTimer=null;
+  function showToast(m,k){toast.textContent=m;toast.className="toast show"+(k?" "+k:"");clearTimeout(toastTimer);toastTimer=setTimeout(function(){toast.className="toast";},900);}
+
+  function tick(ts){
+    if(!running) return;
+    if(!lastTs)lastTs=ts;
+    var dt=Math.min((ts-lastTs)/1000,0.05);lastTs=ts;
+    timeLeft-=dt;
+    if(timeLeft<=0){timeLeft=0;updateHUD();return endGame(false);}
+    updateHUD();
+    rafId=requestAnimationFrame(tick);
+  }
+  function updateHUD(){timerNum.textContent=timeLeft.toFixed(1)+"s";timerNum.classList.toggle("low",timeLeft<=10);timerFill.style.width=(100*timeLeft/totalTime)+"%";}
+
+  function startGame(){
+    if(locked) return;
+    accommodate=accomBox.checked;
+    totalTime=accommodate?Math.round(BASE_TIME*1.5):BASE_TIME;timeLeft=totalTime;
+    order=shuffle(QUESTIONS.map(function(_,i){return i;}));
+    qIndex=0;score=0;scoreNum.textContent=0;
+    startOverlay.classList.add("hidden");endOverlay.classList.add("hidden");
+    loadQuestion();updateHUD();running=true;lastTs=0;rafId=requestAnimationFrame(tick);
+  }
+
+  function endGame(finished){
+    running=false;cancelAnimationFrame(rafId);
+    var total=QUESTIONS.length, pct=Math.round(100*score/total);
+    $("endTitle").textContent = finished ? (score===total?"A flawless performance!":"Curtain!") : "Time!";
+    $("finalScore").textContent=score+"/"+total;
+    $("finalPct").textContent=pct+"%";
+    $("endStars").textContent = pct>=90?"★★★":pct>=70?"★★☆":pct>0?"★☆☆":"☆☆☆";
+
+    if(GRADED){
+      scorm.score(pct); scorm.status(pct>=70?"passed":"completed"); scorm.commit();
+      $("endMsg").textContent = "Your score ("+pct+"%) has been sent to the gradebook. "+(pct>=70?"Well played.":"Review the words and rules you missed.");
+      againBtn.style.display="none"; locked=true;
+    } else {
+      $("endMsg").textContent = pct===100 ? "Every answer correct — you know this material cold." : "Replay to raise your score. Review the items you missed in the lesson.";
+    }
+    endOverlay.classList.remove("hidden");
+  }
+
+  startBtn.addEventListener("click",startGame);
+  againBtn.addEventListener("click",function(){ if(!locked){ attempt++; attemptNum.textContent=attempt; startGame(); } });
+  window.addEventListener("beforeunload",function(){ if(GRADED) scorm.finish(); });
+})();
+</script>
+</body>
+</html>
