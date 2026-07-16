@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 2.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 13px; color: #0e1c42;">Honor and Duty in Sir Gawain</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 2.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Sir Gawain and the Green Knight, Fitt II (trans. Weston)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What does it mean to be truly honorable?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 2.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Pentangle and Chivalric Virtue</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Before Gawain rides into danger, the poet paints a five-pointed star on his shield. Why start a quest with a diagram of virtue?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">In Fitt II, as Gawain is armed, the Pearl Poet pauses on the emblem he carries: a five-pointed star the poet calls the <strong>pentangle</strong>, or "endless knot." Each point stands for a set of five ideals Gawain is bound to keep. Today you will read that passage closely and see the whole standard Gawain will be measured against for the rest of the poem.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what the pentangle is and why the poet calls it the "endless knot."</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> name the five virtues the pentangle demands and what each one asks of a knight.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use this week's vocabulary to describe a person's character with precision.</div></div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module Organizer (the Word document for this module in OneDrive)</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">The public-domain text of Fitt II (link below), and about 35 minutes</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Something to write with</div></div>
+    </div>
+
+    <!-- Reading link (PD Weston, Fitt II) -->
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 16px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#128218; THIS WEEK'S READING &middot; FITT II</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.65; margin-bottom: 10px;">Read <strong>Fitt II</strong>: the arming of Gawain, the pentangle, the winter journey, and his arrival at a castle. Watch for the passage that describes the five-pointed star.</div>
+        <div style="text-align: center;">
+            <a href="https://d.lib.rochester.edu/camelot/text/weston-sir-gawain-and-the-green-knight.html" style="display: inline-block; background: #0E1C42; color: #fff; text-decoration: none; font-size: 16px; padding: 11px 24px; border-radius: 8px;">&#128279; Open the poem (public-domain text, trans. Jessie L. Weston)</a>
+        </div>
+        <div style="font-size: 13px; color: #0e1c42; text-align: center; margin-top: 8px;">If you own the Armitage translation, you may read Part II there as well. This class links only the public-domain Weston text.</div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A SHIELD MADE OF IDEALS</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Suppose you had to sum up the person you most want to be in exactly five words. What is one word that would make your list?</div>
+            <div class="widget-options">
+                <button data-response="A strong choice. Notice how much weight one word has to carry. The Pearl Poet gives Gawain five sets of five, because a single word can never hold a whole character.">A word about honesty or loyalty</button>
+                <button data-response="Interesting. Courage words often top these lists. Gawain's shield includes something close to it, but also softer virtues you might not expect on a warrior.">A word about courage or strength</button>
+                <button data-response="That is telling. Words about kindness, mercy, or care point toward the gentler half of Gawain's code, which surprises many first-time readers.">A word about kindness or care</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The endless knot</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">When Gawain is fully armed, the poet turns to his shield and the golden star painted on it. He calls it a sign "that Solomon set ere-while, as betokening truth," a figure "with five points" where "each line overlaps the other," so that it has neither beginning nor end. For that reason, the poet says, "in English it is called 'the endless knot.'" The shape matters as much as the meaning: a line that never lifts and never breaks. To keep the pentangle is to keep <em>all</em> of it at once, with nothing left out and nothing dropped. That is a demanding promise, and the poem will spend three more Fitts testing whether any human being can keep it.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The poet then unfolds the star into five groups of five. Gawain is "faultless in his five senses"; his "five fingers never failed him"; his faith rests on "the five wounds that Christ bare"; his courage draws on "the five joys which the Queen of Heaven had of her Child"; and the fifth five is a set of five virtues that "never failed him." It is this last group that the poem really cares about, because these are the qualities a knight must show toward other people.</p>
+
+        <!-- ONE core visual: labeled pentangle diagram (five virtues) in gold/indigo/navy -->
+        <figure style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">THE PENTANGLE &middot; THE FIFTH FIVE, THE FIVE VIRTUES GAWAIN MUST KEEP</div>
+            <div style="background: #0E1C42; padding: 18px;">
+                <svg viewBox="0 0 400 400" width="100%" style="max-width: 460px; display: block; margin: 0 auto;" role="img" aria-label="A five-pointed star drawn in one unbroken gold line, the endless knot. Each of the five points is labeled with one of Gawain's five virtues: Generosity at the top, Fellowship at the right, Purity at the lower right, Courtesy at the lower left, and Compassion at the left.">
+                    <polygon points="200,55 288,325 58,158 342,158 112,325" fill="none" stroke="#C7922C" stroke-width="4" stroke-linejoin="round" />
+                    <circle cx="200" cy="55" r="7" fill="#3B4E8C" stroke="#EEF1F8" stroke-width="2" />
+                    <circle cx="342" cy="158" r="7" fill="#3B4E8C" stroke="#EEF1F8" stroke-width="2" />
+                    <circle cx="288" cy="325" r="7" fill="#3B4E8C" stroke="#EEF1F8" stroke-width="2" />
+                    <circle cx="112" cy="325" r="7" fill="#3B4E8C" stroke="#EEF1F8" stroke-width="2" />
+                    <circle cx="58" cy="158" r="7" fill="#3B4E8C" stroke="#EEF1F8" stroke-width="2" />
+                    <text x="200" y="38" fill="#f4f1e8" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="bold" text-anchor="middle">Generosity</text>
+                    <text x="352" y="152" fill="#f4f1e8" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="bold" text-anchor="start">Fellowship</text>
+                    <text x="300" y="352" fill="#f4f1e8" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="bold" text-anchor="start">Purity</text>
+                    <text x="100" y="352" fill="#f4f1e8" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="bold" text-anchor="end">Courtesy</text>
+                    <text x="48" y="152" fill="#f4f1e8" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="bold" text-anchor="end">Compassion</text>
+                </svg>
+                <div style="color: #cdd6ea; font-size: 13px; text-align: center; margin-top: 12px; line-height: 1.6; max-width: 500px; margin-left: auto; margin-right: auto;">One gold line, drawn without lifting the pen, holds all five virtues together: <span style="color:#e6b955;">the endless knot</span>. Drop any one point and the knot comes undone. In Weston's translation the fifth five is "frankness and fellowship, purity and courtesy that never failed him, and compassion."</div>
+            </div>
+            <figcaption style="background: #FFFFFF; padding: 12px 16px;">
+                <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">Diagram built for this lesson from the pentangle passage in Fitt II. "Generosity" renders the poet's <em>frankness</em>; "Compassion" renders his <em>pity</em>. Together these are the five virtues Gawain wears into every test that follows.</div>
+            </figcaption>
+        </figure>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; WHAT EACH POINT DEMANDS</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Read across the star and one thing stands out: only one of the five virtues is about the knight himself. The other four are about how he treats other people. A knight of the pentangle is not just brave. He is generous, loyal, clean in conduct, well-mannered, and merciful, all at once and without exception. Here is what each point asks:</p>
+
+        <div style="overflow-x: auto;"><table style="width: 100%; border-collapse: collapse; min-width: 460px;">
+            <tbody>
+                <tr><td style="padding: 9px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>Generosity</strong></td><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">Giving freely, without holding back for yourself. The poet's word is <em>frankness</em>.</td></tr>
+                <tr><td style="padding: 9px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>Fellowship</strong></td><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">Loyalty to companions; keeping faith with the people you are bound to.</td></tr>
+                <tr><td style="padding: 9px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>Purity</strong></td><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">Cleanness of conduct; being honest and undivided in what you do.</td></tr>
+                <tr><td style="padding: 9px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>Courtesy</strong></td><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">Grace and respect in how you treat others, high or low.</td></tr>
+                <tr><td style="padding: 9px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>Compassion</strong></td><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">Mercy and pity; care for those who suffer. The poet's word is <em>pity</em>.</td></tr>
+            </tbody>
+        </table></div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 14px 0 10px 0;">Notice the trap the poet is setting. A code with one virtue is easy: be brave, and you pass. A code with five, tied in an endless knot, means a single failure in a single point unties the whole thing. Keep this in mind as you read on. The poem is about to send this five-pointed man into a world where the virtues start to pull against each other.</p>
+
+        <!-- WIDGET: evaluative single-select (recolored) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="c" data-hint="Re-read the paragraph on the shape: a line with no start and no finish.">
+                <div class="widget-row-prompt">1. Why does the poet call the pentangle the "endless knot"?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Because it is painted in gold</button>
+                    <button data-choice="b">Because King Solomon invented it</button>
+                    <button data-choice="c" data-fb="Yes. It is one unbroken line with no beginning or end, so it stands for virtue kept whole, with nothing dropped.">Because it is one line with no beginning or end</button>
+                    <button data-choice="d">Because it has exactly five points</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Look back at the table. Four of the five virtues describe how a knight treats other people.">
+                <div class="widget-row-prompt">2. Which best describes the five virtues of the pentangle's fifth five?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Right. Only one virtue is about the knight himself; the other four are about how he treats other people.">Mostly about how the knight treats others, not just himself</button>
+                    <button data-choice="b">All five are about winning in battle</button>
+                    <button data-choice="c">All five are about religious ritual</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.9;">
+                <strong>piety:</strong> dutiful devotion to God, family, and duty (this is close to the poet's <em>pity</em> at the fifth point). &nbsp;&middot;&nbsp;
+                <strong>manifold:</strong> many and varied; of many kinds at once. &nbsp;&middot;&nbsp;
+                <strong>mien:</strong> a person's outward bearing, the manner they carry themselves. &nbsp;&middot;&nbsp;
+                <strong>surpassing:</strong> exceeding all others; going beyond the ordinary. &nbsp;&middot;&nbsp;
+                <strong>inviolate:</strong> unbroken and untouched; kept pure, never violated.
+            </div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>piety</em> comes from Latin <em>pietas</em>, the sense of duty a Roman owed to gods and family; <em>mien</em> arrived through French <em>mine</em>, the look on a face; <em>inviolate</em> joins Latin <em>in-</em> ("not") to <em>violare</em> ("to violate"), so it literally means "not broken into." Notice that Gawain's endless knot is meant to stay exactly that: <em>inviolate</em>.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Copia (in your Organizer):</strong> take the sentence <em>"Gawain kept his vow."</em> Rewrite it three ways: once swapping in a synonym for "kept" (for example, held or preserved); once changing the syntax so it opens with a phrase (for example, "Against every temptation&hellip;"); and once raising the register so it sounds like the poet, using one Word Study word.</div>
+        </div>
+
+        <!-- AI callout (red frame, per components.md) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND SYMBOLS</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Ask an AI tool "what does the pentangle symbolize" and it will list the five fives quickly, which can help you check a fact. It cannot decide for you whether Gawain actually lives up to that standard by the end of the poem. That judgment is the argument you will build this module, and it stays yours.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Record the five virtues and this week's Word Study in your Organizer</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Copy the five points of the pentangle and the five vocabulary words. You will use them in your Character Chart and again in Quick Write 2, the virtue catalog, at the end of the week.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The pentangle is the whole standard, tied in an endless knot: five virtues that must hold together with none dropped. Keep the star in mind as you read. Every test Gawain faces is a tug on one of its points.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.01 &middot; The Pentangle and Chivalric Virtue</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
