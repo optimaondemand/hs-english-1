@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Grammar 3.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 4</div>
+        <div style="font-size: 13px; color: #0e1c42;">Love, Time, and the Sonnet</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Grammar 3.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">GRAMMAR FOCUS</div>
+        <div style="font-size: 17px; color: #0e1c42;">Parallel structure</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Sonnet 116, William Shakespeare</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">GRAMMAR 3.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Parallel Structure in Verse</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127919; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Why do some lists march like a drumbeat while others trip over their own feet?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You will learn what parallel structure is, why it is an argument-making tool and not just a polish, how Sonnet 116 uses it, and how to build (and deliberately break) it in your own sonnet lines.</div>
+    </div>
+
+    <!-- Warm-up (reflect check-in widget) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; READ BOTH ALOUD &middot; NO WRONG ANSWER</div>
+            <div class="widget-question"><strong>A.</strong> I want to read more poems, traveling somewhere new, and better grades. &nbsp;&nbsp;|&nbsp;&nbsp; <strong>B.</strong> I want to read more poems, travel somewhere new, and earn better grades.<br>Which version marches evenly, and which one stumbles?</div>
+            <div class="widget-options">
+                <button data-response="Right. In B every item takes the same shape: read, travel, earn. Three verbs marching in step. That matching of shapes is what today's lesson names.">B marches, A stumbles</button>
+                <button data-response="Read them aloud once more. A switches shape mid-list: a verb, then an -ing phrase, then a bare noun. B keeps one shape: read, travel, earn. The even march is B.">A marches, B stumbles</button>
+                <button data-response="They carry the same information, but listen to the rhythm: A changes shape at every comma while B keeps one shape (read, travel, earn). The ear hears the difference before the eye does.">They sound the same to me</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- The Lesson -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 12px 0;"><strong>Parallel structure</strong> means that items in a series or a comparison take the same grammatical form. Whatever shape the first item has (an infinitive, a noun phrase, a past-tense verb), the rest must match. But parallelism is more than tidiness. When a writer gives two or three ideas the same grammatical shape, the shape itself makes a claim: <em>these things belong together and deserve equal weight.</em> That is why the great public sentences lean on it: "life, liberty, and the pursuit of happiness" gains its force from three noun phrases marching as one. And when a writer <em>breaks</em> an established parallel on purpose, the break is felt like a missed stair: in the sonnets, a snapped pattern is one of the signals that the volta has arrived.</p>
+
+        <!-- Pattern card (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">ONE RULE TO REMEMBER</div>
+            <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;">Whatever form the <strong>first</strong> item in your list takes, every item after it must match. Check lists and comparisons in revision; the ear catches a broken parallel faster than the eye.</div>
+        </div>
+
+        <!-- ONE visual: navy chalkboard of worked examples -->
+        <div style="background: #14213f; border: 10px solid #3a2c1a; border-radius: 10px; padding: 22px 24px; margin: 18px 0; box-shadow: inset 0 0 40px rgba(0,0,0,0.4);">
+            <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .18em; margin-bottom: 16px; text-align: center;">ON THE BOARD &middot; PARALLELISM DOING ARGUMENTATIVE WORK IN SONNET 116</div>
+            <div style="font-size: 13px; color: #8ea2c9; margin-bottom: 6px;">Lines 2&ndash;4 &middot; two parallel relative clauses, two names for the same failure:</div>
+            <div style="font-size: 19px; color: #f4f1e8; line-height: 2.0; margin-bottom: 16px;">
+                Love is not love<br>
+                <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">Which alters</span> when it alteration finds,<br>
+                Or <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">bends</span> with the remover to remove:
+            </div>
+            <div style="font-size: 13px; color: #8ea2c9; margin-bottom: 6px;">Lines 11&ndash;12 &middot; two parallel predicates, refusal and endurance as one motion:</div>
+            <div style="font-size: 19px; color: #f4f1e8; line-height: 2.0;">
+                Love <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">alters not</span> with his brief hours and weeks,<br>
+                But <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">bears it out</span> even to the edge of doom.
+            </div>
+            <div style="font-size: 14px; color: #cdd6ea; margin-top: 16px; line-height: 1.6;">The <span style="color:#e6b955;">gold underlines</span> mark the matched verb shapes. Because "alters" and "bends" share one form, the poem treats altering and bending as the same capitulation. Because "alters not" and "bears it out" share one form, refusing to change and enduring to the end read as two sides of one coin. The grammar is making the argument.</div>
+        </div>
+
+        <!-- Evaluative widget: ow-flip self-check cards (varies engine from L3.01) -->
+        <div style="font-size: 11px; color: #3B4E8C; margin: 6px 0 6px; letter-spacing: .04em;">&#9998; YOUR TURN &middot; DECIDE IN YOUR NOTEBOOK FIRST (PARALLEL OR NOT? IF NOT, WHICH ITEM BREAKS?), THEN TAP EACH CARD TO CHECK</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+            <div class="optima-widget ow-flip" style="flex: 1; min-width: 240px;">
+                <div class="ow-flip-front">
+                    <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">CARD 1 &middot; PARALLEL OR NOT?</div>
+                    <div style="font-size: 16px; color: #0E1C42; line-height: 1.55; font-style: italic;">"She loved the sonnet for its music, its logic, and because it rhymed."</div>
+                    <div style="font-size: 12px; color: #3B4E8C; margin-top: 10px;">Tap to reveal</div>
+                </div>
+                <div class="ow-flip-back">
+                    <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">ANSWER</div>
+                    <div style="font-size: 16px; color: #1a2340; line-height: 1.6;"><strong>Not parallel.</strong> The list runs noun phrase, noun phrase, then a whole clause ("because it rhymed"). Fix the third item to match the first two: "for its music, its logic, and its rhyme."</div>
+                </div>
+            </div>
+            <div class="optima-widget ow-flip" style="flex: 1; min-width: 240px;">
+                <div class="ow-flip-front">
+                    <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">CARD 2 &middot; PARALLEL OR NOT?</div>
+                    <div style="font-size: 16px; color: #0E1C42; line-height: 1.55; font-style: italic;">"Time cuts the rose, dims the eye, and stills the song."</div>
+                    <div style="font-size: 12px; color: #3B4E8C; margin-top: 10px;">Tap to reveal</div>
+                </div>
+                <div class="ow-flip-back">
+                    <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">ANSWER</div>
+                    <div style="font-size: 16px; color: #1a2340; line-height: 1.6;"><strong>Parallel.</strong> Three present-tense verb phrases of the same shape: cuts, dims, stills. The matched shapes imply the three losses belong to one force, which is exactly the claim.</div>
+                </div>
+            </div>
+            <div class="optima-widget ow-flip" style="flex: 1; min-width: 240px;">
+                <div class="ow-flip-front">
+                    <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">CARD 3 &middot; PARALLEL OR NOT?</div>
+                    <div style="font-size: 16px; color: #0E1C42; line-height: 1.55; font-style: italic;">"To write in meter, to rhyme with care, and reading your lines aloud."</div>
+                    <div style="font-size: 12px; color: #3B4E8C; margin-top: 10px;">Tap to reveal</div>
+                </div>
+                <div class="ow-flip-back">
+                    <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">ANSWER</div>
+                    <div style="font-size: 16px; color: #1a2340; line-height: 1.6;"><strong>Not parallel.</strong> Two infinitives ("to write," "to rhyme") and then an -ing phrase ("reading"). Match the first shape: "to write in meter, to rhyme with care, and to read your lines aloud."</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Write your own -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#10145;&#65039; NOW WRITE YOUR OWN (IN YOUR ORGANIZER)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Write <strong>two lines for your sonnet draft</strong> about your subject: one line (or pair of lines) built on a clean parallel of two or three verb phrases, like "alters not&hellip; but bears it out." Then write a second version where you deliberately break the parallel on the last item, and add one sentence: what does the break make the reader feel? Keep whichever version serves your argument.</p>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Matching shapes make a claim of equal weight; a broken shape makes the reader feel a turn. Use the first inside your quatrains, and save the second for the moment your sonnet changes direction.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Grammar 3.01 &middot; Parallel Structure in Verse</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+</script>
+</body>
+</html>
