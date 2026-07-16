@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 3.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 13px; color: #0e1c42;">Justice in Greek Tragedy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">WEEK / LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 3 &middot; Lesson 3.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Electra, Sophocles (trans. Jebb)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What is owed &mdash; to gods, city, family?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 3.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Clytaemnestra vs. Electra: Two Arguments About Justice</div>
+        <div style="font-size: 16px; color: #0e1c42;">Reading Lesson &middot; Lay out both sides, then weigh them</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; WHAT YOU ARE READING TODAY</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">When both sides claim justice, how does a careful reader decide which one holds up?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The play's central <strong>debate</strong>: Clytaemnestra comes out of the palace, and she and Electra argue face to face about whether killing Agamemnon was <em>just</em>. This is the scene the whole play has been building toward. Your job today is a specific skill: to lay out <strong>both</strong> arguments fairly and then weigh which one holds up.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state each woman's claim about the killing of Agamemnon in a single fair sentence.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> line up the evidence each uses, and show how each answers the other: both hinge on Iphigenia.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> judge which argument is more valid, and defend that judgment with evidence.</div></div>
+    </div>
+
+    <!-- ============ PART 1 · WARM-UP (reflect widget) ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; NO WRONG ANSWER</div>
+            <div class="widget-question">Think of a dispute where <em>both</em> sides believe they are in the right. Try, in your head, to state the side you disagree with fairly, in one honest sentence. How did that feel?</div>
+            <div class="widget-options">
+                <button data-response="Right. Stating the other side fairly is surprisingly hard, and it is exactly the skill this lesson trains. You cannot weigh an argument you have not stated honestly.">Harder than I expected</button>
+                <button data-response="Good. When you can put both sides fairly, you are ready to judge them, not just to root for one. That is today's work.">I could do it, but it took care</button>
+                <button data-response="Notice that: if you cannot state it fairly, you cannot really weigh it. Watch how carefully Sophocles lets each woman make her best case.">I kept slipping back to my own side</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ============ PART 2 · THE LESSON ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.75; margin: 0 0 12px 0;">When two people argue and each claims justice, a careful reader does not just pick a favorite. A careful reader first lays out <strong>both arguments in full</strong>: the claim, the reasons, and the evidence, and only then decides which one is stronger. That is what today asks of you. Both Clytaemnestra and Electra rest their entire case on a single event from the past: <strong>Agamemnon's sacrifice of his daughter Iphigenia</strong> to the goddess Artemis so the Greek fleet could sail for Troy. They read that one act in opposite ways. Clytaemnestra says it makes Agamemnon a murderer of his own child, so killing him was justice; she even claims, "I had an ally: Justice." Electra answers that Agamemnon acted <em>under compulsion</em>, because Artemis herself held the fleet and demanded it, so the sacrifice was not a free crime; and she charges that her mother's real motive was not justice at all but her love for Aegisthus. The two claims cannot both be fully right, and the play does not simply hand you the answer. Your task is to hold both up honestly and then weigh them: whose evidence is more solid, and whose reasoning has the weaker link?</p>
+
+        <!-- ONE core visual: clean two-column comparison diagram with a labeled HINGE (gold / indigo / navy) -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">TWO ARGUMENTS ABOUT ONE KILLING &middot; WAS IT JUST?</div>
+            <div style="background: #F8F9FC; padding: 20px 18px;">
+                <div style="display: flex; flex-wrap: wrap; gap: 0; align-items: stretch;">
+                    <!-- Clytaemnestra column (gold) -->
+                    <div style="flex: 1; min-width: 260px; background: #FDF3E3; border: 2px solid #C7922C; border-radius: 10px; overflow: hidden;">
+                        <div style="background: #C7922C; color: #fff; padding: 10px 16px;">
+                            <div style="font-size: 12px; letter-spacing: .08em; opacity: .9;">SIDE A</div>
+                            <div style="font-size: 19px;">Clytaemnestra</div>
+                        </div>
+                        <div style="padding: 14px 16px;">
+                            <div style="font-size: 12px; color: #8A6410; letter-spacing: .06em; margin-bottom: 4px;">HER CLAIM</div>
+                            <div style="font-size: 16px; color: #0e1c42; line-height: 1.5; margin-bottom: 12px;">The killing of Agamemnon <strong>was just</strong>.</div>
+                            <div style="font-size: 12px; color: #8A6410; letter-spacing: .06em; margin-bottom: 4px;">HER REASON &amp; EVIDENCE</div>
+                            <div style="font-size: 15px; color: #1a2340; line-height: 1.6;">Agamemnon sacrificed their daughter Iphigenia. A father who kills his own child has forfeited his life; repaying that death was <em>Justice</em>, and "Justice was her ally."</div>
+                        </div>
+                    </div>
+                    <!-- Center rebuttal arrows -->
+                    <div style="min-width: 90px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px 6px;">
+                        <div style="font-size: 12px; color: #3B4E8C; text-align: center; line-height: 1.4;">each answers<br>the other</div>
+                        <div style="font-size: 26px; color: #3B4E8C; line-height: 1;">&#8646;</div>
+                    </div>
+                    <!-- Electra column (indigo) -->
+                    <div style="flex: 1; min-width: 260px; background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; overflow: hidden;">
+                        <div style="background: #3B4E8C; color: #fff; padding: 10px 16px;">
+                            <div style="font-size: 12px; letter-spacing: .08em; opacity: .9;">SIDE B</div>
+                            <div style="font-size: 19px;">Electra</div>
+                        </div>
+                        <div style="padding: 14px 16px;">
+                            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: .06em; margin-bottom: 4px;">HER CLAIM</div>
+                            <div style="font-size: 16px; color: #0e1c42; line-height: 1.5; margin-bottom: 12px;">The killing of Agamemnon was <strong>not just</strong>.</div>
+                            <div style="font-size: 12px; color: #3B4E8C; letter-spacing: .06em; margin-bottom: 4px;">HER REASON &amp; EVIDENCE</div>
+                            <div style="font-size: 15px; color: #1a2340; line-height: 1.6;">Agamemnon acted under compulsion: Artemis detained the fleet and demanded the sacrifice. And her mother's true motive was not justice but her desire for Aegisthus.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- down arrows into the hinge -->
+                <div style="text-align: center; color: #C7922C; font-size: 22px; line-height: 1.1; margin-top: 8px;">&#8600;&nbsp;&nbsp;&nbsp;&nbsp;&#8601;</div>
+
+                <!-- THE HINGE (navy) -->
+                <div style="background: #0E1C42; border-radius: 10px; padding: 16px 18px; text-align: center;">
+                    <div style="font-size: 12px; color: #55c8e8; letter-spacing: .08em; margin-bottom: 6px;">&#9878; THE HINGE &middot; BOTH ARGUMENTS TURN ON ONE EVENT</div>
+                    <div style="font-size: 20px; color: #fff; margin-bottom: 6px;">The sacrifice of Iphigenia</div>
+                    <div style="font-size: 15px; color: #cdd6ea; line-height: 1.6;">Clytaemnestra reads it as a free murder that earned death. Electra reads it as a forced act commanded by a god. Decide how to read <em>that one event</em>, and you have largely decided the debate.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- READ NOW -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128218; READ NOW</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.65; margin-bottom: 14px;">Read the <strong>confrontation between Clytaemnestra and Electra</strong>, from Clytaemnestra's entrance and her defense of the killing through Electra's full reply. Read slowly: this is a formal debate, and each side answers the other point by point.</div>
+        <div style="text-align: center; margin: 6px 0 14px;">
+            <a href="http://classics.mit.edu/Sophocles/electra.html" style="display: inline-block; background: #0E1C42; color: #fff; text-decoration: none; font-size: 16px; padding: 12px 26px; border-radius: 8px;">&#128279; Open <em>Electra</em> (public-domain text, trans. R. C. Jebb)</a>
+        </div>
+        <div style="font-size: 14px; color: #0e1c42; line-height: 1.55; text-align: center;">Free, full text at the Internet Classics Archive. Look for Clytaemnestra's entrance from the palace and her speech beginning with her defense of Agamemnon's death.</div>
+    </div>
+
+    <!-- Short PD anchor quotes (both sides) -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; letter-spacing: .08em; margin-bottom: 10px;">TWO VOICES, ONE QUESTION</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.7; font-style: italic; margin-bottom: 10px;">&ldquo;&hellip;this father of thine&hellip; was the one man of the Greeks who had the heart to sacrifice thy sister to the gods.&rdquo;<span style="font-style: normal; color:#0e1c42; font-size:14px;"> &mdash; Clytaemnestra</span></div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.7; font-style: italic;">&ldquo;&hellip;thou wert drawn on to it by the wooing of the base man who is now thy spouse.&rdquo;<span style="font-style: normal; color:#0e1c42; font-size:14px;"> &mdash; Electra, on her mother's true motive (trans. Jebb)</span></div>
+    </div>
+
+    <!-- Annotate (practice) -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#9999; ANNOTATE AS YOU READ</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.65; margin-bottom: 10px;">Mark up your own copy. As you read the debate, flag:</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">every reference to <strong>justice</strong> (continue the running highlight),</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">every reference to <strong>Apollo or Phoebus</strong> (and any other god), and</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">each place where one woman <strong>answers</strong> the other's point: draw an arrow from the claim to the reply.</div></div>
+    </div>
+
+    <!-- WIDGET: evaluative single-select — weigh the two -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 6px;">&#9989; WEIGH THE TWO</div>
+        <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom: 4px;">Answer each on your own first. These test whether you can hold both arguments fairly and judge their reasoning, not just pick a favorite.</div>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="c" data-hint="Look back at the hinge in the diagram: what single past event is under both cases?">
+                <div class="widget-row-prompt">1. What single past event do both arguments turn on?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Agamemnon's return from Troy</button>
+                    <button data-choice="b">Orestes' escape as a child</button>
+                    <button data-choice="c" data-fb="Yes. Both women build their case on how to read Agamemnon's sacrifice of Iphigenia so the fleet could sail.">The sacrifice of Iphigenia</button>
+                    <button data-choice="d">Clytaemnestra's marriage to Aegisthus</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Electra attacks the reasoning two ways: was the act free, and was the motive really justice?">
+                <div class="widget-row-prompt">2. Which is the stronger way Electra weakens her mother's claim to justice?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Strong choice. If the sacrifice was forced by Artemis and the real motive was love for Aegisthus, then the claim of 'justice' loses both its ground and its honesty.">She argues the act was forced by a god and the true motive was love for Aegisthus</button>
+                    <button data-choice="b">She says her mother is not really her mother</button>
+                    <button data-choice="c">She refuses to speak to her at all</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Judging validity is about the reasons, not about which character you prefer.">
+                <div class="widget-row-prompt">3. What does it mean to judge the "validity" of an argument?</div>
+                <div class="widget-options">
+                    <button data-choice="a">To decide which speaker is more likable</button>
+                    <button data-choice="b" data-fb="Right. You ask whether the reasons truly support the claim: whether the evidence is solid and the reasoning holds together, not just which side you like.">To ask whether the reasons truly support the claim</button>
+                    <button data-choice="c">To count how many lines each speaker gets</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- AI callout (red frame) -->
+    <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; WORKING WITH AI</div>
+        <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">If you ask AI "who is right, Clytaemnestra or Electra?" it will hand you a verdict. But a verdict handed to you is not an argument you can defend. The skill here is <em>weighing</em>: showing which reasons are strong and which are weak, in your own words, from the text. AI can summarize a position; deciding which position is more valid, and why, is the thinking you are graded on.</div>
+    </div>
+
+    <!-- Written reflection (indigo, device-agnostic) -->
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; letter-spacing: .08em; margin-bottom: 8px;">&#9998; WRITE IT OUT (1&ndash;2 paragraphs in your Organizer)</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.65;">Both women appeal to the <strong>gods</strong> (mainly Phoebus / Apollo), to the <strong>law of the city</strong> of Mycenae, and to the <strong>family</strong> (marriage, and the bond of parent and child). Each believes she has kept her duty to all three. In your Organizer: <strong>(1)</strong> summarize both arguments; <strong>(2)</strong> identify how each woman refutes the other; and <strong>(3)</strong> explain which argument you find more valid, and why. Point to specific lines.</div>
+        <div style="font-size: 14px; color: #3B4E8C; margin-top: 10px;">This entry is the seed of this week's Project Feeder, so make it careful.</div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Keep your two-argument notes handy</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">This week's Project Feeder asks you to turn your position and evidence into a one-sentence thesis about justice in the play. The fair summary you just wrote is exactly what you will build that thesis from.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Both women stake their case on one event: the sacrifice of Iphigenia. Read that event carefully and fairly, and you can weigh the whole debate. That is the move a strong reader makes: state both sides in full, then judge the reasoning.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 3.02 &middot; Clytaemnestra vs. Electra: Two Arguments About Justice</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
