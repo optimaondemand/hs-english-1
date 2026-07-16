@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 3.04</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 13px; color: #0e1c42;">Justice in Greek Tragedy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">WEEK / LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 3 &middot; Lesson 3.04</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Electra, Sophocles (trans. Jebb)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What is owed &mdash; to gods, city, family?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 3.04</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Chorus Comforts Electra</div>
+        <div style="font-size: 16px; color: #0e1c42;">Reading Lesson &middot; Electra's lowest point</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; WHAT YOU ARE READING TODAY</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">When someone has lost everything, how you respond to them says what you believe.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The scene right after the false report, where Electra is at her <strong>lowest point</strong> and the <strong>Chorus</strong> responds to her grief. Believing Orestes dead, she has nothing left to hope for, and how the Chorus meets her in that moment tells you a great deal about how the play sees her.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe Electra's suffering at this point in the play.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> decide whether the Chorus rebukes, comforts, or mourns with her, and cite lines.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> connect the Chorus's attitude to my own reading of justice in the play.</div></div>
+    </div>
+
+    <!-- ============ PART 1 · WARM-UP (reflect widget) ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; NO WRONG ANSWER</div>
+            <div class="widget-question">When someone you know is grieving, you can really do three things: tell them to pull themselves together, sit with them in the sorrow, or point them toward hope. Which do you usually reach for?</div>
+            <div class="widget-options">
+                <button data-response="Each choice says something about what you believe. As you read, notice which of these three the Chorus chooses for Electra.">I try to sit with them in it</button>
+                <button data-response="That instinct has its place. But watch: the Chorus could scold Electra for going too far, and it chooses something else. What does that choice signal?">I try to steer them toward hope</button>
+                <button data-response="Honest. A Greek Chorus can do that too, scold a character for excess. Watch whether this Chorus rebukes Electra, or does something different.">Sometimes I tell them to be strong</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ============ PART 2 · THE LESSON ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.75; margin: 0 0 12px 0;">This is the darkest moment Electra has reached. She has lost her father to murder, lost her place in her own home, and now believes she has lost the one brother who might have set things right. She has nothing left to bargain with and nothing left to wait for. Watch how the Chorus responds, because a Greek Chorus can do very different things: it can scold a character for going too far, it can weep alongside her, or it can gently steer her back toward hope. Here the Chorus leans toward comfort and endurance. It reminds Electra of figures from the past who seemed lost and yet whose story was not finished, and it counsels patience: time, it suggests, is a god who can still smooth a rough path. That choice matters for the whole play's argument about justice. By treating Electra's grief as worthy of comfort rather than rebuke, the Chorus keeps signaling that her cause is a just one, even when everything on stage says she has lost. Her suffering, the play insists, is not the punishment of a foolish woman; it is the cost of holding to justice in a house that has abandoned it.</p>
+
+        <!-- ONE core visual: three things a Chorus can do, with COMFORT highlighted (gold / indigo / navy) -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">THREE THINGS A GREEK CHORUS CAN DO WITH GRIEF &middot; WHICH DOES THIS ONE CHOOSE?</div>
+            <div style="background: #F8F9FC; padding: 20px 18px;">
+                <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: stretch;">
+                    <!-- Rebuke (dimmed / not chosen) -->
+                    <div style="flex: 1; min-width: 200px; background: #FFFFFF; border: 1px dashed #C0C9DC; border-radius: 10px; padding: 14px 16px; opacity: 0.75;">
+                        <div style="font-size: 26px; text-align: center;">&#9995;</div>
+                        <div style="font-size: 16px; color: #3B4E8C; text-align: center; margin: 6px 0;">Rebuke</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.55; text-align: center;">Scold her for grieving too far, too long.</div>
+                        <div style="font-size: 12px; color: #3B4E8C; text-align: center; margin-top: 8px;">Not the path here</div>
+                    </div>
+                    <!-- Mourn with (dimmed / not chosen) -->
+                    <div style="flex: 1; min-width: 200px; background: #FFFFFF; border: 1px dashed #C0C9DC; border-radius: 10px; padding: 14px 16px; opacity: 0.75;">
+                        <div style="font-size: 26px; text-align: center;">&#128557;</div>
+                        <div style="font-size: 16px; color: #3B4E8C; text-align: center; margin: 6px 0;">Mourn with her</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.55; text-align: center;">Weep alongside, and go no further.</div>
+                        <div style="font-size: 12px; color: #3B4E8C; text-align: center; margin-top: 8px;">Not the path here</div>
+                    </div>
+                    <!-- Comfort (chosen / highlighted gold) -->
+                    <div style="flex: 1.2; min-width: 220px; background: #FDF3E3; border: 3px solid #C7922C; border-radius: 10px; padding: 16px; box-shadow: 0 2px 10px rgba(199,146,44,0.25);">
+                        <div style="font-size: 28px; text-align: center;">&#129309;</div>
+                        <div style="font-size: 17px; color: #8A6410; text-align: center; margin: 6px 0; font-weight: bold;">Comfort &amp; endure</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.55; text-align: center;">Recall others once thought lost; counsel patience. "Time is a god who makes rough ways smooth."</div>
+                        <div style="display: inline-block; margin: 10px auto 0; width: 100%;"><div style="background: #C7922C; color: #fff; font-size: 12px; letter-spacing: .06em; padding: 4px 10px; border-radius: 10px; text-align: center; display: block;">&#9733; WHAT THIS CHORUS CHOOSES</div></div>
+                    </div>
+                </div>
+                <div style="font-size: 13px; color: #0e1c42; text-align: center; margin-top: 16px; line-height: 1.6;">By comforting rather than scolding, the Chorus treats Electra's grief as worthy and her cause as just, keeping the audience on her side even as she seems to have lost everything.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- READ NOW -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128218; READ NOW</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.65; margin-bottom: 14px;">Read the <strong>exchange between Electra and the Chorus after the false report</strong>: Electra's lament and the Chorus's reply to it. Read Electra's lines aloud; grief in tragedy is written for the voice.</div>
+        <div style="text-align: center; margin: 6px 0 14px;">
+            <a href="http://classics.mit.edu/Sophocles/electra.html" style="display: inline-block; background: #0E1C42; color: #fff; text-decoration: none; font-size: 16px; padding: 12px 26px; border-radius: 8px;">&#128279; Open <em>Electra</em> (public-domain text, trans. R. C. Jebb)</a>
+        </div>
+        <div style="font-size: 14px; color: #0e1c42; line-height: 1.55; text-align: center;">Free, full text at the Internet Classics Archive. Continue from where you stopped in the last lesson, through the Chorus's words of comfort.</div>
+    </div>
+
+    <!-- Short PD anchor quote -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 16px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; letter-spacing: .08em; margin-bottom: 8px;">THE CHORUS, TO ELECTRA</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.7; font-style: italic;">&ldquo;Time is a god who makes rough ways smooth.&rdquo;</div>
+        <div style="font-size: 14px; color: #0e1c42; margin-top: 8px;">&mdash; the Chorus (trans. Jebb). Comfort, and a hint that the story is not over.</div>
+    </div>
+
+    <!-- Annotate (practice) -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#9999; ANNOTATE AS YOU READ</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.65; margin-bottom: 10px;">Mark up your own copy. As you read:</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">continue to highlight every reference to <strong>justice</strong>,</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">underline the exact words Electra uses to describe her <strong>suffering</strong>, and</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">mark whether each line from the Chorus <strong>rebukes, comforts, or mourns with</strong> her.</div></div>
+    </div>
+
+    <!-- WIDGET: evaluative single-select -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 6px;">&#9989; CHECK YOURSELF</div>
+        <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-bottom: 4px;">Think each one through on your own first, then choose.</div>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="d" data-hint="Add up everything she has lost by this point in the play.">
+                <div class="widget-row-prompt">1. Why is this Electra's lowest point?</div>
+                <div class="widget-options">
+                    <button data-choice="a">She has been exiled from the city</button>
+                    <button data-choice="b">She has lost her highlighter</button>
+                    <button data-choice="c">She has quarreled with Chrysothemis</button>
+                    <button data-choice="d" data-fb="Right. She believes Orestes, her last hope of justice, is dead. Already robbed of her father and her place at home, she now has nothing left to wait for.">She believes Orestes, her last hope of justice, is dead</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Look back at the diagram: which of the three did this Chorus choose, and what does that choice signal?">
+                <div class="widget-row-prompt">2. How does the Chorus's response shape our view of Electra?</div>
+                <div class="widget-options">
+                    <button data-choice="a">By scolding her, it shows her grief is foolish</button>
+                    <button data-choice="b" data-fb="Right. By comforting rather than scolding her, the Chorus treats her grief as worthy and her cause as just, keeping the audience on her side even as she seems to have lost everything.">By comforting her, it treats her grief as worthy and her cause as just</button>
+                    <button data-choice="c">By ignoring her, it shows she does not matter</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- AI callout (red frame) -->
+    <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; WORKING WITH AI</div>
+        <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">AI can define the Chorus's job in a Greek tragedy in one clean sentence. It cannot tell you what <em>this</em> Chorus is doing for <em>this</em> grieving character in these exact lines: whether it scolds, sits in the sorrow, or nudges her toward hope. That reading depends on the specific words on the page, and weighing those words is your work today.</div>
+    </div>
+
+    <!-- Oral reflection (indigo, device-agnostic) -->
+    <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; letter-spacing: .08em; margin-bottom: 8px;">&#127908; SPEAK YOUR THINKING (record 1&ndash;3 minutes)</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.65; margin-bottom: 8px;">Record yourself (phone, Canvas recorder, or VR space) answering these in order:</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.8;">1. How does the Chorus relate to Electra here: does it rebuke, comfort, or mourn with her? Point to a line.<br>2. Does its attitude change how you see justice in the play at this moment?<br>3. Thinking back over everything so far, describe the impact of Agamemnon's murder on Electra: the exact nature of her ongoing suffering in her own home.</div>
+        <div style="font-size: 14px; color: #3B4E8C; margin-top: 10px;">Add this recording to your ongoing recitation thread.</div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Turn your position into a thesis</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">This week's Project Feeder (Build a Thesis) asks you to state, in one sentence, your judgment about justice in <em>Electra</em>. Bring the argument notes from Lesson 3.02 and your read of the Chorus here.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A Chorus that comforts rather than scolds is telling you where the play stands. Even at Electra's lowest point, the play insists her suffering is the cost of holding to justice, not the punishment of a fool.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 3.04 &middot; The Chorus Comforts Electra</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
