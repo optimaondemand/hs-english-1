@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 1.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 13px; color: #0e1c42;">Justice in Greek Tragedy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 1.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Electra, Sophocles (trans. Jebb)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What is owed &mdash; to gods, city, family?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 1.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Framing the Questions: What Is Justice?</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Almost everyone agrees justice matters. So why can almost no one agree on what it is?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The whole module turns on one question: <strong>what is justice?</strong> Today you build a working definition you can carry into the play, and you meet the three colliding duties Sophocles puts on trial: what we owe the <strong>gods</strong>, the <strong>city</strong>, and our <strong>family</strong>.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state a working definition of justice and apply it to real cases.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain the tension between our duties to gods, city, and family.</div></div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module Organizer (the Word document for this module in OneDrive)</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">About 30 minutes and something to write with</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHAT WE MEAN BY JUSTICE</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Someone cuts in line ahead of you. You feel it is unfair. Put your finger on what, exactly, they did wrong.</div>
+            <div class="widget-options">
+                <button data-response="Right. You waited your turn; a turn was owed to you and it was taken. That instinct, that something was owed and not given, is where every theory of justice begins.">They took something that was owed to me</button>
+                <button data-response="True, and notice why it feels rude: an unspoken rule says each person is owed their place in order. When that debt goes unpaid, we call it unfair.">They broke a rule everyone follows</button>
+                <button data-response="Fair. Sometimes it stings personally. See if you can name the deeper reason: a turn was owed to you and someone else took it.">It just felt disrespectful to me</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Justice as giving what is owed</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A useful starting point comes from the Greeks themselves: justice is <strong>giving what is owed</strong>. That one idea explains a surprising range of cases. A thief is unjust because he takes what belongs to another; he owes it back. A person who spreads lies is unjust because we owe one another the truth. Framed this way, justice is really a web of <strong>duties</strong>, things we owe. But the Greeks saw that these duties can pull in different directions. You may owe one thing to the <strong>gods</strong> (piety, sacred law), another to the <strong>polis</strong>, the city organized into a governed state (its laws and its order), and another to your <strong>family</strong> (loyalty, love, the honoring of your dead). Usually these agree. But what happens when they do not, when honoring your murdered father means defying the ruler of your city, who is also now your family? That is the knot at the center of <em>Electra</em>, and there is no easy way to cut it.</p>
+
+        <!-- ONE core visual: labeled diagram of the three colliding duties -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">THREE DUTIES THAT COLLIDE &middot; WHERE THEY MEET, JUSTICE IS DECIDED</div>
+            <div style="background: #F8F9FC; padding: 26px 20px;">
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: 0;">
+                    <!-- Gods node (gold) -->
+                    <div style="flex: 1; min-width: 150px; max-width: 210px; text-align: center; padding: 6px;">
+                        <div style="background: #FDF3E3; border: 2px solid #C7922C; border-radius: 10px; padding: 14px 12px;">
+                            <div style="font-size: 26px; line-height: 1;">&#9889;</div>
+                            <div style="font-size: 16px; color: #8A6410; font-weight: bold; margin-top: 6px;">To the GODS</div>
+                            <div style="font-size: 13px; color: #1a2340; line-height: 1.5; margin-top: 4px;">piety, reverence, sacred law: what the divine requires</div>
+                        </div>
+                        <div style="color: #C7922C; font-size: 22px; line-height: 1; margin-top: 6px;">&#8600;</div>
+                    </div>
+                    <!-- Polis node (indigo) -->
+                    <div style="flex: 1; min-width: 150px; max-width: 210px; text-align: center; padding: 6px;">
+                        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 14px 12px;">
+                            <div style="font-size: 26px; line-height: 1;">&#127963;&#65039;</div>
+                            <div style="font-size: 16px; color: #3B4E8C; font-weight: bold; margin-top: 6px;">To the POLIS</div>
+                            <div style="font-size: 13px; color: #1a2340; line-height: 1.5; margin-top: 4px;">the city's laws and order: what the community requires</div>
+                        </div>
+                        <div style="color: #3B4E8C; font-size: 22px; line-height: 1; margin-top: 6px;">&#8595;</div>
+                    </div>
+                    <!-- Family node (navy) -->
+                    <div style="flex: 1; min-width: 150px; max-width: 210px; text-align: center; padding: 6px;">
+                        <div style="background: #E7EBF4; border: 2px solid #0E1C42; border-radius: 10px; padding: 14px 12px;">
+                            <div style="font-size: 26px; line-height: 1;">&#128106;</div>
+                            <div style="font-size: 16px; color: #0E1C42; font-weight: bold; margin-top: 6px;">To the FAMILY</div>
+                            <div style="font-size: 13px; color: #1a2340; line-height: 1.5; margin-top: 4px;">loyalty, love, honoring one's parents and dead</div>
+                        </div>
+                        <div style="color: #0E1C42; font-size: 22px; line-height: 1; margin-top: 6px;">&#8601;</div>
+                    </div>
+                </div>
+                <!-- Collision center -->
+                <div style="max-width: 420px; margin: 8px auto 0; text-align: center;">
+                    <div style="background: #0E1C42; border-radius: 10px; padding: 16px 18px;">
+                        <div style="font-size: 11px; color: #55c8e8; letter-spacing: .14em; margin-bottom: 6px;">WHERE THE THREE PULL AGAINST EACH OTHER</div>
+                        <div style="font-size: 18px; color: #ffffff; line-height: 1.5;">JUSTICE: giving what is owed</div>
+                        <div style="font-size: 13px; color: #C7922C; margin-top: 6px;">When honoring one duty means failing another, a choice must be made. That is tragedy.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #0e1c42; margin-bottom: 10px;">Add these to your Organizer. They are the language of the whole module.</div>
+            <div style="overflow-x: auto;"><table style="width: 100%; border-collapse: collapse; min-width: 420px;">
+                <tbody>
+                    <tr><td style="padding: 9px 12px; border: 1px solid #E4CDA0; background: #FFFDF8; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>justice</strong></td><td style="padding: 9px 12px; border: 1px solid #E4CDA0; background: #FFFDF8; font-size: 15px; color: #1a2340;">giving what is owed.</td></tr>
+                    <tr><td style="padding: 9px 12px; border: 1px solid #E4CDA0; background: #FFFDF8; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>duty</strong></td><td style="padding: 9px 12px; border: 1px solid #E4CDA0; background: #FFFDF8; font-size: 15px; color: #1a2340;">something a person is bound to do or give.</td></tr>
+                    <tr><td style="padding: 9px 12px; border: 1px solid #E4CDA0; background: #FFFDF8; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>polis</strong></td><td style="padding: 9px 12px; border: 1px solid #E4CDA0; background: #FFFDF8; font-size: 15px; color: #1a2340;">the Greek city organized into a governed state.</td></tr>
+                    <tr><td style="padding: 9px 12px; border: 1px solid #E4CDA0; background: #FFFDF8; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>piety</strong></td><td style="padding: 9px 12px; border: 1px solid #E4CDA0; background: #FFFDF8; font-size: 15px; color: #1a2340;">reverence and duty toward the gods.</td></tr>
+                </tbody>
+            </table></div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 12px;"><strong>Word origins:</strong> <em>polis</em> is hiding in plain sight in English: <em>politics</em> (the affairs of the polis), <em>police</em>, <em>metropolis</em> ("mother-city"). Spotting the root tells you the word's family. <strong>Copia (in your Organizer):</strong> rewrite the sentence <em>"He broke the rule,"</em> twice: once so it names a failure of <em>duty</em>, and once so it names a failure of <em>justice</em>. What shifts between the two?</div>
+        </div>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; WHY DUTIES BECOME TRAGEDY</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Most of the time your duties agree, and doing right is simply hard, not confusing. Tragedy begins where they cannot all be satisfied at once. Test your working definition against the play's central knot before you read a single line.</p>
+
+        <!-- WIDGET: evaluative single-select (recolored) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="b" data-hint="Re-read the definition in Part 1. It is short and it is about what people are owed.">
+                <div class="widget-row-prompt">1. What is our working definition of justice?</div>
+                <div class="widget-options">
+                    <button data-choice="a">punishing anyone who breaks a law</button>
+                    <button data-choice="b" data-fb="Yes. Justice is giving what is owed. It covers the thief, the liar, and the debt owed to a murdered father alike.">giving what is owed</button>
+                    <button data-choice="c">always obeying the ruler of your city</button>
+                    <button data-choice="d">forgiving those who wrong you</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Ask what makes a situation tragic rather than merely difficult. It has to do with duties that cannot both be kept.">
+                <div class="widget-row-prompt">2. Why might these duties create a tragedy rather than a simple choice?</div>
+                <div class="widget-options">
+                    <button data-choice="a">because the gods always punish humans</button>
+                    <button data-choice="b">because Electra does not understand the law</button>
+                    <button data-choice="c" data-fb="Right. Honoring one duty (family) can force you to violate another (the city's ruler and law). When duties collide, any choice costs something. That is the shape of tragedy.">because honoring one duty can force you to break another</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- AI callout (red frame) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND DEFINITIONS</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can give you a dictionary definition of "justice" instantly, and that can be a fine place to check a word. It cannot decide for you which duty should win when two of them collide in <em>Electra</em>. That judgment is the work of this module, and it stays yours.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Rank the three duties in your Module Organizer</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Rank the three duties (to the gods, to the city, to your family) from most binding to least, and defend your ranking in a few sentences. Keep this: it becomes the seed of your first Project Feeder and your module essay.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Justice is <strong>giving what is owed</strong>. Hold the three duties (gods, city, family) in mind as you open the play. Electra's tragedy is that she cannot pay all three at once.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.02 &middot; Framing the Questions: What Is Justice?</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
