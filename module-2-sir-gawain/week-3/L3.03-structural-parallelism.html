@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 3.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 13px; color: #0e1c42;">Honor and Duty in Sir Gawain</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 3.03</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Sir Gawain and the Green Knight, Fitt III (trans. Weston)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What does it mean to be truly honorable?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 3.03</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Structural Parallelism</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Why does the poet keep cutting between a hunt in the woods and a conversation in a bedroom?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Fitt III is built on <strong>parallel structure</strong>: the poet lines up the three hunts against the three temptations so that they comment on each other. When a writer arranges a text this way on purpose, the structure itself becomes an argument. This lesson teaches you to read that structure, a skill you will use on any complex text.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define parallel structure in a narrative.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> read the hunt scenes as a comment on the temptation scenes.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how the structure escalates toward the girdle.</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHAT PARALLEL STRUCTURE DOES</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Movies often cut back and forth between two scenes happening at the same time. When a film does that, what is it usually asking you to do?</div>
+            <div class="widget-options">
+                <button data-response="Right. Cross-cutting asks you to compare the two scenes and see how they mirror each other. Fitt III does this in words.">Compare the two scenes to each other</button>
+                <button data-response="It can build suspense, yes. And the reason it builds suspense is that the two scenes are secretly the same story. Hold that idea.">Feel the tension rise</button>
+                <button data-response="Sometimes it just moves the plot, true. But when scenes are lined up this carefully, the poet wants you to read one through the other.">Just get through the plot faster</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 14px 0 10px 0;"><strong>Parallel structure</strong> is when a writer builds two or more sections in matching shapes so that a reader will compare them. The Pearl Poet gives the three days an identical rhythm: the lord rides out and hunts, the lady comes to Gawain's chamber, the two men trade winnings at night. Because the shape repeats, every difference between the hunt and the chamber jumps out. The poet is quietly telling you that the man in the bed is being hunted just as surely as the deer in the field.</p>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE THREE DAYS, SIDE BY SIDE</div>
+
+        <!-- ONE core visual: three parallel tracks — HUNT | TEMPTATION | ESCALATION -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 6px 0 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">FITT III IN THREE PARALLEL TRACKS &middot; READ ACROSS EACH ROW</div>
+            <div style="background: #F8F9FC; padding: 18px 16px;">
+                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+
+                    <!-- Column 1: THE HUNT -->
+                    <div style="flex: 1; min-width: 210px;">
+                        <div style="background: #0E1C42; color: #fff; text-align: center; font-size: 13px; letter-spacing: .1em; padding: 8px; border-radius: 8px 8px 0 0;">THE HUNT (OUTSIDE)</div>
+                        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: none; padding: 12px 14px;"><div style="font-size: 12px; color: #8A6410;">DAY 1</div><div style="font-size: 15px; color: #1a2340; line-height: 1.5;">The lord hunts <strong>deer</strong>: swift, timid prey, run down in the open.</div></div>
+                        <div style="background: #F4F6FA; border: 1px solid #D0D9E8; border-top: none; padding: 12px 14px;"><div style="font-size: 12px; color: #8A6410;">DAY 2</div><div style="font-size: 15px; color: #1a2340; line-height: 1.5;">The lord hunts a <strong>boar</strong>: fierce and dangerous, killed only after a hard fight.</div></div>
+                        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: none; padding: 12px 14px; border-radius: 0 0 8px 8px;"><div style="font-size: 12px; color: #8A6410;">DAY 3</div><div style="font-size: 15px; color: #1a2340; line-height: 1.5;">The lord hunts a <strong>fox</strong>: cunning, tricky, caught only by a trick of its own.</div></div>
+                    </div>
+
+                    <!-- Column 2: THE TEMPTATION -->
+                    <div style="flex: 1; min-width: 210px;">
+                        <div style="background: #3B4E8C; color: #fff; text-align: center; font-size: 13px; letter-spacing: .1em; padding: 8px; border-radius: 8px 8px 0 0;">THE TEMPTATION (INSIDE)</div>
+                        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: none; padding: 12px 14px;"><div style="font-size: 12px; color: #3B4E8C;">DAY 1</div><div style="font-size: 15px; color: #1a2340; line-height: 1.5;">The lady is light and playful. Gawain slips away with <strong>1 kiss</strong>.</div></div>
+                        <div style="background: #EEF1F8; border: 1px solid #D0D9E8; border-top: none; padding: 12px 14px;"><div style="font-size: 12px; color: #3B4E8C;">DAY 2</div><div style="font-size: 15px; color: #1a2340; line-height: 1.5;">She presses harder, reproaching him. He holds, giving <strong>2 kisses</strong>.</div></div>
+                        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: none; padding: 12px 14px; border-radius: 0 0 8px 8px;"><div style="font-size: 12px; color: #3B4E8C;">DAY 3</div><div style="font-size: 15px; color: #1a2340; line-height: 1.5;">She offers the <strong>green girdle</strong>. He takes it plus gives <strong>3 kisses</strong>.</div></div>
+                    </div>
+
+                    <!-- Column 3: THE ESCALATION -->
+                    <div style="flex: 1; min-width: 210px;">
+                        <div style="background: #C7922C; color: #fff; text-align: center; font-size: 13px; letter-spacing: .1em; padding: 8px; border-radius: 8px 8px 0 0;">THE ESCALATION</div>
+                        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: none; padding: 12px 14px;"><div style="font-size: 12px; color: #8A6410;">DAY 1</div><div style="font-size: 15px; color: #1a2340; line-height: 1.5;">Easy prey, easy test. Gawain passes cleanly.</div></div>
+                        <div style="background: #FDF3E3; border: 1px solid #D0D9E8; border-top: none; padding: 12px 14px;"><div style="font-size: 12px; color: #8A6410;">DAY 2</div><div style="font-size: 15px; color: #1a2340; line-height: 1.5;">Dangerous prey, harder test. He fights and still passes.</div></div>
+                        <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: none; padding: 12px 14px; border-radius: 0 0 8px 8px;"><div style="font-size: 12px; color: #8A1F16;">DAY 3</div><div style="font-size: 15px; color: #1a2340; line-height: 1.5;">Tricky prey, tricky test. Like the fox, Gawain wins by a hidden trick, and it costs him.</div></div>
+                    </div>
+
+                </div>
+                <div style="font-size: 13px; color: #0e1c42; text-align: center; margin-top: 16px; line-height: 1.6;">Read across: on the day the lord hunts the <strong>cunning fox</strong>, Gawain himself turns cunning and hides the girdle. The animal in the field mirrors the man in the castle.</div>
+            </div>
+        </div>
+
+        <!-- Pattern card (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 4px 0 14px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">THE READING MOVE</div>
+            <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;">When a text repeats a shape, read the panels <strong>across</strong>, not just down. The meaning often lives in how the matching parts differ.</div>
+        </div>
+
+        <!-- WIDGET: evaluative single-select (recolored) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="c" data-hint="Look at Day 3 across all three columns. What kind of animal is hunted, and how does Gawain behave?">
+                <div class="widget-row-prompt">1. The fox hunt on Day 3 best mirrors which of Gawain's actions?</div>
+                <div class="widget-options">
+                    <button data-choice="a">bravely facing the boar</button>
+                    <button data-choice="b">running from the lady</button>
+                    <button data-choice="c" data-fb="Yes. The fox wins by cunning and is caught by a trick; Gawain turns cunning and hides the girdle.">cunningly hiding the girdle</button>
+                    <button data-choice="d">refusing every kiss</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Why would a poet give three days the exact same shape?">
+                <div class="widget-row-prompt">2. The main purpose of the parallel structure is to&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Correct. Matching shapes invite you to compare the hunt and the temptation and read one through the other.">make readers compare the hunt and the temptation</button>
+                    <button data-choice="b">make the poem longer</button>
+                    <button data-choice="c">hide the ending</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Word Study / copia (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY &middot; COPIA WITH <em>BEGUILE</em></div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>Copia (in your Organizer):</strong> the structure of Fitt III shows the lady trying to <em>beguile</em> Gawain across three days. Take the sentence <em>"The lady tried to beguile the knight over three mornings,"</em> and rewrite it three ways: (1) substitute a synonym for <em>beguile</em>; (2) change the syntax so the sentence opens with a subordinate clause; (3) shift the register so it sounds formal, as if written for a scholarly essay. Keep the meaning; change the shape. This is exactly the flexibility your module essay will reward.</div>
+        </div>
+
+        <!-- AI callout (red frame, per components.md) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND STRUCTURE</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Ask an AI tool "what happens in Fitt III" and it will give you the events in a row. Seeing that the fox hunt <em>mirrors</em> Gawain's own trickery is a leap of interpretation the tool did not make and you did. That leap is the reading skill this lesson is training.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Rebuild the three-track diagram in your Organizer, then write one claim</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Copy the three columns, then write one sentence answering this week's question: <em>Why does the poet run the hunt and the temptation in parallel?</em> Save it. You will reuse it in the Week 3 Discussion and again in your essay.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The shape of a text is part of its meaning. Read Fitt III across, and the hunt tells you what kind of creature Gawain becomes on the day he hides the girdle.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 3.03 &middot; Structural Parallelism</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
