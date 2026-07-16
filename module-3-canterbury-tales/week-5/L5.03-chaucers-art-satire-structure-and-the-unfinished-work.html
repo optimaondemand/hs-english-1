@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 5.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+    /* flip engine */
+    .flip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .flip-card { flex: 1; min-width: 210px; background: #FFFFFF; border: 1.5px solid #3B4E8C; border-radius: 8px; padding: 14px 16px; cursor: pointer; }
+    .flip-card .flip-back { display: none; }
+    .flip-card.flipped { background: #FDF3E3; border-color: #C7922C; }
+    .flip-card.flipped .flip-front { display: none; }
+    .flip-card.flipped .flip-back { display: block; }
+    .flip-front { font-size: 16px; color: #0E1C42; line-height: 1.5; }
+    .flip-back { font-size: 15px; color: #8A6410; line-height: 1.55; }
+    .flip-hint { font-size: 12px; color: #3B4E8C; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 13px; color: #0e1c42;">The Canterbury Tales</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 5.03</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Canterbury Tales (whole work)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE QUESTION</div>
+        <div style="font-size: 16px; color: #0e1c42;">What does a traveler's character reveal about the soul?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 5.03</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Chaucer's Art: Satire, Structure, and the Unfinished Work</div>
+        <div style="font-size: 16px; color: #0e1c42;">Synthesis Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">The contest has no winner. The pilgrims never reach Canterbury on the page. Why has an unfinished book stayed alive for six hundred years?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Today you step back from single tales and look at the whole design: how Chaucer's satire works across the pilgrims, what the frame narrative does that no single tale could, and why the work's incompleteness might be part of its meaning. This is the thinking your essay draws on this week.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe how Chaucer's satire works differently across the pilgrims I have read: the Knight, the Miller, the Nun's Priest, the Wife of Bath, and the Pardoner.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what the frame narrative adds: tales that answer, mock, and correct one another.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state what the unfinished pilgrimage leaves open, and use that openness in my own argument.</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; ONE SATIRIST, MANY BLADES</div>
+
+        <!-- WIDGET 1: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">You have now met five tale-tellers. Whose tale surprised you most, given who was telling it?</div>
+            <div class="widget-options">
+                <button data-response="A fair pick. The Knight's tale matches him almost too well; some readers find that perfect fit its own kind of comment. Keep that idea of 'fit' in view today.">The Knight or the Miller</button>
+                <button data-response="Good instinct. A rooster quoting scholars, told by a quiet priest, is satire wearing a costume. Today you will name how that costume works.">The Nun's Priest</button>
+                <button data-response="Many readers agree. The Wife argues about herself; the Pardoner confesses himself. Both reveal more than they intend, and that gap is where today's lesson lives.">The Wife of Bath or the Pardoner</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Satire that never raises its voice</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Chaucer's satire almost never announces itself. In the General Prologue the narrator praises everyone, and the praise is the trap: he calls the Prioress's table manners exquisite while her charity goes to lapdogs, and he reports the Pardoner's tricks in the same friendly voice he uses for the Knight's honors. The judgment is left to you. Across the tales the method shifts. The Miller answers the Knight's high romance with a low fabliau, so the two tales satirize each other. The Nun's Priest hides a lesson about pride and flattery inside a barnyard mock epic. The Wife of Bath performs her own defense so vigorously that the defense becomes evidence. And the Pardoner does what no satirist could do better: he satirizes himself, on purpose, and does not care. One author, five different blades, and every one of them cuts by <em>showing</em> rather than telling.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">That is the first tool for your essay: when you argue that a pilgrim embodies or betrays a virtue, ask <em>how Chaucer lets you see it.</em> A telling detail in the portrait? A tale that fits its teller too well, or not at all? A voice that reveals more than it means to? The method is your evidence.</p>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE FRAME, AND THE ROAD THAT NEVER ENDS</div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 4px 0 8px 0;">What the frame narrative does</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A <strong>frame narrative</strong> is a story that contains other stories: the pilgrimage and the Host's contest are the outer story, and every tale lives inside it. The frame is not just a container. It puts the tales in conversation. The Miller's tale means something different because it interrupts the Knight's. The Wife's tale lands differently because her long prologue comes first. Remove the frame and you have an anthology; keep it and you have an argument among thirty voices about what people are worth.</p>
+
+        <!-- ONE core visual: labeled diagram of the frame -->
+        <div style="background: #14213f; border: 10px solid #3a2c1a; border-radius: 10px; padding: 22px 24px; margin: 18px 0; box-shadow: inset 0 0 40px rgba(0,0,0,0.4);">
+            <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .18em; margin-bottom: 16px; text-align: center;">THE FRAME NARRATIVE &middot; AN UNFINISHED ROAD FROM SOUTHWARK TOWARD CANTERBURY</div>
+            <div style="border: 2px dashed #e6b955; border-radius: 10px; padding: 14px;">
+                <div style="font-size: 12px; color: #e6b955; letter-spacing: .1em; margin-bottom: 10px; text-align:center;">OUTER STORY: THE PILGRIMAGE + THE HOST'S CONTEST (the frame)</div>
+                <div style="display:flex; flex-wrap:wrap; gap: 8px; align-items:stretch; justify-content:center;">
+                    <div style="flex:1; min-width:120px; background:#1c2c50; border:1px solid #3B4E8C; border-radius:8px; padding:10px; text-align:center;">
+                        <div style="font-size:13px; color:#f4f1e8; font-weight:bold;">The Knight's Tale</div>
+                        <div style="font-size:12px; color:#cdd6ea; margin-top:4px; line-height:1.4;">high romance</div>
+                    </div>
+                    <div style="align-self:center; color:#e6b955; font-size:15px;" title="the Miller interrupts">&#8646;</div>
+                    <div style="flex:1; min-width:120px; background:#1c2c50; border:1px solid #3B4E8C; border-radius:8px; padding:10px; text-align:center;">
+                        <div style="font-size:13px; color:#f4f1e8; font-weight:bold;">The Miller's Tale</div>
+                        <div style="font-size:12px; color:#cdd6ea; margin-top:4px; line-height:1.4;">fabliau answer</div>
+                    </div>
+                    <div style="align-self:center; color:#e6b955; font-size:15px;">&#8646;</div>
+                    <div style="flex:1; min-width:120px; background:#1c2c50; border:1px solid #3B4E8C; border-radius:8px; padding:10px; text-align:center;">
+                        <div style="font-size:13px; color:#f4f1e8; font-weight:bold;">The Nun's Priest's Tale</div>
+                        <div style="font-size:12px; color:#cdd6ea; margin-top:4px; line-height:1.4;">mock epic</div>
+                    </div>
+                    <div style="align-self:center; color:#e6b955; font-size:15px;">&#8646;</div>
+                    <div style="flex:1; min-width:120px; background:#1c2c50; border:1px solid #3B4E8C; border-radius:8px; padding:10px; text-align:center;">
+                        <div style="font-size:13px; color:#f4f1e8; font-weight:bold;">The Wife of Bath</div>
+                        <div style="font-size:12px; color:#cdd6ea; margin-top:4px; line-height:1.4;">prologue + tale</div>
+                    </div>
+                    <div style="align-self:center; color:#e6b955; font-size:15px;">&#8646;</div>
+                    <div style="flex:1; min-width:120px; background:#1c2c50; border:1px solid #3B4E8C; border-radius:8px; padding:10px; text-align:center;">
+                        <div style="font-size:13px; color:#f4f1e8; font-weight:bold;">The Pardoner</div>
+                        <div style="font-size:12px; color:#cdd6ea; margin-top:4px; line-height:1.4;">confession + exemplum</div>
+                    </div>
+                </div>
+                <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; justify-content:space-between; align-items:center;">
+                    <div style="font-size:12px; color:#f4d78a;">&#127963;&#65039; Southwark: the Tabard Inn (the road begins)</div>
+                    <div style="font-size:12px; color:#cdd6ea;">&#8594; &#8594; &#8594; planned: about 120 tales &middot; written: 24 &#8594; &#8594; &#8594;</div>
+                    <div style="font-size:12px; color:#8ea2c9; border:1px dashed #8ea2c9; border-radius:6px; padding:4px 8px;">Canterbury: never reached on the page</div>
+                </div>
+            </div>
+            <div style="font-size: 14px; color: #cdd6ea; margin-top: 14px; line-height: 1.6; text-align:center;">The <span style="color:#e6b955;">gold dashed border</span> is the frame: the pilgrimage and contest that hold every tale. The double arrows mark tales answering one another. The road runs off the right edge unfinished: no winner is named, and no judge closes the argument.</div>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The unfinished pilgrimage, and the Retraction</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Chaucer worked on the <em>Canterbury Tales</em> from roughly 1387 until his death in A.D. 1400, and he never finished it. The plan announced in the General Prologue called for each pilgrim to tell tales going and coming, on the order of a hundred and twenty tales; we have twenty-four, some only fragments. The Host promised a supper for the best tale; no prize is ever awarded. And at the very end of the manuscripts stands one more surprise, the <strong>Retraction</strong>: a short passage in Chaucer's own voice asking forgiveness for his worldly writings, with the <em>Canterbury Tales</em> named among them. Readers have argued for centuries about whether it is sincere piety, a conventional gesture, a last quiet irony, or all three at once.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Here is why the incompleteness matters to <em>your</em> essay. Because no judge inside the book ever rules on the pilgrims, the ruling falls to the reader. The work hands you the gavel. When you argue that one pilgrim best embodies or most betrays a virtue, you are not decorating a finished monument; you are finishing, for one pilgrim, the judgment the book deliberately left open.</p>
+
+        <!-- WIDGET 2: flip cards (different engine from L5.01/L5.02) -->
+        <div class="optima-widget ow-flip">
+            <div class="widget-kicker">&#9998; SYNTHESIS CHECK &middot; DECIDE FIRST, THEN FLIP</div>
+            <div class="widget-question">For each card: answer the question aloud or in your notebook first. Then click the card to check your thinking.</div>
+            <div class="flip-grid">
+                <div class="flip-card">
+                    <div class="flip-front"><strong>The frame.</strong> What does the Miller's Tale gain from coming right after the Knight's?</div>
+                    <div class="flip-back">Placed against the Knight's high romance, the Miller's low fabliau becomes an answer, not just a joke: two views of love and worth arguing across the frame. Alone, it is only a comic story.</div>
+                    <div class="flip-hint">Click to flip</div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-front"><strong>The satire.</strong> The narrator praises nearly every pilgrim. How can praise be satire?</div>
+                    <div class="flip-back">The praise reports damning details in an admiring voice, so the gap between the tone and the facts does the judging. The reader, not the narrator, delivers the verdict.</div>
+                    <div class="flip-hint">Click to flip</div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-front"><strong>The unfinished work.</strong> No winner, no arrival, and a Retraction. What does that leave the reader?</div>
+                    <div class="flip-back">The judgment. With no arbiter inside the book, deciding what each pilgrim is worth becomes the reader's task. Your module essay is exactly that task, done for one pilgrim.</div>
+                    <div class="flip-hint">Click to flip</div>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>frame narrative</strong> &nbsp;a story that contains other stories; the outer story shapes how every inner tale is heard. &nbsp;&middot;&nbsp; <strong>synthesis</strong> &nbsp;combining separate ideas or texts into one new claim that none of them makes alone. &nbsp;&middot;&nbsp; <strong>retraction</strong> &nbsp;a formal taking-back of earlier words or works.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>synthesis</em> is Greek, <em>syn</em> ("together") + <em>tithenai</em> ("to place"): a placing-together. <em>Retraction</em> is Latin, <em>re-</em> ("back") + <em>trahere</em> ("to drag or draw"): a drawing-back of what was said, the same root that gives English <em>tractor</em> and <em>extract</em>.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Copia (in your Organizer):</strong> take the sentence <em>"Chaucer never finished the book,"</em> and rewrite it twice: once using <em>frame narrative</em> so the sentence says what is left open, and once using <em>retraction</em> so the sentence names what stands at the end anyway.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Reread your Character Tracking Chart with today's lens</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">For your Module Project pilgrim, note in one sentence <em>how</em> Chaucer lets you see their virtue or vice: portrait detail, tale choice, or self-revealing voice. That sentence is raw material for your thesis.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Go to Quick Write 5: The Thesis Takes Shape</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">You will write your essay's thesis and opening paragraph there, then join this week's discussion: which pilgrim most reveals their soul through their tale?</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The <em>Canterbury Tales</em> ends nowhere and judges no one, and that is the invitation. Chaucer shows; the reader rules. This week, for one pilgrim and one virtue, the ruling is yours to write.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 5.03 &middot; Chaucer's Art: Satire, Structure, and the Unfinished Work</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (reflect / flip / reset) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.flip-card').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var card = e.target.closest('.ow-flip .flip-card');
+    if (card) { card.classList.toggle('flipped'); return; }
+  });
+})();
+</script>
+</body>
+</html>
