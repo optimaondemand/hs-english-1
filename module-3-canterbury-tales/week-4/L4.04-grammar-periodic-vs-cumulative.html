@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Grammar 4.04</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 13px; color: #0e1c42;">The Canterbury Tales</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Grammar 4.04</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">FOCUS</div>
+        <div style="font-size: 17px; color: #0e1c42;">Periodic vs. cumulative</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">The Wife of Bath's Prologue &amp; Tale</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">GRAMMAR 4.04</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Periodic vs. Cumulative Sentences</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127919; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Where you put the main point of a sentence changes what the reader feels: suspense, or momentum.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You met the periodic sentence in Week 1. Today you set it beside its opposite, the <strong>cumulative sentence</strong>, and learn to choose between them on purpose. This is the exact skill Quick Write 4 tests: the Wife's voice and your analytical voice should not be built from the same sentence shapes.</div>
+    </div>
+
+    <!-- Warm-up (reflect check-in widget) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; READ BOTH ALOUD &middot; NO WRONG ANSWER</div>
+            <div class="widget-question"><strong>A.</strong> After a year of searching, after every answer had failed him, on the last day of his life, the knight found her. &nbsp;&nbsp;|&nbsp;&nbsp; <strong>B.</strong> The knight found her at last, worn from a year of searching, empty of answers, one day from death.<br>Which version makes you wait longer to learn what happened?</div>
+            <div class="widget-options">
+                <button data-response="Right. Version A withholds its main clause until the very end; you cannot stop reading until it lands. That delayed-payoff shape is the periodic sentence.">Version A</button>
+                <button data-response="Read them once more. Version B hands you the main clause immediately, then adds detail. It is Version A that makes you wait, holding its point to the end.">Version B</button>
+                <button data-response="They carry the same facts, but not the same experience. A delays its point to the end; B delivers it at once and then builds. That difference is today's lesson.">They feel the same</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- The Lesson -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 12px 0;">A <strong>periodic sentence</strong> saves its main clause for the end. Modifiers, conditions, and buildup come first; the point lands last. The effect is <strong>suspense and emphasis</strong>: the reader must hold everything in mind until the final words snap it into place. It sounds formal, deliberate, composed. That is why it suits an analytical voice delivering a judgment.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 12px 0;">A <strong>cumulative sentence</strong> (also called a loose sentence) does the reverse. It opens with the main clause, then piles on detail: phrases and clauses that extend, sharpen, and color the point already made. The effect is <strong>momentum and voice</strong>: it moves like living speech, one thing tumbling after another. That is why it suits a talker like the Wife of Bath, who never says one thing where five will do.</p>
+
+        <!-- Pattern card (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">THE ONE RULE TO REMEMBER</div>
+            <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;"><strong>Periodic</strong> = buildup first, main clause <strong>last</strong> (suspense). &nbsp;<strong>Cumulative</strong> = main clause <strong>first</strong>, detail after (momentum).</div>
+        </div>
+
+        <!-- ONE visual: navy chalkboard of worked examples -->
+        <div style="background: #14213f; border: 10px solid #3a2c1a; border-radius: 10px; padding: 22px 24px; margin: 18px 0; box-shadow: inset 0 0 40px rgba(0,0,0,0.4);">
+            <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .18em; margin-bottom: 16px; text-align: center;">ON THE BOARD &middot; FIND THE MAIN CLAUSE</div>
+            <div style="font-size: 18px; color: #f4f1e8; line-height: 2.0;">
+                <span style="color:#8ea2c9;">Periodic:</span> Though she quotes scripture, though she counts her husbands like trophies, though she laughs at her own confessions, <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">the Wife is making an argument</span>.<br><br>
+                <span style="color:#8ea2c9;">Cumulative:</span> <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">The Wife is making an argument</span>, quoting scripture when it suits her, counting her husbands like trophies, laughing at confessions that would shame another speaker.
+            </div>
+            <div style="font-size: 14px; color: #cdd6ea; margin-top: 16px; line-height: 1.6;">Same facts in both. The <span style="color:#e6b955;">gold underline</span> marks the main clause: last in the periodic sentence, first in the cumulative one. Feel how the first delays and the second accelerates.</div>
+        </div>
+
+        <!-- Evaluative widget: single-select rows -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; YOUR TURN &middot; CHOOSE THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="b" data-hint="Find the main clause. Does the sentence make you wait for it, or hand it over first?">
+                <div class="widget-row-prompt">1. <em>"Old, poor, and plain, bound by a promise he hated, standing before the queen's whole court, the knight took her hand."</em> This sentence is&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a">cumulative, because it has many details</button>
+                    <button data-choice="b" data-fb="Yes. The main clause ('the knight took her hand') arrives only at the end; everything before it is buildup. That delay makes it periodic.">periodic, because the main clause comes last</button>
+                    <button data-choice="c">neither, because it is only one sentence</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Which shape sounds like unstoppable talk: point first, then detail tumbling after?">
+                <div class="widget-row-prompt">2. You are writing your Quick Write paragraph in the Wife's own voice: fast, confident, piling story upon story. Which shape should carry most of it?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Right. Cumulative sentences move like speech: the claim up front and the evidence spilling after, which is exactly her manner.">Cumulative</button>
+                    <button data-choice="b">Periodic</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Think about which voice benefits from a composed, delayed, formal delivery of judgment.">
+                <div class="widget-row-prompt">3. Your second Quick Write paragraph steps outside her voice to deliver an analytical verdict. A well-placed periodic sentence there would&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a">make the paragraph sound more casual</button>
+                    <button data-choice="b">hide your main point from the reader</button>
+                    <button data-choice="c" data-fb="Yes. Delaying the verdict to the end of a controlled sentence gives it weight, and it separates your register sharply from hers.">give your judgment weight and mark the change in register</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- Write your own -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#10145;&#65039; NOW WRITE YOUR OWN (IN YOUR ORGANIZER)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Take one fact from the Wife of Bath's Tale (the crime, the riddle, the bargain, or the choice) and write it <strong>twice</strong>: once as a periodic sentence and once as a cumulative sentence. Underline the main clause in each. Bring both shapes with you into Quick Write 4.</p>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Sentence shape is voice. Cumulative sentences talk; periodic sentences pronounce. In Quick Write 4 you will build one paragraph that talks like the Wife and one that pronounces like a critic, and the reader should hear the difference in the very first sentence of each.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Grammar 4.04 &middot; Periodic vs. Cumulative Sentences</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
