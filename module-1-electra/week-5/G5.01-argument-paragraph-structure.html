@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Grammar 5.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 13px; color: #0e1c42;">Week 5 &middot; Project Week</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Grammar 5.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">GRAMMAR FOCUS</div>
+        <div style="font-size: 17px; color: #0e1c42;">Claim &middot; Evidence &middot; Analysis</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Electra, Sophocles</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">GRAMMAR 5.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Argument Paragraph Structure</div>
+        <div style="font-size: 16px; color: #0e1c42;">Grammar Lesson &middot; Week 5</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127919; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">What is the one order that turns three loose sentences into a paragraph that persuades?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You will build a body paragraph in the order that persuades: a <strong>claim</strong> sentence, an <strong>evidence</strong> sentence, and one or more <strong>analysis</strong> sentences. And you will spot when one of the three is missing.</div>
+    </div>
+
+    <!-- Warm-up (reflect) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; READ THE PARAGRAPH &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Here is a whole &ldquo;paragraph&rdquo;: <em>&ldquo;Electra is angry. She says her mother is a criminal. This shows the theme.&rdquo;</em> Something is missing. What has the writer not done?</div>
+            <div class="widget-options">
+                <button data-response="Right. The writer never explains how the evidence proves a point. That explaining is the analysis, and it is exactly what today's lesson adds.">Never explained what it all means</button>
+                <button data-response="True, and connected: &lsquo;This shows the theme&rsquo; names no real position. Without a clear claim, the sentences have nothing to prove.">Never made a real claim</button>
+                <button data-response="Fair. &lsquo;This shows the theme&rsquo; does almost no work. Watch how analysis replaces empty sentences like that one.">The last sentence does no work</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- The Lesson -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.75; margin: 0 0 12px 0;">A body paragraph in an argument has a fixed shape, and the shape matters as much as the content. It opens with a <strong>claim sentence</strong>, sometimes called a topic sentence, that states the one point this paragraph will prove and connects it to your thesis. Next comes the <strong>evidence sentence</strong>, which introduces and quotes a specific line from the play. Then come the <strong>analysis sentences</strong>, usually two or three, where you explain how the evidence proves the claim. The order is not decoration: a reader who meets the claim first knows what to look for in the evidence, and a reader who meets the analysis last leaves with your thinking, not just Sophocles&rsquo;. The most common failure is a paragraph that is all claim and evidence with no analysis, a quotation dropped in and left to fend for itself. The second most common is a paragraph with no clear claim, so the evidence floats free of any point. When you draft, you can even label your own sentences to check the shape is complete. If a paragraph has no analysis, it is a report; if it has no claim, it is a note; only all three together make an argument.</p>
+
+        <!-- ONE visual: navy chalkboard of a labeled example, feature (the structure) in gold -->
+        <div style="background: #14213f; border: 10px solid #3a2c1a; border-radius: 10px; padding: 22px 24px; margin: 18px 0; box-shadow: inset 0 0 40px rgba(0,0,0,0.4);">
+            <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .18em; margin-bottom: 18px; text-align: center;">ON THE BOARD &middot; ONE PARAGRAPH, THREE JOBS</div>
+            <div style="font-size: 18px; color: #f4f1e8; line-height: 1.8;">
+                <div style="margin-bottom: 14px;"><span style="display:inline-block; background:#e6b955; color:#14213f; font-size:11px; padding:2px 9px; border-radius:4px; letter-spacing:.06em;">CLAIM</span><br>Sophocles gives Clytaemnestra a real argument, not a villain&rsquo;s excuse.</div>
+                <div style="margin-bottom: 14px;"><span style="display:inline-block; background:#e6b955; color:#14213f; font-size:11px; padding:2px 9px; border-radius:4px; letter-spacing:.06em;">EVIDENCE</span><br>She insists she killed Agamemnon with &ldquo;Justice&rdquo; as her ally, avenging the daughter he sacrificed.</div>
+                <div><span style="display:inline-block; background:#e6b955; color:#14213f; font-size:11px; padding:2px 9px; border-radius:4px; letter-spacing:.06em;">ANALYSIS</span><br>By letting her claim the same word Electra claims, Sophocles makes justice contested rather than obvious, so the audience must weigh two duties instead of cheering one side.</div>
+            </div>
+            <div style="font-size: 14px; color: #cdd6ea; margin-top: 18px; line-height: 1.6;">The <span style="color:#e6b955;">gold labels</span> mark the three jobs. Read top to bottom: claim, then evidence, then analysis.</div>
+        </div>
+
+        <!-- Pattern box (gold) with colored tags -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin-bottom: 4px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">THE PATTERN, IN YOUR OWN COLORS</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.7;">
+                <span style="display:inline-block; background:#C7922C; color:#fff; font-size:11px; padding:2px 8px; border-radius:4px;">CLAIM</span> states the point.&nbsp;&nbsp;
+                <span style="display:inline-block; background:#3B4E8C; color:#fff; font-size:11px; padding:2px 8px; border-radius:4px;">EVIDENCE</span> quotes the proof.&nbsp;&nbsp;
+                <span style="display:inline-block; background:#0E1C42; color:#fff; font-size:11px; padding:2px 8px; border-radius:4px;">ANALYSIS</span> explains the link.
+            </div>
+        </div>
+    </div>
+
+    <!-- Identify & Practice (widget) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 8px;">&#9998; IDENTIFY &amp; PRACTICE</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-bottom: 6px;">Label each sentence <span style="display:inline-block; background:#C7922C; color:#fff; font-size:11px; padding:1px 7px; border-radius:4px;">CLAIM</span>, <span style="display:inline-block; background:#3B4E8C; color:#fff; font-size:11px; padding:1px 7px; border-radius:4px;">EVIDENCE</span>, or <span style="display:inline-block; background:#0E1C42; color:#fff; font-size:11px; padding:1px 7px; border-radius:4px;">ANALYSIS</span>.</div>
+
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; PICK THE RIGHT LABEL FOR EACH SENTENCE</div>
+            <div class="widget-row" data-correct="a" data-hint="Does the sentence state the point the paragraph will prove?">
+                <div class="widget-row-prompt">1. &ldquo;Chrysothemis is the play&rsquo;s voice of caution.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Yes. It states the point of the paragraph, so it is the claim.">Claim</button>
+                    <button data-choice="b">Evidence</button>
+                    <button data-choice="c">Analysis</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Does the sentence quote a line from the play?">
+                <div class="widget-row-prompt">2. &ldquo;She warns Electra that &lsquo;Justice is sometimes dangerous.&rsquo;&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="a">Claim</button>
+                    <button data-choice="b" data-fb="Right. It is a quoted line that supports the claim, so it is the evidence.">Evidence</button>
+                    <button data-choice="c">Analysis</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Does the sentence explain what the evidence shows?">
+                <div class="widget-row-prompt">3. &ldquo;This warning complicates the plan, because the sister urging restraint may be the wiser one.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="a">Claim</button>
+                    <button data-choice="b">Evidence</button>
+                    <button data-choice="c" data-fb="Yes. It explains what the evidence shows and why it matters, so it is the analysis.">Analysis</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- Use it (indigo do) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 10px;">&#10145;&#65039; NOW WRITE YOUR OWN (IN YOUR ORGANIZER)</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Take one body paragraph from your essay draft and label its sentences <strong>CLAIM</strong>, <strong>EVIDENCE</strong>, and <strong>ANALYSIS</strong>. If any label is missing, write the sentence that fills the gap. Remove the labels before you submit: they are a check, not part of the essay.</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Claim, evidence, analysis, in that order. Drop the analysis and you have a report; drop the claim and you have a note. All three together make an argument.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Grammar 5.01 &middot; Argument Paragraph Structure</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
