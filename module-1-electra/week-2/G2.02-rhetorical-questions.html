@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Grammar 2.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Grammar 2.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">GRAMMAR FOCUS</div>
+        <div style="font-size: 17px; color: #0e1c42;">Rhetorical questions</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Electra, Sophocles</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">GRAMMAR 2.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Rhetorical Questions</div>
+        <div style="font-size: 16px; color: #0e1c42;">Grammar Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127919; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">When is a question not really a question at all?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You will recognize a rhetorical question, explain the point it is really making, punctuate it correctly, and use one deliberately in your own writing about the play, without overusing it.</div>
+    </div>
+
+    <!-- Warm-up (reflect check-in widget) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; READ BOTH ALOUD &middot; NO WRONG ANSWER</div>
+            <div class="widget-question"><strong>A.</strong> I will not stop mourning my murdered father. &nbsp;&nbsp;|&nbsp;&nbsp; <strong>B.</strong> How could I ever stop mourning my murdered father?<br>Both make the same claim. Is Electra, in B, really asking?</div>
+            <div class="widget-options">
+                <button data-response="Right. B is shaped like a question but expects no answer. It is a strong way of saying 'I never will,' and it pulls the listener into agreeing. That is a rhetorical question.">No, she already knows the answer</button>
+                <button data-response="Look again. B does not want information; it dares you to disagree and knows you can't. The question form is doing persuasive work, not seeking an answer.">Yes, she wants an answer</button>
+                <button data-response="They do make the same claim, but they do not feel the same. B's question form adds force. That extra force is what today's lesson is about.">They feel identical</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- The Lesson -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.7; margin: 0 0 12px 0;">A <strong>rhetorical question</strong> is a question asked for effect, not for information. The speaker already knows the answer, or believes it is obvious, and wants the listener to arrive at it themselves. "How could I ever stop mourning?" is not a request for advice; it is a strong way of saying "I never will," and it pulls the listener into agreeing. Rhetorical questions still take a question mark, and they still follow normal question order, but their job is persuasion. Characters in a heated argument reach for them constantly, because a question dares the other person to answer, and often there is no good answer to give. That is exactly what the sisters do in this week's scenes: they press each other with questions that are really accusations. Used once or twice, a rhetorical question sharpens your point. Used in every sentence, it starts to sound like nagging, so aim for control: ask when you want the reader to feel the weight of an answer that cannot honestly be denied.</p>
+
+        <!-- Pattern card (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">ONE RULE TO REMEMBER</div>
+            <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;">Question form + no answer expected = <strong>a claim in disguise</strong>. It still takes a question mark.</div>
+        </div>
+
+        <!-- ONE visual: navy chalkboard of rhetorical questions, with the real claim underneath -->
+        <div style="background: #14213f; border: 10px solid #3a2c1a; border-radius: 10px; padding: 22px 24px; margin: 18px 0; box-shadow: inset 0 0 40px rgba(0,0,0,0.4);">
+            <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .18em; margin-bottom: 16px; text-align: center;">ON THE BOARD &middot; THE QUESTION IN GOLD, THE REAL CLAIM BELOW</div>
+            <div style="font-size: 19px; color: #f4f1e8; line-height: 1.7;">
+                <span style="color: #e6b955;">"Should I bow to the people who killed my father?"</span><br>
+                <span style="font-size: 15px; color: #cdd6ea;">&rarr; the real claim: <em>I never should.</em></span>
+                <div style="height:14px;"></div>
+                <span style="color: #e6b955;">"How could I ever stop mourning?"</span><br>
+                <span style="font-size: 15px; color: #cdd6ea;">&rarr; the real claim: <em>I never will.</em></span>
+                <div style="height:14px;"></div>
+                <span style="color: #e6b955;">"What good is protest when we have no power to strike?"</span><br>
+                <span style="font-size: 15px; color: #cdd6ea;">&rarr; the real claim: <em>Protest without power is useless.</em></span>
+            </div>
+            <div style="font-size: 14px; color: #cdd6ea; margin-top: 16px; line-height: 1.6;">Each <span style="color:#e6b955;">gold line</span> keeps a question mark, but none is really asking. The arrow shows the claim the question is making.</div>
+        </div>
+
+        <!-- Evaluative widget -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; YOUR TURN &middot; REAL QUESTION OR RHETORICAL?</div>
+            <div class="widget-row" data-correct="a" data-hint="Does the speaker want information back, or is she making a point she already believes?">
+                <div class="widget-row-prompt">1. Electra: "Would you have me forget the father who was murdered?"</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Yes. Rhetorical. The real point: of course I could never forget him.">Rhetorical (a claim in disguise)</button>
+                    <button data-choice="b">Real (seeking an answer)</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Here the speaker actually lacks a piece of information and wants it supplied.">
+                <div class="widget-row-prompt">2. Chrysothemis: "When did our mother bring you these offerings?"</div>
+                <div class="widget-options">
+                    <button data-choice="a">Rhetorical (a claim in disguise)</button>
+                    <button data-choice="b" data-fb="Right. Real. She genuinely wants the information.">Real (seeking an answer)</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- Identify & Practice (in-notebook, then self-check) -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#9998;&#65039; IDENTIFY &amp; PRACTICE (IN YOUR ORGANIZER)</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-bottom: 10px;">For each line, decide whether it is a <strong>real</strong> question (seeking an answer) or a <strong>rhetorical</strong> one (making a point), and write down what the point is. Do all five before you open the check.</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 2;">
+            1. Chrysothemis to Electra: "What good is protest when we have no power to strike?"<br>
+            2. Electra to Chrysothemis: "When did our mother bring you these offerings?"<br>
+            3. Electra: "Would you have me forget the father who was murdered?"<br>
+            4. The Chorus: "Can we not pay our debts to our parents, as even the birds do?"<br>
+            5. Chrysothemis: "Where does she mean to send me with these gifts?"
+        </div>
+        <details style="border: 1px solid #D0D9E8; border-left: 4px solid #3B4E8C; border-radius: 6px; padding: 12px 16px; margin-top: 14px;">
+            <summary style="font-size: 16px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #3B4E8C;">&#9654;</span>&nbsp; Decide all five in your notebook first, then open to check</summary>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.8; margin-top: 10px; padding-top: 10px; border-top: 1px solid #EEF1F8;">
+                1. <strong>Rhetorical.</strong> Point: protest without power is useless.<br>
+                2. <strong>Real.</strong> She genuinely wants the information.<br>
+                3. <strong>Rhetorical.</strong> Point: of course I could never forget him.<br>
+                4. <strong>Rhetorical.</strong> Point: we owe our parents at least what the birds pay theirs.<br>
+                5. <strong>Real.</strong> She is asking for a destination.
+            </div>
+        </details>
+    </div>
+
+    <!-- Now write your own (indigo) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#10145;&#65039; NOW WRITE YOUR OWN (IN YOUR ORGANIZER)</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Write <strong>one</strong> rhetorical question that Electra might ask Chrysothemis, and <strong>one</strong> that Chrysothemis might ask Electra, each one making the speaker's real point clear. Then, under each, write the plain statement the question stands in for, so you can see what the question form adds.</p>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A rhetorical question is a claim wearing a question mark. Use one, not ten, when you want a reader to feel the weight of an answer they cannot honestly deny. You will place exactly one in this week's Evidence Log reflection.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Grammar 2.02 &middot; Rhetorical Questions</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
