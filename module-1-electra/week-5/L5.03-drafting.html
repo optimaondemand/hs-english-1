@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 5.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 13px; color: #0e1c42;">Justice in Greek Tragedy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 5.03</div>
+        <div style="font-size: 13px; color: #0e1c42;">Week 5 &middot; Project Week</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Electra, Sophocles (trans. Jebb)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What is owed &mdash; to gods, city, family?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 5.03</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Drafting</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson &middot; Week 5 (Project Week)</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; WHAT YOU ARE LEARNING TODAY</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Now you turn your outline into full paragraphs. Today&rsquo;s focus is on the two moves that make a first draft strong: <strong>working quotations smoothly into your own sentences</strong>, and <strong>using the module&rsquo;s vocabulary of justice</strong> to say exactly what you mean.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> introduce, quote, and cite evidence from the text without breaking my sentence.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use module Word Study terms accurately to sharpen my argument.</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WEAVING IN EVIDENCE</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Open your outline and look at the first quotation you chose. Before you paste it, what will your run-up sentence do first?</div>
+            <div class="widget-options">
+                <button data-response="Good instinct. Naming the speaker orients the reader before the quote arrives, so the line does not appear out of nowhere.">Name who is speaking</button>
+                <button data-response="Yes. Setting the moment lets the reader feel the weight of the line before they read it.">Set the moment in the play</button>
+                <button data-response="That works too. Signaling why the line matters primes the reader to look for exactly what you will explain.">Hint at why the line matters</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.75; margin: 8px 0 12px 0;">A draft is where your outline becomes prose, and the skill that most separates strong essays from weak ones is how the writer handles evidence. A quotation should never be dropped into a paragraph on its own line, orphaned; it should be woven into a sentence you write. The reliable pattern is <strong>introduce, quote, explain</strong>. First you set up the line in your own words, naming the speaker and the moment. Then you give the quotation, exact and inside quotation marks, cited by its place in the play rather than by a page number from any printed edition. Then, in the sentences that follow, you explain what the line shows and how it advances your claim: this is the reasoning, and it should be longer than the quote itself. Keep quotations short. A phrase or a line usually proves more than a long block, because you can point precisely at the words that matter. As you draft, reach for the module&rsquo;s vocabulary of justice on purpose. Words like <em>justice, duty, piety, vengeance,</em> and <em>polis</em> are not decoration; each one names an idea the play tests, and using the exact word lets you say in one term what would otherwise take a clumsy phrase. Do not stop to polish every sentence now. The goal today is a complete draft, beginning to end, that you can improve tomorrow.</p>
+
+        <!-- ONE core visual: introduce / quote / explain quote-integration -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">INTRODUCE &middot; QUOTE &middot; EXPLAIN</div>
+            <div style="padding: 18px; background: #FFFFFF;">
+                <div style="font-size: 16px; color: #1a2340; line-height: 2.05;">
+                    <span style="background:#FDF3E3; border-bottom:2px solid #C7922C; padding:1px 3px;">When Chrysothemis pleads with her sister to give up the plan, she cautions that</span> <span style="background:#EEF1F8; border-bottom:2px solid #3B4E8C; padding:1px 3px;">&ldquo;Justice is sometimes dangerous.&rdquo;</span> <span style="border-bottom:2px solid #0E1C42; padding:1px 3px;">The warning lands because it comes from the sister who has been right about survival all along, and it forces the audience to weigh the rightness of the cause against the cost of pursuing it.</span>
+                </div>
+                <div style="font-size: 14px; color: #1a2340; line-height: 1.9; margin-top: 14px;">
+                    <span style="background:#FDF3E3; padding:1px 7px; border-radius:4px;">1. introduce (your words)</span>&nbsp;&nbsp;
+                    <span style="background:#EEF1F8; padding:1px 7px; border-radius:4px;">2. quote (exact, brief)</span>&nbsp;&nbsp;
+                    <span style="border:1px solid #D0D9E8; padding:1px 7px; border-radius:4px;">3. explain (the longest part)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; CITE AND NAME PRECISELY</div>
+
+        <!-- Citing PD text (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin-bottom: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">CITING THE TEXT</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.7;">We read the free, public-domain Jebb translation. Cite by <strong>speaker and moment</strong> (for example, &ldquo;in Clytaemnestra&rsquo;s defense of the killing&rdquo;), not by a page number from a printed book. The full text lives here: <a href="http://classics.mit.edu/Sophocles/electra.html" style="color:#3B4E8C;">classics.mit.edu/Sophocles/electra.html</a>.</div>
+        </div>
+
+        <!-- Vocab reminder (indigo do) -->
+        <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#10145;&#65039; USE THE WORDS ON PURPOSE</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.65;">Your essay must use at least <strong>three</strong> Word Study terms from the module accurately, for example <em>justice, duty, piety, vengeance, polis,</em> or <em>anagnorisis.</em> As you draft, underline each one you use so you can confirm you have met the requirement.</div>
+        </div>
+
+        <!-- WIDGET: evaluative single-select -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="c" data-hint="Remember the order, and that the last step should be the longest.">
+                <div class="widget-row-prompt">1. What are the three steps for using a quotation?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Quote it, then move on</button>
+                    <button data-choice="b">Explain, quote, introduce</button>
+                    <button data-choice="c" data-fb="Right. Introduce it in your own words, give the exact quote, then explain how it supports your claim. The explanation should be longer than the quote.">Introduce, quote, explain</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="We are reading a free public-domain translation, not a printed textbook.">
+                <div class="widget-row-prompt">2. How should you cite a line from our translation?</div>
+                <div class="widget-options">
+                    <button data-choice="a">By a page number from a printed book</button>
+                    <button data-choice="b" data-fb="Yes. Cite by speaker and moment in the play, since we read the public-domain Jebb text and there is no fixed page number.">By speaker and moment in the play</button>
+                    <button data-choice="c">By the year Sophocles wrote it</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- AI callout (red frame, per components.md) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; A NOTE ON AI</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">An AI tool can define a term like <em>anagnorisis</em> and can suggest a smoother way to phrase a sentence. It cannot verify that a quotation is really in the play, and it sometimes invents lines that sound right but were never written. Every quotation in your essay must be one you found in the actual text and can point to.</div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A quotation proves nothing on its own. Introduce it, keep it short and exact, and spend your longest sentences explaining what it shows. Get a full draft down today; you will sharpen it tomorrow.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 5.03 &middot; Drafting</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
