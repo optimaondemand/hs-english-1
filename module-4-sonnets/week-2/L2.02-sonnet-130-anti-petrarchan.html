@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 2.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+
+    /* Flip cards (engine rotated from L2.01's select rows) */
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* Annotated sonnet visual */
+    .arg-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 12px; align-items: stretch; }
+    .arg-poem { flex: 2; min-width: 300px; border-left: 4px solid #3B4E8C; border-radius: 2px; padding-left: 12px; }
+    .arg-note { flex: 1; min-width: 180px; background: #EEF1F8; border: 1px solid #C9D3E8; border-radius: 8px; padding: 10px 14px; font-size: 14px; color: #1a2340; line-height: 1.55; }
+    .arg-note .arg-kicker { font-size: 10px; color: #3B4E8C; letter-spacing: .1em; margin-bottom: 4px; }
+    .sonnet-line { font-family: Georgia, "Times New Roman", serif; font-size: 16px; color: #1a2340; line-height: 1.8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Module 4</div>
+        <div style="font-size: 13px; color: #0e1c42;">Love, Time, and the Sonnet</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 2.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Sonnet 130, William Shakespeare</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">Can a poem defeat time?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 2.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Sonnet 130: The Anti-Petrarchan Love Poem</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">This poem spends twelve lines telling you everything the beloved is not. Why does it end up sounding like the most sincere love poem you have read?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Sonnets 18 and 29 played the love-poem game brilliantly. Sonnet 130 refuses to play it at all. To understand the refusal, you first need to know the rules being broken: a two-hundred-year-old formula for praising a beloved called the <strong>blazon</strong>, inherited from the Italian poet Petrarch. Today you will learn that formula, watch Shakespeare demolish it line by line, and decide what the demolition builds.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define the blazon and describe the Petrarchan conventions Sonnet 130 borrows and inverts.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how Sonnet 130 works as a parody: an imitation precise enough to expose what is false in the original.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> analyze how the couplet, and the word "belied" in particular, turns twelve lines of refusal into an argument about honesty in love.</div></div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module Organizer, open to this week's Word Study section</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">About 35 minutes and something to write with</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE FORMULA THE POEM BREAKS</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">In your Organizer, try writing a two-line compliment for someone you know that works entirely by listing things they are <em>not</em>. Then answer: how did it feel to write praise that way?</div>
+            <div class="widget-options">
+                <button data-response="Wrong and rude is exactly how the first readers of Sonnet 130 were meant to feel, for about twelve lines. Keep that discomfort; the couplet is going to do something with it.">It felt wrong, almost rude</button>
+                <button data-response="Funny is half of Shakespeare's method. Sonnet 130 is a genuinely comic poem, and the comedy is aimed at a target. Your job today is to figure out whether the target is the woman in the poem or something else entirely.">It felt funny, like a joke</button>
+                <button data-response="More honest is the poem's own wager. If praise built from impossible comparisons is false, maybe praise that refuses those comparisons is the only kind that can be trusted. Watch how the couplet cashes in that idea.">It felt strangely honest</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The blazon: praise by catalog</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">By the 1590s, European love poetry ran on a formula. The <strong>blazon</strong> is a catalog of a beloved's features, each one compared to an idealized object: eyes like the sun, lips redder than coral, skin whiter than snow, cheeks like roses, breath like perfume, a voice like music, a walk like a goddess gliding. The tradition descends from the fourteenth-century Italian poet Francesco Petrarch, whose sonnets for a woman named Laura were imitated across Europe for two centuries; poetry in his manner is called <strong>Petrarchan</strong>. English poets of Shakespeare's generation, Sidney and Spenser among them, filled whole books with blazons. The comparisons were beautiful, and that was the problem. They had hardened into a formula, and a formula flatters no one. A blazon does not describe the woman in front of the poet; it replaces her with a mosaic of borrowed treasures. Readers of 1600 could finish the comparisons before the poet did.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Sonnet 130 takes the formula and runs it in reverse. It walks the same checklist, feature by feature, in the same order a blazon would: eyes, lips, skin, hair, cheeks, breath, voice, walk. And at every stop it refuses the comparison. Her eyes are "nothing like the sun." Coral is "far more red" than her lips. Snow makes her skin look "dun" (a dull grayish brown). This is <strong>parody</strong>: an imitation of a form exact enough to expose what is wrong with the original. The precision matters. A sloppy imitation is just a joke; an exact one is criticism. One line needs a historical footnote so you do not misread it: "the breath that from my mistress reeks" sounds harsh today, but in Shakespeare's English <em>reeks</em> simply meant "comes forth, is exhaled." The line concedes that her breath is no perfume; it does not call it foul. Words drift over four centuries, and a careful reader checks before judging.</p>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE INVERSION, MAPPED ONTO THE POEM</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">Here is the full poem, annotated against the blazon checklist it dismantles. Read each section, then its margin note. Notice that the turn comes late in this sonnet: the whole case rests on the couplet.</p>
+
+        <!-- ===== ONE core visual: the annotated full Sonnet 130, couplet gilded ===== -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">SONNET 130 &middot; THE BLAZON, RUN IN REVERSE</div>
+            <div style="background: #FDFCF8; padding: 20px 22px;">
+
+                <div class="arg-row">
+                    <div class="arg-poem">
+                        <div style="font-size: 11px; color: #3B4E8C; letter-spacing: .1em; margin-bottom: 4px;">QUATRAIN 1 &middot; LINES 1&ndash;4 &middot; EYES, LIPS, SKIN, HAIR</div>
+                        <div class="sonnet-line">My mistress' eyes are nothing like the sun;</div>
+                        <div class="sonnet-line">Coral is far more red than her lips' red;</div>
+                        <div class="sonnet-line">If snow be white, why then her breasts are dun;</div>
+                        <div class="sonnet-line">If hairs be wires, black wires grow on her head.</div>
+                    </div>
+                    <div class="arg-note"><div class="arg-kicker">REFUSAL 1 &middot; THE CHECKLIST BEGINS</div>Four stock comparisons (sun, coral, snow, golden wires), four refusals. The opening line even announces the method: "nothing like."</div>
+                </div>
+
+                <div class="arg-row">
+                    <div class="arg-poem">
+                        <div style="font-size: 11px; color: #3B4E8C; letter-spacing: .1em; margin-bottom: 4px;">QUATRAIN 2 &middot; LINES 5&ndash;8 &middot; CHEEKS AND BREATH</div>
+                        <div class="sonnet-line">I have seen roses damask'd, red and white,</div>
+                        <div class="sonnet-line">But no such roses see I in her cheeks;</div>
+                        <div class="sonnet-line">And in some perfumes is there more delight</div>
+                        <div class="sonnet-line">Than in the breath that from my mistress reeks.</div>
+                    </div>
+                    <div class="arg-note"><div class="arg-kicker">REFUSAL 2 &middot; EVIDENCE, NOT INSULT</div>The speaker has seen real damask roses; he reports honestly that her cheeks are not flowers. Remember: "reeks" here means "is exhaled," not "stinks."</div>
+                </div>
+
+                <div class="arg-row">
+                    <div class="arg-poem">
+                        <div style="font-size: 11px; color: #3B4E8C; letter-spacing: .1em; margin-bottom: 4px;">QUATRAIN 3 &middot; LINES 9&ndash;12 &middot; VOICE AND WALK</div>
+                        <div class="sonnet-line">I love to hear her speak, yet well I know</div>
+                        <div class="sonnet-line">That music hath a far more pleasing sound;</div>
+                        <div class="sonnet-line">I grant I never saw a goddess go;</div>
+                        <div class="sonnet-line">My mistress, when she walks, treads on the ground:</div>
+                    </div>
+                    <div class="arg-note"><div class="arg-kicker">REFUSAL 3 &middot; WARMTH BREAKS THROUGH</div>"I love to hear her speak" slips real affection into the catalog. And "treads on the ground" is a quiet compliment in disguise: she is real, present, and walking on the same earth as the speaker.</div>
+                </div>
+
+                <div class="arg-row">
+                    <div class="arg-poem" style="border-left: 4px solid #C7922C; background: #FDF3E3; border-radius: 8px; padding: 10px 14px;">
+                        <div style="font-size: 11px; color: #8A6410; letter-spacing: .1em; margin-bottom: 4px;">COUPLET &middot; LINES 13&ndash;14 &middot; <span style="background:#3B4E8C; color:#fff; padding: 1px 8px; border-radius: 8px;">VOLTA AT "AND YET"</span></div>
+                        <div class="sonnet-line"><strong style="color:#3B4E8C;">And yet</strong>, by heaven, I think my love as rare</div>
+                        <div class="sonnet-line">As any she belied with false compare.</div>
+                    </div>
+                    <div class="arg-note" style="background: #FDF3E3; border-color: #C7922C;"><div class="arg-kicker" style="color: #8A6410;">THE VERDICT</div>The turn arrives at line 13, later than in Sonnets 18 and 29. "Belied" means lied about: the old blazons falsified the very women they claimed to praise. His love needs no false comparisons to be "as rare" as theirs.</div>
+                </div>
+
+                <div style="font-size: 14px; color: #0e1c42; line-height: 1.6; margin-top: 8px;">Public-domain text (modernized). Original 1609 spelling: <a href="https://en.wikisource.org/wiki/Shakespeare%27s_Sonnets" style="color: #3B4E8C;">Wikisource: Shakespeare's Sonnets</a>.</div>
+            </div>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Sincerity through anti-flattery</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The couplet re-reads everything above it. For twelve lines the poem sounded like failed praise, or worse. Then "And yet, by heaven" arrives with the force of an oath, and the word <strong>belied</strong> names the crime the poem has been prosecuting all along: conventional blazons <em>lied about</em> the women they described, replacing each real person with a goddess assembled from stolen images. Once you hear that accusation, the twelve refusals change character. They stop being insults and become evidence of attention: this speaker has actually looked at the woman he loves, cheeks, breath, voice, walk and all, and loves what is actually there. The poem argues that flattery is a form of dishonesty, and that praise stripped of flattery is the only praise worth having. Sonnet 130 belongs to the second half of Shakespeare's sequence (Sonnets 127&ndash;154), poems addressed to a dark-haired, dark-eyed woman scholars call the Dark Lady, and it is both a love poem and a piece of literary criticism at once. Readers still argue about the balance: is the poem primarily mocking a tired convention, or primarily declaring a love too honest for convention? Hold that question; it is this week's discussion.</p>
+
+        <!-- WIDGET: evaluative flip cards (engine rotated from L2.01) -->
+        <div style="font-size: 11px; color: #3B4E8C; margin: 16px 0 6px; letter-spacing: .04em;">&#9998; YOUR TURN &middot; ANSWER IN YOUR ORGANIZER FIRST, THEN CLICK EACH CARD TO CHECK</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+            <div class="optima-widget ow-flip" style="flex: 1; min-width: 240px;">
+                <div class="ow-flip-front">
+                    <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">CARD 1 &middot; WHAT IS THIS LINE DOING?</div>
+                    <div style="font-size: 16px; color: #0E1C42; line-height: 1.55; font-style: italic;">"If snow be white, why then her breasts are dun;"</div>
+                    <div style="font-size: 12px; color: #3B4E8C; margin-top: 10px;">Tap to reveal</div>
+                </div>
+                <div class="ow-flip-back">
+                    <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">ANSWER</div>
+                    <div style="font-size: 16px; color: #1a2340; line-height: 1.6;"><strong>Inverting a stock blazon comparison.</strong> The formula said "skin white as snow." Shakespeare grants the premise ("if snow be white") and then reports the honest observation instead: her skin is "dun," an ordinary human color. The target of the line is the formula, not the woman.</div>
+                </div>
+            </div>
+            <div class="optima-widget ow-flip" style="flex: 1; min-width: 240px;">
+                <div class="ow-flip-front">
+                    <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">CARD 2 &middot; ONE WORD, WHOLE ARGUMENT</div>
+                    <div style="font-size: 16px; color: #0E1C42; line-height: 1.55; font-style: italic;">"As any she belied with false compare."</div>
+                    <div style="font-size: 12px; color: #3B4E8C; margin-top: 10px;">Tap to reveal</div>
+                </div>
+                <div class="ow-flip-back">
+                    <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">ANSWER</div>
+                    <div style="font-size: 16px; color: #1a2340; line-height: 1.6;"><strong>"Belied" means lied about.</strong> The couplet accuses the entire blazon tradition of falsifying the women it praised. His love is "as rare" as any of theirs, and his praise, because it refuses false comparison, can actually be believed. The refusals were honesty, not insult.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>Petrarchan</strong> &mdash; in the manner of Francesco Petrarch, the fourteenth-century Italian poet whose sonnets set the fashion for idealized love poetry across Europe. &nbsp;&middot;&nbsp; <strong>blazon</strong> &mdash; a poetic catalog of a beloved's features, each compared to an idealized object; praise by substitution. &nbsp;&middot;&nbsp; <strong>parody</strong> &mdash; an imitation of a form or style exact enough to expose or mock something in the original. &nbsp;&middot;&nbsp; <strong>irony</strong> &mdash; saying one thing while meaning something larger or opposite; twelve lines of apparent criticism that turn out to be the sequence's most trustworthy praise.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>blazon</em> comes from French <em>blason</em>, a shield painted with a coat of arms: the beloved displayed piece by piece, like heraldry. <em>Parody</em> comes from Greek <em>paroidia</em>, "a song sung beside" (<em>para</em>, beside + <em>oide</em>, song): a mock-song that runs alongside the original, matching its steps. <strong>Copia (in your Organizer):</strong> take the sentence <em>"The advertisement praised the product,"</em> and rewrite it three times: once so the praise works like a <em>blazon</em>, once so the sentence describes a <em>parody</em> of that advertisement, and once so the sentence turns on <em>irony</em>.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Add this week's Word Study terms and copia to your Organizer</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Then take a position in Discussion 4.2: is Sonnet 130 mostly mockery of a convention, or the truest love poem in the sequence? You will need to quote a specific line either way.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Then finish the week's work</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Grammar 2.02 studies the sentence shapes both sonnets use. VR Activity 2.01 builds Sonnet 29's argument in space. Quiz 4.2 covers both poems. And on Friday, Project Feeder 2 asks for your first quatrain: as you draft, decide whether your own lines will flatter or tell the truth.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Sonnet 130 proves that a form can be honored by being broken. Shakespeare follows the blazon's checklist exactly so that every refusal lands on a convention, not a person, and the couplet converts twelve denials into the one claim that matters: praise you can trust. When you write your own quatrain this Friday, remember the lesson under the joke. Specific, honest observation beats borrowed beauty every time.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.02 &middot; Sonnet 130: The Anti-Petrarchan Love Poem</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html; includes flip handler) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+</script>
+</body>
+</html>
