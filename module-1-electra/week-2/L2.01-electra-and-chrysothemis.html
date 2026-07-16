@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 2.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 13px; color: #0e1c42;">Justice in Greek Tragedy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 2.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Electra &mdash; the sisters' debate</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What is owed &mdash; to gods, city, family?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 2.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Two Sisters, Two Answers to Injustice</div>
+        <div style="font-size: 16px; color: #0e1c42;">Reading Lesson &middot; Electra meets Chrysothemis</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">When two people share the same wrong, can they answer it in opposite ways and both be right?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Today you read the <strong>Electra&ndash;Chrysothemis scene</strong>: the first meeting of the two sisters, where Chrysothemis, richly dressed, urges Electra to stop her open mourning and bow to the rulers, and Electra refuses. Two women share the same wrong and choose opposite responses to it. Along the way you will sharpen a reader's tool: telling a <strong>simile</strong> from a <strong>metaphor</strong>, and asking what each comparison is really doing.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> tell a simile from a metaphor, and explain what a comparison is doing in the line where it appears.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> contrast how Electra and Chrysothemis each answer the same injustice.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> update the Character Tracking Chart in my Module Organizer for both sisters.</div></div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Module Organizer (the Character Tracking Chart)</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">The public-domain text of <em>Electra</em> (linked below), and something to write with</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Imagine you and a sibling both know something in your home is wrong. One of you says so, loudly, every day. The other stays quiet to keep the peace. Neither approves of the wrong. Who is acting more rightly?</div>
+            <div class="widget-options">
+                <button data-response="A fair instinct. Speaking out honors the truth and refuses to pretend. Hold onto that: it is close to Electra's answer.">The one who says so out loud</button>
+                <button data-response="A reasonable instinct too. Quiet can be patience, not approval. Hold onto that: it is close to Chrysothemis's answer.">The one who keeps the peace</button>
+                <button data-response="Interesting. Maybe both are right in different ways. That is exactly the tension Sophocles builds this scene on.">They might both be right</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.75; margin: 0 0 12px 0;">Sophocles gives Electra a sister, Chrysothemis, so that we can watch two people carry the same grief and reach opposite conclusions about what justice requires. Chrysothemis agrees, privately, that their father was wronged, but she has decided that open protest is useless when you have no power to act on it, and so she keeps her comforts and her safety. Electra has decided the opposite: to say the truth aloud whatever it costs, because to fall silent would be to join the wrong. As they argue, notice how each sister reaches for <strong>comparison</strong> to make her point land. A <strong>simile</strong> compares two things using <em>like</em> or <em>as</em> ("she wept like a bird robbed of its young"), keeping the two things side by side so you feel the likeness. A <strong>metaphor</strong> goes further and says one thing simply <em>is</em> another ("her grief is a fire that will not go out"), fusing them so the image becomes the thing itself. Both are tools for making an abstract feeling, such as grief, fear, or defiance, into something you can see. When you find one in this scene, do not stop at naming it. Ask what it lets the speaker say that plain statement could not, and whose side it quietly asks you to take.</p>
+
+        <!-- ONE core visual: two-column contrast card (HTML/CSS) -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 10px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 9px 16px;">TWO SISTERS, ONE INJUSTICE &middot; SAME WRONG, OPPOSITE ANSWERS</div>
+            <div style="display: flex; flex-wrap: wrap;">
+                <!-- Electra column -->
+                <div style="flex: 1; min-width: 240px; border-right: 1px solid #D0D9E8;">
+                    <div style="background: #3B4E8C; color: #fff; padding: 12px 16px; font-size: 18px;">ELECTRA</div>
+                    <div style="padding: 6px 16px 14px;">
+                        <div style="font-size: 11px; color: #3B4E8C; margin: 12px 0 4px;">HER CHOICE</div>
+                        <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Open, daily mourning; refuse to be silent.</div>
+                        <div style="font-size: 11px; color: #3B4E8C; margin: 12px 0 4px;">HER REASONING</div>
+                        <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">To fall silent before a murder is to join the wrong.</div>
+                        <div style="font-size: 11px; color: #3B4E8C; margin: 12px 0 4px;">WHAT SHE RISKS</div>
+                        <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Her safety and comfort; the rulers' anger.</div>
+                    </div>
+                </div>
+                <!-- Chrysothemis column -->
+                <div style="flex: 1; min-width: 240px;">
+                    <div style="background: #C7922C; color: #fff; padding: 12px 16px; font-size: 18px;">CHRYSOTHEMIS</div>
+                    <div style="padding: 6px 16px 14px;">
+                        <div style="font-size: 11px; color: #8A6410; margin: 12px 0 4px;">HER CHOICE</div>
+                        <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Quiet submission; bow to the rulers.</div>
+                        <div style="font-size: 11px; color: #8A6410; margin: 12px 0 4px;">HER REASONING</div>
+                        <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Protest is useless without the power to act on it.</div>
+                        <div style="font-size: 11px; color: #8A6410; margin: 12px 0 4px;">WHAT SHE RISKS</div>
+                        <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Her conscience; the charge of cowardice.</div>
+                    </div>
+                </div>
+            </div>
+            <div style="background: #EEF1F8; padding: 10px 16px; font-size: 14px; color: #0e1c42; line-height: 1.55;">Both begin from the same fact: their father was wronged. Everything after that is a choice. As you read, decide which choice you find more just, and why.</div>
+        </div>
+    </div>
+
+    <!-- READ NOW (PD source) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128218; READ NOW</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.65; margin-bottom: 14px;">Read the <strong>Electra&ndash;Chrysothemis scene</strong>: from Chrysothemis's entrance, where she comes on richly dressed and warns her sister, through Electra's refusal to be silent. Read it aloud if you can, giving each sister her own voice.</div>
+        <div style="text-align: center; margin: 6px 0 14px;">
+            <a href="http://classics.mit.edu/Sophocles/electra.html" style="display: inline-block; background: #0E1C42; color: #fff; text-decoration: none; font-size: 16px; padding: 12px 26px; border-radius: 8px;">&#128279; Open <em>Electra</em> (public-domain text, trans. R. C. Jebb)</a>
+        </div>
+        <div style="font-size: 14px; color: #0e1c42; line-height: 1.55; text-align: center;">Free, full text at the Internet Classics Archive. This is the same translation you use all module.</div>
+
+        <!-- Short PD anchor quote -->
+        <div style="background: #EEF1F8; border-radius: 7px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #0e1c42; margin-bottom: 8px;">CHRYSOTHEMIS DEFENDS HER CAUTION</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.7; font-style: italic;">"I care not to seem active, without the power to hurt."</div>
+            <div style="font-size: 14px; color: #0e1c42; margin-top: 8px;">&mdash; Chrysothemis (trans. Jebb). She will not make a show of protest she cannot back with force. Electra answers: <em>"Do not teach me to betray my friends."</em></div>
+        </div>
+    </div>
+
+    <!-- Annotate (practice) -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#9999;&#65039; ANNOTATE AS YOU READ</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.65; margin-bottom: 10px;">On your own copy, mark up the scene. As you read, flag every place you find:</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">a <strong>simile</strong> (a comparison with <em>like</em> or <em>as</em>), and label it <em>S</em>;</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">a <strong>metaphor</strong> (one thing said to <em>be</em> another), and label it <em>M</em>;</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px;">&#9654;</span><div style="font-size: 16px; color: #1a2340; line-height: 1.6;">every <strong>reference to justice</strong>, and each place Electra accuses Chrysothemis of something. Keep this thread going all module.</div></div>
+    </div>
+
+    <!-- Evaluative widget (check yourself) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 6px;">&#9998;&#65039; DO IT IN YOUR NOTEBOOK FIRST, THEN CHECK YOURSELF</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 0 0 4px;">Answer each in your Organizer before you pick, so the choice confirms your own thinking.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="b" data-hint="One keeps the two things side by side with a linking word; the other says one thing IS the other.">
+                <div class="widget-row-prompt">1. What is the difference between a simile and a metaphor?</div>
+                <div class="widget-options">
+                    <button data-choice="a">A simile is longer; a metaphor is shorter.</button>
+                    <button data-choice="b" data-fb="Yes. A simile keeps two things side by side with 'like' or 'as'; a metaphor fuses them by saying one thing is the other.">A simile uses <em>like</em> or <em>as</em>; a metaphor says one thing <em>is</em> another.</button>
+                    <button data-choice="c">A simile is about people; a metaphor is about objects.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Both sisters believe the father was wronged. What splits them is what they DO about it.">
+                <div class="widget-row-prompt">2. How do the two sisters answer the same injustice differently?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Only Electra believes their father was wronged.</button>
+                    <button data-choice="b">Only Chrysothemis believes their father was wronged.</button>
+                    <button data-choice="c" data-fb="Right. Both believe he was wronged; Chrysothemis chooses safe submission, Electra chooses open, costly mourning.">Both believe he was wronged; Chrysothemis chooses safety, Electra chooses open protest.</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- AI callout (red frame, per components.md) -->
+    <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND WHAT A COMPARISON DOES</div>
+        <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">AI can label a line as a simile or a metaphor quickly, and usually correctly. What it cannot do is tell you what that comparison is doing <em>here</em>: whether it makes Electra's grief look noble or excessive, and whose side it nudges you toward. That reading is the actual work of this lesson, and it stays yours.</div>
+    </div>
+
+    <!-- Speak your thinking (indigo) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 12px;">&#127908; SPEAK YOUR THINKING (RECORD 2&ndash;4 MINUTES)</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.65; margin-bottom: 8px;">Record yourself, using any tool you like (your phone, the recorder in Canvas, or your VR space), answering these in order:</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.9;">1. What is Chrysothemis's reasoning for bowing to the rulers, and how is her experience of the family's injustice different from Electra's?<br>2. How does Electra respond? Be specific about how she contrasts her sister's words with her deeds.<br>3. How does this scene add to the play's unfolding question of what justice is and who owes it?</div>
+        <div style="font-size: 14px; color: #3B4E8C; margin-top: 10px;">Save this recording in your Organizer; it feeds this week's Evidence Log and your module essay.</div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Two sisters, one wrong, opposite answers. Sophocles refuses to hand you the winner. Keep the contrast close: it is the question your whole module essay on justice will answer.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.01 &middot; Two Sisters, Two Answers to Injustice</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
