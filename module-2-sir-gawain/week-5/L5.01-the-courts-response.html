@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 5.01</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 13px; color: #0e1c42;">Honor and Duty in <em>Sir Gawain</em></div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 5.01</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">Sir Gawain and the Green Knight (trans. Weston)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE QUESTION</div>
+        <div style="font-size: 16px; color: #0e1c42;">What does it mean to be truly honorable?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 5.01</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Court&rsquo;s Response: Wisdom or Evasion?</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Gawain comes home ashamed. The whole court laughs. Is that the wisest thing the court could do, or the easiest?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">This is the last scene of the poem, and it is the strangest. Gawain returns to Camelot wearing the green girdle as a mark of his failure. The court responds by laughing warmly and deciding that every knight will wear a green band too. Today you will read that ending as an <strong>argument the court is making about honor</strong>, and decide whether you agree with it.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> retell the final scene and explain how Gawain and the court read the girdle differently.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state the strongest case that the court is <em>wise</em> and the strongest case that the court is <em>evading</em>.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> write a short passage that turns this scene into usable evidence for my essay.</div></div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your Reading Journal / Module Organizer, and your Fitt IV notes</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">About 30 minutes and your own copy of the poem (public-domain Weston translation, linked below)</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHAT ACTUALLY HAPPENS AT THE END</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Think of a time you made a small mistake and felt terrible about it, but the people around you shrugged it off and said it was no big deal. How did their reaction feel?</div>
+            <div class="widget-options">
+                <button data-response="That happens. Sometimes a light response is a gift: it keeps one mistake from swallowing the whole person. Hold onto that idea as you read the court's laughter.">Kind. It helped me let it go.</button>
+                <button data-response="Fair. Sometimes a shrug feels like no one is taking your growth seriously. Gawain may feel exactly this way about the court.">Frustrating. I wanted them to take it seriously.</button>
+                <button data-response="Interesting. Both can be true at once, which is exactly the tension in this scene. Watch how the poem holds both.">Both, honestly.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 14px 0 10px 0;">At the Green Chapel, the Green Knight reveals himself as Bertilak, Gawain&rsquo;s host. He explains that the whole beheading game was a test, and that Gawain passed almost all of it. Gawain flinched at the first swing and, on the third day, kept the green girdle instead of handing it over as the exchange-of-winnings game required. In the Weston translation Bertilak judges that Gawain failed &ldquo;but a little,&rdquo; and only because he loved his life, so he blames him the less. To Bertilak, Gawain is still the finest knight he has ever tested.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Gawain does not accept the mercy. He is furious with himself. He calls his fault <em>cowardice</em> and <em>covetousness</em>, blames the frailty of the flesh, and (in a moment worth arguing about) blames women&rsquo;s wiles too. He decides to keep the girdle forever, but as a sign of shame: a badge to remind him that even the best knight can fall.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Then he rides home to Camelot. He tells the whole story honestly, expecting disgrace. Instead, the court <strong>laughs</strong>, comforts him, and makes a decision: every lord and lady of the Round Table will wear a bright green band, for love of Gawain. What Gawain wears as private shame, the court adopts as shared honor. The poem closes with its motto: <em>Honi soit qui mal y pense</em>, which means &ldquo;shame to anyone who thinks ill of it.&rdquo;</p>
+
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 10px 0 0 0; background: #EEF1F8; border-radius: 6px; padding: 12px 16px;">Read the ending in the public-domain Weston translation (1898): <a href="https://d.lib.rochester.edu/camelot/text/weston-sir-gawain-and-the-green-knight.html" style="color: #3B4E8C;">the Camelot Project, University of Rochester</a>, or Project Gutenberg edition #14568. Use your own copy to find the exact lines you quote in your essay.</p>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; ONE GIRDLE, TWO MEANINGS</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">The green girdle is the same object in everyone&rsquo;s hands, but it does not mean the same thing to everyone. That gap is where your essay lives. Study the diagram: notice that Gawain and the court agree on the facts and disagree on the meaning.</p>
+
+        <!-- ONE core visual: labeled diagram of the girdle's double meaning -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 10px; overflow: hidden; margin: 6px 0 4px;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">THE SAME GREEN GIRDLE &middot; READ TWO WAYS</div>
+            <div style="padding: 22px 20px; background: #FFFFFF;">
+                <!-- center object -->
+                <div style="text-align: center; margin-bottom: 8px;">
+                    <div style="display: inline-block; background: linear-gradient(90deg, #C7922C 0%, #E6B955 50%, #C7922C 100%); color: #3a2c1a; font-size: 15px; font-weight: bold; letter-spacing: .12em; padding: 10px 30px; border-radius: 20px; border: 2px solid #8A6410;">THE GREEN GIRDLE</div>
+                    <div style="font-size: 13px; color: #1a2340; margin-top: 6px;">A woven sash. Gawain kept it hoping it would protect his life.</div>
+                </div>
+                <div style="text-align: center; font-size: 22px; color: #3B4E8C; line-height: 1;">&#8595;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8595;</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 8px;">
+                    <div style="flex: 1; min-width: 240px; background: #FDF3E3; border: 1px solid #E6B955; border-top: 4px solid #C7922C; border-radius: 8px; padding: 14px 16px;">
+                        <div style="font-size: 12px; color: #8A6410; letter-spacing: .08em; margin-bottom: 6px;">GAWAIN READS IT AS&hellip;</div>
+                        <div style="font-size: 17px; color: #0e1c42; font-weight: bold; margin-bottom: 4px;">A badge of shame</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">Proof that he failed, that even the best knight can be moved by fear. He keeps it to never forget.</div>
+                    </div>
+                    <div style="flex: 1; min-width: 240px; background: #EEF1F8; border: 1px solid #C9D3E8; border-top: 4px solid #3B4E8C; border-radius: 8px; padding: 14px 16px;">
+                        <div style="font-size: 12px; color: #3B4E8C; letter-spacing: .08em; margin-bottom: 6px;">THE COURT READS IT AS&hellip;</div>
+                        <div style="font-size: 17px; color: #0e1c42; font-weight: bold; margin-bottom: 4px;">A badge of honor</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">A shared emblem of fellowship. They all wear a green band, turning one knight&rsquo;s failing into the whole Round Table&rsquo;s pride.</div>
+                    </div>
+                </div>
+                <div style="font-size: 13px; color: #0e1c42; text-align: center; margin-top: 14px; line-height: 1.5;">The poem never tells you which reading is right. That silence is your invitation to argue.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ PART 3 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; WISDOM OR EVASION?</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">A strong reader can build a case for either verdict before choosing. Try both before you decide.</p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 6px;">
+            <div style="flex: 1; min-width: 260px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #3B4E8C; border-radius: 8px; padding: 16px 18px;">
+                <div style="font-size: 13px; color: #3B4E8C; letter-spacing: .06em; margin-bottom: 8px;">THE CASE FOR WISDOM</div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">The court refuses to let one mistake define a good man. Mercy and fellowship are part of a healthy community. By all wearing the band, the knights admit that <em>any</em> of them might have done the same. That is humility, not denial.</div>
+            </div>
+            <div style="flex: 1; min-width: 260px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #C7922C; border-radius: 8px; padding: 16px 18px;">
+                <div style="font-size: 13px; color: #8A6410; letter-spacing: .06em; margin-bottom: 8px;">THE CASE FOR EVASION</div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Gawain took his failing seriously; the court laughs it away. Turning a symbol of shame into a fashion may let the whole court avoid the hard question Gawain is actually asking about honor. Comfort can be a way of not looking.</div>
+            </div>
+        </div>
+
+        <!-- WIDGET: evaluative single-select (recolored) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="b" data-hint="Focus on the difference in meaning, not the object itself. Both hold the same girdle.">
+                <div class="widget-row-prompt">1. What is the key difference between how Gawain and the court treat the girdle?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Gawain wears it and the court does not</button>
+                    <button data-choice="b" data-fb="Yes. The object is identical; the meaning is opposite. Gawain reads shame, the court reads honor.">They give the same object opposite meanings</button>
+                    <button data-choice="c">The court wants to destroy it</button>
+                    <button data-choice="d">Gawain forgets about it</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Re-read Bertilak's verdict: how much does he blame Gawain, and why?">
+                <div class="widget-row-prompt">2. In Bertilak&rsquo;s judgment, Gawain failed mainly because he&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a">was cruel to his host</button>
+                    <button data-choice="b">broke the beheading agreement entirely</button>
+                    <button data-choice="c" data-fb="Right. Bertilak says Gawain lacked a little, and only because he loved his life, so he blames him the less.">loved his life and kept the girdle to protect it</button>
+                    <button data-choice="d">refused the whole test</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="An 'evasion' reading asks what the laughter might let the court avoid.">
+                <div class="widget-row-prompt">3. Which sentence best states the &ldquo;evasion&rdquo; reading of the ending?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Yes. That is the evasion case: the court's comfort may sidestep the serious question Gawain raises.">The court&rsquo;s laughter may dodge the hard question about honor that Gawain takes seriously.</button>
+                    <button data-choice="b">The court is right to punish Gawain harshly.</button>
+                    <button data-choice="c">Gawain should have kept the girdle a secret.</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- AI callout (red frame) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND THE EASY VERDICT</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Ask an AI tool &ldquo;Is Gawain honorable?&rdquo; and it will give you a balanced, reasonable-sounding paragraph in seconds. That paragraph is a starting point, not your answer. The AI has not decided; you have to. Your essay is graded on <em>your</em> reasoning from <em>the</em> text, which is the one thing the tool cannot do for you.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT (IN YOUR ORGANIZER)</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Write the final scene from Gawain&rsquo;s point of view (about 150 words)</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Narrate the homecoming as Gawain would tell it: the girdle, the laughter, what he feels. Then add one sentence naming whether <em>you</em> think the court is being wise or evasive, and why. You will mine this passage for evidence in Lesson 5.02 and in your essay.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The ending is not a tidy moral. It is a disagreement, staged for you: Gawain says shame, the court says honor, and the poem leaves the last word to you. Decide which reading you can defend, because that decision is the seed of your thesis.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 5.01 &middot; The Court&rsquo;s Response</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
