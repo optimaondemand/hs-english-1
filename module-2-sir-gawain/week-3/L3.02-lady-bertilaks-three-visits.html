@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 3.02</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div>
+        <div style="font-size: 13px; color: #0e1c42;">Honor and Duty in Sir Gawain</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 3.02</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Sir Gawain and the Green Knight, Fitt III (trans. Weston)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE THEME</div>
+        <div style="font-size: 16px; color: #0e1c42;">What does it mean to be truly honorable?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 3.02</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Lady Bertilak's Three Visits</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Lady Bertilak never threatens Gawain. So how does she nearly undo the most courteous knight in the world?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">She uses <strong>words</strong>. Across three morning visits she works on Gawain with praise, with reproach, and finally with a gift. This lesson names her three strategies so you can spot them in the text, and gives you the vocabulary to describe how persuasion works when it wears a smile.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> name three rhetorical strategies Lady Bertilak uses.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> match each strategy to a moment in Fitt III.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> use this week's five vocabulary words accurately.</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; PERSUASION WITHOUT A THREAT</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Think of a time someone tried to talk you into something you did not want to do, without ever ordering you. What worked on you hardest: flattery, guilt, or a tempting offer?</div>
+            <div class="widget-options">
+                <button data-response="Flattery is powerful. It makes refusing feel like proving the compliment wrong. Lady Bertilak uses exactly this on Gawain.">Flattery, when they praised me</button>
+                <button data-response="Guilt is sharp. 'I thought you were better than this' is hard to answer. Watch the lady turn Gawain's reputation into a trap.">Guilt, when they made me feel small</button>
+                <button data-response="A good offer is tempting because it changes the math. Hold that idea for the third day, when she offers Gawain something he badly wants.">A tempting offer or gift</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The setup</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Each of the three mornings, while her husband hunts, Lady Bertilak comes to Gawain's chamber and sits by his bed. She is charming, clever, and completely in control of the conversation. Gawain must stay courteous to his hostess and loyal to his host at the same time, and she keeps finding the narrow gap between the two. She is <em>wily</em>: she means to <em>beguile</em> him, to test, or <em>assay</em>, how far his courtesy will bend. He is in real <em>peril</em>, though no sword is drawn.</p>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; HER THREE STRATEGIES</div>
+
+        <!-- ONE core visual: labeled diagram of the three rhetorical strategies (gold / indigo / navy) -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 6px 0 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">LADY BERTILAK'S PLAYBOOK &middot; THREE WAYS TO MOVE A MAN WHO WILL NOT BE ORDERED</div>
+            <div style="background: #F8F9FC; padding: 20px 16px;">
+                <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: stretch;">
+                    <!-- Strategy 1 -->
+                    <div style="flex: 1; min-width: 220px; background: #FFFFFF; border: 2px solid #C7922C; border-radius: 10px; padding: 16px 16px;">
+                        <div style="font-size: 24px;">&#128079;</div>
+                        <div style="font-size: 12px; color: #8A6410; letter-spacing: .1em; margin-top: 6px;">STRATEGY 1</div>
+                        <div style="font-size: 17px; color: #0e1c42; font-weight: bold; margin: 4px 0 6px;">Flatter his reputation</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">She praises Gawain as the most famous, most courteous knight alive, so that refusing her feels like betraying his own good name.</div>
+                    </div>
+                    <!-- Strategy 2 -->
+                    <div style="flex: 1; min-width: 220px; background: #FFFFFF; border: 2px solid #3B4E8C; border-radius: 10px; padding: 16px 16px;">
+                        <div style="font-size: 24px;">&#9878;&#65039;</div>
+                        <div style="font-size: 12px; color: #3B4E8C; letter-spacing: .1em; margin-top: 6px;">STRATEGY 2</div>
+                        <div style="font-size: 17px; color: #0e1c42; font-weight: bold; margin: 4px 0 6px;">Reproach and shame</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">When praise stalls, she scolds him: a knight so famed in courtesy, and yet so cold? She turns his virtue into a debt he seems to owe her.</div>
+                    </div>
+                    <!-- Strategy 3 -->
+                    <div style="flex: 1; min-width: 220px; background: #FFFFFF; border: 2px solid #C7922C; border-radius: 10px; padding: 16px 16px;">
+                        <div style="font-size: 24px;">&#127873;</div>
+                        <div style="font-size: 12px; color: #8A6410; letter-spacing: .1em; margin-top: 6px;">STRATEGY 3</div>
+                        <div style="font-size: 17px; color: #0e1c42; font-weight: bold; margin: 4px 0 6px;">Offer a tempting gift</div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.55;">On the last day she offers tokens: first a rich ring (he refuses), then a green girdle she claims can save his life. Her largesse hides the real trap.</div>
+                    </div>
+                </div>
+                <div style="font-size: 13px; color: #0e1c42; text-align: center; margin-top: 16px; line-height: 1.6;">Notice the escalation: praise, then pressure, then a gift he is desperate to accept. She adapts each morning to what did not work the morning before.</div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Here is one of her sharpest lines, when she reproaches Gawain for holding back: <span style="font-style: italic;">"Ye deserve blame if ye hold not that lady who sits beside ye above all else in the world."</span> Read how it works. She is not asking; she is judging him for not already agreeing. That is Strategy 2 in a single sentence: she makes refusal look like a failure of the very courtesy he is famous for.</p>
+
+        <!-- WIDGET: evaluative single-select (recolored) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="b" data-hint="Which strategy turns Gawain's own good name into a pressure on him?">
+                <div class="widget-row-prompt">1. When the lady says a knight so famous in courtesy should not be so cold, she is using&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a">a threat of violence</button>
+                    <button data-choice="b" data-fb="Yes. She reproaches him, turning his reputation into a debt. That is Strategy 2.">reproach and shame</button>
+                    <button data-choice="c">an offer of gold</button>
+                    <button data-choice="d">a direct command</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Which word names a clever, tricky kind of cunning?">
+                <div class="widget-row-prompt">2. The best word for the lady's clever, tricky approach is&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a">largesse</button>
+                    <button data-choice="b">peril</button>
+                    <button data-choice="c" data-fb="Correct. 'Wily' means cunning and full of tricks, which fits her exactly.">wily</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Word Study (gold) — full five vocab with etymology + copia -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY &middot; THIS WEEK'S FIVE WORDS</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.85;">
+                <strong>beguile</strong> &mdash; to charm or trick someone into doing something. &nbsp;&middot;&nbsp;
+                <strong>wily</strong> &mdash; cunning, clever at getting what one wants by trickery. &nbsp;&middot;&nbsp;
+                <strong>assay</strong> &mdash; to test or try the quality of something. &nbsp;&middot;&nbsp;
+                <strong>peril</strong> &mdash; serious danger. &nbsp;&middot;&nbsp;
+                <strong>largesse</strong> &mdash; generous giving, especially by someone of high rank.
+            </div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.65; margin-top: 12px;"><strong>Word origins:</strong> <em>assay</em> and <em>essay</em> are cousins from the same French root meaning "a trying or an attempt": to <em>assay</em> gold is to test it, and an <em>essay</em> is literally an attempt to work a question out. <em>Largesse</em> comes from the French for "large" or "abundant," the open-handed generosity expected of a noble. Keep these near your definition of the girdle scene: the lady's <em>largesse</em> is exactly how she disguises the trap.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.65; margin-top: 10px;"><strong>Copia (in your Organizer):</strong> take the sentence <em>"The lady tried to trick the knight,"</em> and rewrite it three ways: once using <em>beguile</em>, once using <em>wily</em>, and once using <em>assay</em>. Change the wording, not the meaning.</div>
+        </div>
+
+        <!-- AI callout (red frame, per components.md) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND PERSUASION</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">The same strategies Lady Bertilak uses (flattery, reproach, a tempting offer) show up in the ads and messages an AI system can generate at scale. Learning to name a persuasive move is a defense you can use far outside this poem. Naming it is a skill; only you can practice it.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Add the five words and the three strategies to your Organizer</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Record the vocabulary and do the copia practice above. Then, next to each of the three strategies, jot one line from Fitt III where you see the lady use it. You will need these examples for Project Feeder 3, when you write in her voice.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Lady Bertilak wins ground with words, not weapons: praise, then reproach, then a gift. Once you can name a persuasive move, it loses half its power. Carry that skill into every argument you read.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 3.02 &middot; Lady Bertilak's Three Visits</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
