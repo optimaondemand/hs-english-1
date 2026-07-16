@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Lesson 3.03</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+.canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 3</div>
+        <div style="font-size: 13px; color: #0e1c42;">Canterbury Tales</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 3.03 &middot; Week 3</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 16px; color: #0e1c42; font-style: italic;">The Nun's Priest's Tale (Middle English)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">CENTRAL QUESTION</div>
+        <div style="font-size: 16px; color: #0e1c42;">What does a traveler reveal about their soul?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LESSON 3.03 &middot; THE DARK SIDE OF THE ROAD</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Nun's Priest's Tale: When Chickens Speak Like Scholars</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A rooster quotes Latin, debates philosophy, and cites ancient authorities. So why does a fox still catch him with a compliment?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Today you meet Chanticleer, the most learned rooster in literature, in a tale that dresses a barnyard chase in the armor of epic poetry. You will learn two forms at once, the <strong>beast fable</strong> and the <strong>mock epic</strong>, and watch Chaucer use both to ask a serious question: can all your learning save you from your own vanity?</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> define <em>beast fable</em> and <em>mock epic</em> and tell how this tale is both at once.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> trace how flattery defeats Chanticleer's learning, and how it defeats the fox in turn.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> state the tale's moral and argue what it says about learning and self-deception.</div></div>
+    </div>
+
+    <!-- Reading link -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin-bottom: 20px; border-left: 4px solid #3B4E8C;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#128278; THIS WEEK'S READING</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Read <strong>The Nun's Priest's Tale</strong> in the original Middle English, public domain: <a href="https://www.gutenberg.org/ebooks/2383" style="color:#3B4E8C;">The Canterbury Tales, Project Gutenberg #2383</a>. Read the fox's flattery speech and the closing moral aloud; the sound is half the joke. Add the Nun's Priest to your Character Tracking Chart as you go.</div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; TWO FORMS STACKED: BEAST FABLE AND MOCK EPIC</div>
+
+        <!-- WIDGET 1: reflective check-in -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP &middot; NO WRONG ANSWER</div>
+            <div class="widget-question">Someone praises you in a way that feels a little too generous, right before asking you for something. Be honest: how hard is that praise to resist in the moment?</div>
+            <div class="widget-options">
+                <button data-response="That honesty is exactly where this tale lives. Chanticleer knows better too, and knowing better does not save him. Watch how the fox aims the praise at what the rooster is proudest of.">Harder to resist than I would like</button>
+                <button data-response="Maybe so. But notice the fox's trick: he does not praise Chanticleer at random. He praises the one thing the rooster is proudest of, his singing. Precision-guided flattery is harder to spot.">I can usually see through it</button>
+                <button data-response="Fair, it depends on who is talking and what they praise. The fox chooses both perfectly: a courteous stranger, praising Chanticleer's proudest gift. That is the trap in its finished form.">Depends who is flattering me</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The oldest trick in storytelling: animals who are really us</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A <strong>beast fable</strong> is a short story in which animals speak and act like human beings, told to point at a lesson about human behavior. You have known this form since childhood: the tortoise and the hare, the boy who cried wolf. The animals give the storyteller cover. No one is insulted by a story about a vain rooster, and yet everyone recognizes the vain rooster in themselves. The tale usually ends by naming its lesson, the <strong>moral</strong>.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Chaucer takes that humble form and dresses it in borrowed royal robes. A <strong>mock epic</strong> applies the grand style of epic poetry, elevated language, classical allusions, solemn speeches about fate, to a subject far too small for it. The hero here is Chanticleer, a rooster whose crowing is "merrier than the church organ" and whose comb is redder than fine coral. He lives, the poem admits, in a poor widow's yard. But when the fox strikes, the narrator cries out to Destiny and Venus and compares the hens' shrieking to the wailing of Troy when the city fell. A chicken coop is narrated like the fall of a kingdom. The gap between the style and the subject is the engine of the comedy, and you learned its rhetorical fuel in Lesson 3.02: those repeated cries of "O" are anaphora doing epic work on a barnyard stage.</p>
+
+        <!-- ONE core visual: labeled diagram of the mock-epic gap -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">THE MOCK-EPIC GAP &middot; GRAND STYLE, SMALL SUBJECT</div>
+            <div style="background: #F8F9FC; padding: 22px 18px;">
+                <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: stretch;">
+                    <div style="flex: 1; min-width: 230px; background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 10px; padding: 14px 16px;">
+                        <div style="font-size: 12px; color: #3B4E8C; letter-spacing: .06em; margin-bottom: 6px;">THE STYLE SAYS: EPIC</div>
+                        <div style="font-size: 15px; color: #1a2340; line-height: 1.7;">&#9654; A hero of dazzling beauty and peerless voice<br>&#9654; Prophetic dreams debated with learned authorities<br>&#9654; Cries to Destiny and Venus when disaster strikes<br>&#9654; The lament compared to the fall of Troy</div>
+                    </div>
+                    <div style="min-width: 110px; background: #0E1C42; border-radius: 10px; padding: 14px 12px; text-align: center; align-self: center;">
+                        <div style="font-size: 26px; line-height: 1;">&#9889;</div>
+                        <div style="font-size: 12px; color: #55c8e8; margin-top: 6px; letter-spacing: .06em; line-height: 1.5;">THE GAP =<br>THE COMEDY</div>
+                    </div>
+                    <div style="flex: 1; min-width: 230px; background: #FDF3E3; border: 2px solid #C7922C; border-radius: 10px; padding: 14px 16px;">
+                        <div style="font-size: 12px; color: #8A6410; letter-spacing: .06em; margin-bottom: 6px;">THE SUBJECT IS: A BARNYARD</div>
+                        <div style="font-size: 15px; color: #1a2340; line-height: 1.7;">&#9654; A rooster on a perch in a poor widow's yard<br>&#9654; A hen who prescribes laxatives for bad dreams<br>&#9654; A fox lurking in the cabbage patch<br>&#9654; A noisy chase past pigs and geese</div>
+                    </div>
+                </div>
+                <div style="background: #0E1C42; border-radius: 8px; padding: 12px 16px; margin-top: 14px; text-align: center;">
+                    <div style="font-size: 14px; color: #f4f1e8; line-height: 1.6;">Mock epic does not mock the epic. It mocks <span style="color:#55c8e8;">us</span>, for narrating our small dramas as if they were the fall of Troy.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; LEARNING VS. SELF-DECEPTION: HOW THE TRAP WORKS TWICE</div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 4px 0 8px 0;">The most learned rooster in literature</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The tale opens with a warning Chanticleer gives himself. He dreams of a fox-like beast that means to seize him, and he wakes up groaning. His favorite hen, Pertelote, is unimpressed: dreams mean nothing, she says, they come from bad digestion, and what he needs is a laxative. Chanticleer fights back with scholarship. He cites authority after authority, stories of dreamers whose visions came true, ancient writers, biblical figures, learned examples piled high. He wins the debate. He proves, with impressive learning, that his dream is a true warning. And then he flies down from his perch into the yard anyway. This is the tale's first, quiet joke about learning: knowledge that does not change what you do is only decoration.</p>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Flattery finds the blind spot</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The fox does not attack. He talks. He tells Chanticleer he means no harm; he only came to hear him sing, for his voice is like an angel's. He praises Chanticleer's father, who sang so feelingly that he would stretch out his neck, stand on tiptoe, and close both eyes to reach his fullest note. Could the son match him? Chanticleer, drunk on the praise, stretches his neck, rises on tiptoe, shuts both eyes to sing, and the fox seizes him by the throat and runs for the woods. Notice what the flattery did: it did not just please Chanticleer. It got him to <em>close his eyes</em>, to switch off the very watchfulness his dream had given him. <strong>Self-deception is the ally flattery needs.</strong> The fox supplied the compliment; Chanticleer supplied the belief.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Then the trap springs a second time, in reverse. Carried in the fox's jaws with the whole farmyard in roaring pursuit, Chanticleer finally uses his wits: why not taunt the pursuers, he suggests, and boast that the prize is yours? The fox opens his mouth to gloat, and Chanticleer bursts free to the safety of a tree. The fox tries flattery once more, and the rooster, one painful lesson wiser, refuses: he will not sing with his eyes shut again. The tale closes by pointing at its own <strong>moral</strong>: do not trust flattery, and do not shut your eyes when you ought to watch, and it slyly invites you to take the fruit of the story and let the chaff blow away, even from a tale about chickens.</p>
+
+        <!-- WIDGET 2: evaluative single-select -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="b" data-hint="One form is about who the characters are; the other is about the size of the style compared to the subject.">
+                <div class="widget-row-prompt">1. The tale is a beast fable AND a mock epic. Which pairing is right?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Beast fable: grand style; mock epic: talking animals</button>
+                    <button data-choice="b" data-fb="Yes. Talking animals teaching a human lesson make it a beast fable; epic grandeur wrapped around a barnyard makes it a mock epic. Chaucer runs both at once.">Beast fable: talking animals with a moral; mock epic: grand style on a small subject</button>
+                    <button data-choice="c">Both terms mean the same thing</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Think about what the fox's compliment actually got Chanticleer to DO, not just to feel.">
+                <div class="widget-row-prompt">2. Why is the fox's flattery so much more dangerous than a direct attack?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Right. The praise made Chanticleer close his own eyes: flattery recruits the victim into disarming himself. That is why the tale calls self-deception the real enemy.">It gets Chanticleer to shut his own eyes, disarming himself</button>
+                    <button data-choice="b">It is louder and more frightening</button>
+                    <button data-choice="c">It proves the fox is stronger than the rooster</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Chanticleer escapes by turning the fox's own weakness against him. What weakness is that?">
+                <div class="widget-row-prompt">3. How does Chanticleer escape, and why is it fitting?</div>
+                <div class="widget-options">
+                    <button data-choice="a">The widow catches the fox; strength defeats cunning</button>
+                    <button data-choice="b">The fox trips while running; luck saves the foolish</button>
+                    <button data-choice="c" data-fb="Correct. Chanticleer baits the fox into opening his mouth to boast, the same vanity trap he fell into himself. The trickster is tricked by his own pride, which is comic justice.">He flatters the fox into opening his mouth to boast; the trickster falls for his own trick</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>mock epic</strong> &mdash; a comic work that applies epic grandeur to a trivial subject. &nbsp;&middot;&nbsp; <strong>beast fable</strong> &mdash; a story of talking animals that teaches a human lesson. &nbsp;&middot;&nbsp; <strong>flattery</strong> &mdash; excessive, insincere praise aimed at gaining something. &nbsp;&middot;&nbsp; <strong>comic relief</strong> &mdash; a humorous scene or figure that eases tension in a serious work. &nbsp;&middot;&nbsp; <strong>moral</strong> &mdash; the lesson a story states or implies.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>flattery</em> comes from Old French <em>flater</em>, to stroke or smooth with the hand; flattery still "strokes" its victim. <em>Moral</em> comes from Latin <em>mos, moris</em>, custom or way of behaving, the same root as <em>morale</em> and <em>morality</em>. <strong>Copia (in your Organizer):</strong> take the sentence <em>"The fox praised the rooster's singing,"</em> and rewrite it twice: once so the praise is clearly <em>flattery</em> with a motive, and once as a <em>moral</em>, a one-line lesson a fable might end with.</div>
+        </div>
+
+        <!-- AI callout (red frame) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND FLATTERY</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">AI chat tools are often tuned to be agreeable, and they can praise a weak idea as readily as a strong one. That is a modern version of the fox's voice: pleasant, fluent, and not always aimed at your good. An AI tool cannot want anything for you. Testing praise against evidence, the skill Chanticleer forgot, remains yours to practice.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Record the Word Study terms and update your Character Tracking Chart</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Add <em>mock epic, beast fable, flattery, comic relief,</em> and <em>moral</em> to your Organizer, with the copia practice. Add the Nun's Priest to your chart: a quiet pilgrim whose tale is anything but. This lesson feeds your Discussion Post and Quick Write 3 this week.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE ONE THING TO CARRY FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Chanticleer's learning was real, and it did not save him, because flattery does not argue with your mind; it recruits your vanity. The tale's deepest lesson is not "beware of foxes." It is that self-deception opens the door the fox walks through.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 3.03 &middot; The Nun's Priest's Tale: When Chickens Speak Like Scholars</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
