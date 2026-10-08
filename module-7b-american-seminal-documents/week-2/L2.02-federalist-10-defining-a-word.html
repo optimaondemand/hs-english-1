@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Federalist No. 10: Watching a Writer Define a Word (Module 7B)</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q7 &middot; Module 7B</div>
+        <div style="font-size: 13px; color: #0e1c42;">American Seminal Documents</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">TYPE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Literature</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">THIS WEEK</div>
+        <div style="font-size: 17px; color: #0e1c42;">The Constitution and Federalist No. 10</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE QUESTION</div>
+        <div style="font-size: 17px; color: #0e1c42;">What happens to a promise a nation makes to itself?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LITERATURE</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Federalist No. 10: Watching a Writer Define a Word</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Madison spends the first part of his essay defining one word. By the time he finishes, the definition has already decided the argument.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">A writer who gets to define the key term usually wins, because every later sentence is measured against that definition. The check is whether the definition was fair.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; OBJECTIVES</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> trace how a writer builds and refines a key term across a text.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> follow an argument that works by eliminating alternatives.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> test whether a definition has been built to make one conclusion inevitable.</div></div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; MATERIALS</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #C7922C; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Federalist No. 10 &mdash; linked below, public domain</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #C7922C; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.6;">About 35 minutes. This is the hardest reading in the module.</div></div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE PROBLEM MADISON IS TRYING TO SOLVE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In 1787 the Constitution had been written but not yet ratified, and it was in real trouble. James Madison, Alexander Hamilton, and John Jay wrote a series of newspaper essays arguing for it, published under the shared pen name <em>Publius</em>. Number 10 is the most famous of them.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The objection Madison is answering is a serious one, and it was the common wisdom of the age: republics only work when they are small. Everyone knew this. Small republics let citizens know each other and share interests; large ones fill up with rival groups that tear each other apart. The proposed United States was going to be enormous. So the objection had real force.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Madison's answer is that everyone has the causation backwards.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 16px 0 6px;">
+            <a href="https://avalon.law.yale.edu/18th_century/fed10.asp" style="display: inline-block; background: #0E1C42; color: #fff; text-decoration: none; font-size: 15px; padding: 10px 20px; border-radius: 8px;">&#128279; Federalist No. 10 (Avalon Project, Yale)</a>
+            <a href="https://guides.loc.gov/federalist-papers/text-1-10" style="display: inline-block; background: #0E1C42; color: #fff; text-decoration: none; font-size: 15px; padding: 10px 20px; border-radius: 8px;">&#128279; Federalist No. 10 (Library of Congress)</a>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE DEFINITION, AND WHAT IT IS BUILT TO DO</div>
+        <div style="background: #14213f; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
+            <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .16em; margin-bottom: 12px;">MADISON DEFINES HIS KEY TERM</div>
+            <div style="font-size: 17px; color: #f4f1e8; line-height: 1.9;">
+                &ldquo;By a faction, I understand a number of citizens, whether amounting to a majority or a minority of the whole, who are united and actuated by some common impulse of <span style="color:#e6b955;">passion</span>, or of <span style="color:#e6b955;">interest</span>, <span style="color:#e6b955;">adverse to the rights of other citizens</span>, or to the permanent and aggregate interests of the community.&rdquo;
+            </div>
+            <div style="font-size: 14px; color: #8ea2c9; margin-top: 12px; line-height: 1.7;">Three things this definition quietly settles before the argument starts:<br>
+            &middot; A faction can be a <strong>majority</strong>. Most readers assume a faction is a small troublesome minority; Madison rules that assumption out in his first clause.<br>
+            &middot; A faction is defined by being <strong>adverse to others' rights</strong>. So it is not just any group with a shared interest &mdash; it is a group whose aim conflicts with the rights of others.<br>
+            &middot; The cause can be <strong>passion or interest</strong>. Not only greed, and not only anger. Both.</div>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Why the definition is the argument</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Because Madison defines a faction as possibly a majority, he can say something that would otherwise sound absurd: that in a democracy, the danger is not the mob at the edges but the majority itself. A pure democracy, he writes, offers &ldquo;no cure for the mischiefs of faction,&rdquo; because if the faction <em>is</em> the majority, voting will not stop it. Voting is how it wins.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Hold on to that. Nothing later in the essay works unless you accepted the first clause of the definition.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; AN ARGUMENT THAT WORKS BY CLOSING DOORS</div>
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 4px 0 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">MADISON'S FORK &middot; HE ELIMINATES EVERY OPTION BUT ONE</div>
+            <div style="background: #F8F9FC; padding: 20px 18px;">
+
+                <div style="background: #FFFFFF; border: 2px solid #0E1C42; border-radius: 8px; padding: 12px 16px; text-align: center; margin-bottom: 12px;">
+                    <div style="font-size: 16px; color: #0e1c42;"><strong>Two ways to cure the mischiefs of faction</strong></div>
+                </div>
+
+                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+                    <div style="flex: 1; min-width: 250px;">
+                        <div style="background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 8px; padding: 12px 16px; text-align: center; margin-bottom: 10px;">
+                            <div style="font-size: 15px; color: #0e1c42;"><strong>A. Remove the causes</strong></div>
+                        </div>
+                        <div style="background: #FDECEC; border: 1px solid #C0392B; border-radius: 8px; padding: 11px 14px; margin-bottom: 8px;">
+                            <div style="font-size: 14px; color: #8A1F16;"><strong>A1. Destroy liberty</strong></div>
+                            <div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-top: 4px;">Rejected: &ldquo;liberty is to faction what air is to fire.&rdquo; The cure is worse than the disease.</div>
+                        </div>
+                        <div style="background: #FDECEC; border: 1px solid #C0392B; border-radius: 8px; padding: 11px 14px;">
+                            <div style="font-size: 14px; color: #8A1F16;"><strong>A2. Give everyone the same opinions and interests</strong></div>
+                            <div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-top: 4px;">Rejected as impossible: as long as people reason freely and own different amounts of property, they will differ.</div>
+                        </div>
+                    </div>
+                    <div style="flex: 1; min-width: 250px;">
+                        <div style="background: #FDF3E3; border: 2px solid #C7922C; border-radius: 8px; padding: 12px 16px; text-align: center; margin-bottom: 10px;">
+                            <div style="font-size: 15px; color: #0e1c42;"><strong>B. Control the effects</strong></div>
+                        </div>
+                        <div style="background: #FFFFFF; border: 2px solid #C7922C; border-radius: 8px; padding: 11px 14px; height: calc(100% - 62px);">
+                            <div style="font-size: 14px; color: #8A6410;"><strong>The only door left open</strong></div>
+                            <div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-top: 4px;">And a large republic controls effects better than a small one: more groups means it is harder for any one of them to become a majority, and elected representatives filter public views. <strong>The objection is turned into the answer.</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="background: #F8F9FC; font-size: 13px; color: #0e1c42; text-align: center; padding: 0 18px 14px; line-height: 1.6;">Notice the shape: he does not argue directly for his conclusion. He closes every other door, and the conclusion is what is left standing.</div>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Now test it</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">An argument by elimination is only as strong as its list of options. It is a powerful form, and it has one characteristic weak point: if the writer left a door off the diagram, the conclusion does not follow, no matter how well the remaining doors were closed.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">So ask the honest question. Are those really the only two ways to deal with faction? A reader could propose a third: change the conditions that produce the sharpest divisions in the first place &mdash; Madison himself names &ldquo;the various and unequal distribution of property&rdquo; as the most durable source of faction, and then does not consider addressing it. Whether that third door <em>should</em> have been on the diagram is a real question that historians and political theorists still argue about. That is what makes it a good research question, and it is exactly the kind of thing your project could take up.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice what testing an argument looks like here. You are not calling Madison a liar, and you are not saying the essay is worthless. You are asking whether the list was complete. That is the respectful version of the question, and it is also the sharpest.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="c" data-hint="Look again at the first clause of the definition. What assumption does it deliberately block?">
+                <div class="widget-row-prompt">1. Why does Madison specify that a faction may be &ldquo;a majority or a minority&rdquo;?</div>
+                <div class="widget-options">
+                    <button data-choice="a">To show that he is being thorough and fair-minded</button>
+                    <button data-choice="b">To make the definition harder for opponents to quote</button>
+                    <button data-choice="c" data-fb="Yes. If a faction can be a majority, then voting cannot be relied on to stop it &mdash; and his whole case against pure democracy depends on that. The definition does the work before the argument begins.">Because his later argument requires that a majority itself can be the danger</button>
+                    <button data-choice="d">Because the states disagreed about how to count votes</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Ask what has to be true about the diagram for the conclusion to follow. Not whether each rejection was reasonable, but whether anything is missing from it.">
+                <div class="widget-row-prompt">2. What is the fairest way to test an argument that works by eliminating options?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Right. Elimination arguments live or die on whether the list of options was complete. Checking for a missing door is the honest test, and it is more useful than disputing a door he already closed.">Ask whether any real option was left off the list</button>
+                    <button data-choice="b">Point out that the writer clearly wanted his conclusion</button>
+                    <button data-choice="c">Find a modern expert who disagrees with him</button>
+                    <button data-choice="d">Check whether the essay is longer than it needs to be</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Read the metaphor literally. Air does not cause fire to be bad; it is what fire needs to exist at all. What does that say about liberty and faction?">
+                <div class="widget-row-prompt">3. Madison writes that &ldquo;liberty is to faction what air is to fire.&rdquo; What is he claiming?</div>
+                <div class="widget-options">
+                    <button data-choice="a">That liberty and faction are equally dangerous</button>
+                    <button data-choice="b" data-fb="Yes. Faction is an unavoidable by-product of freedom, so removing it would mean removing freedom. That is why he calls this cure worse than the disease.">That faction is an unavoidable consequence of liberty, so abolishing it means abolishing liberty</button>
+                    <button data-choice="c">That factions spread quickly once they start</button>
+                    <button data-choice="d">That liberty should be limited during a crisis</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>faction</strong> &mdash; in Madison's sense, a group united by a passion or interest that runs against others' rights. &nbsp;&middot;&nbsp; <strong>republic</strong> &mdash; a government in which the people rule through elected representatives. &nbsp;&middot;&nbsp; <strong>adverse</strong> &mdash; opposed; working against. &nbsp;&middot;&nbsp; <strong>aggregate</strong> &mdash; combined; taken as a whole. &nbsp;&middot;&nbsp; <strong>mischief</strong> (1787 sense) &mdash; harm or damage, not playfulness.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>faction</em> comes from Latin <em>facere</em>, &ldquo;to do or make&rdquo; &mdash; the same root as <em>factory</em>; a faction is a group organized to get something done. <em>Adverse</em> is <em>ad-</em> (&ldquo;toward&rdquo;) plus <em>vertere</em> (&ldquo;to turn&rdquo;): turned against you. Note <em>mischief</em>: another word whose 1787 meaning is heavier than today's. <strong>Copia:</strong> write Madison's definition of <em>faction</em> in your own words in one sentence. Then rewrite it so that a faction can only be a minority, and write one sentence on what that change does to his argument.</div>
+        </div>
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; SUMMARY IS NOT ANALYSIS</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Ask an AI tool to summarize Federalist No. 10 and you will get a fluent, broadly accurate paragraph in about two seconds. Notice what it does not give you: whether the definition was built to produce the conclusion, or which door was left off the diagram. A summary tells you what a text says. Only a reader who has the text open can tell you how it works, and that is what your project is graded on.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 12px;">&#128211; PRACTICE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Complete the tracking exercise:</p>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #3B4E8C; padding-left: 14px;"><span style="color: #3B4E8C; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Copy Madison's definition of <em>faction</em>. Underline the part that surprised you.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #3B4E8C; padding-left: 14px;"><span style="color: #3B4E8C; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Draw his fork in your own hand: two branches, the rejections, and the one door left open.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0; border-left: 3px solid #3B4E8C; padding-left: 14px;"><span style="color: #3B4E8C; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.6;">One question you would need research to answer. If you like the property question raised above, take it &mdash; but say in one sentence what evidence would count as an answer.</div></div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; KEY IDEA</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Whoever defines the key term has already shaped the argument. When you read, find the definition before you judge the conclusion. When you write, define your terms on purpose, and be honest about what your definition rules out.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Q7 &middot; American Seminal Documents</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Federalist No. 10: Watching a Writer Define a Word</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

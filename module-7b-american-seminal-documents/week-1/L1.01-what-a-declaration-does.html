@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; What a Declaration Actually Does (Module 7B)</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q7 &middot; Module 7B</div>
+        <div style="font-size: 13px; color: #0e1c42;">American Seminal Documents</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">TYPE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Literature</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">THIS WEEK</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Declaration of Independence</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE QUESTION</div>
+        <div style="font-size: 16px; color: #0e1c42;">What happens to a promise a nation makes to itself?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LITERATURE</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">What a Declaration Actually Does</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">The Declaration of Independence is not a speech, a poem, or a statement of feelings. It is an argument, and it is built like one.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The Declaration was written by a committee of five men in a rented room in Philadelphia in 1776, working under a deadline, for an audience that included every government in Europe.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; OBJECTIVES</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> name the four parts of the Declaration and say what job each one does.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> explain why the argument has to move in that order and not another.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> identify who the document is addressed to, and find the sentence that proves it.</div></div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; MATERIALS</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">The full text of the Declaration &mdash; linked below, and free (it is in the public domain)</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">About 30 minutes</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A DOCUMENT WITH A JOB TO DO</div>
+
+        <!-- WIDGET: reflective warm-up -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP</div>
+            <div class="widget-question">Suppose you are breaking a serious agreement &mdash; quitting a team mid-season, leaving a job, walking away from a promise. You have to explain yourself in writing. What do you put first?</div>
+            <div class="widget-options">
+                <button data-response="A reasonable instinct, and it is what most people do. Notice what it costs you, though: if you open with your specific complaints, your reader can dismiss the whole thing by disputing one of them.">The list of things that went wrong</button>
+                <button data-response="This is the harder move, and it is the one the Declaration makes. If you first establish a rule everyone already agrees with, your complaints stop being a mood and start being evidence that the rule was broken.">The principle you think was violated</button>
+                <button data-response="Honest and human. But an audience that does not already trust you will read feelings as an excuse. The Declaration was written for exactly that kind of audience, which is why it opens somewhere else.">How the whole thing made you feel</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Written to be read by strangers</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">By the summer of 1776 the fighting had been going on for more than a year. The colonies did not need a document to start a war; the war had started. What they needed was something else: recognition. A rebellion is a crime. An independent nation is a country other countries can trade with, lend money to, and sign treaties with. France was watching. So the Declaration had to convince readers who had never set foot in America that these colonies were not a mob but a people with a lawful reason to separate.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The document says so itself, in its opening sentence: the separation requires &ldquo;a decent respect to the opinions of mankind&rdquo; &mdash; that is, other people are owed an explanation. Everything the document does afterward is shaped by who it is talking to.</p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 16px 0 6px;">
+            <a href="https://www.archives.gov/founding-docs/declaration-transcript" style="display: inline-block; background: #0E1C42; color: #fff; text-decoration: none; font-size: 15px; padding: 10px 20px; border-radius: 8px;">&#128279; Full text (National Archives)</a>
+            <a href="https://avalon.law.yale.edu/18th_century/declare.asp" style="display: inline-block; background: #0E1C42; color: #fff; text-decoration: none; font-size: 15px; padding: 10px 20px; border-radius: 8px;">&#128279; Full text (Avalon Project, Yale)</a>
+        </div>
+        <div style="font-size: 14px; color: #0e1c42; line-height: 1.55; text-align: center;">Read the whole document. It is about 1,300 words.</div>
+    </div>
+
+    <!-- ============ PART 2 — THE CORE VISUAL ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE FOUR PARTS, AND WHY THEY COME IN THIS ORDER</div>
+
+        <!-- ONE core visual: the argument's architecture -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 4px 0 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">THE ARCHITECTURE OF THE DECLARATION &middot; EACH PART DEPENDS ON THE ONE ABOVE IT</div>
+            <div style="background: #F8F9FC; padding: 20px 18px;">
+
+                <div style="display: flex; align-items: stretch; gap: 12px; margin-bottom: 10px;">
+                    <div style="min-width: 92px; background: #0E1C42; color: #fff; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px 6px;">
+                        <div style="font-size: 22px;">1</div><div style="font-size: 10px; letter-spacing: .1em; color: #55c8e8;">OPENING</div>
+                    </div>
+                    <div style="flex: 1; background: #FFFFFF; border: 2px solid #3B4E8C; border-radius: 8px; padding: 12px 16px;">
+                        <div style="font-size: 16px; color: #0e1c42;"><strong>&ldquo;When in the Course of human events&hellip;&rdquo;</strong></div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.55; margin-top: 4px;"><strong>Its job:</strong> say why an explanation is owed at all. This is the sentence that names the audience.</div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; color: #3B4E8C; font-size: 18px; line-height: 1;">&#9660;</div>
+
+                <div style="display: flex; align-items: stretch; gap: 12px; margin: 10px 0;">
+                    <div style="min-width: 92px; background: #C7922C; color: #fff; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px 6px;">
+                        <div style="font-size: 22px;">2</div><div style="font-size: 10px; letter-spacing: .1em;">PRINCIPLE</div>
+                    </div>
+                    <div style="flex: 1; background: #FDF3E3; border: 2px solid #C7922C; border-radius: 8px; padding: 12px 16px;">
+                        <div style="font-size: 16px; color: #0e1c42;"><strong>&ldquo;We hold these truths to be self-evident&hellip;&rdquo;</strong></div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.55; margin-top: 4px;"><strong>Its job:</strong> state a rule the reader is expected to accept without proof &mdash; that governments exist to secure certain rights, and that a government which destroys them may be replaced.</div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; color: #3B4E8C; font-size: 18px; line-height: 1;">&#9660;</div>
+
+                <div style="display: flex; align-items: stretch; gap: 12px; margin: 10px 0;">
+                    <div style="min-width: 92px; background: #3B4E8C; color: #fff; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px 6px;">
+                        <div style="font-size: 22px;">3</div><div style="font-size: 10px; letter-spacing: .1em;">EVIDENCE</div>
+                    </div>
+                    <div style="flex: 1; background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 8px; padding: 12px 16px;">
+                        <div style="font-size: 16px; color: #0e1c42;"><strong>&ldquo;He has refused&hellip; He has forbidden&hellip; He has plundered&hellip;&rdquo;</strong></div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.55; margin-top: 4px;"><strong>Its job:</strong> twenty-seven specific charges showing the rule in Part 2 was broken. This is the longest section by far &mdash; more than half the document.</div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; color: #3B4E8C; font-size: 18px; line-height: 1;">&#9660;</div>
+
+                <div style="display: flex; align-items: stretch; gap: 12px; margin-top: 10px;">
+                    <div style="min-width: 92px; background: #0E1C42; color: #fff; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px 6px;">
+                        <div style="font-size: 22px;">4</div><div style="font-size: 10px; letter-spacing: .1em; color: #55c8e8;">CONCLUSION</div>
+                    </div>
+                    <div style="flex: 1; background: #FFFFFF; border: 2px solid #3B4E8C; border-radius: 8px; padding: 12px 16px;">
+                        <div style="font-size: 16px; color: #0e1c42;"><strong>&ldquo;We, therefore&hellip; solemnly publish and declare&hellip;&rdquo;</strong></div>
+                        <div style="font-size: 14px; color: #1a2340; line-height: 1.55; margin-top: 4px;"><strong>Its job:</strong> the actual claim. Everything before it exists to make this sentence sound like a conclusion rather than a decision.</div>
+                    </div>
+                </div>
+
+            </div>
+            <div style="background: #F8F9FC; font-size: 13px; color: #0e1c42; text-align: center; padding: 0 18px 14px; line-height: 1.6;">Read from the bottom up and you can see the design: the claim needs evidence, the evidence needs a rule, and the rule needs a reason to be stated at all.</div>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The order is the argument</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Open with the twenty-seven grievances and you have a complaint letter: a reader who disagrees with charge number nine can start arguing there and never reach your point. Open with &ldquo;we declare ourselves independent&rdquo; and you have an announcement, which invites the reply <em>says who?</em></p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Putting the principle second does something specific. It gets the reader to agree to a general rule <em>before</em> they know what it will be used to justify. By the time the grievances arrive, the reader has already accepted the standard by which they will be judged. That is not a trick; it is how a well-built argument works. It is the same move as a disputation that states the question before answering it.</p>
+
+        <!-- WIDGET: evaluative single-select -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="c" data-hint="All four options describe something the sentence does. Ask which one the rest of the document depends on. What would collapse if this part were missing?">
+                <div class="widget-row-prompt">1. What is the main job of the &ldquo;self-evident truths&rdquo; sentence?</div>
+                <div class="widget-options">
+                    <button data-choice="a">It makes the document sound dignified and memorable</button>
+                    <button data-choice="b">It lists the rights the colonists had lost</button>
+                    <button data-choice="c" data-fb="Yes. It sets the standard. Without an agreed rule, the twenty-seven grievances are just a list of things somebody disliked. The rule is what turns them into evidence.">It establishes the rule the grievances will be measured against</button>
+                    <button data-choice="d">It explains what the King had done wrong</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Think about who needed convincing in 1776. The colonists already agreed with themselves. Look again at the phrase about the opinions of mankind.">
+                <div class="widget-row-prompt">2. The Declaration says the separation requires &ldquo;a decent respect to the opinions of mankind.&rdquo; What does that phrase tell you about the intended audience?</div>
+                <div class="widget-options">
+                    <button data-choice="a">It is written mainly for King George III</button>
+                    <button data-choice="b" data-fb="Right. The document is addressed outward, to other nations and to history. That is why it argues from a general principle rather than from local complaints a foreign reader would not care about.">It is written for readers outside the colonies whose recognition was needed</button>
+                    <button data-choice="c">It is written for soldiers in the Continental Army</button>
+                    <button data-choice="d">It is written for future generations of Americans only</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Count the words. One section is more than half the document. Why would the writers spend most of their space there?">
+                <div class="widget-row-prompt">3. Why is the grievance section so much longer than the rest?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Yes. Evidence is what a skeptical reader wants most of. The principle can be stated in one sentence; proving the principle was violated takes twenty-seven.">Because evidence is what a doubtful reader needs most of</button>
+                    <button data-choice="b">Because the writers could not agree on how to shorten it</button>
+                    <button data-choice="c">Because eighteenth-century documents were always long</button>
+                    <button data-choice="d">Because the grievances were the most interesting part to read</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>self-evident</strong> &mdash; true in a way that needs no proof. &nbsp;&middot;&nbsp; <strong>unalienable</strong> &mdash; not able to be taken away or given up. &nbsp;&middot;&nbsp; <strong>usurpation</strong> &mdash; seizing power that is not yours to hold. &nbsp;&middot;&nbsp; <strong>tyranny</strong> &mdash; rule by force rather than by law. &nbsp;&middot;&nbsp; <strong>consent</strong> &mdash; agreement freely given.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>unalienable</em> comes from Latin <em>alienare</em>, &ldquo;to transfer to another&rdquo; &mdash; so an unalienable right is one you cannot hand over even if you want to. <em>Consent</em> comes from <em>con-</em> (&ldquo;together&rdquo;) plus <em>sentire</em> (&ldquo;to feel&rdquo;); the same root gives us <em>sentiment</em>. <strong>Copia:</strong> take the sentence <em>&ldquo;The government took away our rights,&rdquo;</em> and rewrite it twice: once as a private complaint, and once as a formal charge intended for a foreign reader.</div>
+        </div>
+    </div>
+
+    <!-- Practice -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 12px;">&#128211; MARK UP THE DOCUMENT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Mark where each of the four parts begins and ends, using the first few words of each part as a marker. Then write:</p>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #3B4E8C; padding-left: 14px;"><span style="color: #3B4E8C; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Part 1 begins &ldquo;When in the Course&hellip;&rdquo; and ends where?</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #3B4E8C; padding-left: 14px;"><span style="color: #3B4E8C; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Copy the one sentence you would keep if you had to cut the document to a single line, and say why that one.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #3B4E8C; padding-left: 14px;"><span style="color: #3B4E8C; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.6;">One question you still have about the document.</div></div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; KEY IDEA</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A document that changed the world is built from nameable moves: state the rule, show it was broken, draw the conclusion. Famous writing is made of the same parts as ordinary writing, arranged with more care.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Q7 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">What a Declaration Actually Does</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

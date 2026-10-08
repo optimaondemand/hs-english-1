@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Two Hundred Seventy-Two Words (Module 7B)</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q7 &middot; Module 7B</div>
+        <div style="font-size: 13px; color: #0e1c42;">American Seminal Documents</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">TYPE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Literature</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">THIS WEEK</div>
+        <div style="font-size: 17px; color: #0e1c42;">Three American Speeches</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE QUESTION</div>
+        <div style="font-size: 17px; color: #0e1c42;">What happens to a promise a nation makes to itself?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LITERATURE</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Two Hundred Seventy-Two Words</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">The main speaker at Gettysburg that day talked for two hours. Lincoln spoke for about two minutes. Only one of those speeches is remembered.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">This is the shortest text in the course and the most tightly built. The speech is not, in the end, a speech about a cemetery.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; OBJECTIVES</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> explain how a speaker's choices of structure and wording advance a purpose.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> identify the moment a speech turns from its stated occasion to its real subject.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> explain why Lincoln dates the nation from 1776 rather than 1787, and what that choice accomplishes.</div></div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; MATERIALS</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #C7922C; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.6;">The full text, printed below (public domain), and linked at the Library of Congress</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #C7922C; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.6;">About 30 minutes. Read the speech aloud at least once; it was written to be heard.</div></div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE WHOLE THING</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">On 19 November 1863, four and a half months after the battle, a new national cemetery was dedicated at Gettysburg. Edward Everett, the most admired orator in the country, gave the main address: two hours, roughly 13,600 words. Then the President was invited to add &ldquo;a few appropriate remarks.&rdquo; Here they are, complete.</p>
+        <div style="background: #14213f; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
+            <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .16em; margin-bottom: 12px;">THE GETTYSBURG ADDRESS &middot; 19 NOVEMBER 1863 &middot; 272 WORDS</div>
+            <div style="font-size: 17px; color: #f4f1e8; line-height: 1.95;">
+                <span style="color:#e6b955;">Four score and seven years ago</span> our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.<br><br>
+                <span style="color:#e6b955;">Now</span> we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this.<br><br>
+                <span style="color:#e6b955;">But, in a larger sense,</span> we can not dedicate&mdash;we can not consecrate&mdash;we can not hallow&mdash;this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us&mdash;that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion&mdash;that we here highly resolve that these dead shall not have died in vain&mdash;that this nation, under God, shall have a new birth of freedom&mdash;and that government of the people, by the people, for the people, shall not perish from the earth.
+            </div>
+            <div style="font-size: 14px; color: #8ea2c9; margin-top: 14px; line-height: 1.6;">Three highlighted phrases. Each one starts a new section, and each section is doing a different job.</div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 16px 0 6px;">
+            <a href="https://www.loc.gov/item/rbpe.24404500/" style="display: inline-block; background: #0E1C42; color: #fff; text-decoration: none; font-size: 15px; padding: 10px 20px; border-radius: 8px;">&#128279; The Gettysburg Address (Library of Congress)</a>
+            <a href="https://avalon.law.yale.edu/19th_century/gettyb.asp" style="display: inline-block; background: #0E1C42; color: #fff; text-decoration: none; font-size: 15px; padding: 10px 20px; border-radius: 8px;">&#128279; Text and the five manuscript copies (Avalon Project, Yale)</a>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; PAST, PRESENT, TASK</div>
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 4px 0 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">THE SHAPE OF THE SPEECH &middot; NOTICE WHERE THE WORDS GO</div>
+            <div style="background: #F8F9FC; padding: 20px 18px 14px; overflow-x: auto;">
+                <div style="min-width: 540px;">
+                    <div style="display: flex; align-items: flex-end; gap: 10px; height: 150px;">
+                        <div style="flex: 30; display: flex; flex-direction: column; justify-content: flex-end; text-align: center;">
+                            <div style="font-size: 13px; color: #0e1c42; font-weight: bold; margin-bottom: 6px;">PAST<br><span style="font-weight: normal;">30 words</span></div>
+                            <div style="height: 34px; background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 8px 8px 0 0;"></div>
+                        </div>
+                        <div style="flex: 70; display: flex; flex-direction: column; justify-content: flex-end; text-align: center;">
+                            <div style="font-size: 13px; color: #0e1c42; font-weight: bold; margin-bottom: 6px;">PRESENT<br><span style="font-weight: normal;">about 70 words</span></div>
+                            <div style="height: 66px; background: #EEF1F8; border: 2px solid #3B4E8C; border-radius: 8px 8px 0 0;"></div>
+                        </div>
+                        <div style="flex: 172; display: flex; flex-direction: column; justify-content: flex-end; text-align: center;">
+                            <div style="font-size: 13px; color: #8A6410; font-weight: bold; margin-bottom: 6px;">THE TASK OF THE LIVING<br><span style="font-weight: normal;">about 172 words</span></div>
+                            <div style="height: 132px; background: #FDF3E3; border: 2px solid #C7922C; border-radius: 8px 8px 0 0; display: flex; align-items: flex-start; justify-content: center;"><span style="font-size: 13px; color: #8A6410; margin-top: 8px;">the real subject</span></div>
+                        </div>
+                    </div>
+                    <div style="font-size: 13px; color: #0e1c42; text-align: center; margin-top: 12px; line-height: 1.6;">Two-thirds of a dedication speech is about what the audience must do next. The occasion is the doorway, not the room.</div>
+                </div>
+            </div>
+        </div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The turn</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Everything pivots on four words: <em>But, in a larger sense.</em> Up to that point Lincoln is doing exactly what he was invited to do &mdash; dedicating a cemetery. After it, he says the thing he has come to say: that this ground cannot be dedicated by anyone standing here, because the men who fought have already done it, and therefore the only dedication left available is the dedication of the living to an unfinished job.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Watch how he uses a single word to make that turn work. <em>Dedicate</em> appears six times. First it means what it means at a cemetery: to set ground apart in honor. By the end it means something else entirely: to commit yourself to a task. The word is carried across the whole speech and quietly changes jobs while the audience is listening. That is the same move you watched Madison make with <em>faction</em>, executed at speed.</p>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Four score and seven</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Now the choice that matters most, and it is easy to read past. Four score and seven years before 1863 is 1776 &mdash; the Declaration. Not 1787, not the Constitution. Lincoln dates the birth of the nation from the document that says all men are created equal rather than from the document that organized the government and accommodated slavery.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">That single arithmetic choice does an enormous amount of work. It makes the war a test of whether the 1776 promise can hold, rather than a dispute about the terms of the 1787 arrangement. It puts equality at the origin of the country instead of treating it as a later addition. And it sets up the last line: a <em>new birth</em> of freedom, which only makes sense if there was a first birth to be born again from.</p>
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 16px 20px; margin: 16px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#128279; THE THREAD OF THIS MODULE</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.65;">In Week 1 you noticed the gap between <em>all men are created equal</em> and the fact of slavery, and that the Congress struck Jefferson's passage on the slave trade. Here is that gap again, eighty-seven years later, at the center of a war. Lincoln's move is to treat the promise as binding and the failure as unfinished business. Whether a nation can do that &mdash; hold itself to words it has not lived up to &mdash; is the question this whole module is built around, and it returns one more time in Week 4.</div>
+        </div>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="c" data-hint="Do the arithmetic first: what year is four score and seven before 1863? Then ask which document that year points to, and what that document says.">
+                <div class="widget-row-prompt">1. What does dating the nation from 1776 rather than 1787 accomplish?</div>
+                <div class="widget-options">
+                    <button data-choice="a">It makes the country sound older and more established</button>
+                    <button data-choice="b">It avoids mentioning the Constitution, which was unpopular in 1863</button>
+                    <button data-choice="c" data-fb="Yes. It locates the nation's origin in the document that declares all men equal, which makes the war a test of that promise rather than an argument about the machinery built later.">It makes equality the nation's founding commitment, so the war becomes a test of that commitment</button>
+                    <button data-choice="d">It was simply the date most of his listeners would have known</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Count what comes before the phrase and what comes after. Which side of it holds most of the speech?">
+                <div class="widget-row-prompt">2. What is the function of &ldquo;But, in a larger sense&rdquo;?</div>
+                <div class="widget-options">
+                    <button data-choice="a">It signals that Lincoln is about to conclude</button>
+                    <button data-choice="b" data-fb="Right. It is the hinge. Before it, he performs the occasion he was invited to. After it &mdash; two-thirds of the speech &mdash; he redirects the audience from honoring the dead to obligating the living.">It turns the speech from its stated occasion to its actual subject</button>
+                    <button data-choice="c">It softens a claim that might have offended the audience</button>
+                    <button data-choice="d">It introduces the names of the men who died</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="d" data-hint="Track one word through the speech and notice that it does not mean the same thing at the end as it did at the start.">
+                <div class="widget-row-prompt">3. Lincoln uses <em>dedicate</em> six times. What is the effect?</div>
+                <div class="widget-options">
+                    <button data-choice="a">It makes the speech easier to memorize</button>
+                    <button data-choice="b">It emphasizes how solemn the occasion was</button>
+                    <button data-choice="c">It shows he had a limited vocabulary under pressure</button>
+                    <button data-choice="d" data-fb="Yes. The word shifts from setting ground apart to committing yourself to a task, and the repetition is what lets the shift happen without the audience noticing a substitution has been made.">The word's meaning shifts across the speech, from consecrating ground to committing to a task</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>consecrate</strong> &mdash; to set apart as sacred. &nbsp;&middot;&nbsp; <strong>hallow</strong> &mdash; to make or honor as holy. &nbsp;&middot;&nbsp; <strong>proposition</strong> &mdash; a statement put forward to be proved or tested. &nbsp;&middot;&nbsp; <strong>score</strong> &mdash; a group of twenty. &nbsp;&middot;&nbsp; <strong>resolve</strong> (verb) &mdash; to decide firmly.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>consecrate</em> and <em>hallow</em> mean nearly the same thing, one from Latin (<em>sacrare</em>, to make sacred) and one from Old English (<em>halgian</em>, from <em>halig</em>, holy). Lincoln uses both, back to back, which is an old habit in English &mdash; pairing a Latin word with its plain English twin. <em>Proposition</em> is worth noticing: it comes from Latin <em>proponere</em>, &ldquo;to put forward,&rdquo; and in logic it names a statement to be <em>tested</em>. Lincoln does not call equality a truth here. He calls it a proposition, and the war is the test. <strong>Copia:</strong> rewrite <em>&ldquo;we can not dedicate&mdash;we can not consecrate&mdash;we can not hallow&mdash;this ground&rdquo;</em> as a single plain sentence. Then write one sentence on what is lost.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 12px;">&#128211; PRACTICE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Write:</p>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #3B4E8C; padding-left: 14px;"><span style="color: #3B4E8C; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Mark the three sections on your own copy and count the words in each.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #3B4E8C; padding-left: 14px;"><span style="color: #3B4E8C; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Find every use of <em>dedicate</em> and write, in your own words, what it means in the first instance and what it means in the last.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0; border-left: 3px solid #3B4E8C; padding-left: 14px;"><span style="color: #3B4E8C; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.6;">One sentence: what is the speech asking its audience to <em>do</em>?</div></div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; KEY IDEA</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A short text is not a simple one. Everything in this speech is load-bearing, down to the arithmetic in the first four words.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Q7 &middot; American Seminal Documents</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Two Hundred Seventy-Two Words</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
