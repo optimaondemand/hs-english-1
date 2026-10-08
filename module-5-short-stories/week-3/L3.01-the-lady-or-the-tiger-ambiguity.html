@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; The Lady, or the Tiger? Ambiguity and the Ending That Never Arrives (Module 5)</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q5 &middot; Module 5</div>
+        <div style="font-size: 13px; color: #0e1c42;">Short Story Explorations</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">TYPE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Literature</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">THIS WEEK'S STORY</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Lady, or the Tiger? (Stockton, 1882)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE QUESTION</div>
+        <div style="font-size: 16px; color: #0e1c42;">What can a small story hold?</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LITERATURE</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Lady, or the Tiger? Ambiguity and the Ending That Never Arrives</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Can an ending the author refuses to write be the most powerful ending of all?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Jacobs showed how a planted detail pays off. Frank R. Stockton shows the opposite trick: a story built so that its payoff never comes. "The Lady, or the Tiger?" uses the technique that made readers write angry letters to its author for decades: <strong>ambiguity</strong>, the deliberate refusal to resolve the question the story was built to ask.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; OBJECTIVES</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> define ambiguity as a deliberate technique and tell it apart from vagueness.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> describe the king's arena system and the impossible position the princess is placed in.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> gather textual evidence for both readings of the ending as I read.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> turn a vague curiosity into a question I could actually answer, and change it when it does not work.</div></div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; MATERIALS</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">About 45 minutes: 20 for the story, 25 for the lesson</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE ARENA, THE PRINCESS, AND THE STORY THAT STOPS</div>
+
+        <!-- WIDGET 1: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP</div>
+            <div class="widget-question">Think of a story you have met that ended without answering its own central question: a film that cut to black, a series that never revealed the truth. How did that ending sit with you?</div>
+            <div class="widget-options">
+                <button data-response="Stockton counts on that frustration: he wants the reader to need the answer badly enough to argue for one.">It frustrated me. I wanted the answer.</button>
+                <button data-response="Exactly. An unresolved ending keeps working on you after a tidy one would have faded. Stockton's story has kept readers arguing since 1882, which is longer than most answered questions last.">It stayed with me longer than a tidy ending would have.</button>
+                <button data-response="Some open endings are just unfinished. True ambiguity is built with evidence on both sides, on purpose.">It felt like the author gave up.</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A kingdom where justice is a guessing game</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Stockton opens in a fairy-tale kingdom ruled by a king he calls <strong>semi-barbaric</strong>: half polished by "distant Latin neighbors," half wild. This king is "a man of exuberant fancy, and, withal, of an authority so irresistible that, at his will, he turned his varied fancies into facts." His grandest fancy is a public arena where the accused decides his own case. Two doors stand side by side. Behind one waits a hungry tiger; behind the other, a lady chosen as the man's instant bride. The accused opens whichever door he pleases. Guilt or innocence is settled, in Stockton's sly phrase, "by the decrees of an impartial and incorruptible chance." The king calls this perfect fairness.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Into the arena comes a young courtier who committed the kingdom's most dangerous crime: he loved the king's daughter. On the day of his trial, one person in the arena knows the secret of the doors. The princess, working with "gold, and the power of a woman's will," has found out which door hides the tiger and which the lady. And she knows something else: the lady behind the door is beautiful, and the princess hates her. Her lover looks up, sees at once that she knows, and asks with his eyes: <em>Which?</em> She makes a slight, quick motion toward the right. He walks to the door on the right and opens it. And there Stockton stops the story, turns to face the reader, and asks his famous last question: "Which came out of the opened door,&mdash;the lady, or the tiger?"</p>
+
+        <!-- Reading step (PD link) -->
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 16px 20px; margin: 16px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#128214; READ THE STORY NOW (ABOUT 20 MINUTES)</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.65; margin-bottom: 12px;">Read "The Lady, or the Tiger?" in full at the free public-domain text below. Keep two running lists as you read: moments that suggest the princess sent him to the <em>lady</em>, and moments that suggest she sent him to the <em>tiger</em>. Both lists are used in the diagram below and in this week's discussion.</div>
+            <div style="text-align: center;">
+                <a href="https://en.wikisource.org/wiki/The_Lady,_or_the_Tiger%3F" style="display: inline-block; background: #0E1C42; color: #ffffff; text-decoration: none; font-size: 16px; padding: 12px 26px; border-radius: 8px;">&#128279; Open the story (public-domain text, Wikisource)</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; AMBIGUITY: A TECHNIQUE, NOT A SHRUG</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Ambiguity</strong> is the deliberate arrangement of a text so that two or more readings are equally supported, and the question of which is right is handed to the reader. It is not vagueness. A vague story gives you too little to decide with; an ambiguous story gives you plenty, on both sides, in careful balance. Stockton published this story in <em>The Century Magazine</em> in 1882, and readers wrote to him for the rest of his life demanding the answer. He refused, because the refusal <em>is</em> the story. The tale is not really about a door. It is about what the princess loves more, her lover's life or her exclusive claim on him, and Stockton loads the evidence so evenly that your answer says as much about you as about her.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Study the two doors below. Every item under each door is real evidence from the text. This is the balance you are up against.</p>
+
+        <!-- ONE core visual: two-door decision diagram -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">THE TWO DOORS &middot; WHAT THE TEXT SUPPORTS ON EACH SIDE</div>
+            <div style="background: #F8F9FC; padding: 20px 16px; overflow-x: auto;">
+                <div style="display: flex; gap: 14px; min-width: 560px; align-items: stretch;">
+                    <!-- Door 1: the lady reading -->
+                    <div style="flex: 1; text-align: center;">
+                        <div style="width: 110px; height: 150px; margin: 0 auto 10px; background: linear-gradient(180deg, #FDF3E3 0%, #F6E3C0 100%); border: 3px solid #C7922C; border-radius: 55px 55px 0 0; position: relative;">
+                            <div style="position: absolute; right: 14px; top: 72px; width: 9px; height: 9px; border-radius: 50%; background: #8A6410;"></div>
+                            <div style="position: absolute; left: 0; right: 0; top: 26px; font-size: 12px; color: #8A6410; letter-spacing: .08em;">READING 1</div>
+                        </div>
+                        <div style="font-size: 15px; color: #8A6410; font-weight: bold; margin-bottom: 8px;">SHE CHOSE THE LADY: LOVE WINS</div>
+                        <div style="background: #FFFFFF; border: 1px solid #C7922C; border-radius: 8px; padding: 12px 14px; text-align: left; font-size: 13px; color: #1a2340; line-height: 1.65;">
+                            &#9654; She loves him with "an ardor that had enough of barbarism in it to make it exceedingly warm and strong."<br>
+                            &#9654; She has "started in wild horror, and covered her face with her hands" at the vision of the tiger's "cruel fangs."<br>
+                            &#9654; She paid a real price (gold, will, days of agony) to be able to save him.<br>
+                            &#9654; He trusts her "without the slightest hesitation." Souls "that are one" may deserve that trust.
+                        </div>
+                    </div>
+                    <!-- Center divider -->
+                    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-width: 110px;">
+                        <div style="width: 44px; height: 44px; border-radius: 50%; background: #0E1C42; color: #FFFFFF; font-size: 20px; display: flex; align-items: center; justify-content: center;">?</div>
+                        <div style="font-size: 12px; color: #0e1c42; text-align: center; margin-top: 10px; line-height: 1.5;">The princess knows.<br>Stockton will not tell.<br><strong>You must argue it.</strong></div>
+                    </div>
+                    <!-- Door 2: the tiger reading -->
+                    <div style="flex: 1; text-align: center;">
+                        <div style="width: 110px; height: 150px; margin: 0 auto 10px; background: linear-gradient(180deg, #EEF1F8 0%, #D8DFF0 100%); border: 3px solid #3B4E8C; border-radius: 55px 55px 0 0; position: relative;">
+                            <div style="position: absolute; left: 14px; top: 72px; width: 9px; height: 9px; border-radius: 50%; background: #3B4E8C;"></div>
+                            <div style="position: absolute; left: 0; right: 0; top: 26px; font-size: 12px; color: #3B4E8C; letter-spacing: .08em;">READING 2</div>
+                        </div>
+                        <div style="font-size: 15px; color: #3B4E8C; font-weight: bold; margin-bottom: 8px;">SHE CHOSE THE TIGER: JEALOUSY WINS</div>
+                        <div style="background: #FFFFFF; border: 1px solid #3B4E8C; border-radius: 8px; padding: 12px 14px; text-align: left; font-size: 13px; color: #1a2340; line-height: 1.65;">
+                            &#9654; She is "hot-blooded" and semi-barbaric, with "the intensity of the savage blood" of "wholly barbaric ancestors."<br>
+                            &#9654; She "hated the woman who blushed and trembled behind that silent door."<br>
+                            &#9654; "But how much oftener had she seen him at the other door!" She has "gnashed her teeth, and torn her hair" imagining his "rapturous delight" at the lady.<br>
+                            &#9654; She has consoled herself that he could "wait for her" in the afterlife of "semi-barbaric futurity."
+                        </div>
+                    </div>
+                </div>
+                <div style="font-size: 13px; color: #0e1c42; text-align: center; margin: 16px 4px 4px; line-height: 1.6;">One gesture, two fully supported readings: that balance is ambiguity built on purpose. Add at least one piece of evidence of your own to each side.</div>
+            </div>
+        </div>
+
+        <!-- WIDGET 2: evaluative single-select (recolored) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="b" data-hint="Re-read the definition at the top of Part 2. The key words are deliberate and equally supported.">
+                <div class="widget-row-prompt">1. Ambiguity, as a literary technique, is best described as&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a">a story that gives the reader too little information to decide anything</button>
+                    <button data-choice="b" data-fb="Yes. Ambiguity is engineered balance: plenty of evidence, loaded evenly on both sides, so the choice passes to the reader.">a deliberate arrangement of evidence so two readings are equally supported</button>
+                    <button data-choice="c">an ending the author did not have time to finish</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Think about what the king calls the arena and what the story actually shows. The narrator's praise of the system has an edge to it.">
+                <div class="widget-row-prompt">2. When the narrator says the arena delivers justice "by the decrees of an impartial and incorruptible chance," the story is&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a">sincerely praising the king's wisdom</button>
+                    <button data-choice="b">proving the accused deserved his fate</button>
+                    <button data-choice="c" data-fb="Right. The praise is ironic. Chance cannot weigh guilt at all, and this trial is not even chance: one watcher knows the doors, and she is anything but impartial.">using irony: the system is called fair while the story shows it is not</button>
+                    <button data-choice="d">explaining a real historical court</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>ambiguity</strong>: the deliberate arrangement of a text so two or more readings are equally supported. &nbsp;&middot;&nbsp; <strong>semi-barbaric</strong>: half civilized, half savage; Stockton's word for the king, the princess, and perhaps the reader who demands blood or a wedding. &nbsp;&middot;&nbsp; <strong>impartial</strong>: favoring no side; what the king claims his arena is. &nbsp;&middot;&nbsp; <strong>fervent</strong>: burning with feeling; the princess has "a soul as fervent and imperious as his own." &nbsp;&middot;&nbsp; <strong>deliberation</strong>: slow, careful weighing of a choice; her signal took an instant, "but it had been made after days and nights of anguished deliberation."</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>ambiguity</em> comes from Latin <em>ambigere</em>, "to drive both ways": an ambiguous text drives in two directions at once. <em>Semi-</em> is Latin for "half," and <em>barbaric</em> comes from Greek <em>barbaros</em>, the Greeks' word for foreigners whose speech sounded like "bar bar." <em>Impartial</em> is Latin <em>in-</em> ("not") + <em>pars</em> ("side"): taking no side. <em>Fervent</em> comes from Latin <em>fervere</em>, "to boil." <em>Deliberation</em> comes from Latin <em>libra</em>, "the scales": to deliberate is to weigh. <strong>Copia:</strong> take Stockton's sentence <em>"Her decision had been indicated in an instant, but it had been made after days and nights of anguished deliberation,"</em> and rewrite it three ways: once with a synonym for <em>deliberation</em>, once with the two halves reversed, and once in casual, modern register.</div>
+        </div>
+
+        <!-- AI callout (red frame, per components.md) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND AMBIGUOUS ENDINGS</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">If you ask an AI tool which door the princess chose, it will summarize both readings and decline to pick, because the text supports both. That is an accurate description of the evidence. What no tool can supply is <em>your</em> verdict and your reasons for it. Stockton addressed his last question to the reader.</div>
+        </div>
+    </div>
+
+    <!-- ============ PART 3 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; A QUESTION YOU COULD ACTUALLY ANSWER</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><em>Which door?</em> is a question no amount of research will settle. Stockton removed the answer on purpose. No library holds it.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">But plenty of nearby questions <em>do</em> have answers sitting in the record. What did Stockton himself say when readers demanded an ending? How did people in 1882 react? Did other writers try to finish it for him? Learning to tell those two kinds of question apart is the first real research skill, and it saves you from hunting for something that was never there.</p>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Narrowing a curiosity into a question</h3>
+        <div style="overflow-x: auto;"><table style="width: 100%; border-collapse: collapse; min-width: 460px;">
+            <tbody>
+                <tr><td style="padding: 9px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>Too broad</strong></td><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">&ldquo;Tell me about Frank Stockton.&rdquo; Thousands of results, none of them aimed at anything.</td></tr>
+                <tr><td style="padding: 9px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>Answerable</strong></td><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">&ldquo;How did readers respond to the ending when the story appeared in 1882?&rdquo; Specific, and the evidence exists.</td></tr>
+                <tr><td style="padding: 9px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>Too narrow</strong></td><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">&ldquo;What did Stockton eat the morning he wrote it?&rdquo; Probably answerable, and worth nothing.</td></tr>
+                <tr><td style="padding: 9px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>Not researchable</strong></td><td style="padding: 9px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">&ldquo;Which door did she choose?&rdquo; A fine question to argue. Nothing you find will decide it.</td></tr>
+            </tbody>
+        </table></div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Two kinds of source</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A <strong>primary source</strong> comes from the moment itself: the story as Stockton published it, a letter an 1882 reader sent to the magazine, an interview he gave. A <strong>secondary source</strong> is someone studying that moment afterward: a scholar's article about how the ending was received. You need both, and you should always know which one you are holding.</p>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Expect to change the question</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Your first question almost never survives the first search. Too broad and you drown; too narrow and nothing comes back. Rewriting it after you see what is actually out there is not failing at research. It <em>is</em> research. Experienced researchers expect to revise the question two or three times before it fits the evidence.</p>
+
+        <!-- WIDGET: evaluative single-select -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="c" data-hint="Two of these are worth arguing but nothing you could find would settle them. Look for the one with evidence sitting somewhere in the record.">
+                <div class="widget-row-prompt">1. Which of these could research actually answer?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Which door did the princess choose?</button>
+                    <button data-choice="b">Was the princess right to signal as she did?</button>
+                    <button data-choice="c" data-fb="Yes. Reviews, letters, and Stockton's own remarks survive, so this one has an answer in the record. The other two are arguments, not questions with findable answers.">How did readers react to the ending in 1882?</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Ask which one is evidence from the time itself, and which one is a later study of that time.">
+                <div class="widget-row-prompt">2. You find an 1882 letter from an angry reader and a 2004 scholarly article about the story's reception. Which is the primary source?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Right. The letter is a piece of the 1882 reaction itself. The 2004 article studies that reaction from a distance.">The 1882 letter</button>
+                    <button data-choice="b">The 2004 article</button>
+                    <button data-choice="c">Both, since both are about the story</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; NEXT STEP</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Complete the copia rewrite</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Rewrite Stockton's sentence the three ways described under Word Study.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Keep both evidence lists growing</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">The character-motivation lesson puts the princess's motives under a magnifying glass and uses both lists as raw material.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; KEY IDEA</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Ambiguity is not a missing ending. It is two endings built with equal care, and a question handed to the reader.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Q5 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">The Lady, or the Tiger? Ambiguity and the Ending That Never Arrives</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

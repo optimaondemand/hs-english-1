@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Testing What You Read (Module 5)</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q5 &middot; Module 5</div>
+        <div style="font-size: 13px; color: #0e1c42;">Short Story Explorations</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Research and reasoning</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42;">"An Occurrence at Owl Creek Bridge," Ambrose Bierce (1890)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">THIS WEEK'S CRAFT</div>
+        <div style="font-size: 16px; color: #0e1c42;">The twist ending, played fair</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">RESEARCH AND REASONING</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Testing What You Read</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Farquhar's escape was vivid, detailed, and completely convincing. It was also not happening. How do you tell the difference from the inside?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Bierce spends most of a story inside an account that felt airtight and was false. This lesson covers five moves that make a weak argument sound strong, and a four-question check for deciding whether a source deserves trust.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; OBJECTIVES</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> explain why an argument sounding convincing is not evidence that it is sound.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> name five common faulty moves and spot them in a real sentence.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> run a four-question check on a source before I rely on it.</div></div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; MATERIALS</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your JSTOR login</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">About 20 minutes</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; PLAUSIBLE IS NOT THE SAME AS TRUE</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Bierce gives Farquhar's escape everything a true account would have: physical detail, a sequence that follows, sensations you can feel. It holds together. It is still not happening. The story works because a false account, told well, is indistinguishable from a true one <em>while you are inside it</em>.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Arguments do this too. A claim can be organized, confident, and well written, and still rest on a move that does no real work. Below are five of those moves. They are not rare or exotic.</p>
+
+        <!-- ONE core visual: navy chalkboard of real examples -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">FIVE MOVES THAT SOUND LIKE ARGUMENTS &middot; AND WHAT EACH ONE ACTUALLY DOES</div>
+            <div style="background: #12224E; padding: 20px 22px;">
+
+                <div style="border-left: 4px solid #C7922C; padding-left: 16px; margin-bottom: 20px;">
+                    <div style="font-size: 17px; color: #F5C86B; margin-bottom: 6px;"><strong>Attacking the person</strong> &nbsp;<span style="font-size: 13px; color: #9FD9F0;">ad hominem</span></div>
+                    <div style="font-size: 16px; color: #FFFFFF; line-height: 1.6; font-style: italic; margin-bottom: 6px;">&ldquo;You cannot take her argument about the school schedule seriously. She has been late four times this year.&rdquo;</div>
+                    <div style="font-size: 15px; color: #CFE0F5; line-height: 1.55;">Her lateness may be true and is still not a reply. The argument was about the schedule; the answer was about her.</div>
+                </div>
+
+                <div style="border-left: 4px solid #C7922C; padding-left: 16px; margin-bottom: 20px;">
+                    <div style="font-size: 17px; color: #F5C86B; margin-bottom: 6px;"><strong>Loaded language</strong></div>
+                    <div style="font-size: 16px; color: #FFFFFF; line-height: 1.6; font-style: italic; margin-bottom: 6px;">&ldquo;Only a reckless school board would gamble with a scheme like this.&rdquo;</div>
+                    <div style="font-size: 15px; color: #CFE0F5; line-height: 1.55;">Swap in <em>cautious</em>, <em>consider</em>, and <em>proposal</em>, and the sentence makes no argument at all. The work was being done by the word choice, not by reasons.</div>
+                </div>
+
+                <div style="border-left: 4px solid #C7922C; padding-left: 16px; margin-bottom: 20px;">
+                    <div style="font-size: 17px; color: #F5C86B; margin-bottom: 6px;"><strong>The slippery slope</strong></div>
+                    <div style="font-size: 16px; color: #FFFFFF; line-height: 1.6; font-style: italic; margin-bottom: 6px;">&ldquo;If we let students revise one essay, soon nothing will have a deadline and no one will learn anything.&rdquo;</div>
+                    <div style="font-size: 15px; color: #CFE0F5; line-height: 1.55;">A chain of steps is asserted, and no step is defended. The first move may be fine; the disaster at the end is doing the persuading.</div>
+                </div>
+
+                <div style="border-left: 4px solid #C7922C; padding-left: 16px; margin-bottom: 20px;">
+                    <div style="font-size: 17px; color: #F5C86B; margin-bottom: 6px;"><strong>The straw man</strong></div>
+                    <div style="font-size: 16px; color: #FFFFFF; line-height: 1.6; font-style: italic; margin-bottom: 6px;">&ldquo;He wants a later start time, so apparently he thinks students should just sleep all day.&rdquo;</div>
+                    <div style="font-size: 15px; color: #CFE0F5; line-height: 1.55;">A weaker, sillier version of his claim is built and then knocked over. The real claim is left standing, untouched.</div>
+                </div>
+
+                <div style="border-left: 4px solid #C7922C; padding-left: 16px;">
+                    <div style="font-size: 17px; color: #F5C86B; margin-bottom: 6px;"><strong>The red herring</strong></div>
+                    <div style="font-size: 16px; color: #FFFFFF; line-height: 1.6; font-style: italic; margin-bottom: 6px;">&ldquo;Why are we arguing about the bell schedule when the parking lot has been a mess all year?&rdquo;</div>
+                    <div style="font-size: 15px; color: #CFE0F5; line-height: 1.55;">The parking lot may well be a mess. It is a different subject, introduced to move you off this one.</div>
+                </div>
+
+            </div>
+            <div style="background: #F8F9FC; font-size: 13px; color: #0e1c42; text-align: center; padding: 12px 18px; line-height: 1.6;">A useful habit: when a sentence makes you nod fast, slow down and ask what it actually established.</div>
+        </div>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; FOUR QUESTIONS TO ASK A SOURCE</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Finding a source on JSTOR is a good sign. It is not a verdict. Before you lean on anything, ask it four questions.</p>
+
+        <div style="overflow-x: auto;"><table style="width: 100%; border-collapse: collapse; min-width: 460px;">
+            <tbody>
+                <tr><td style="padding: 10px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>C</strong>urrency</td><td style="padding: 10px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">When was it written? For Bierce's life, older scholarship can hold up fine. For anything still being argued about, recent work matters.</td></tr>
+                <tr><td style="padding: 10px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>R</strong>elevance</td><td style="padding: 10px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">Does it address your actual question, or just mention your topic on the way somewhere else? The abstract usually settles this.</td></tr>
+                <tr><td style="padding: 10px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>A</strong>uthority</td><td style="padding: 10px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">Who wrote it, and where did it appear? Do not take their word for it. Look them up somewhere else and see what other people say about them.</td></tr>
+                <tr><td style="padding: 10px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>P</strong>urpose</td><td style="padding: 10px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">Is it informing, arguing, or selling? You may still use an argumentative source. Just know its angle before you borrow its claims.</td></tr>
+            </tbody>
+        </table></div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The bias that is hardest to catch</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Most bias is not a false statement. It is an <strong>omission</strong>: something true that got left out. A source can be accurate in every sentence and still mislead you by never mentioning the evidence that cuts the other way. This is why you read more than one source on anything that matters: the second one shows you the hole in the first.</p>
+
+        <!-- WIDGET: evaluative single-select -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="c" data-hint="Ask what the sentence is actually replying to. Is it answering the argument, or replacing it with something easier?">
+                <div class="widget-row-prompt">1. &ldquo;She says the ending is a cheat, but she also admitted she read it in one sitting at midnight, so.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="a">Slippery slope</button>
+                    <button data-choice="b">Red herring</button>
+                    <button data-choice="c" data-fb="Yes, attacking the person. When she read it has nothing to do with whether the ending is a cheat, but the sentence is built to make you dismiss her.">Attacking the person</button>
+                    <button data-choice="d">Loaded language</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Nobody actually said that. Ask whether the position being knocked down is the one that was really put forward.">
+                <div class="widget-row-prompt">2. &ldquo;Bierce fans think a story is only good if it tricks you, which would make a card game better than a novel.&rdquo;</div>
+                <div class="widget-options">
+                    <button data-choice="a">Attacking the person</button>
+                    <button data-choice="b" data-fb="Right, a straw man. A sillier claim gets built and demolished, while what Bierce's readers actually argue goes unanswered.">Straw man</button>
+                    <button data-choice="c">Red herring</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="This source may be perfectly accurate in what it says. The question is what it does not say.">
+                <div class="widget-row-prompt">3. An article about Bierce's war stories never mentions that he fought in the Civil War himself. Every sentence in it is true. What is the problem?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Yes. Bias by omission. Nothing stated is false, but leaving out that he wrote from experience changes how you would read everything else.">Bias by omission</button>
+                    <button data-choice="b">It fails the Currency question</button>
+                    <button data-choice="c">There is no problem, since it is accurate</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>fallacy</strong>: a move in an argument that looks like reasoning but does no real work. &nbsp;&middot;&nbsp; <strong>credible</strong>: worth believing, on evidence. &nbsp;&middot;&nbsp; <strong>bias</strong>: a lean in one direction, whether admitted or not. &nbsp;&middot;&nbsp; <strong>omission</strong>: something true that was left out.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>fallacy</em> comes from Latin <em>fallere</em>, &ldquo;to deceive&rdquo;, the same root that gives us <em>false</em> and <em>fail</em>. <em>Credible</em> comes from Latin <em>credere</em>, &ldquo;to believe,&rdquo; which also gives us <em>credit</em> and <em>creed</em>. <em>Bias</em> came through Old French <em>biais</em>, &ldquo;a slant&rdquo;; in lawn bowling a biased ball is weighted to curve. <strong>Copia:</strong> take the sentence <em>&ldquo;The committee changed the rule,&rdquo;</em> and rewrite it twice with loaded language: once so the committee sounds heroic, once so it sounds sinister. Change no facts.</div>
+        </div>
+
+        <!-- AI callout (red frame, per components.md) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; FLUENCY IS NOT REASONING</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">AI tools produce smooth, confident prose, and smooth confident prose can contain every move on this page. Fluent writing is evidence that something was written well. It is not evidence that the reasoning holds or that the facts are real. The same check applies to a chatbot's paragraph as to anything else you read.</div>
+        </div>
+    </div>
+
+    <!-- Source Check -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 12px;">&#128211; SOURCE CHECK &middot; TRY IT ONCE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Search JSTOR for something about Bierce or the story: try <em>Bierce Civil War fiction</em> or <em>&ldquo;Owl Creek Bridge&rdquo; narrative</em>. Open two results and note:</p>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #3B4E8C; padding-left: 14px;"><span style="color: #3B4E8C; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Both titles and authors</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #3B4E8C; padding-left: 14px;"><span style="color: #3B4E8C; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.6;">Which one looks stronger, and your four one-line C.R.A.P. answers for it</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #3B4E8C; padding-left: 14px;"><span style="color: #3B4E8C; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 17px; color: #1a2340; line-height: 1.6;">One thing the weaker source leaves out</div></div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Finish the source check, and define the Word Study terms</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Define <em>fallacy, credible, bias,</em> and <em>omission</em> in your own words, and do the loaded-language copia rewrite.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Keep the five moves where you can see them</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Week 7 puts two sources side by side. Knowing which moves are cheap separates a source that argues from one that only performs.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; KEY IDEA</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Farquhar believed his escape because it was well constructed. Construction is not truth. Ask what a sentence actually established, and ask a source the four questions.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Q5 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Testing What You Read</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

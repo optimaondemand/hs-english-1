@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 | Absolute Phrases (Module 6)</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; line-height: 1.45; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE</div><div style="font-size: 17px; color: #0e1c42;">Module 6</div><div style="font-size: 13px; color: #0e1c42;">The Scarlet Letter</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">TEXT</div><div style="font-size: 17px; color: #0e1c42; font-style: italic;">Ch. VII&ndash;XII</div><div style="font-size: 13px; color: #0e1c42;">The Scarlet Letter</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">WEEK</div><div style="font-size: 17px; color: #0e1c42;">Week 2</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;"><div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON TYPE</div><div style="font-size: 17px; color: #0e1c42;">Grammar lesson</div></div>
+</div>
+
+<div style="padding: 24px 34px;">
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+<div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+    <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">GRAMMAR LESSON</div>
+    <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Absolute Phrases</div>
+    <div style="font-size: 16px; color: #0e1c42;">Grammar</div>
+</div>
+
+<div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+    <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; FOCUS</div>
+    <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">How does a writer fold one small action into another so the reader sees a single moment?</div>
+    <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">An <strong>absolute phrase</strong> is a noun plus a participle that adds a detail to the whole sentence: <em>her hand on the hammer, his face half hidden</em>. This lesson covers how to recognize one, how to punctuate it, and how it differs from a participial phrase.</div>
+</div>
+
+<div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+    <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+<div class="optima-widget ow-reflect">
+    <div class="widget-kicker">&#128173; READ BOTH ALOUD</div>
+    <div class="widget-question"><strong>A.</strong> Pearl laughed. Her small hand pulled free. &nbsp;&nbsp;|&nbsp;&nbsp; <strong>B.</strong> Pearl laughed, her small hand pulling free.<br>Which version joins the two actions into one picture?</div>
+    <div class="widget-options">
+        <button data-response="Yes. The second action becomes a detail inside the first, and the reader sees one moment instead of two separate events. That joining is what an absolute phrase does.">Version B</button>
+        <button data-response="Version A states two events one after the other. Each is clear, but nothing connects them. The absolute phrase in Version B attaches the second action to the first.">Version A</button>
+        <button data-response="Read them once more for how the events relate. A lists two events; B folds one into the other. The meaning is the same and the effect differs.">They are the same</button>
+    </div>
+    <div class="widget-feedback"></div>
+    <button class="widget-reset">Reset</button>
+</div>
+</div>
+
+<div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+    <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; ABSOLUTE OR PARTICIPIAL?</div>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Both phrases end in <em>-ing</em> or <em>-ed</em>, and the difference is the noun.</p><div style="overflow-x: auto;"><table style="width: 100%; border-collapse: collapse; min-width: 440px;"><thead><tr style="background: #0E1C42;"><th style="padding: 10px 12px; font-size: 13px; color: #fff; text-align: left; border: 1px solid #334;">Kind</th><th style="padding: 10px 12px; font-size: 13px; color: #fff; text-align: left; border: 1px solid #334;">Example</th><th style="padding: 10px 12px; font-size: 13px; color: #fff; text-align: left; border: 1px solid #334;">What it modifies</th></tr></thead><tbody><tr><td style="padding: 10px 12px; font-size: 15px; color: #0e1c42; border: 1px solid #D0D9E8;">Participial</td><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;"><em>Trembling,</em> Hester stood at the door.</td><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;">One word: <em>Hester</em></td></tr><tr style="background: #F4F6FA;"><td style="padding: 10px 12px; font-size: 15px; color: #0e1c42; border: 1px solid #D0D9E8;">Absolute</td><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;"><em>Her hands trembling,</em> Hester stood at the door.</td><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;">The whole sentence</td></tr></tbody></table></div>
+</div>
+
+<div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+    <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE LESSON</div>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">An absolute phrase is a compact way to add a detail: a posture, a gesture, a condition. It names a body part, an object, or a circumstance (<em>her hand, the lantern, the morning light</em>) and says what it was doing. Hawthorne uses it in the scaffold scene of Chapter XII, picturing the town gathering at dawn: “the morning light still waxing stronger”. The phrase has its own noun and its own participle and belongs to the entire sentence.</p><div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+    <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">ONE RULE TO REMEMBER</div>
+    <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;">An <strong>absolute phrase</strong> is a <strong>noun + a participle</strong> (plus any modifiers). It has no finite verb, so it cannot stand alone, and it modifies the whole sentence rather than one word. Set it off with commas. <strong>Test:</strong> add <em>was</em> or <em>were</em>. If the phrase becomes a complete sentence, it is an absolute phrase.</div>
+</div><div style="background: #14213f; border: 10px solid #3a2c1a; border-radius: 10px; padding: 22px 24px; margin: 18px 0; box-shadow: inset 0 0 40px rgba(0,0,0,0.4);">
+    <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .18em; margin-bottom: 16px; text-align: center;">ON THE BOARD &middot; ABSOLUTE PHRASES</div>
+    <div style="font-size: 19px; color: #f4f1e8; line-height: 2.1;">
+<div style="font-size: 12px; color:#8ea2c9; letter-spacing:.14em; margin-bottom: 4px;">SPOT IT</div>
+<span style="color: #e6b955; border-bottom: 2px solid #e6b955;">Her hand on the iron hammer</span><span style="color:#8ea2c9;">,</span> Hester summoned the servant.<br>
+Pearl ran ahead<span style="color:#8ea2c9;">,</span> <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">her crimson tunic flaring in the sun</span>.<br>
+The minister stood in the curtain's shadow<span style="color:#8ea2c9;">,</span> <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">his hand pressed over his heart</span>.<br>
+<span style="color: #e6b955; border-bottom: 2px solid #e6b955;">With the child clinging to her skirt</span><span style="color:#8ea2c9;">,</span> Hester faced the magistrate.<br>
+<div style="font-size: 12px; color:#8ea2c9; letter-spacing:.14em; margin: 14px 0 4px; border-top: 1px dashed #8ea2c9; padding-top: 12px;">IN HAWTHORNE</div>
+“Hester Prynne looked at the man of skill, and even then, <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">with her fate hanging in the balance,</span> was startled to perceive what a change had come over his features.”<br>
+<div style="font-size: 12px; color:#8ea2c9; letter-spacing:.14em; margin: 14px 0 4px; border-top: 1px dashed #8ea2c9; padding-top: 12px;">WRONG, THEN RIGHT</div>
+<span style="color:#f0a39b;">&#10007;</span> <span style="color: #f0a39b; text-decoration: line-through;">Hester stood at the door her hands trembling.</span><br>
+<span style="color:#e6b955;">&#10003;</span> Hester stood at the door<span style="color:#8ea2c9;">,</span> <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">her hands trembling</span>.<br>
+<span style="color:#f0a39b;">&#10007;</span> <span style="color: #f0a39b; text-decoration: line-through;">Her hands were trembling, Hester stood at the door.</span><br>
+<span style="color:#e6b955;">&#10003;</span> <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">Her hands trembling</span><span style="color:#8ea2c9;">,</span> Hester stood at the door.<br>
+    </div>
+    <div style="font-size: 14px; color: #cdd6ea; margin-top: 16px; line-height: 1.6;">The <span style="color:#e6b955;">gold underline</span> marks the absolute phrase. The first error is a missing comma. The second keeps a finite verb (<em>were</em>), which makes two full sentences joined by a comma.</div>
+</div><div class="optima-widget ow-select">
+    <div class="widget-kicker">&#9998; YOUR TURN &middot; CHOOSE THE BEST ANSWER</div>
+    <div class="widget-row" data-correct="c">
+        <div class="widget-row-prompt">1. Which part is the absolute phrase? <em>The minister stood in the window, his face half hidden in the curtain.</em></div>
+        <div class="widget-options">
+            <button data-choice="a" data-fb="That is the main clause: a subject, a finite verb, and a complete thought. The absolute phrase is the added detail.">The minister stood in the window</button>
+            <button data-choice="b" data-fb="That is a prepositional phrase. It has no participle and no noun of its own doing something.">in the window</button>
+            <button data-choice="c" data-fb="Yes. &lt;em&gt;Face&lt;/em&gt; is the noun, &lt;em&gt;hidden&lt;/em&gt; is the participle, and adding &lt;em&gt;was&lt;/em&gt; makes a complete sentence.">his face half hidden in the curtain</button>
+            <button data-choice="d" data-fb="That is only part of the phrase. The noun &lt;em&gt;face&lt;/em&gt; belongs to it: &lt;em&gt;his face half hidden in the curtain&lt;/em&gt;.">half hidden</button>
+        </div>
+    </div>
+    <div class="widget-row" data-correct="b">
+        <div class="widget-row-prompt">2. Which sentence is correct?</div>
+        <div class="widget-options">
+            <button data-choice="a" data-fb="The phrase needs a comma. Without one, &lt;em&gt;laughed&lt;/em&gt; seems to take the phrase as its object.">Pearl laughed her small hand pulling free.</button>
+            <button data-choice="b" data-fb="Yes. A comma sets off the absolute phrase, and it has no finite verb.">Pearl laughed, her small hand pulling free.</button>
+            <button data-choice="c" data-fb="&lt;em&gt;Was pulling&lt;/em&gt; is a finite verb. That makes two full sentences joined by only a comma.">Pearl laughed, her small hand was pulling free.</button>
+            <button data-choice="d" data-fb="The second group is a fragment: it has a noun and a participle but no finite verb and no main clause to attach to.">Pearl laughed. Her small hand pulling free.</button>
+        </div>
+    </div>
+    <div class="widget-row" data-correct="d">
+        <div class="widget-row-prompt">3. Which sentence contains an absolute phrase rather than a participial phrase?</div>
+        <div class="widget-options">
+            <button data-choice="a" data-fb="That is a relative clause. It has a finite verb (&lt;em&gt;held&lt;/em&gt;) and begins with &lt;em&gt;who&lt;/em&gt;.">Mr. Wilson, who held the lantern, walked on.</button>
+            <button data-choice="b" data-fb="This is a participial phrase. It has no noun of its own, so it modifies &lt;em&gt;Mr. Wilson&lt;/em&gt;.">Holding the lantern before his breast, Mr. Wilson walked on.</button>
+            <button data-choice="c" data-fb="This is a participial phrase. &lt;em&gt;Muffled&lt;/em&gt; modifies &lt;em&gt;Mr. Wilson&lt;/em&gt;; there is no separate noun.">Mr. Wilson walked on, muffled in his cloak.</button>
+            <button data-choice="d" data-fb="Yes. &lt;em&gt;Lantern&lt;/em&gt; is the noun, &lt;em&gt;held&lt;/em&gt; is the participle, and the phrase modifies the whole sentence.">The lantern held before his breast, Mr. Wilson walked on.</button>
+        </div>
+    </div>
+    <button class="widget-reset">Reset</button>
+</div>
+</div>
+
+<div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+    <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#9998; PRACTICE</div>
+<div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 17px; color: #1a2340; line-height: 1.65;">Write three sentences about Pearl, the Governor's hall, or the hearing.</div></div>
+<div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 17px; color: #1a2340; line-height: 1.65;">Put one absolute phrase in each, set off by commas.</div></div>
+<div style="display: flex; align-items: flex-start; gap: 12px; "><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 17px; color: #1a2340; line-height: 1.65;">Underline the noun in each phrase and circle the participle.</div></div>
+</div>
+
+<div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+    <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+    <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>absolute phrase</strong>: a noun plus a participle that modifies the whole sentence &nbsp;&middot;&nbsp; <strong>participle</strong>: a verb form ending in <em>-ing</em> or <em>-ed</em> that acts as a modifier &nbsp;&middot;&nbsp; <strong>finite verb</strong>: a verb with a subject that can anchor a sentence</div>
+    <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>Absolute</em> comes from Latin <em>absolutus</em>, “set loose”: the phrase is loosened from the grammar of the sentence it joins. <em>Participle</em> comes from Latin <em>participium</em>, “a partaking,” because the form shares in the work of a verb and an adjective. <em>Phrase</em> comes from Greek <em>phrasis</em>, “speech, expression.”</div>
+</div>
+<div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+    <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128170; KEY POINT</div>
+<p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0 0 0px 0;">An absolute phrase adds one detail to a whole sentence: a noun, a participle, and commas.</p>
+</div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Module 6 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Absolute Phrases</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = sBtn.dataset.fb || (right ? 'Right.' : (row.dataset.hint || 'Not quite. Try again.'));
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

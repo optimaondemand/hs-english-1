@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; Owl Creek Bridge: Time and Perception (Module 5)</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q5 &middot; Module 5</div>
+        <div style="font-size: 13px; color: #0e1c42;">Short Story Explorations</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Literature</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">"An Occurrence at Owl Creek Bridge," Ambrose Bierce (1890)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">THIS WEEK'S CRAFT</div>
+        <div style="font-size: 16px; color: #0e1c42;">Time and perception</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LITERATURE</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Owl Creek Bridge: Time and Perception</div>
+        <div style="font-size: 16px; color: #0e1c42;">An Occurrence at Owl Creek Bridge</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Between the sergeant's step and the end of the rope there is barely a heartbeat of clock time. Bierce builds most of a story inside it. How?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Bierce splits the story into three parts that each run on a different clock, and uses <strong>sensory detail</strong> not as decoration but as psychology: the sharper the senses, the more desperate the mind behind them.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; OBJECTIVES</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> describe the story's three-part structure and name the job each part does.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> explain how Bierce uses sensory detail (starting with a ticking watch) to show a mind under extreme pressure.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> chart story time against real time and use that chart when rereading Part III.</div></div>
+    </div>
+
+    <!-- Materials / the reading -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; MATERIALS</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">The story: <a href="https://en.wikisource.org/wiki/An_Occurrence_at_Owl_Creek_Bridge" style="color: #3B4E8C;">"An Occurrence at Owl Creek Bridge" by Ambrose Bierce</a> (public domain; the 1909 <em>Collected Works</em> text; about 20 minutes)</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">About 45 minutes</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; FIRST READING</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP</div>
+            <div class="widget-question">Think of a moment when time seemed to change speed on you. Which is closest to your experience?</div>
+            <div class="widget-options">
+                <button data-response="That stretch is real: under sudden fear, the mind takes in far more detail per second, so the second feels enormous. Bierce builds his whole story on exactly this effect. Watch for a ticking watch.">Time slowed down during a scare or a fall</button>
+                <button data-response="Happiness compresses; hours vanish. Bierce works the opposite direction: he takes the worst moment of a life and stretches it. As you read, ask what the stretching is FOR.">Time flew when I was having fun</button>
+                <button data-response="Waiting is its own time distortion: the clock crawls when the mind has nothing to hold but the next tick. Part I of today's story is one long wait, and Bierce makes you live every second of it.">Time crawled while I waited for something</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Before you read: the story's world</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The story is set during the American Civil War, on a railroad bridge in northern Alabama held by Union soldiers. Ambrose Bierce knew this world firsthand: he fought through the war as a Union soldier, including at Shiloh, and he published this story in 1890, twenty-five years after the fighting ended. That experience shows. The military details of Part I are exact and unhurried, and the story reserves its judgment: no character is called hero or villain. A man is to be hanged; the story's real subject is what happens inside his mind.</p>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Read it now, twice</h3>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 17px; color: #1a2340; line-height: 1.65;">Open <a href="https://en.wikisource.org/wiki/An_Occurrence_at_Owl_Creek_Bridge" style="color: #3B4E8C;">the story</a> and read it straight through, no stopping and no peeking ahead.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 17px; color: #1a2340; line-height: 1.65;">Reread <strong>Part I only</strong>. Mark every place where time seems to slow, stretch, or stop, and every detail the man's senses report.</div></div>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THREE PARTS, THREE CLOCKS</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Most stories run on one clock: events happen, one after another, at roughly the pace of life. Bierce breaks his story into three numbered parts and gives each its own clock. <strong>Part I</strong> is the bridge: a few minutes of preparation, stretched taut. <strong>Part II</strong> steps out of the present entirely: a flashback that tells us who Peyton Farquhar is ("a well-to-do planter, of an old and highly respected Alabama family") and how a visitor's talk of the bridge brought him here. <strong>Part III</strong> is the escape: the rope, the river, the forest, the road home. Hold that shape in your head, then study how the page space is spent.</p>
+
+        <!-- ONE core visual: story time vs. real time diagram -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">STORY TIME VS. REAL TIME &middot; HOW BIERCE SPENDS HIS PAGES</div>
+            <div style="background: #F8F9FC; padding: 20px 22px;">
+                <div style="font-size: 12px; color: #0e1c42; margin-bottom: 14px;">Each indigo bar shows how much of the story's <strong>page space</strong> a part fills. Each gold pill shows how much <strong>clock time</strong> actually passes there.</div>
+                <!-- Part I -->
+                <div style="margin-bottom: 16px;">
+                    <div style="font-size: 13px; color: #0e1c42; font-weight: bold; margin-bottom: 5px;">PART I &middot; THE BRIDGE (the hanging is prepared)</div>
+                    <div style="background: #EEF1F8; border-radius: 6px; overflow: hidden;"><div style="width: 34%; background: #3B4E8C; color: #fff; font-size: 12px; padding: 7px 10px; white-space: nowrap;">about a third of the pages</div></div>
+                    <div style="margin-top: 5px;"><span style="display: inline-block; background: #FDF3E3; border: 1px solid #C7922C; color: #8A6410; font-size: 12px; padding: 3px 10px; border-radius: 10px;">clock time: a few minutes, slowed almost to a stop</span></div>
+                </div>
+                <!-- Part II -->
+                <div style="margin-bottom: 16px;">
+                    <div style="font-size: 13px; color: #0e1c42; font-weight: bold; margin-bottom: 5px;">PART II &middot; THE PLANTATION (who he is, and how he got here)</div>
+                    <div style="background: #EEF1F8; border-radius: 6px; overflow: hidden;"><div style="width: 16%; background: #3B4E8C; color: #fff; font-size: 12px; padding: 7px 10px; white-space: nowrap;">the shortest part</div></div>
+                    <div style="margin-top: 5px;"><span style="display: inline-block; background: #FDF3E3; border: 1px solid #C7922C; color: #8A6410; font-size: 12px; padding: 3px 10px; border-radius: 10px;">clock time: none at all; a flashback to weeks earlier</span></div>
+                </div>
+                <!-- Part III -->
+                <div style="margin-bottom: 6px;">
+                    <div style="font-size: 13px; color: #0e1c42; font-weight: bold; margin-bottom: 5px;">PART III &middot; THE ESCAPE (the rope, the river, the road home)</div>
+                    <div style="background: #EEF1F8; border-radius: 6px; overflow: hidden;"><div style="width: 50%; background: #3B4E8C; color: #fff; font-size: 12px; padding: 7px 10px; white-space: nowrap;">half the story: its longest, richest part</div></div>
+                    <div style="margin-top: 5px;"><span style="display: inline-block; background: #FDF3E3; border: 1px solid #C7922C; color: #8A6410; font-size: 12px; padding: 3px 10px; border-radius: 10px;">clock time: explained in the ending lesson</span></div>
+                </div>
+            </div>
+            <div style="background: #FFFFFF; font-size: 13px; color: #0e1c42; padding: 10px 16px; border-top: 1px solid #D0D9E8; line-height: 1.6;">Read the two scales against each other: the longest stretch of <em>story</em> covers the shortest stretch of <em>clock</em>. That inversion is not a flaw. It is the story's engine, and the ending lesson turns the key.</div>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Sensory detail as psychology: the ticking watch</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">As the noose waits, Farquhar's thoughts of his family are interrupted by "a sound which he could neither ignore nor understand, a sharp, distinct, metallic percussion like the stroke of a blacksmith's hammer upon the anvil." The strokes come slower and slower; "the intervals of silence grew progressively longer; the delays became maddening." Then the reveal: "What he heard was the ticking of his watch."</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Bierce never writes "Farquhar was terrified" or "time seemed to slow down." He hands the reader a sense impression, exact and physical, and leaves the arithmetic to the reader: if one tick of a pocket watch can swell into a blacksmith's hammer blow, this man's mind is running so fast that seconds have become ages. The detail <em>is</em> the psychology. That is the week's craft rule: when your character is under pressure, do not report the feeling. Report what the senses do to the world.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In Part III the senses run wilder still: a swimmer who can see "the leaves and the veining of each leaf" on the trees along the bank, who hears the humming of gnats and the beating of dragon-flies' wings as "audible music." What state must a mind be in, for the world to look like that?</p>
+
+        <!-- WIDGET: evaluative single-select (recolored) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="c" data-hint="Reread the end of the watch passage in Part I. Bierce names the sound himself in one flat sentence.">
+                <div class="widget-row-prompt">1. The "sharp, distinct, metallic percussion like the stroke of a blacksmith's hammer upon the anvil" turns out to be&hellip;</div>
+                <div class="widget-options">
+                    <button data-choice="a">a soldier loading his rifle</button>
+                    <button data-choice="b">the driftwood knocking against the bridge</button>
+                    <button data-choice="c" data-fb="Yes: 'What he heard was the ticking of his watch.' An ordinary tick has swollen into a hammer blow, which tells you how far his mind has stretched each second.">the ticking of his own watch</button>
+                    <button data-choice="d">a church bell across the river</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Ask what the detail shows about the man, not about the watch. Bierce never names the feeling directly.">
+                <div class="widget-row-prompt">2. What does that sound reveal about Farquhar's mind?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Right. Under extremity, his perception has accelerated so far that seconds swell into ages. The detail carries the psychology; no feeling-word is ever needed.">Terror has stretched his perception until each second feels enormous</button>
+                    <button data-choice="b">He is calm enough to count the minutes accurately</button>
+                    <button data-choice="c">His watch is broken and striking the rail</button>
+                    <button data-choice="d">He has stopped noticing his surroundings entirely</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>perception</strong>: what the senses report to the mind, and how the mind reads that report. &nbsp;&middot;&nbsp; <strong>condemned</strong>: judged and sentenced; awaiting the penalty. &nbsp;&middot;&nbsp; <strong>imperceptible</strong>: too slight for the senses to catch. &nbsp;&middot;&nbsp; <strong>oscillation</strong>: a swinging back and forth, like a pendulum. &nbsp;&middot;&nbsp; <strong>poignant</strong>: piercingly sharp to the feelings.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>perception</em> comes from Latin <em>percipere</em>, "to seize thoroughly": the mind grabbing hold of the world. <em>Condemned</em> comes from Latin <em>condemnare</em>, "to pronounce judgment against" (the root <em>damnum</em> means "loss"). <em>Imperceptible</em> is the same <em>percipere</em> with <em>in-</em>, "not," in front: what cannot be seized by the senses. <em>Oscillation</em> comes from Latin <em>oscillare</em>, "to swing." <em>Poignant</em> comes through Old French <em>poindre</em>, "to prick," from Latin <em>pungere</em> (the family that gives us <em>puncture</em> and <em>pungent</em>): a feeling that stings. <strong>Copia:</strong> take the sentence <em>"What he heard was the ticking of his watch,"</em> and rewrite it twice: once stretching it so the sound grows monstrous, and once compressing it so the sound stays small and ordinary. Notice which version distorts time.</div>
+        </div>
+
+        <!-- AI callout (red frame) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; AI AND THIS STORY</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">This story is so famous that any AI tool will reveal its secret in the first sentence of a summary. That summary is accurate, and it costs you the one thing the story was built to give: the experience of a first reading. Read first; summarize after. The order matters more here than almost anywhere in this course.</div>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Mark the time distortions</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Copy your three strongest time-distortion marks from Part I with one sentence each on what the detail does.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; KEY IDEA</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Time on the page is a choice, not a given. Bierce spends half his pages on his shortest stretch of clock time, and he pays for every stretched second with exact sensory detail. The ending shows what all that stretched time was hiding.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Q5 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Owl Creek Bridge: Time and Perception</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

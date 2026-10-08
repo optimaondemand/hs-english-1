@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; A Question Worth Researching (Module 7)</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Module 7</div>
+        <div style="font-size: 13px; color: #0e1c42;">The Crucible</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42;">Research for the module project</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">WEEK</div>
+        <div style="font-size: 17px; color: #0e1c42;">Week 2</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON TYPE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Research</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">RESEARCH</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">A Question Worth Researching</div>
+        <div style="font-size: 16px; color: #0e1c42;">Lesson</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A theme is a subject. A research question is something sources can settle.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The module project follows one theme across <em>The Crucible</em> and at least two earlier course texts, with one researched source. That source has to answer a question, and the question has to be narrow enough to answer and open enough to argue. This lesson covers how to build it and how to test it.</div>
+    </div>
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; OBJECTIVES</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> turn a theme into a question that research can settle.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> choose a historical or critical angle and match it to a type of source.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> apply the four-question credibility check and record an MLA entry as I find a source.</div></div>
+    </div>
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; MATERIALS</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your copy of <em>The Crucible</em>, with Act Two read.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">The Research &amp; JSTOR Access page in Start Here, for database access.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;"><em>The Crucible</em> is protected by copyright. Use your own copy; this course does not reproduce the play.</div></div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; BUILDING THE QUESTION</div>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP</div>
+            <div class="widget-question">Which of these questions about Act Two would send you to a library?</div>
+            <div class="widget-options">
+                <button data-response="This is a question about character. Answering it takes the play itself and, for a research version, criticism of the play.">Why does John hesitate to speak to the court?</button>
+                <button data-response="This is a historical question. Scholars of the Salem trials have written on it, and the answer needs their work.">Why did people in 1692 believe the girls?</button>
+                <button data-response="This is a question about context. It sends a reader to scholarship on the period and records from it.">How did the 1950s shape what Miller wrote?</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Any of the three needs a source, and each leads to a different angle. A good project question starts as something unresolved in the reading and ends as a sentence a source can answer.</p>
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">FROM THEME TO QUESTION &middot; FOUR NARROWING STEPS</div>
+            <div style="background: #F8F9FC; padding: 20px 18px 14px 18px;">
+            <div style="width: 100%; max-width: 100%; margin: 0 auto 8px auto; background: #0E1C42; border-radius: 6px; padding: 12px 16px; text-align: center;"><div style="font-size: 11px; letter-spacing: .14em; color: #55c8e8;">1 &middot; THEME</div><div style="font-size: 16px; color: #55c8e8; line-height: 1.5;"><span style="color:#fff;">justice &middot; loyalty &middot; family &middot; duty</span></div></div>
+            <div style="width: 84%; max-width: 100%; margin: 0 auto 8px auto; background: #3B4E8C; border-radius: 6px; padding: 12px 16px; text-align: center;"><div style="font-size: 11px; letter-spacing: .14em; color: #C9D3E8;">2 &middot; THREE TEXTS</div><div style="font-size: 16px; color: #C9D3E8; line-height: 1.5;"><span style="color:#fff;"><em>The Crucible</em> plus two or more earlier course texts</span></div></div>
+            <div style="width: 68%; max-width: 100%; margin: 0 auto 8px auto; background: #EEF1F8; border-radius: 6px; padding: 12px 16px; text-align: center;"><div style="font-size: 11px; letter-spacing: .14em; color: #3B4E8C;">3 &middot; ANGLE</div><div style="font-size: 16px; color: #3B4E8C; line-height: 1.5;"><span style="color:#0e1c42;">Salem, 1692 &middot; the 1950s hearings &middot; criticism of an earlier text</span></div></div>
+            <div style="width: 52%; max-width: 100%; margin: 0 auto 8px auto; background: #C7922C; border-radius: 6px; padding: 12px 16px; text-align: center;"><div style="font-size: 11px; letter-spacing: .14em; color: #FDF3E3;">4 &middot; QUESTION</div><div style="font-size: 16px; color: #FDF3E3; line-height: 1.5;"><span style="color:#fff;">one sentence research can settle</span></div></div>
+            </div>
+            <div style="background: #FFFFFF; font-size: 13px; color: #0e1c42; text-align: center; padding: 12px 18px; line-height: 1.6; border-top: 1px solid #D0D9E8;">Each step removes options. The question at the bottom is the only one the sources have to answer.</div>
+        </div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Four tests catch most weak questions.</p>
+        <div style="overflow-x: auto;"><table style="width: 100%; border-collapse: collapse; min-width: 460px;">
+            <thead><tr style="background: #0E1C42;"><th style="padding: 10px 12px; font-size: 13px; color: #fff; text-align: left; border: 1px solid #3B4E8C;">The question</th><th style="padding: 10px 12px; font-size: 13px; color: #fff; text-align: left; border: 1px solid #3B4E8C;">Verdict</th></tr></thead>
+            <tbody><tr style=""><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;"><em>Why did the Salem witch trials happen?</em></td><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;"><strong>Too broad.</strong> Whole libraries answer it. A paper could only summarize.</td></tr><tr style=" background: #EEF1F8;"><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;"><em>How many people were accused in Salem in 1692?</em></td><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;"><strong>Too small.</strong> One fact, with no argument. This is a lookup.</td></tr><tr style=""><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;"><em>Was Abigail Williams a villain?</em></td><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;"><strong>Not researchable as written.</strong> No evidence settles it. Rewrite it as a question about actions or effects.</td></tr><tr style=" background: #EEF1F8;"><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;"><em>How do scholars explain the spread of accusations in Salem Village, and where does Miller&rsquo;s version agree or differ?</em></td><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;"><strong>Answerable.</strong> Narrow enough to research and open enough that informed readers disagree.</td></tr></tbody>
+        </table></div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THREE ANGLES AND THEIR SOURCES</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The project question comes from one of three angles. Each calls for a different kind of source.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0;">
+            <div style="flex: 1; min-width: 220px; background: #FDF3E3; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 16px; color: #0e1c42; margin-bottom: 6px;"><strong>Salem, 1692</strong></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-bottom: 6px;">Asks how the historical events compare with the play.</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-bottom: 6px;"><strong>Sources:</strong> Scholarly articles and books on the trials; reference entries; primary records held by archives and libraries.</div><div style="font-size: 14px; color: #8A6410; line-height: 1.5;"><strong>Sample question:</strong> <em>How do scholars explain the spread of accusations in Salem Village?</em></div></div>
+            <div style="flex: 1; min-width: 220px; background: #FDF3E3; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 16px; color: #0e1c42; margin-bottom: 6px;"><strong>The 1950s hearings</strong></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-bottom: 6px;">Asks how the period shaped the play and its first audiences.</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-bottom: 6px;"><strong>Sources:</strong> Scholarly articles on McCarthyism and the arts; period newspapers; government records of the hearings.</div><div style="font-size: 14px; color: #8A6410; line-height: 1.5;"><strong>Sample question:</strong> <em>How did the congressional investigations of the 1950s shape the way audiences read the play?</em></div></div>
+            <div style="flex: 1; min-width: 220px; background: #FDF3E3; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 16px; color: #0e1c42; margin-bottom: 6px;"><strong>Criticism of an earlier text</strong></div><div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-bottom: 6px;">Asks what critics say about a text the question will compare to the play.</div><div style="font-size: 14px; color: #1a2340; line-height: 1.5; margin-bottom: 6px;"><strong>Sources:</strong> Scholarly articles on the text; introductions to critical editions.</div><div style="font-size: 14px; color: #8A6410; line-height: 1.5;"><strong>Sample question:</strong> <em>How have critics read the clash between family loyalty and public law in <em>Electra</em>?</em></div></div>
+        </div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Search a database or archive by name and keyword, open each result, and confirm it exists before it goes on a list. Database access for JSTOR is on the Research &amp; JSTOR Access page in Start Here.</p>
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">WORTH KNOWING &middot; AI AND SOURCES</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">AI tools can help turn a vague question into search terms. They also produce article titles, authors, and page numbers that look real and do not exist. Every source on a list is one the student opened.</div>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; TESTING AND RECORDING SOURCES</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Module 5 introduced the four-question credibility check: <strong>currency</strong> (when it was written), <strong>relevance</strong> (whether it addresses the question), <strong>authority</strong> (who wrote it and where it appeared), and <strong>purpose</strong> (to inform, argue, or sell). Bias by omission applies to all four: a source can be accurate in every sentence and still leave out evidence that cuts the other way. The weight of each question shifts with the angle.</p>
+        <div style="overflow-x: auto;"><table style="width: 100%; border-collapse: collapse; min-width: 460px;"><tbody><tr><td style="padding: 10px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>Salem, 1692</strong></td><td style="padding: 10px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #0e1c42;"><strong>Currency</strong></td><td style="padding: 10px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">Interpretations of the trials have changed over time. Check the date and what has been argued since.</td></tr><tr><td style="padding: 10px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>The 1950s hearings</strong></td><td style="padding: 10px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #0e1c42;"><strong>Purpose</strong></td><td style="padding: 10px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">Popular pages on the period often argue. Identify the angle before borrowing a claim.</td></tr><tr><td style="padding: 10px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42; white-space: nowrap;"><strong>Criticism of an earlier text</strong></td><td style="padding: 10px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #0e1c42;"><strong>Authority</strong></td><td style="padding: 10px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">Check the author&rsquo;s field and the periodical that published the article.</td></tr></tbody></table></div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Record the entry when you find it</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Copy the author, title, publication, date, and address while the page is open. MLA entries follow a set pattern.</p>
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 14px 20px; margin: 12px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">MLA PATTERNS</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.7; margin-bottom: 8px;"><strong>Scholarly article:</strong> Last, First. &ldquo;Title of Article.&rdquo; <em>Title of Periodical</em>, vol. #, no. #, Year, pp. #&ndash;#. <em>JSTOR</em>, address.</div>
+            <div style="font-size: 16px; color: #1a2340; line-height: 1.7;"><strong>Web page:</strong> Author or Organization. &ldquo;Title of Page.&rdquo; <em>Title of Site</em>, Publisher, Day Month Year, address.</div>
+        </div>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="d" data-hint="Test each one: not too broad, not a lookup, answerable with evidence.">
+                <div class="widget-row-prompt">1. Which is the best research question about Act Two?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="No evidence settles it. It asks for an opinion, not a finding.">Is <em>The Crucible</em> a good play?</button>
+                    <button data-choice="b" data-fb="One fact. A search answers it and leaves nothing to argue.">When was <em>The Crucible</em> first performed?</button>
+                    <button data-choice="c" data-fb="Too broad. It covers all of human history and no text in particular.">Why do people accuse each other of things?</button>
+                    <button data-choice="d" data-fb="Correct. It names a moment, points to criticism, and can be answered in more than one way.">How do critics explain why John Proctor hesitates to expose Abigail, and what does the hesitation say about conscience?</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Ask whether any source could settle it.">
+                <div class="widget-row-prompt">2. &ldquo;Was Abigail Williams evil?&rdquo; fails because it</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="The problem is the opposite. No amount of evidence could settle the question as phrased.">is too narrow for a full paper.</button>
+                    <button data-choice="b" data-fb="Correct. Rewrite it as a question about her actions, her motives, or how historians and critics have described her.">asks for a judgment that evidence cannot settle.</button>
+                    <button data-choice="c" data-fb="It has no answer a source could confirm.">has only one correct answer.</button>
+                    <button data-choice="d" data-fb="The play is named in the assignment. The question&amp;rsquo;s flaw is its wording.">does not mention the play.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Decide whether the question has an argument in it.">
+                <div class="widget-row-prompt">3. How many people were accused in Salem in 1692? What does this question need?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Correct. Ask why accusations spread or how scholars count and explain them.">A new question: it is a lookup with nothing to argue.</button>
+                    <button data-choice="b" data-fb="It has one answer and no argument to build.">Nothing. It is an ideal research question.</button>
+                    <button data-choice="c" data-fb="The wording is not the problem.">Fewer words.</button>
+                    <button data-choice="d" data-fb="The play is not the problem.">A different play.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Look at who wrote it, when, and what the page wants from the reader.">
+                <div class="widget-row-prompt">4. A popular web page on the 1950s hearings lists no author, no date, and sells T-shirts. Which checks does it fail first?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="The topic fits. The page fails on other grounds.">Relevance only.</button>
+                    <button data-choice="b" data-fb="The missing date is one problem, but the missing author and the sales purpose matter more.">Currency only.</button>
+                    <button data-choice="c" data-fb="Correct. No named author means no way to judge expertise, and the shop shows the page exists to sell.">Authority and purpose.</button>
+                    <button data-choice="d" data-fb="A page earns trust through the four questions, not through being online.">None; web pages are always acceptable.</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3b4e8c; margin-bottom: 14px;">&#10145;&#65039; BEFORE THE NEXT LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0px; border-left: 3px solid #3B4E8C; padding-left: 14px;"><span style="color: #3b4e8c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Next: the lesson on the periodic sentence, then Project Feeder 1.</div></div>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Module 7 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">A Question Worth Researching</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = sBtn.dataset.fb || (right ? 'Right.' : (row.dataset.hint || 'Not quite. Try again.'));
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

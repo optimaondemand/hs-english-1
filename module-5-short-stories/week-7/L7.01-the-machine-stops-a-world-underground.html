@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 &mdash; The Machine Stops: A World Underground (Module 5)</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS — recolored to the ELA palette (indigo frame, gold correct, red incorrect; no green/teal) ===== */
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">QUARTER / MODULE</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q5 &middot; Module 5</div>
+        <div style="font-size: 13px; color: #0e1c42;">Short Story Explorations</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON</div>
+        <div style="font-size: 17px; color: #0e1c42;">Literature</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">ANCHOR TEXT</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">"The Machine Stops," E. M. Forster (1909)</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">THIS WEEK'S CRAFT</div>
+        <div style="font-size: 16px; color: #0e1c42;">World-building and juxtaposition</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">LITERATURE</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">"The Machine Stops": A World Underground</div>
+        <div style="font-size: 16px; color: #0e1c42;">The Machine Stops</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">In 1909, before television, before the internet, before video calls, E. M. Forster wrote a story about people who live alone in small rooms, see each other only through glowing plates, and have everything delivered at the push of a button. How?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The largest world of the module is a whole civilization in a single story. Forster builds it: one room, one rule at a time, always holding the world below against the world above. The two people who disagree about it are a mother named <strong>Vashti</strong> and her son <strong>Kuno</strong>.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; OBJECTIVES</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> describe the rules of the Machine's world and point to the details Forster uses to establish each one.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> explain the conflict between Vashti and Kuno as a conflict between a mediated life and direct experience.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> write a "rules of my world" list for my own story, the way Forster must have written one for his.</div></div>
+    </div>
+
+    <!-- Materials / the reading -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; MATERIALS</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">The story: <a href="https://en.wikisource.org/wiki/The_Machine_Stops" style="color: #3B4E8C;">"The Machine Stops" by E. M. Forster</a> (public domain in the US, free to read online). It has three parts. Read <strong>Part I: The Air Ship</strong> and <strong>Part II: The Mending Apparatus</strong> (about 40 minutes). Part III is read in the ending lesson.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">About 60 minutes total. This is the longest reading of the module.</div></div>
+    </div>
+
+    <!-- ============ PART 1 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; FIRST READING</div>
+
+        <!-- WIDGET: reflective check-in (indigo) -->
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#128173; WARM-UP</div>
+            <div class="widget-question">Think about your day so far. Roughly how much of what you saw, heard, and learned today reached you through a screen or a speaker rather than in person?</div>
+            <div class="widget-options">
+                <button data-response="Then you already live partly in Vashti's room, and so do most of us. Forster is not scolding you; he is asking what a life becomes when the screen share keeps growing. Read with that question open.">Most of it, honestly</button>
+                <button data-response="A real mix is where most people live. Watch how Forster splits that mix into two characters: Vashti, who accepts the screen version of everything, and Kuno, who wants the thing itself.">About half and half</button>
+                <button data-response="Then you will side with Kuno quickly. Watch how the story treats people like you: in the Machine's world, wanting to see a thing for yourself is considered strange, then rude, then dangerous.">Mostly in person, actually</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Before you read: the story's world</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Forster published "The Machine Stops" in 1909, in <em>The Oxford and Cambridge Review</em>. Humanity has moved underground. Each person lives alone in a small room where a vast global system called <strong>the Machine</strong> supplies everything: food, music, beds, medicine, lectures, and conversation through round glowing plates. The surface of the earth is believed to be uninhabitable. The story opens on Vashti, content in her room, receiving a call from her son Kuno, who lives on the other side of the world and wants something the Machine cannot deliver: his mother, in person.</p>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Read Parts I and II now, with one job</h3>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 17px; color: #1a2340; line-height: 1.65;">Open <a href="https://en.wikisource.org/wiki/The_Machine_Stops" style="color: #3B4E8C;">the story</a> and read Part I (The Air Ship) and Part II (The Mending Apparatus) straight through.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 17px; color: #1a2340; line-height: 1.65;">As you read, keep a two-column list: <strong>BELOW</strong> (what life in the rooms is like) and <strong>ABOVE</strong> (every glimpse of the surface). Collect at least five details in each column.</div></div>
+    </div>
+
+    <!-- ============ PART 2 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; TWO WORLDS, ONE PAGE: HOW FORSTER BUILDS BY CONTRAST</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A writer inventing a whole world cannot explain everything, so Forster builds by <strong>juxtaposition</strong>: he sets the world below and the world above side by side and lets the contrast do the teaching. The story opens with an invitation: "Imagine, if you can, a small room, hexagonal in shape, like the cell of a bee." One sentence, and you know the shape of a life: small, sealed, and part of a hive. Every rule of the world is planted the same way, through a concrete detail rather than an explanation. Vashti's life is <strong>mediated</strong>: everything reaches her through the Machine, secondhand. When an air-ship attendant steadies her and Vashti recoils, Forster plants the deepest rule of all: "People never touched one another. The custom had become obsolete, owing to the Machine." Kuno's rebellion is just as concrete. Standing on the surface, he takes the body back as the ruler of reality: "Man is the measure." Compare your two-column list with the diagram below, then reread any detail you missed.</p>
+
+        <!-- ONE core visual: the Machine vs. the surface world diagram -->
+        <div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;">
+            <div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">THE STORY'S WORLD IN CROSS-SECTION &middot; THE MACHINE BELOW, THE SURFACE ABOVE</div>
+            <!-- ABOVE: the surface -->
+            <div style="background: #FDF3E3; border-left: 6px solid #C7922C; padding: 16px 22px;">
+                <div style="font-size: 12px; color: #8A6410; letter-spacing: .12em; margin-bottom: 8px;">&#9728;&#65039; ABOVE &middot; THE SURFACE (KUNO'S WORLD, FOR ONE STOLEN HOUR)</div>
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.9;">
+                    &bull; Sunlight, mist, hills, ferns; air you must fight to breathe<br>
+                    &bull; Distance measured by the body: "Man is the measure"; a walk is as far as legs can carry you<br>
+                    &bull; Experience is <strong>direct</strong>: you see the stars themselves, not a lecture about them<br>
+                    &bull; Officially "uninhabitable"; visiting it without permission is rebellion
+                </div>
+            </div>
+            <!-- The crust divider -->
+            <div style="background: #0E1C42; color: #FFFFFF; text-align: center; font-size: 12px; letter-spacing: .2em; padding: 6px;">&#9650; THE EARTH'S CRUST &#9660;</div>
+            <!-- BELOW: the Machine -->
+            <div style="background: #EEF1F8; border-left: 6px solid #3B4E8C; padding: 16px 22px;">
+                <div style="font-size: 12px; color: #3B4E8C; letter-spacing: .12em; margin-bottom: 8px;">&#128280; BELOW &middot; THE MACHINE (VASHTI'S WORLD, ALL HER LIFE)</div>
+                <div style="font-size: 15px; color: #1a2340; line-height: 1.9;">
+                    &bull; One person per hexagonal room, "like the cell of a bee"; no windows, constant soft light and humming air<br>
+                    &bull; Buttons for everything: food, music, clothing, medicine, a bed that rises from the floor<br>
+                    &bull; People appear as images in a round glowing plate; thousands of "friends," none ever met<br>
+                    &bull; Touch is obsolete; travel is rare and disliked; the Book of the Machine explains every procedure<br>
+                    &bull; Experience is <strong>mediated</strong>: everything arrives secondhand, filtered through the system
+                </div>
+            </div>
+            <div style="background: #FFFFFF; font-size: 13px; color: #0e1c42; padding: 10px 16px; border-top: 1px solid #D0D9E8; line-height: 1.6;">Notice the craft: Forster never writes an essay about what the Machine has cost. He puts the two halves of this diagram side by side, below and above, Vashti and Kuno, and lets you feel the difference. That is juxtaposition, and the juxtaposition grammar lesson shows how to do it inside a single sentence.</div>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Vashti and Kuno: the argument at the story's heart</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The story's plot is small: a son asks his mother to visit, and she does. The conflict is enormous, because each of them speaks for a whole way of being human. Kuno's plea sets the terms: "I want to see you not through the Machine... I want to speak to you not through the wearisome Machine." To Vashti this is nearly meaningless; she is looking at him right now, in the plate. But the narrator quietly takes a side. The Machine's designers, he tells us, ignored something real: the "imponderable bloom" of actual human presence, the something in face-to-face contact that no transmission carries. Vashti has never missed it because she has never had it. Kuno went to the surface to find it, and Part II is his account of what it cost him. In Part II, he also says the sentence the whole story is built to earn, the one the whole story is built to earn: <em>"The Machine stops."</em></p>
+
+        <!-- WIDGET: evaluative single-select (recolored) -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="c" data-hint="Think about what Kuno is asking for. He can already see her in the plate. What is missing?">
+                <div class="widget-row-prompt">1. Kuno says, "I want to see you not through the Machine." What is he actually asking for?</div>
+                <div class="widget-options">
+                    <button data-choice="a">A better, clearer viewing plate</button>
+                    <button data-choice="b">Permission to become an air-ship pilot</button>
+                    <button data-choice="c" data-fb="Yes. He wants unmediated presence: his mother herself, not a transmission of her. The whole story turns on whether that difference is real. The narrator's 'imponderable bloom' passage says it is.">Direct experience of his mother, with nothing in between</button>
+                    <button data-choice="d">More friends to talk to through the Machine</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Juxtaposition teaches by placing contrasting things side by side. Which answer describes that move?">
+                <div class="widget-row-prompt">2. How does Forster teach us the rules of his invented world?</div>
+                <div class="widget-options">
+                    <button data-choice="a" data-fb="Right. The hexagonal cell against the open hillside, the plate against the face, buttons against legs. Each contrast carries a rule without a paragraph of explanation. Steal this for your own story.">By placing the world below and the world above side by side and letting contrast teach</button>
+                    <button data-choice="b">By opening with a long history of how the Machine was built</button>
+                    <button data-choice="c">By keeping the surface entirely offstage until the last page</button>
+                    <button data-choice="d">By having the Machine explain itself in dialogue</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Word Study (gold) -->
+        <div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>mediated</strong>: reaching you through something in between, rather than directly. &nbsp;&middot;&nbsp; <strong>sacrilege</strong>: an act of disrespect toward what a community holds sacred. &nbsp;&middot;&nbsp; <strong>atrophy</strong>: the wasting away of something unused, a muscle or a capacity. &nbsp;&middot;&nbsp; <strong>apparatus</strong>: the equipment or machinery built for a particular purpose. &nbsp;&middot;&nbsp; <strong>humanity</strong>: the human race, and also the quality of being humane.</div>
+            <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>mediated</em> comes from Latin <em>medius</em>, "middle": something stands in the middle, between you and the thing itself. Vashti's whole life is lived in the middle position. <em>Sacrilege</em> comes from Latin <em>sacrilegium</em>, temple-robbing; watch how the story slowly turns the Machine into the temple, so that doubting it becomes the sacrilege. <em>Atrophy</em> comes from Greek <em>a-</em> ("without") + <em>trophe</em> ("nourishment"): what is not fed wastes away, and in this world the unfed thing is the body itself; infants who promise to be too strong are not kept. <em>Apparatus</em> comes from Latin <em>apparare</em>, "to prepare": Part II is named for the Mending Apparatus, the machinery that repairs the Machine. <em>Humanity</em> comes from Latin <em>humanitas</em>, which meant both "humankind" and "kindness": one word carrying the story's whole question, since losing the second meaning may cost you the first. <strong>Copia:</strong> take the sentence <em>"She spoke to her son,"</em> and rewrite it twice: once so the contact is fully <em>mediated</em> (name the devices in between), and once so it is fully direct, down to the smallest physical detail.</div>
+        </div>
+
+        <!-- AI callout (red frame) -->
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin-top: 16px;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; A 1909 STORY ABOUT RELYING ON A MACHINE</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">You are reading a story about people who let a machine answer every question, and you live in a time when AI tools will summarize this story for you in five seconds. Both facts are worth stating plainly. An AI summary can give you the plot of "The Machine Stops"; it cannot give you the experience of reading it, and the difference between a summary and an experience is the exact subject of the story. The citizens of the Machine preferred lectures about the sea to the sea. Read the story itself first; use tools to check details after.</div>
+        </div>
+    </div>
+
+    <!-- ============ PART 3 ============ -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; MAKING TWO SOURCES TALK TO EACH OTHER</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Forster's story is not only a story. It is an argument about what happens to people who let a system do their thinking. That makes it a useful thing to put beside somebody else's argument and see what happens.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Research writing usually fails in one specific way: quote, quote, quote, and the writer nowhere in sight. That is <strong>stacking</strong>. What you want is <strong>synthesis</strong>: making the sources serve a point of yours, and making them respond to each other.</p>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">What the difference looks like</h3>
+        <div style="overflow-x: auto;"><table style="width: 100%; border-collapse: collapse; min-width: 460px;">
+            <tbody>
+                <tr><td style="padding: 10px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42; white-space: nowrap; vertical-align: top;"><strong>Stacking</strong></td><td style="padding: 10px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">Forster shows the Machine as a trap. One critic says the story predicts the internet. Another critic says it is about religion. All three sit in a row, touching nothing.</td></tr>
+                <tr><td style="padding: 10px 12px; border: 1px solid #D0D9E8; background: #FDF3E3; font-size: 15px; color: #0e1c42; white-space: nowrap; vertical-align: top;"><strong>Synthesis</strong></td><td style="padding: 10px 12px; border: 1px solid #D0D9E8; font-size: 15px; color: #1a2340;">Forster's citizens worship the Machine before they depend on it. <em>Where one critic reads the story as a prediction about technology, another finds it closer to a story about faith</em>, and the second reading explains something the first cannot: why the citizens keep the Book after the Machine fails.</td></tr>
+            </tbody>
+        </table></div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 14px 0 10px 0;">The difference is the connecting tissue: <em>where X sees&hellip;, Y finds&hellip;</em> &nbsp;&middot;&nbsp; <em>Y's point sharpens X's</em> &nbsp;&middot;&nbsp; <em>both concede that&hellip;</em>. If your two sources never touch, you have a pile, not a paragraph.</p>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Paraphrase, and the line you must not cross</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">To <strong>paraphrase</strong> is to put someone's idea fully into your own words and sentence shape. Swapping a few words for synonyms and keeping their structure is not paraphrasing; it is copying with a disguise, and it counts as plagiarism even when you did not mean it that way. Here is the reliable method: read the passage, look away from it, and write what it said. Then check that you got it right.</p>
+
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 16px 20px; margin: 16px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#128221; THE ONE RULE THAT SAVES YOU LATER</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.65;"><strong>A paraphrase still needs a citation.</strong> Students often think quotation marks are what trigger the citation. They are not. Borrowing the <em>idea</em> is what triggers it, whether you quote it or not. On a JSTOR article page, use the <strong>Cite</strong> option, choose <strong>MLA</strong>, and paste it into your document the moment you decide to use the source. Note the page number of anything you quote. Re-finding a lost article the night before a deadline is a misery you can simply skip.</div>
+        </div>
+
+        <!-- WIDGET: evaluative single-select -->
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+            <div class="widget-row" data-correct="b" data-hint="Look at whether the two sources are actually responding to one another, or just standing next to each other.">
+                <div class="widget-row-prompt">1. Which sentence is doing synthesis rather than stacking?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Chen argues the story is about technology. Okoye argues it is about faith.</button>
+                    <button data-choice="b" data-fb="Yes. The second source is used to do something to the first, and your own claim is steering both.">Okoye's reading of the story as faith explains the detail Chen's technology reading leaves unaccounted for: the citizens' reverence comes before their dependence.</button>
+                    <button data-choice="c">Chen and Okoye both wrote about &ldquo;The Machine Stops&rdquo; and both are worth reading.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Ask what actually triggers a citation. It is not the punctuation.">
+                <div class="widget-row-prompt">2. You put a critic's idea entirely in your own words, with no quotation marks. What do you owe?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Nothing, since none of the words are theirs</button>
+                    <button data-choice="b">Only a mention if the idea is unusual</button>
+                    <button data-choice="c" data-fb="Right. Borrowing the idea is what requires the citation. Quotation marks mark borrowed words; the citation covers borrowed thinking.">A full citation, exactly as if you had quoted it</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <!-- Reading Journal -->
+        <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin-top: 18px;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 12px;">&#128211; SOURCE PARAGRAPH &middot; TWO SOURCES, ONE PARAGRAPH</div>
+            <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Find one JSTOR source about &ldquo;The Machine Stops&rdquo; or about Forster. Run the C.R.A.P. check on it. Then write <strong>one paragraph</strong> that does three things: makes a claim of your own about the story, brings in the story itself as evidence, and brings in your source so that it agrees with, extends, or pushes against what the story shows. Paste the MLA citation at the bottom. One paragraph, once, done well.</p>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 16px;">&#10145;&#65039; NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #3B4E8C; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Write the rules of YOUR world</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Write a <strong>"rules of my world" list</strong> for your own story: five concrete details that establish where it happens and what is normal there, each shown through an object or action rather than explained.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; KEY IDEA</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">A world is built from rules, and rules are best taught by contrast: the cell beside the hillside, the plate beside the face. Part III shows what Forster has really been building: not a world but its ending, defect by defect, until the humming stops.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Q5 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">"The Machine Stops": A World Underground</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (from lesson-interactive-template.html) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

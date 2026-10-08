@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 | Parallel Structure (Module 6)</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; line-height: 1.45; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE</div><div style="font-size: 17px; color: #0e1c42;">Module 6</div><div style="font-size: 13px; color: #0e1c42;">The Scarlet Letter</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">TEXT</div><div style="font-size: 17px; color: #0e1c42; font-style: italic;">Ch. IX&ndash;XII</div><div style="font-size: 13px; color: #0e1c42;">The Scarlet Letter</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">WEEK</div><div style="font-size: 17px; color: #0e1c42;">Week 2</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;"><div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON TYPE</div><div style="font-size: 17px; color: #0e1c42;">Grammar lesson</div></div>
+</div>
+
+<div style="padding: 24px 34px;">
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+<div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+    <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">GRAMMAR LESSON</div>
+    <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Parallel Structure</div>
+    <div style="font-size: 16px; color: #0e1c42;">Grammar</div>
+</div>
+
+<div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+    <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; FOCUS</div>
+    <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A list can march or stumble. What makes the items in a series fit together?</div>
+    <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>Parallel structure</strong> gives matching ideas matching form. This lesson covers series and pairs, the correlative pairs, and how repetition builds a climax in Hawthorne's sentences.</div>
+</div>
+
+<div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+    <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WARM-UP</div>
+<div class="optima-widget ow-reflect">
+    <div class="widget-kicker">&#128173; READ BOTH ALOUD</div>
+    <div class="widget-question"><strong>A.</strong> Chillingworth gathers herbs, questions his patient, and watching the minister's face. &nbsp;&nbsp;|&nbsp;&nbsp; <strong>B.</strong> Chillingworth gathers herbs, questions his patient, and watches the minister's face.<br>Which sentence reads without a stumble?</div>
+    <div class="widget-options">
+        <button data-response="Yes. The three verbs share one form, so the series moves in a line. In A, the last item breaks the pattern and the ear catches it.">Version B</button>
+        <button data-response="The last item, &lt;em&gt;watching&lt;/em&gt;, is an &lt;em&gt;-ing&lt;/em&gt; form after two verbs that take endings (&lt;em&gt;gathers, questions&lt;/em&gt;). The mismatch is what makes the sentence stumble.">Version A</button>
+        <button data-response="Read A again and stop after &lt;em&gt;questions his patient, and&lt;/em&gt;. The reader expects another verb with an ending. &lt;em&gt;Watching&lt;/em&gt; does not fit.">They sound the same</button>
+    </div>
+    <div class="widget-feedback"></div>
+    <button class="widget-reset">Reset</button>
+</div>
+</div>
+
+<div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+    <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON</div>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Parallel structure</strong> gives equal ideas equal grammatical form. A reader sees the pattern before understanding it, so a matched series sounds complete and a broken one sounds careless. Parallel form also carries meaning: when Bellingham lists three actions to be taken with Pearl, the repeated form makes the program sound thorough and unyielding. Repetition of an opening, as in Dimmesdale's imagined confession, adds one claim after another until the last phrase lands.</p><div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+    <div style="font-size: 11px; color: #8A6410; margin-bottom: 8px;">ONE RULE TO REMEMBER</div>
+    <div style="font-size: 17px; color: #0e1c42; line-height: 1.7;">Items in a series, a pair, or a comparison share one grammatical form: all nouns, all <em>-ing</em> phrases, all <em>to</em> phrases, or all clauses. After <em>not only&hellip; but also</em>, <em>both&hellip; and</em>, and <em>either&hellip; or</em>, the same form follows each half. <strong>Test:</strong> read the items one after another with the shared lead word. If any one sounds out of step, its form is different.</div>
+</div><div style="background: #14213f; border: 10px solid #3a2c1a; border-radius: 10px; padding: 22px 24px; margin: 18px 0; box-shadow: inset 0 0 40px rgba(0,0,0,0.4);">
+    <div style="font-size: 11px; color: #8ea2c9; letter-spacing: .18em; margin-bottom: 16px; text-align: center;">ON THE BOARD &middot; PARALLEL STRUCTURE</div>
+    <div style="font-size: 19px; color: #f4f1e8; line-height: 2.1;">
+<div style="font-size: 12px; color:#8ea2c9; letter-spacing:.14em; margin-bottom: 4px;">IN HAWTHORNE &middot; THREE KINDS OF PARALLELISM</div>
+“<span style="color: #e6b955; border-bottom: 2px solid #e6b955;">clad</span> soberly, and <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">disciplined</span> strictly, and <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">instructed</span> in the truths of heaven and earth”<br>
+<span style="font-size: 14px; color:#8ea2c9;">three participles, one form (Governor Bellingham, Chapter VIII)</span><br>
+“<span style="color: #e6b955; border-bottom: 2px solid #e6b955;">I, who</span> have laid the hand of baptism upon your children”<br>“<span style="color: #e6b955; border-bottom: 2px solid #e6b955;">I, who</span> have breathed the parting prayer over your dying friends”<br>
+<span style="font-size: 14px; color:#8ea2c9;">one opening repeated to build a climax (Dimmesdale's imagined confession, Chapter XI)</span><br>
+“<span style="color: #e6b955; border-bottom: 2px solid #e6b955;">The elders,</span> <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">the deacons,</span> <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">the motherly dames,</span> and <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">the young and fair maidens</span>”<br>
+<span style="font-size: 14px; color:#8ea2c9;">four noun phrases in a series (Chapter IX)</span>
+<div style="font-size: 12px; color:#8ea2c9; letter-spacing:.14em; margin: 14px 0 4px; border-top: 1px dashed #8ea2c9; padding-top: 12px;">WRONG, THEN RIGHT</div>
+<span style="color:#f0a39b;">&#10007;</span> <span style="color: #f0a39b; text-decoration: line-through;">Chillingworth gathered herbs, studied his patient, and was watching the minister's face.</span><br>
+<span style="color:#e6b955;">&#10003;</span> Chillingworth <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">gathered</span> herbs<span style="color:#8ea2c9;">,</span> <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">studied</span> his patient<span style="color:#8ea2c9;">,</span> and <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">watched</span> the minister's face.<br>
+<span style="color:#f0a39b;">&#10007;</span> <span style="color: #f0a39b; text-decoration: line-through;">Hester wanted to keep Pearl, to teach her, and for her to grow up safe.</span><br>
+<span style="color:#e6b955;">&#10003;</span> Hester wanted <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">to keep</span> Pearl<span style="color:#8ea2c9;">,</span> <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">to teach</span> her<span style="color:#8ea2c9;">,</span> and <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">to see</span> her grow up safe.<br>
+<span style="color:#f0a39b;">&#10007;</span> <span style="color: #f0a39b; text-decoration: line-through;">Dimmesdale suffered not only from guilt but also the town's reverence hurt him.</span><br>
+<span style="color:#e6b955;">&#10003;</span> Dimmesdale suffered not only <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">from guilt</span> but also <span style="color: #e6b955; border-bottom: 2px solid #e6b955;">from the town's reverence</span>.
+    </div>
+    <div style="font-size: 14px; color: #cdd6ea; margin-top: 16px; line-height: 1.6;">The <span style="color:#e6b955;">gold</span> marks the matching parts. Each wrong sentence breaks the pattern at its last item: <em>was watching</em> after two simple past verbs, a clause after two <em>to</em> phrases, a clause after a <em>from</em> phrase.</div>
+</div><div class="optima-widget ow-select">
+    <div class="widget-kicker">&#9998; YOUR TURN &middot; CHOOSE THE BEST ANSWER</div>
+    <div class="widget-row" data-correct="b">
+        <div class="widget-row-prompt">1. Which sentence is parallel?</div>
+        <div class="widget-options">
+            <button data-choice="a" data-fb="&lt;em&gt;Was whipping&lt;/em&gt; is a different verb form from &lt;em&gt;fasted&lt;/em&gt; and &lt;em&gt;kept&lt;/em&gt;. Make all three simple past: &lt;em&gt;scourged&lt;/em&gt;.">Dimmesdale fasted, kept vigils, and was whipping himself.</button>
+            <button data-choice="b" data-fb="Yes. Three simple past verbs in a row, each with its object where needed.">Dimmesdale fasted, kept vigils, and scourged himself.</button>
+            <button data-choice="c" data-fb="The first item is an &lt;em&gt;-ing&lt;/em&gt; phrase and the last is a full clause. Neither matches the verb in the middle.">Dimmesdale fasting, kept vigils, and he scourged himself.</button>
+            <button data-choice="d" data-fb="The middle item switches to a passive clause with a new subject, so the series changes direction.">Dimmesdale fasted, vigils were kept, and scourged himself.</button>
+        </div>
+    </div>
+    <div class="widget-row" data-correct="a">
+        <div class="widget-row-prompt">2. Which revision fixes this sentence? <em>Chillingworth was both a physician and he studied the human heart.</em></div>
+        <div class="widget-options">
+            <button data-choice="a" data-fb="Yes. After &lt;em&gt;both&lt;/em&gt; and after &lt;em&gt;and&lt;/em&gt;, a noun phrase follows: &lt;em&gt;a physician&lt;/em&gt;, &lt;em&gt;a student of the human heart&lt;/em&gt;.">Chillingworth was both a physician and a student of the human heart.</button>
+            <button data-choice="b" data-fb="The second half repeats the verb and changes the form. After &lt;em&gt;both&lt;/em&gt;, the two halves must match.">Chillingworth was both a physician and was studying the human heart.</button>
+            <button data-choice="c" data-fb="Moving &lt;em&gt;both&lt;/em&gt; does not repair the mismatch. A noun phrase still faces a clause.">Chillingworth was a physician both and he studied the human heart.</button>
+            <button data-choice="d" data-fb="This breaks the sentence. &lt;em&gt;Studied&lt;/em&gt; and &lt;em&gt;the human heart&lt;/em&gt; are not parallel items.">Chillingworth, a physician, studied and the human heart.</button>
+        </div>
+    </div>
+    <div class="widget-row" data-correct="c">
+        <div class="widget-row-prompt">3. In Dimmesdale's imagined confession, each statement begins <em>I, who&hellip;</em> before the final phrase, <em>a pollution and a lie</em>. What does the repetition do?</div>
+        <div class="widget-options">
+            <button data-choice="a" data-fb="The repetition is deliberate. Each clause is built to match the one before.">It shows the speaker repeating himself by accident</button>
+            <button data-choice="b" data-fb="It does the opposite. The clauses are parallel, and the form is what lets the pattern build.">It breaks parallel form on purpose</button>
+            <button data-choice="c" data-fb="Yes. Every clause adds a reason the town trusts him, and the last phrase reverses all of them.">It piles up claims of holiness so the final admission lands harder</button>
+            <button data-choice="d" data-fb="The Governor speaks in a different pattern. This repetition belongs to Dimmesdale&#x27;s imagined address to his congregation.">It copies the Governor's style of speech</button>
+        </div>
+    </div>
+    <button class="widget-reset">Reset</button>
+</div>
+</div>
+
+<div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+    <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#9998; PRACTICE</div>
+<div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 17px; color: #1a2340; line-height: 1.65;">Write one sentence about Chillingworth or Dimmesdale with three parallel verbs.</div></div>
+<div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 17px; color: #1a2340; line-height: 1.65;">Write one sentence with <em>not only&hellip; but also</em> and the same form after each half.</div></div>
+<div style="display: flex; align-items: flex-start; gap: 12px; "><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 17px; color: #1a2340; line-height: 1.65;">Read each sentence with its items one after another to check the form.</div></div>
+</div>
+
+<div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+    <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+    <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>parallel structure</strong>: equal ideas given equal grammatical form &nbsp;&middot;&nbsp; <strong>series</strong>: three or more items in a row &nbsp;&middot;&nbsp; <strong>correlative conjunctions</strong>: paired words such as <em>not only&hellip; but also</em></div>
+    <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>Parallel</em> comes from Greek <em>para allelon</em>, “beside one another.” <em>Series</em> comes from Latin <em>series</em>, “a row, a chain,” from <em>serere</em>, “to join.” <em>Correlative</em> combines Latin <em>com-</em>, “together,” and <em>relativus</em>, “referring”: the two words refer to each other.</div>
+</div>
+<div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+    <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128170; KEY POINT</div>
+<p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0 0 0px 0;">Match the form of every item in a series, and match both halves of a pair.</p>
+</div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Module 6 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Parallel Structure</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = sBtn.dataset.fb || (right ? 'Right.' : (row.dataset.hint || 'Not quite. Try again.'));
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

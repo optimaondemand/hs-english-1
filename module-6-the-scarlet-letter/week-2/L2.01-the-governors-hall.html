@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English 1 | The Governor's Hall and the Elf-Child (Module 6)</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #EEF1F8 0%, #F4F6FA 100%); border: 1px solid #C9D3E8; border-left: 5px solid #3B4E8C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #3B4E8C; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; line-height: 1.45; }
+    .widget-options button:hover { background: #EEF1F8; border-color: #3B4E8C; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #FDF3E3; border-color: #C7922C; color: #8A6410; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #FDF3E3; border-left: 3px solid #C7922C; color: #8A6410; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #EEF1F8; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">ENGLISH 1</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">MODULE</div><div style="font-size: 17px; color: #0e1c42;">Module 6</div><div style="font-size: 13px; color: #0e1c42;">The Scarlet Letter</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">TEXT</div><div style="font-size: 17px; color: #0e1c42; font-style: italic;">Ch. VII&ndash;VIII</div><div style="font-size: 13px; color: #0e1c42;">The Scarlet Letter</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">WEEK</div><div style="font-size: 17px; color: #0e1c42;">Week 2</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;"><div style="font-size: 11px; color: #3B4E8C; margin-bottom: 4px;">LESSON TYPE</div><div style="font-size: 17px; color: #0e1c42;">Reading lesson</div></div>
+</div>
+
+<div style="padding: 24px 34px;">
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+
+<div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+    <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">READING LESSON</div>
+    <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Governor's Hall and the Elf-Child (Ch. VII&ndash;VIII)</div>
+    <div style="font-size: 16px; color: #0e1c42;">Symbol, motif, and irony</div>
+</div>
+
+<div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+    <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; FOCUS</div>
+    <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A governor, two ministers, and a mother argue over one child. What does the argument show about how the town sees the scarlet letter?</div>
+    <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Hester goes to Governor Bellingham's mansion to keep Pearl. The scene rests on a <strong>symbol</strong> (a concrete thing that stands for an idea) and on three competing readings of what the letter means.</div>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+    <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; OBJECTIVES</div>
+<div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> explain how Pearl's dress and the armor's reflection turn the scarlet letter into a symbol.</div></div>
+<div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> compare how Bellingham, Wilson, and Dimmesdale argue about Pearl's welfare.</div></div>
+<div style="display: flex; align-items: flex-start; gap: 12px; "><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I can</strong> identify the irony in Dimmesdale's defense of Hester.</div></div>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+    <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; MATERIALS</div>
+<div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #C7922C; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;"><em>The Scarlet Letter</em>: <a href="https://www.gutenberg.org/cache/epub/25344/pg25344-images.html#VII" style="color: #3B4E8C;">Chapter VII</a> and <a href="https://www.gutenberg.org/cache/epub/25344/pg25344-images.html#VIII" style="color: #3B4E8C;">Chapter VIII</a> (public domain, free to read online; about 25 minutes)</div></div>
+</div>
+
+<div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+    <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; READ THE CHAPTERS</div>
+<div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 17px; color: #1a2340; line-height: 1.65;">Read Chapters VII and VIII.</div></div>
+<div style="display: flex; align-items: flex-start; gap: 12px; "><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 17px; color: #1a2340; line-height: 1.65;">Reread the hearing in Chapter VIII, from the Governor's first question to his decision. Mark every moment where someone mentions the letter or the child's origin.</div></div>
+<div class="optima-widget ow-reflect">
+    <div class="widget-kicker">&#128173; WARM-UP</div>
+    <div class="widget-question">A town is deciding whether a parent should keep her child. One fact about her past is public. How much should that fact count?</div>
+    <div class="widget-options">
+        <button data-response="That is the Governor&#x27;s position, and it is the logic of the hearing. The question the scene tests is whether one public fact can stand for a whole person.">It should count most: the past shows character</button>
+        <button data-response="Hester makes this argument when she says what the letter has taught her. The scene tests whether the town will weigh the present against the past.">It should count a little, beside how she raises the child now</button>
+        <button data-response="No one at the hearing goes this far, not even Dimmesdale. Notice how far each speaker is willing to go, and where each stops.">It should not count at all</button>
+    </div>
+    <div class="widget-feedback"></div>
+    <button class="widget-reset">Reset</button>
+</div>
+</div>
+
+<div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+    <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LETTER AS A SYMBOL</div>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A <strong>symbol</strong> is a concrete thing that stands for an idea. A <strong>motif</strong> is a symbol or image that returns. The scarlet letter is the novel's central symbol, and Chapter VII multiplies it. Hester dresses Pearl in crimson velvet and gold thread, and the narrator says plainly what the dress is:</p><div style="border-left: 4px solid #C7922C; background: #FDF3E3; border-radius: 4px; padding: 12px 18px; margin: 12px 0;"><div style="font-size: 17px; color: #0e1c42; line-height: 1.65; font-style: italic;">It was the scarlet letter in another form; the scarlet letter endowed with life!</div></div><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Pearl is the letter made alive. The children of the town read her that way at once, and they act on it: “let us fling mud at them!” They see the badge, then the woman, then the child.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Inside the hall, Pearl looks into the Governor's polished armor. Hester looks too, and finds the letter distorted:</p><div style="border-left: 4px solid #C7922C; background: #FDF3E3; border-radius: 4px; padding: 12px 18px; margin: 12px 0;"><div style="font-size: 17px; color: #0e1c42; line-height: 1.65; font-style: italic;">the scarlet letter was represented in exaggerated and gigantic proportions, so as to be greatly the most prominent feature of her appearance.</div></div><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Hawthorne adds one more clause: “she seemed absolutely hidden behind it.” The curved steel makes the town's way of seeing into an image. The letter grows until it hides the person wearing it. This is the question the hearing will argue.</p>
+</div>
+
+<div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+    <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE HEARING, ARGUMENT BY ARGUMENT</div>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Chapter VIII stages an argument with a verdict. Each speaker offers a different answer to what the letter means, and the chart shows where each one stands.</p><div style="border: 1px solid #D0D9E8; border-radius: 8px; overflow: hidden; margin: 18px 0;"><div style="background: #0E1C42; color: #55c8e8; font-size: 11px; letter-spacing: .14em; padding: 8px 14px;">THE HEARING IN THE HALL &middot; FOUR VOICES, ONE QUESTION: WHO SHOULD RAISE PEARL?</div><div style="background: #F4F6FA; padding: 16px; display: flex; flex-wrap: wrap; gap: 12px;"><div style="flex: 1; min-width: 220px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 5px solid #3B4E8C; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 12px; color: #3B4E8C; letter-spacing: .08em;">GOVERNOR BELLINGHAM</div><div style="font-size: 13px; color: #0e1c42; margin-bottom: 8px;">the magistrate</div><div style="font-size: 15px; color: #1a2340; line-height: 1.55; margin-bottom: 10px;">Asks whether a woman who has fallen can be trusted with an immortal soul. Rests on the letter as proof of unfitness.</div><div style="font-size: 15px; color: #0e1c42; line-height: 1.5; font-style: italic; border-left: 3px solid #C7922C; padding-left: 10px;">“Woman, it is thy badge of shame!”</div></div><div style="flex: 1; min-width: 220px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 5px solid #3B4E8C; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 12px; color: #3B4E8C; letter-spacing: .08em;">MR. WILSON</div><div style="font-size: 13px; color: #0e1c42; margin-bottom: 8px;">the senior minister</div><div style="font-size: 15px; color: #1a2340; line-height: 1.55; margin-bottom: 10px;">Tests Pearl on the catechism. Rests on her answer as proof of neglect.</div><div style="font-size: 15px; color: #0e1c42; line-height: 1.5; font-style: italic; border-left: 3px solid #C7922C; padding-left: 10px;">“Canst thou tell me, my child, who made thee?”</div></div><div style="flex: 1; min-width: 220px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 5px solid #C7922C; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 12px; color: #C7922C; letter-spacing: .08em;">HESTER</div><div style="font-size: 13px; color: #0e1c42; margin-bottom: 8px;">the mother</div><div style="font-size: 15px; color: #1a2340; line-height: 1.55; margin-bottom: 10px;">Argues from experience: the letter has taught her something Pearl can use.</div><div style="font-size: 15px; color: #0e1c42; line-height: 1.5; font-style: italic; border-left: 3px solid #C7922C; padding-left: 10px;">“I can teach my little Pearl what I have learned from this!”</div></div><div style="flex: 1; min-width: 220px; background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 5px solid #3B4E8C; border-radius: 8px; padding: 14px 16px;"><div style="font-size: 12px; color: #3B4E8C; letter-spacing: .08em;">MR. DIMMESDALE</div><div style="font-size: 13px; color: #0e1c42; margin-bottom: 8px;">the young minister</div><div style="font-size: 15px; color: #1a2340; line-height: 1.55; margin-bottom: 10px;">Reframes the question: Pearl is a gift given to keep her mother's soul alive.</div><div style="font-size: 15px; color: #0e1c42; line-height: 1.5; font-style: italic; border-left: 3px solid #C7922C; padding-left: 10px;">“It was meant for a blessing; for the one blessing of her life!”</div></div></div><div style="background: #FFFFFF; font-size: 15px; color: #0e1c42; padding: 12px 16px; border-top: 1px solid #D0D9E8; line-height: 1.6;"><strong>Outcome:</strong> the Governor leaves the matter as it stands, “so long, at least, as there shall be no further scandal in the woman.” The decision follows Dimmesdale's argument, not Hester's.</div></div><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Pearl's answer</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Wilson's question gets a startling reply. Pearl, the narrator reports, “had not been made at all, but had been plucked by her mother off the bush of wild roses that grew by the prison-door”. The Governor takes this as proof of ignorance: “Methinks, gentlemen, we need inquire no further.” The narrator has already said Pearl knows her catechism and is being perverse. The test measures a child's mood, and the Governor treats it as a measure of her soul.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Dimmesdale and irony</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Hester turns to the young minister: “Speak thou for me!” He answers with the strongest argument in the scene, ending with a line that is easy to pass over: “Herein is the sinful mother happier than the sinful father.” Roger Chillingworth, standing nearby, remarks with a smile that Dimmesdale speaks with “a strange earnestness”.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Irony</strong> is a gap between what is said and what is meant, or between what a character knows and what the reader suspects. Dimmesdale pleads for a woman whose sin the reader suspects he shares. The first reading finds a kind defender; the second hears a man arguing for himself. Chapters X to XII settle what Chapter VIII only suggests.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The invitation</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">As Hester leaves, Mistress Hibbins, the Governor's sister, invites her to a meeting in the forest. Hester refuses, and adds: “Had they taken her from me, I would willingly have gone with thee into the forest, and signed my name in the Black Man’s book too, and that with mine own blood!” The narrator draws the conclusion: “Even thus early had the child saved her from Satan’s snare.” The hearing was never only about custody. Taking Pearl would have taken the one tie that held Hester inside the community.</p>
+</div>
+
+<div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+    <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9998; CHECK</div>
+<div class="optima-widget ow-select">
+    <div class="widget-kicker">&#9998; CHECK YOURSELF &middot; PICK THE BEST ANSWER</div>
+    <div class="widget-row" data-correct="b">
+        <div class="widget-row-prompt">1. In the armor's curved breastplate, Hester sees the letter enlarged until she seems hidden behind it. What does the image show?</div>
+        <div class="widget-options">
+            <button data-choice="a" data-fb="The passage is not about vanity. Pearl points at the reflection to show her mother, and the narrator describes the effect of a convex mirror. The image is about how the letter looks from outside.">Pearl is vain and enjoys her own reflection</button>
+            <button data-choice="b" data-fb="Yes. The distortion makes the town&#x27;s habit of seeing visible: the symbol grows until it replaces the woman.">The letter can swallow the person: the town sees the badge before it sees Hester</button>
+            <button data-choice="c" data-fb="The armor belongs to the Governor and is described as a soldier&#x27;s equipment. Hester uses no weapon in this scene; her only defense is argument.">The armor is a weapon Hester could use to protect Pearl</button>
+            <button data-choice="d" data-fb="The Governor is not yet in the room. The distortion is a physical effect of the armor, which Hawthorne turns into an image.">The Governor is trying to shame Hester before the hearing begins</button>
+        </div>
+    </div>
+    <div class="widget-row" data-correct="c">
+        <div class="widget-row-prompt">2. Which statement best separates Bellingham's argument from Dimmesdale's?</div>
+        <div class="widget-options">
+            <button data-choice="a" data-fb="Both want Pearl raised in the faith; Bellingham’s ruling keeps her under examination in the catechism by Wilson or Dimmesdale. They disagree about who should raise her.">Bellingham wants Pearl educated and Dimmesdale does not</button>
+            <button data-choice="b" data-fb="Neither speaker cites a statute or public opinion. Bellingham argues from the letter as proof; Dimmesdale argues from God&#x27;s purpose for the child.">Bellingham argues from law and Dimmesdale from the town's opinion</button>
+            <button data-choice="c" data-fb="Right. The same facts, the same child, and the same letter lead to opposite conclusions because each man begins from a different idea of what the letter means.">Bellingham treats the letter as proof Hester is unfit; Dimmesdale treats Pearl as given to keep Hester's soul alive</button>
+            <button data-choice="d" data-fb="Dimmesdale argues against removal. The Governor is persuaded to leave the matter as it stands.">Both want Pearl removed, but at different times</button>
+        </div>
+    </div>
+    <div class="widget-row" data-correct="a">
+        <div class="widget-row-prompt">3. Why does Dimmesdale's defense of Hester carry irony?</div>
+        <div class="widget-options">
+            <button data-choice="a" data-fb="Yes. The speech is sincere and also self-interested; what he says about the father may describe himself. That doubleness is the irony.">His words about the sinful father read differently once the reader suspects he shares Hester's guilt</button>
+            <button data-choice="b" data-fb="He argues from them: he calls Pearl a gift from God. The irony does not come from a contradiction of belief.">He argues against his own religious beliefs</button>
+            <button data-choice="c" data-fb="In this scene Chillingworth only comments. The two do not scheme together; Chillingworth&#x27;s remark about earnestness is an observation.">He is secretly working with Chillingworth</button>
+            <button data-choice="d" data-fb="Nothing in the speech concerns the Governor. Dimmesdale pleads for Hester and Pearl.">He is arguing to protect the Governor</button>
+        </div>
+    </div>
+    <button class="widget-reset">Reset</button>
+</div>
+<div style="background: #FDF3E3; border-left: 5px solid #C7922C; border-radius: 6px; padding: 16px 20px; margin-top: 16px;">
+    <div style="font-size: 11px; color: #8A6410; margin-bottom: 6px;">&#128218; WORD STUDY</div>
+    <div style="font-size: 15px; color: #1a2340; line-height: 1.7;"><strong>symbol</strong>: a concrete thing that stands for an idea &nbsp;&middot;&nbsp; <strong>motif</strong>: a symbol or image that returns &nbsp;&middot;&nbsp; <strong>irony</strong>: a gap between what is said and what is meant &nbsp;&middot;&nbsp; <strong>retribution</strong>: punishment given in return for a wrong &nbsp;&middot;&nbsp; <strong>ignominy</strong>: public disgrace</div>
+    <div style="font-size: 15px; color: #1a2340; line-height: 1.6; margin-top: 10px;"><strong>Word origins:</strong> <em>symbol</em> comes from Greek <em>symbolon</em>, a token broken in two so that the halves could later be matched; a symbol is half of a pair, and the reader supplies the other. <em>Irony</em> comes from Greek <em>eironeia</em>, pretended ignorance. <em>Retribution</em> comes from Latin <em>retribuere</em>, “to pay back.” <em>Ignominy</em> comes from Latin <em>in-</em>, “not,” and <em>nomen</em>, “name”: a loss of one's good name. <strong>Copia:</strong> Rewrite the sentence <em>The woman wore a badge</em> twice: once so the badge is a punishment, once so it is a symbol of something larger.</div>
+</div>
+</div>
+
+<div style="background: #FFFFFF; border-top: 3px solid #3B4E8C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+    <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 14px;">&#10145;&#65039; BEFORE THE NEXT READING LESSON</div>
+<p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0 0 0px 0;">Read Chapters IX to XII of <em>The Scarlet Letter</em>.</p>
+</div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; ENGLISH 1 &middot; Module 6 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">The Governor's Hall and the Elf-Child</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = sBtn.dataset.fb || (right ? 'Right.' : (row.dataset.hint || 'Not quite. Try again.'));
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
