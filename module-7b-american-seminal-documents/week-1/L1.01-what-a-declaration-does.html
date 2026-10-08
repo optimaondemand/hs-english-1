@@ -27,6 +27,27 @@
     .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
     .widget-reset { background: transparent; border: 1px solid #3B4E8C; color: #3B4E8C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
     .widget-reset:hover { background: #EEF1F8; }
+
+    /* ===== MARK-UP WIDGET (highlight passages by part; underline the audience) ===== */
+    .dm-tools { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 14px; }
+    .dm-tool { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 7px 12px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+    .dm-tool:hover { border-color: #3B4E8C; }
+    .dm-tool.active { outline: 3px solid #3B4E8C; outline-offset: 1px; }
+    .dm-tool[data-tool="opening"] { background: #D5DCEA; } .dm-tool[data-tool="principle"] { background: #F6E0B8; }
+    .dm-tool[data-tool="evidence"] { background: #D2D9F0; } .dm-tool[data-tool="conclusion"] { background: #C9ECF7; }
+    .dm-num { display: inline-block; width: 18px; height: 18px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 11px; line-height: 18px; text-align: center; margin-right: 4px; }
+    .dm-passage { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 16px 18px; font-family: Georgia, "Times New Roman", serif; font-size: 17px; line-height: 1.8; color: #0E1C42; }
+    .dm-seg { cursor: pointer; border-radius: 3px; padding: 2px 0; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+    .dm-seg:hover, .dm-seg:focus { outline: 1px dashed #3B4E8C; }
+    .dm-seg[data-mark]::before { content: attr(data-label); font-family: "Segoe UI", Roboto, Arial, sans-serif; font-size: 10px; letter-spacing: 0.4px; background: #0E1C42; color: #fff; border-radius: 3px; padding: 1px 5px; margin-right: 4px; vertical-align: 2px; white-space: nowrap; display: inline-block; }
+    .dm-seg[data-mark="opening"] { background: #D5DCEA; } .dm-seg[data-mark="principle"] { background: #F6E0B8; }
+    .dm-seg[data-mark="evidence"] { background: #D2D9F0; } .dm-seg[data-mark="conclusion"] { background: #C9ECF7; }
+    .dm-chunk.underlined { text-decoration: underline; text-decoration-color: #3B4E8C; text-decoration-thickness: 3px; text-underline-offset: 4px; }
+    .dm-seg.dm-bad { box-shadow: 0 0 0 2px #C0392B; } .dm-seg.dm-ok { box-shadow: 0 0 0 2px #C7922C; }
+    .dm-cut { color: #3B4E8C; font-family: "Segoe UI", Roboto, Arial, sans-serif; font-size: 14px; }
+    .dm-source { font-size: 13px; color: #0E1C42; margin: 6px 0 10px; }
+    .dm-check { background: #3B4E8C; color: #fff; border: none; border-radius: 6px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; margin-right: 8px; }
+    .dm-result .row-feedback { margin-top: 8px; }
 </style>
 </head>
 <body>
@@ -386,6 +407,26 @@
             <div style="background: #F8F9FC; font-size: 13px; color: #0e1c42; text-align: center; padding: 0 18px 14px; line-height: 1.6;">Read from the bottom up and you can see the design: the claim needs evidence, the evidence needs a rule, and the rule needs a reason to be stated at all.</div>
         </div>
 
+
+        <!-- WIDGET: mark up the Declaration -->
+        <div class="optima-widget ow-markup">
+            <div class="widget-kicker">&#128396;&#65039; MARK UP THE DECLARATION</div>
+            <div class="widget-question">Choose a highlighter, then click each passage to mark the part of the argument it belongs to. Then choose <strong>Underline: audience</strong> and click the words in the first sentence that name who the document is written for.</div>
+            <div class="dm-tools" role="radiogroup" aria-label="Highlighters">
+                <button class="dm-tool" data-tool="opening"><span class="dm-num">1</span> Opening</button>
+                <button class="dm-tool" data-tool="principle"><span class="dm-num">2</span> Principle</button>
+                <button class="dm-tool" data-tool="evidence"><span class="dm-num">3</span> Evidence</button>
+                <button class="dm-tool" data-tool="conclusion"><span class="dm-num">4</span> Conclusion</button>
+                <button class="dm-tool" data-tool="aud">&#9135; Underline: audience</button>
+                <button class="dm-tool" data-tool="erase">Eraser</button>
+            </div>
+            <div class="dm-passage"><span class="dm-seg" tabindex="0" role="button" data-part="opening" data-fb="This sentence explains why the document exists at all: a people separating from another owes the world its reasons. That is the Opening."><span class="dm-chunk">When in the Course of human events, it becomes necessary for one people to dissolve the political bands which have connected them with another, and to assume among the powers of the earth, the separate and equal station to which the Laws of Nature and of Nature&rsquo;s God entitle them, </span><span class="dm-chunk" data-aud="1">a decent respect to the opinions of mankind</span><span class="dm-chunk"> requires that they should declare the causes which impel them to the separation.</span></span> <br><br><span class="dm-cut" aria-label="text omitted">[&hellip;]</span> <span class="dm-seg" tabindex="0" role="button" data-part="principle" data-fb="A general rule about all people and all governments, stated before any charge against the King. That is the Principle.">We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.</span> <span class="dm-seg" tabindex="0" role="button" data-part="principle" data-fb="A general rule about all people and all governments, stated before any charge against the King. That is the Principle.">&mdash;That to secure these rights, Governments are instituted among Men, deriving their just powers from the consent of the governed,</span> <span class="dm-seg" tabindex="0" role="button" data-part="principle" data-fb="A general rule about all people and all governments, stated before any charge against the King. That is the Principle.">&mdash;That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form, as to them shall seem most likely to effect their Safety and Happiness.</span> <span class="dm-seg" tabindex="0" role="button" data-part="principle" data-fb="Still the Principle. It adds a limit to the rule (no overthrowing a government for small reasons), which sets the bar the evidence has to clear.">Prudence, indeed, will dictate that Governments long established should not be changed for light and transient causes; and accordingly all experience hath shewn, that mankind are more disposed to suffer, while evils are sufferable, than to right themselves by abolishing the forms to which they are accustomed.</span> <br><br><span class="dm-cut" aria-label="text omitted">[&hellip;]</span> <span class="dm-seg" tabindex="0" role="button" data-part="evidence" data-fb="&quot;He has...&quot; names one specific act by the King. A specific charge is Evidence.">He has refused his Assent to Laws, the most wholesome and necessary for the public good.</span> <span class="dm-seg" tabindex="0" role="button" data-part="evidence" data-fb="&quot;He has...&quot; names one specific act by the King. A specific charge is Evidence.">He has forbidden his Governors to pass Laws of immediate and pressing importance, unless suspended in their operation till his Assent should be obtained; and when so suspended, he has utterly neglected to attend to them.</span> <span class="dm-cut" aria-label="text omitted">[&hellip;]</span> <span class="dm-seg" tabindex="0" role="button" data-part="evidence" data-fb="&quot;He has...&quot; names one specific act by the King. A specific charge is Evidence.">He has plundered our seas, ravaged our Coasts, burnt our towns, and destroyed the lives of our people.</span> <br><br><span class="dm-cut" aria-label="text omitted">[&hellip;]</span> <span class="dm-seg" tabindex="0" role="button" data-part="conclusion" data-fb="&quot;We, therefore&quot; signals the claim itself, drawn from everything above it. That is the Conclusion.">We, therefore, the Representatives of the united States of America, in General Congress, Assembled, appealing to the Supreme Judge of the world for the rectitude of our intentions, do, in the Name, and by Authority of the good People of these Colonies, solemnly publish and declare, That these United Colonies are, and of Right ought to be Free and Independent States;</span> <span class="dm-cut" aria-label="text omitted">[&hellip;]</span> <span class="dm-seg" tabindex="0" role="button" data-part="conclusion" data-fb="The signers stake their lives on the claim just made. The pledge completes the Conclusion.">And for the support of this Declaration, with a firm reliance on the protection of divine Providence, we mutually pledge to each other our Lives, our Fortunes and our sacred Honor.</span></div>
+            <div class="dm-source">Excerpt from the Declaration of Independence (1776), National Archives transcript. [&hellip;] marks text left out.</div>
+            <button class="dm-check">Check my markup</button>
+            <div class="dm-result" aria-live="polite"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
         <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The order is the argument</h3>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Open with the twenty-seven grievances and you have a complaint letter: a reader who disagrees with charge number nine can start arguing there and never reach your point. Open with &ldquo;we declare ourselves independent&rdquo; and you have an announcement, which invites the reply <em>says who?</em></p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Putting the principle second does something specific. It gets the reader to agree to a general rule <em>before</em> they know what it will be used to justify. By the time the grievances arrive, the reader has already accepted the standard by which they will be judged. That is not a trick; it is how a well-built argument works. It is the same move as a disputation that states the question before answering it.</p>
@@ -461,7 +502,7 @@
 <script>
 (function () {
   document.addEventListener('click', function (e) {
-    var reset = e.target.closest('.widget-reset');
+    var reset = e.target.closest('.widget-reset'); if (reset && reset.closest('.ow-markup')) reset = null;
     if (reset) {
       var w = reset.closest('.optima-widget');
       w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
@@ -492,6 +533,64 @@
       rf.textContent = text;
       return;
     }
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var LABEL = { opening: '1 OPENING', principle: '2 PRINCIPLE', evidence: '3 EVIDENCE', conclusion: '4 CONCLUSION' };
+  function tool(w) { var a = w.querySelector('.dm-tool.active'); return a ? a.dataset.tool : null; }
+  function mark(seg, chunk) {
+    var w = seg.closest('.ow-markup'), t = tool(w);
+    if (!t) { say(w, 'Choose a highlighter first.', false); return; }
+    seg.classList.remove('dm-ok', 'dm-bad');
+    if (t === 'aud') { if (chunk) chunk.classList.toggle('underlined'); return; }
+    if (t === 'erase') { seg.removeAttribute('data-mark'); seg.removeAttribute('data-label'); if (chunk) chunk.classList.remove('underlined'); return; }
+    seg.dataset.mark = t; seg.dataset.label = LABEL[t];
+  }
+  function say(w, html, ok) {
+    var r = w.querySelector('.dm-result'); r.innerHTML = '';
+    var d = document.createElement('div'); d.className = 'row-feedback ' + (ok ? 'correct' : 'incorrect'); d.innerHTML = html; r.appendChild(d);
+  }
+  function check(w) {
+    var segs = w.querySelectorAll('.dm-seg'), right = 0, notes = [];
+    segs.forEach(function (s, i) {
+      s.classList.remove('dm-ok', 'dm-bad');
+      if (s.dataset.mark === s.dataset.part) { right++; s.classList.add('dm-ok'); }
+      else { s.classList.add('dm-bad'); notes.push('<strong>Passage ' + (i + 1) + (s.dataset.mark ? '' : ' (not marked)') + ':</strong> ' + s.dataset.fb); }
+    });
+    var und = w.querySelectorAll('.dm-chunk.underlined'), aud = w.querySelector('.dm-chunk[data-aud]');
+    var audOk = und.length === 1 && und[0] === aud;
+    var r = w.querySelector('.dm-result'); r.innerHTML = '';
+    var head = document.createElement('div');
+    head.className = 'row-feedback ' + (right === segs.length && audOk ? 'correct' : 'incorrect');
+    head.innerHTML = right + ' of ' + segs.length + ' passages marked correctly.' + (right === segs.length ? ' The argument runs in order: Opening, Principle, Evidence, Conclusion.' : '');
+    r.appendChild(head);
+    notes.forEach(function (n) { var d = document.createElement('div'); d.className = 'row-feedback incorrect'; d.innerHTML = n; r.appendChild(d); });
+    var a = document.createElement('div'); a.className = 'row-feedback ' + (audOk ? 'correct' : 'incorrect');
+    a.innerHTML = audOk ? '<strong>Audience:</strong> Right. &ldquo;The opinions of mankind&rdquo;: the document is written for the world, not for the King or the colonists.'
+      : (und.length ? '<strong>Audience:</strong> Underline only the words that name whose opinion matters. The rest of the sentence says what is happening, not who it is for.'
+                    : '<strong>Audience:</strong> Not underlined yet. Use <em>Underline: audience</em> on the first sentence.');
+    r.appendChild(a);
+  }
+  document.addEventListener('click', function (e) {
+    var tb = e.target.closest('.ow-markup .dm-tool');
+    if (tb) { var w = tb.closest('.ow-markup'); w.querySelectorAll('.dm-tool').forEach(function (b) { b.classList.remove('active'); b.setAttribute('aria-checked', 'false'); }); tb.classList.add('active'); tb.setAttribute('aria-checked', 'true'); return; }
+    var seg = e.target.closest('.ow-markup .dm-seg');
+    if (seg) { mark(seg, e.target.closest('.dm-chunk')); return; }
+    var ck = e.target.closest('.ow-markup .dm-check');
+    if (ck) { check(ck.closest('.ow-markup')); return; }
+    var rs = e.target.closest('.ow-markup .widget-reset');
+    if (rs) { var w2 = rs.closest('.ow-markup');
+      w2.querySelectorAll('.dm-seg').forEach(function (s) { s.removeAttribute('data-mark'); s.removeAttribute('data-label'); s.classList.remove('dm-ok', 'dm-bad'); });
+      w2.querySelectorAll('.dm-chunk').forEach(function (c) { c.classList.remove('underlined'); });
+      w2.querySelectorAll('.dm-tool').forEach(function (b) { b.classList.remove('active'); });
+      w2.querySelector('.dm-result').innerHTML = ''; }
+  });
+  document.addEventListener('keydown', function (e) {
+    var seg = e.target.closest && e.target.closest('.ow-markup .dm-seg');
+    if (seg && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); mark(seg, null); }
   });
 })();
 </script>
