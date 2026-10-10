@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Promise and the Story: The Draft</title>
+<link rel="stylesheet" href="project.css" />
+</head>
+<body data-ns="eng1.promise" data-lesson="L3" data-title="The Promise and the Story: The Draft" data-course="English 1" data-project-name="The Promise and the Story" data-assignment="Module 7B Project: The Promise and the Story" data-code="ELA9">
+<div class="frame" id="pageTop">
+
+<div class="progress-wrap"><span class="progress-label">LESSON PROGRESS</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
+
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" /></div>
+    <div><div class="header-org">Optima Academy Online</div><div class="header-tag">An Education Experience Company</div></div>
+  </div>
+  <div class="header-course">ENGLISH 1</div>
+</div>
+<div class="strip">
+  <div class="strip-cell"><div class="strip-k">Module 7B Project</div><div class="strip-v">The Promise and the Story</div><div class="strip-s">Research argument &middot; 100 pts</div></div>
+  <div class="strip-cell"><div class="strip-k">Part</div><div class="strip-v">3 of 4 &middot; The Draft</div><div class="strip-s">Module 7B, Week 3</div></div>
+  <div class="strip-cell"><div class="strip-k">You make</div><div class="strip-v">A thesis, an introduction, a body paragraph, a counterargument</div><div class="strip-s">Saved as a PDF</div></div>
+  <div class="strip-cell"><div class="strip-k">Turn in</div><div class="strip-v"><span class="cname">Feeder 3: Source Audit and Research Check-In</span></div><div class="strip-s">Your Word file, with this lesson&rsquo;s PDF in the same submission</div></div>
+</div>
+
+<div style="padding: 18px 28px 0 28px;">
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+</div>
+
+<div class="intro">
+  <div class="title-card">
+    <div class="title-k">The Promise and the Story</div>
+    <div class="title-h">The Draft</div>
+    <div class="title-s">The middle of the project is where the paper takes shape. Today you check your question, write your thesis, and draft your introduction, one body paragraph, and your counterargument.</div>
+  </div>
+  <div class="path">
+    <div class="path-title">YOUR PATH TODAY</div>
+    <div class="path-steps">
+      <span class="path-step">Check your question</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Write your thesis</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Draft the introduction</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Build a body paragraph</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Answer an objection</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Turn in Feeder 3</span>
+    </div>
+  </div>
+  <div class="need-strip"><span class="need-label">You will need:</span><span class="need-chip">About 50 minutes</span><span class="need-chip">Your PDF from The Sources</span><span class="need-chip">Your two texts open</span></div>
+  <div class="project-strip" data-fields="question,doc,lit"></div>
+</div>
+
+<div class="tab-bar">
+  <button class="tab-btn" data-tab="question"><span class="tab-n">1</span>Your question</button>
+  <button class="tab-btn" data-tab="thesis"><span class="tab-n">2</span>Your thesis</button>
+  <button class="tab-btn" data-tab="intro"><span class="tab-n">3</span>Introduction</button>
+  <button class="tab-btn" data-tab="body"><span class="tab-n">4</span>A body paragraph</button>
+  <button class="tab-btn" data-tab="counter"><span class="tab-n">5</span>Counterargument</button>
+  <button class="tab-btn" data-tab="wrap"><span class="tab-n">6</span>Wrap up</button>
+</div>
+<div class="reset-row"><button class="reset-btn">Start this lesson over</button></div>
+
+<!-- ===== question ===== -->
+<div class="tab-panel" id="tab-question">
+  <div class="activity bl-navy">
+    <div class="activity-head"><div class="activity-num">1</div><div><div class="activity-title">Check your question</div><div class="activity-sub">The check-in that decides what you draft</div></div></div>
+    <div class="activity-body">
+      <svg viewBox="0 0 560 170" role="img" aria-label="The shape of the paper. Introduction, 150 to 200 words. Three or four body paragraphs, 700 to 900 words. Counterargument, 150 to 200 words. Conclusion, 100 to 150 words. Today you draft the introduction, one body paragraph, and the counterargument." style="display:block;max-width:560px;width:100%;margin:4px auto 14px;">
+        <rect x="0" y="0" width="560" height="170" rx="12" fill="#0E1C42"/>
+        <g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+          <rect x="16" y="26" width="92" height="74" rx="8" fill="#55C8E8"/>
+          <text x="62" y="56" font-size="14" font-weight="700" fill="#0E1C42">Introduction</text>
+          <text x="62" y="78" font-size="12" fill="#0E1C42">150 to 200</text>
+          <rect x="116" y="26" width="248" height="74" rx="8" fill="#FFFFFF"/>
+          <text x="240" y="56" font-size="14" font-weight="700" fill="#0E1C42">Body, 3 or 4 paragraphs</text>
+          <text x="240" y="78" font-size="12" fill="#0E1C42">700 to 900 words, both texts in each</text>
+          <rect x="372" y="26" width="104" height="74" rx="8" fill="#C7922C"/>
+          <text x="424" y="56" font-size="14" font-weight="700" fill="#0E1C42">Counter</text>
+          <text x="424" y="78" font-size="12" fill="#0E1C42">150 to 200</text>
+          <rect x="484" y="26" width="62" height="74" rx="8" fill="#55C8E8"/>
+          <text x="515" y="56" font-size="13" font-weight="700" fill="#0E1C42">End</text>
+          <text x="515" y="78" font-size="10.5" fill="#0E1C42">100 to 150</text>
+        </g>
+        <path d="M62,108 L62,128" stroke="#C7922C" stroke-width="3"/>
+        <path d="M168,108 L168,128" stroke="#C7922C" stroke-width="3"/>
+        <path d="M424,108 L424,128" stroke="#C7922C" stroke-width="3"/>
+        <text x="280" y="152" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#FFFFFF">Gold marks: the three parts you draft today</text>
+      </svg>
+      <div class="coach"><span class="ci">&#9679;</span><div>Halfway through, a researcher checks whether the original question still works. Changing it now costs nothing. Finding out in Week 4 that it never worked costs the paper. Feeder 3 asks four things about your research. Here you settle the one that matters most for drafting: is your question still the one you are answering?</div></div>
+      <div class="carry" data-from="L1.question" data-k="Your question so far"></div>
+      <div class="carry" data-from="L2.src1note" data-k="Your Source 1 note (The Sources)"></div>
+      <div class="choices" data-key="qChange" data-label="Whether my question has changed" data-required>
+        <button class="choice" type="button" data-value="Same" data-fb="Fine, if you can defend it. Say in one line why the research did not move it.">It has not changed</button>
+        <button class="choice" type="button" data-value="Narrowed" data-fb="Good. A narrower question is usually easier to argue in 1,200 to 1,500 words.">I narrowed it</button>
+        <button class="choice" type="button" data-value="Changed" data-fb="That is normal. Research changes questions. Write the new version below and say what changed it.">It changed</button>
+      </div>
+      <div class="choice-fb"></div>
+      <div class="q"><div class="q-prompt">My question now<div class="q-hint">One question. It should still name or point to both texts.</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="question" data-label="My question now (revised)" data-project="question" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">What changed it, or why it stayed<div class="q-hint">One or two sentences.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="qWhy" data-label="What changed my question or why it stayed" data-required></textarea></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="thesis">Continue: your thesis &#8594;</button>
+</div>
+
+<!-- ===== thesis ===== -->
+<div class="tab-panel" id="tab-thesis">
+  <div class="activity bl-burgundy">
+    <div class="activity-head"><div class="activity-num">2</div><div><div class="activity-title">A balanced sentence</div><div class="activity-sub">A shape for your thesis</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Your thesis is the one sentence that answers your question. It must be a sentence that could only be written by someone holding both texts at once. A balanced sentence is a good shape for it. A balanced sentence has two parts of matching shape, set against each other. Lincoln's famous sentence does it. Look at the two halves.</div></div>
+      <div class="parchment">
+        <div class="pm-title">GETTYSBURG ADDRESS &middot; 1863</div>
+        <div class="pm-line">"The world will little note nor long remember what we say here, but it can never forget what they did here."</div>
+        <div class="pm-cite">Lincoln, in 1863. Two halves: what we say, and what they did.</div>
+      </div>
+      <div class="coach"><span class="ci">&#9679;</span><div>The first half says words will be forgotten. The second says deeds will not. The halves match in shape and set one thing against another. That is the move.</div></div>
+      <div class="notebook"><div class="nb-title">A THESIS FRAME</div><div class="nb-line">Although [the document] promises ___, [the story] shows ___; together they argue that ___.</div></div>
+      <div class="notebook"><div class="nb-title">MODEL (GETTYSBURG AND THE SCARLET LETTER)</div><div class="nb-line">Lincoln stands inside the standard he asks the nation to meet, but Hawthorne's town enforces a law it exempts its own leaders from, so a standard means nothing unless its makers accept it too.</div></div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">Which thesis could only be written by someone holding both texts?</div>
+        <div class="check-row">
+          <div class="opts">
+            <button class="opt" data-correct="false" data-fb="That is true of the texts but it is not an argument. It answers no question.">Lincoln gave a short speech about the nation, and Hawthorne wrote a long novel about a Puritan town, and both are well known.</button>
+            <button class="opt" data-correct="true" data-fb="Yes. It needs both texts, it takes a position, and the halves are set against each other.">Lincoln accepts the test he sets for the nation, while Hawthorne's town exempts its leaders, so a standard needs its makers to meet it.</button>
+            <button class="opt" data-correct="false" data-fb="It names a topic and a compliment. Nobody could disagree, so there is nothing to argue.">Both texts are about equality and justice, and both are important to Americans who study their own history.</button>
+          </div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+    </div>
+  </div>
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">3</div><div><div class="activity-title">Write your thesis</div><div class="activity-sub">One sentence that answers your question</div></div></div>
+    <div class="activity-body">
+      <div class="carry" data-from="L1.question" data-k="Your question"></div>
+      <div class="carry" data-from="L2.mp1idea" data-k="Meeting point 1 (The Sources)"></div>
+      <div class="carry" data-from="L2.mp2idea" data-k="Meeting point 2 (The Sources)"></div>
+      <div class="carry" data-from="L2.mp3idea" data-k="Meeting point 3 (The Sources)"></div>
+      <div class="q"><div class="q-prompt">My thesis<div class="q-hint">One sentence that answers your question. Use the frame if it helps, and break the frame if your idea needs it.</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="thesis" data-label="My thesis" data-project="thesis" data-required placeholder="Although... / Because..."></textarea></div>
+      <div class="coach"><span class="ci">&#9679;</span><div>Test your thesis on two things. Could a reasonable person disagree? Does it need both of your texts? If you answered no to either, rewrite it.</div></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="intro">Continue: your introduction &#8594;</button>
+</div>
+
+<!-- ===== intro ===== -->
+<div class="tab-panel" id="tab-intro">
+  <div class="activity bl-cyan">
+    <div class="activity-head"><div class="activity-num">4</div><div><div class="activity-title">Write your introduction</div><div class="activity-sub">Both texts, the question, then the answer</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>The introduction runs 150 to 200 words. It names both texts, poses your question, and ends with your thesis. It does not summarize either text.</div></div>
+      <div class="flow">
+        <div class="flow-step"><div class="flow-n">1</div><div class="flow-t">Set the scene</div><div class="flow-d">Name the document and the story, and the problem they share</div></div>
+        <div class="flow-step"><div class="flow-n">2</div><div class="flow-t">Ask the question</div><div class="flow-d">State your question as a question</div></div>
+        <div class="flow-step"><div class="flow-n">3</div><div class="flow-t">Give the answer</div><div class="flow-d">End on your thesis, word for word</div></div>
+      </div>
+      <div class="carry" data-from="L1.docPromise" data-k="Your document promises"></div>
+      <div class="carry" data-from="L1.litPromise" data-k="Your story promises"></div>
+      <div class="coach"><span class="ci">&#9679;</span><div>Your thesis: <span data-project-text="thesis" data-empty="(write it in tab 2)"></span></div></div>
+      <div class="q"><div class="q-prompt">My introduction<div class="q-hint">150 to 200 words. Your last sentence is your thesis.</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="intro" data-label="My introduction" data-required></textarea></div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">What belongs at the end of the introduction?</div>
+        <div class="check-row">
+          <div class="opts">
+            <button class="opt" data-correct="false" data-fb="The introduction does not retell. It names the texts and moves to the question.">A summary of the whole story, kept to two sentences</button>
+            <button class="opt" data-correct="false" data-fb="Your sources appear in the body, doing work. A list belongs on the Works Cited page.">A list of the sources you used, in the order found</button>
+            <button class="opt" data-correct="true" data-fb="Yes. The thesis comes last, so the paper moves from question to answer.">Your thesis, the sentence that answers the question</button>
+          </div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="body">Continue: a body paragraph &#8594;</button>
+</div>
+
+<!-- ===== body ===== -->
+<div class="tab-panel" id="tab-body">
+  <div class="activity bl-gold">
+    <div class="activity-head"><div class="activity-num">5</div><div><div class="activity-title">Build one body paragraph</div><div class="activity-sub">Claim, document, story, source, so what</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>A body paragraph makes one point and uses both texts to make it. Here is the order: a claim, the document, the story, a source if it helps, and then your explanation of what it all shows. Use your first meeting point.</div></div>
+      <div class="flow">
+        <div class="flow-step"><div class="flow-n">1</div><div class="flow-t">Claim</div><div class="flow-d">One idea, in your own words</div></div>
+        <div class="flow-step"><div class="flow-n">2</div><div class="flow-t">The document</div><div class="flow-d">A short quotation, built into your sentence</div></div>
+        <div class="flow-step"><div class="flow-n">3</div><div class="flow-t">The story</div><div class="flow-d">A moment, quoted briefly or described exactly</div></div>
+        <div class="flow-step"><div class="flow-n">4</div><div class="flow-t">A source</div><div class="flow-d">One of your four, doing work the texts cannot</div></div>
+        <div class="flow-step"><div class="flow-n">5</div><div class="flow-t">So what</div><div class="flow-d">What it shows, in your own words</div></div>
+      </div>
+      <div class="coach"><span class="ci">&#9679;</span><div>On quotations: put the quoted words inside a sentence of your own, then explain them. A quotation that stands alone is dropped in. Compare these two.</div></div>
+      <div class="notebook"><div class="nb-title">DROPPED IN</div><div class="nb-line">Lincoln wrote about the nation. "dedicated to the proposition that all men are created equal."</div></div>
+      <div class="notebook"><div class="nb-title">BUILT IN</div><div class="nb-line">Lincoln calls the nation "dedicated to the proposition that all men are created equal," and then asks whether such a nation can last.</div></div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">What makes the second one better?</div>
+        <div class="check-row">
+          <div class="opts">
+            <button class="opt" data-correct="false" data-fb="Length is not the difference. The second one is built into a complete sentence.">It is longer, and it gives the reader more of Lincoln's actual words to look at.</button>
+            <button class="opt" data-correct="true" data-fb="Yes. The quotation does a job in the sentence, and the sentence goes on to make a point.">The quotation sits inside the writer's own sentence, which goes on to say what Lincoln does</button>
+            <button class="opt" data-correct="false" data-fb="Both use quotation marks. The difference is how the quotation sits in the sentence.">It does not use quotation marks, so the sentence flows more smoothly for the reader.</button>
+          </div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+      <div class="coach"><span class="ci">&#9679;</span><div>In MLA style, cite as you go. A page number goes in parentheses after the quotation. For an online text with no page numbers, cite the author or a short title, matching the first word of your Works Cited entry.</div></div>
+      <div class="carry" data-from="L2.mp1idea" data-k="Meeting point 1"></div>
+      <div class="carry" data-from="L2.mp1doc" data-k="In the document"></div>
+      <div class="carry" data-from="L2.mp1lit" data-k="In the story"></div>
+      <div class="q"><div class="q-prompt">My body paragraph<div class="q-hint">About 150 to 250 words. Check every quotation against the text before you keep it.</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="body1" data-label="My first body paragraph" data-required></textarea></div>
+      <div class="coach"><span class="ci">&#9679;</span><div>Now run the cover test. Cover one of your two texts. Does the paragraph still make its point?</div></div>
+      <div class="choices" data-key="coverTest" data-label="Result of the cover test on body paragraph 1" data-required>
+        <button class="choice" type="button" data-value="Both needed" data-fb="Good. That is what holding two texts at once looks like.">Cover either text and the point falls apart</button>
+        <button class="choice" type="button" data-value="One still works" data-fb="Then it only used one. Add the missing text into the claim, not into a separate sentence.">The paragraph still works with one text covered</button>
+        <button class="choice" type="button" data-value="Not sure" data-fb="Read the claim sentence alone. Does it name an idea both texts speak to? If it names one text only, rewrite it.">I cannot tell</button>
+      </div>
+      <div class="choice-fb"></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="counter">Continue: the counterargument &#8594;</button>
+</div>
+
+<!-- ===== counter ===== -->
+<div class="tab-panel" id="tab-counter">
+  <div class="activity bl-burgundy">
+    <div class="activity-head"><div class="activity-num">6</div><div><div class="activity-title">Write the counterargument</div><div class="activity-sub">An objection stated fairly, then answered</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Feeder 3's audit asks you to test the reasoning of an address. The same eye helps with your counterargument. A counterargument is one real objection to your reading. You state it in a form the person who holds it would accept, and then you answer it. The opposite of that is a straw man, where you state the other side weakly so it is easy to knock down. Placing the counterargument late works well. Leaving it out costs you the top band.</div></div>
+      <div class="flow">
+        <div class="flow-step"><div class="flow-n">1</div><div class="flow-t">State it fairly</div><div class="flow-d">In words its holder would accept</div></div>
+        <div class="flow-step"><div class="flow-n">2</div><div class="flow-t">Say why it is strong</div><div class="flow-d">What it gets right</div></div>
+        <div class="flow-step"><div class="flow-n">3</div><div class="flow-t">Answer it</div><div class="flow-d">Where it falls short, using your texts or a source</div></div>
+      </div>
+      <div class="coach"><span class="ci">&#9679;</span><div>Your thesis: <span data-project-text="thesis" data-empty="(write it in tab 2)"></span></div></div>
+      <div class="q"><div class="q-prompt">The strongest objection to my reading<div class="q-hint">Write it so someone who believed it would say yes, that is what I think.</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="objection" data-label="The strongest objection to my reading" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">Who would hold this view, and why<div class="q-hint">One or two sentences. A historian, a character, a reader, or a source you found.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="objHolder" data-label="Who would hold this objection and why" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">My reply<div class="q-hint">Answer it with your evidence. Concede what is fair, and say where it falls short.</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="reply" data-label="My reply to the objection" data-required></textarea></div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">Which opening states the objection fairly?</div>
+        <div class="check-row">
+          <div class="opts">
+            <button class="opt" data-correct="false" data-fb="'Foolishly' delivers a verdict before any reasoning. A holder would not accept this wording.">Some people foolishly think that the standard is too high to matter, but they have not read closely.</button>
+            <button class="opt" data-correct="false" data-fb="It names no objection and answers nothing. Say what the objection is, in full, first.">Someone might object to this thesis, but they would be wrong, so I will not name the objection.</button>
+            <button class="opt" data-correct="true" data-fb="Yes. It is stated the way someone who believed it would state it, and it is strong enough to need an answer.">A reader could argue that every community applies its standard unevenly, which is a limit, not hypocrisy.</button>
+          </div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="wrap">Continue: wrap up &#8594;</button>
+</div>
+
+<!-- ===== wrap ===== -->
+<div class="tab-panel" id="tab-wrap">
+  <div class="project-strip" data-fields="question,thesis"></div>
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">7</div><div><div class="activity-title">Your work from The Draft, on one page</div><div class="activity-sub">Download it and keep it. The Paper turns it into the paper.</div></div></div>
+    <div class="activity-body">
+      <div class="gathered">
+        <div class="gathered-head"><div><div class="gk">ALL YOUR WORK FROM THIS LESSON</div><div class="gt">Review, copy, or download</div></div></div>
+        <div class="gathered-body">
+          <textarea class="gathered-output" id="gathered" readonly></textarea>
+          <div class="gathered-actions">
+            <button class="gbtn pdf" data-action="pdf" type="button">Download as PDF</button>
+            <button class="gbtn ghost" data-action="copy" type="button">Copy the text</button>
+          </div>
+          <div class="gstatus" id="gstatus"></div>
+        </div>
+      </div>
+      <div class="turn-in">
+        <div class="turn-in-head"><div class="gk">BEFORE YOU MOVE ON</div><div class="gt">Check each line</div></div>
+        <div class="turn-in-body">
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I checked my question and wrote the version I am answering.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">My thesis answers my question and needs both texts.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">My introduction names both texts, poses the question, and ends on my thesis.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">My first body paragraph passes the cover test.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">My objection is stated in a form its holder would accept, and I answered it.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I turned in my audit and check-in answers to <span class="cname">Feeder 3: Source Audit and Research Check-In</span> in Canvas and uploaded this lesson's PDF (LastName_PromiseLesson3_ELA9) to the same submission.</div></div>
+        </div>
+      </div>
+      <div class="action"><div class="ak">NOW, IN WORD</div><ul>
+        <li>Open a new Word document and start your paper file: LastName_FirstName_Module7Paper_ELA9, in OneDrive: Optima &rarr; ELA &rarr; ELA9 &rarr; Module 7B.</li>
+        <li>Paste in your introduction, your first body paragraph, and your counterargument. Leave room between them.</li>
+        <li>Do Feeder 3 separately in Word: the audit of one address and the four research check-in answers, in LastName_FirstName_Feeder3_ELA9. Turn it in to <b><span class="cname">Feeder 3: Source Audit and Research Check-In</span></b> in Canvas, and upload this lesson's PDF to the same submission.</li>
+      </ul></div>
+      <div class="callout-gold" style="margin-top:14px;"><strong>Next.</strong> In Week 4, open <a href="promise-lesson-4-the-paper.html">The Paper</a> to finish the body, the conclusion, and the revision, and turn the paper in.</div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="f1"><span>Optima Academy Online</span> &middot; ENGLISH 1 &middot; Module 7B &middot; American Seminal Documents</div>
+  <div class="f2">The Promise and the Story &middot; Part 3 of 4 &middot; The Draft</div>
+  <div class="f3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>window.PROJECT_LABELS = { question: "Your question", doc: "Your document", lit: "Your story", thesis: "Your thesis" };</script>
+<script src="project.js"></script>
+</body>
+</html>

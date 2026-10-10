@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Promise and the Story: The Pair</title>
+<link rel="stylesheet" href="project.css" />
+</head>
+<body data-ns="eng1.promise" data-lesson="L1" data-title="The Promise and the Story: The Pair" data-course="English 1" data-project-name="The Promise and the Story" data-assignment="Module 7B Project: The Promise and the Story" data-code="ELA9">
+<div class="frame" id="pageTop">
+
+<div class="progress-wrap"><span class="progress-label">LESSON PROGRESS</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
+
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" /></div>
+    <div><div class="header-org">Optima Academy Online</div><div class="header-tag">An Education Experience Company</div></div>
+  </div>
+  <div class="header-course">ENGLISH 1</div>
+</div>
+<div class="strip">
+  <div class="strip-cell"><div class="strip-k">Module 7B Project</div><div class="strip-v">The Promise and the Story</div><div class="strip-s">Research argument &middot; 100 pts</div></div>
+  <div class="strip-cell"><div class="strip-k">Part</div><div class="strip-v">1 of 4 &middot; The Pair</div><div class="strip-s">Module 7B, Week 1</div></div>
+  <div class="strip-cell"><div class="strip-k">You make</div><div class="strip-v">A pair of texts, a question, three candidate sources</div><div class="strip-s">Saved as a PDF</div></div>
+  <div class="strip-cell"><div class="strip-k">Turn in</div><div class="strip-v"><span class="cname">Feeder 1: Research Question and Source Hunt</span></div><div class="strip-s">A PDF in Week 1</div></div>
+</div>
+
+<div style="padding: 18px 28px 0 28px;">
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+</div>
+
+<div class="intro">
+  <div class="title-card">
+    <div class="title-k">The Promise and the Story</div>
+    <div class="title-h">The Pair</div>
+    <div class="title-s">At the end of this module you will write one argument that puts an American document beside a story you read this year. Today you see how the project works, watch a pair at work, choose your own, and start your question and your sources.</div>
+  </div>
+  <div class="path">
+    <div class="path-title">YOUR PATH TODAY</div>
+    <div class="path-steps">
+      <span class="path-step">See the project</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Watch a pair work</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Choose your pair</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Write your question</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Hunt three sources</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Turn in Feeder 1</span>
+    </div>
+  </div>
+  <div class="need-strip"><span class="need-label">You will need:</span><span class="need-chip">About 40 minutes</span><span class="need-chip">The Declaration of Independence read</span><span class="need-chip">Your list of this year's stories</span></div>
+  <div class="project-strip" data-fields="question,doc,lit"></div>
+  <div class="q plain" style="max-width:420px;"><div class="q-prompt">Your last name<span class="saved-dot"></span></div><input class="answer" type="text" data-key="name" data-project="name" data-label="Name" placeholder="LastName" /></div>
+</div>
+
+<div class="tab-bar">
+  <button class="tab-btn" data-tab="project"><span class="tab-n">1</span>The project</button>
+  <button class="tab-btn" data-tab="model"><span class="tab-n">2</span>A model pair</button>
+  <button class="tab-btn" data-tab="pair"><span class="tab-n">3</span>Your pair</button>
+  <button class="tab-btn" data-tab="question"><span class="tab-n">4</span>Your question</button>
+  <button class="tab-btn" data-tab="hunt"><span class="tab-n">5</span>Source hunt</button>
+  <button class="tab-btn" data-tab="wrap"><span class="tab-n">6</span>Wrap up</button>
+</div>
+<div class="reset-row"><button class="reset-btn">Start this lesson over</button></div>
+
+<!-- ===== project ===== -->
+<div class="tab-panel" id="tab-project">
+  <div class="activity bl-navy">
+    <div class="activity-head"><div class="activity-num">1</div><div><div class="activity-title">How the project works</div><div class="activity-sub">Five steps across four weeks, four lessons to guide you</div></div></div>
+    <div class="activity-body">
+      <svg viewBox="0 0 560 270" role="img" aria-label="Diagram: one American document and one story from this year meet in your question. Four researched sources support the argument. The result is a 1,200 to 1,500 word paper." style="display:block;max-width:560px;width:100%;margin:4px auto 14px;">
+        <rect x="0" y="0" width="560" height="270" rx="12" fill="#0E1C42"/>
+        <rect x="24" y="24" width="190" height="62" rx="8" fill="none" stroke="#55C8E8" stroke-width="2.5"/>
+        <text x="119" y="50" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">One document</text>
+        <text x="119" y="72" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#55C8E8">from this module</text>
+        <rect x="346" y="24" width="190" height="62" rx="8" fill="none" stroke="#C7922C" stroke-width="2.5"/>
+        <text x="441" y="50" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">One story</text>
+        <text x="441" y="72" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#C7922C">from this year</text>
+        <path d="M119,86 L119,110 L240,128" fill="none" stroke="#55C8E8" stroke-width="2.5"/>
+        <path d="M441,86 L441,110 L320,128" fill="none" stroke="#C7922C" stroke-width="2.5"/>
+        <rect x="200" y="124" width="160" height="50" rx="25" fill="#FFFFFF"/>
+        <text x="280" y="147" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0E1C42">Your question</text>
+        <text x="280" y="164" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#0E1C42">you chose it</text>
+        <g font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle">
+          <rect x="24" y="130" width="120" height="40" rx="6" fill="#1B2D5E"/><text x="84" y="147">Source 1</text><text x="84" y="163" font-size="11" fill="#55C8E8">scholarly</text>
+          <rect x="24" y="180" width="120" height="40" rx="6" fill="#1B2D5E"/><text x="84" y="197">Source 2</text><text x="84" y="213" font-size="11" fill="#55C8E8">primary</text>
+          <rect x="416" y="130" width="120" height="40" rx="6" fill="#1B2D5E"/><text x="476" y="147">Source 3</text><text x="476" y="163" font-size="11" fill="#55C8E8">primary</text>
+          <rect x="416" y="180" width="120" height="40" rx="6" fill="#1B2D5E"/><text x="476" y="197">Source 4</text><text x="476" y="213" font-size="11" fill="#55C8E8">your choice</text>
+        </g>
+        <path d="M280,174 L280,206" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+        <rect x="170" y="206" width="220" height="44" rx="8" fill="#C7922C"/>
+        <text x="280" y="226" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#0E1C42">One argument</text>
+        <text x="280" y="242" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#0E1C42">1,200 to 1,500 words</text>
+      </svg>
+      <div class="coach"><span class="ci">&#9679;</span><div>You do not write this paper in one sitting. Each week's feeder (a smaller graded step) builds one piece of it. These four lessons sit beside the feeders and help you think before you write.</div></div>
+      <div class="flow">
+        <div class="flow-step now"><div class="flow-n">1</div><div class="flow-t">Feeder 1</div><div class="flow-d">Your question and three candidate sources</div><div class="flow-when">WEEK 1 &middot; THE PAIR</div></div>
+        <div class="flow-step"><div class="flow-n">2</div><div class="flow-t">Feeder 2</div><div class="flow-d">Annotated bibliography: four sources, each judged</div><div class="flow-when">WEEK 2 &middot; THE SOURCES</div></div>
+        <div class="flow-step"><div class="flow-n">3</div><div class="flow-t">Feeder 3</div><div class="flow-d">Source audit and research check-in</div><div class="flow-when">WEEK 3 &middot; THE DRAFT</div></div>
+        <div class="flow-step"><div class="flow-n">4</div><div class="flow-t">Feeder 4</div><div class="flow-d">Your article in the class declaration</div><div class="flow-when">WEEK 4</div></div>
+        <div class="flow-step"><div class="flow-n">5</div><div class="flow-t">The paper</div><div class="flow-d">Argument, 1,200 to 1,500 words</div><div class="flow-when">WEEK 4 &middot; THE PAPER</div></div>
+      </div>
+      <div class="flow-end"><div class="fe-k">WEEK 4</div><div class="fe-t">One finished paper in MLA style, saved as LastName_FirstName_Module7Paper_ELA9 and turned in through the OneDrive tab in Canvas. The presentation is a separate assignment, scored separately.</div></div>
+    </div>
+  </div>
+  <div class="activity bl-cyan">
+    <div class="activity-head"><div class="activity-num">2</div><div><div class="activity-title">What the paper is</div><div class="activity-sub">One document, one story, one question</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>The paper puts one American document from this module beside one work of literature you read this year. It asks one question you chose, and it answers with four researched sources. Here is what it must contain.</div></div>
+      <div class="flow">
+        <div class="flow-step"><div class="flow-n">1</div><div class="flow-t">A question</div><div class="flow-d">Chosen by you, stated in your introduction</div></div>
+        <div class="flow-step"><div class="flow-n">2</div><div class="flow-t">A document</div><div class="flow-d">One text from this module</div></div>
+        <div class="flow-step"><div class="flow-n">3</div><div class="flow-t">A story</div><div class="flow-d">One work you read this year</div></div>
+        <div class="flow-step"><div class="flow-n">4</div><div class="flow-t">Four sources</div><div class="flow-d">Researched, in addition to the two texts</div></div>
+        <div class="flow-step"><div class="flow-n">5</div><div class="flow-t">A counterargument</div><div class="flow-d">One real objection, answered</div></div>
+        <div class="flow-step"><div class="flow-n">6</div><div class="flow-t">MLA</div><div class="flow-d">In-text citations and a Works Cited page</div></div>
+      </div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">What is the paper's central move?</div>
+        <div class="check-row">
+          <div class="opts">
+            <button class="opt" data-correct="true" data-fb="Yes. Every body paragraph uses both texts to make one point.">Hold the document and the story in view together to answer your question</button>
+            <button class="opt" data-correct="false" data-fb="Summary alone earns the lowest band. The paper has to argue.">Summarize the document, then the story, then say which one is better</button>
+            <button class="opt" data-correct="false" data-fb="The paper is about the texts and what they say, not the people who wrote them.">Compare the lives of the authors and show how each life shaped the text</button>
+          </div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+    </div>
+  </div>
+  <div class="activity bl-gold">
+    <div class="activity-head"><div class="activity-num">3</div><div><div class="activity-title">What your teacher looks for</div><div class="activity-sub">The four rows of the rubric</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Here are the four things your teacher scores. Read them as goals, then say the project in your own words.</div></div>
+      <div class="goals">
+        <div class="goal"><div class="goal-w"><b>1</b><span>of 4</span></div><div class="goal-b"><div class="goal-t">ARGUMENT AND SYNTHESIS</div><div class="goal-d">A clear, arguable thesis that needs both texts. Every body paragraph uses both. The counterargument is real.</div></div></div>
+        <div class="goal"><div class="goal-w"><b>2</b><span>of 4</span></div><div class="goal-b"><div class="goal-t">USE OF RESEARCH</div><div class="goal-d">Four sources in the required mix, each doing work the two texts cannot do alone.</div></div></div>
+        <div class="goal"><div class="goal-w"><b>3</b><span>of 4</span></div><div class="goal-b"><div class="goal-t">EVIDENCE AND REASONING</div><div class="goal-d">Well-chosen quotations woven into your sentences, each followed by what it shows.</div></div></div>
+        <div class="goal"><div class="goal-w"><b>4</b><span>of 4</span></div><div class="goal-b"><div class="goal-t">CRAFT AND CITATION</div><div class="goal-d">Controlled sentences, a deliberate structure, and MLA in the text and on the Works Cited page.</div></div></div>
+      </div>
+      <div class="q"><div class="q-prompt">In your own words, what will you make?<div class="q-hint">Two sentences. Say it the way you would explain it to a friend.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="projectOwnWords" data-label="The project in my own words" data-required></textarea></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="model">Continue: a model pair &#8594;</button>
+</div>
+
+<!-- ===== model ===== -->
+<div class="tab-panel" id="tab-model">
+  <div class="activity bl-burgundy">
+    <div class="activity-head"><div class="activity-num">4</div><div><div class="activity-title">A pair at work</div><div class="activity-sub">Gettysburg and The Scarlet Letter, as a model</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Before you choose your own pair, watch one pair work. This model is on a different topic from the one you may choose. Copy the shape, not the ideas. First, the document: Lincoln's Gettysburg Address, one line.</div></div>
+      <div class="parchment">
+        <div class="pm-title">GETTYSBURG ADDRESS &middot; 1863</div>
+        <div class="pm-line">"dedicated to the proposition that all men are created equal"</div>
+        <div class="pm-cite">Lincoln, speaking at a battlefield cemetery about the nation's founding promise</div>
+      </div>
+      <div class="coach"><span class="ci">&#9679;</span><div>The story: <em>The Scarlet Letter</em>, in which a Puritan town in Boston judges Hester Prynne by its own moral law while it hides sins of its own. The model has a question, a thesis, and two paragraphs.</div></div>
+      <div class="notebook"><div class="nb-title">MODEL QUESTION</div><div class="nb-line">What does a community owe to the standard it uses to judge other people?</div></div>
+      <div class="notebook"><div class="nb-title">MODEL THESIS</div><div class="nb-line">Lincoln asks whether a nation can live up to its own founding promise, and Hawthorne shows a town enforcing a law on one woman while its leaders keep their own secrets, so together they argue that a standard means nothing unless the people who set it accept it too.</div></div>
+      <div class="coach"><span class="ci">&#9679;</span><div>Now two model body paragraphs. One passes the cover test. One does not. The cover test: hide one of your two texts. If the paragraph still makes its point, it never used both.</div></div>
+      <div class="notebook"><div class="nb-title">PARAGRAPH A</div><div class="nb-line">Lincoln says the nation was dedicated to the idea that all people are created equal. He says the war tests whether such a nation can last. He honors the soldiers who died at Gettysburg and asks the living to finish their work. His speech is short, and he does not claim the nation has already succeeded.</div></div>
+      <div class="notebook"><div class="nb-title">PARAGRAPH B</div><div class="nb-line">Lincoln says a war is testing whether a nation built on equality can last, and Hawthorne's Boston runs a test of its own on Hester Prynne in the marketplace. In both texts the test is real. In both, the people applying it are also the people it should measure. Lincoln speaks as part of the nation under test, while Hawthorne's magistrates judge Hester and leave the man who shares her sin to keep his own secret. The difference tells you something: Lincoln puts himself inside the standard, and the town does not.</div></div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">Which paragraph passes the cover test, and why?</div>
+        <div class="check-row">
+          <div class="opts">
+            <button class="opt" data-correct="false" data-fb="It is accurate, but cover the story and nothing changes. It never mentions the story, so it did not combine two texts.">Paragraph A, because it describes Lincoln accurately</button>
+            <button class="opt" data-correct="true" data-fb="Yes. Cover either text and the point about who stands inside the standard falls apart.">Paragraph B, because the point needs both texts to make it</button>
+            <button class="opt" data-correct="false" data-fb="Length is not the test. Ask whether the paragraph still works with one text covered.">Neither, because both are too short</button>
+          </div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+      <div class="q"><div class="q-prompt">In your own words, why does the paragraph that passes pass?<div class="q-hint">One or two sentences. Say what the paragraph needs both texts to say.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="modelWhy" data-label="Why the passing paragraph passes the cover test" data-required></textarea></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="pair">Continue: your pair &#8594;</button>
+</div>
+
+<!-- ===== pair ===== -->
+<div class="tab-panel" id="tab-pair">
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">5</div><div><div class="activity-title">Choose your document and your story</div><div class="activity-sub">The two texts your paper will hold together</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Pick the document and the story you want to work with. You can change either one until you submit the paper. If you want to work on King's Letter from Birmingham Jail, use your own licensed copy and quote only briefly.</div></div>
+      <p><strong>Your document.</strong></p>
+      <div class="stance-cards" data-key="doc" data-label="My document" data-project="doc" data-required>
+        <div class="stance-card" data-value="The Declaration of Independence"><div class="sc-t">The Declaration of Independence</div><div class="sc-d">A promise, then a list of charges.</div></div>
+        <div class="stance-card" data-value="The Preamble or the Bill of Rights"><div class="sc-t">The Preamble or the Bill of Rights</div><div class="sc-d">A promise written as procedure.</div></div>
+        <div class="stance-card" data-value="Federalist No. 10"><div class="sc-t">Federalist No. 10</div><div class="sc-d">A writer defining a danger, faction.</div></div>
+        <div class="stance-card" data-value="The Gettysburg Address"><div class="sc-t">The Gettysburg Address</div><div class="sc-d">272 words that date a nation from a promise.</div></div>
+        <div class="stance-card" data-value="Lincoln's Second Inaugural"><div class="sc-t">Lincoln's Second Inaugural</div><div class="sc-d">A speech that refuses to celebrate.</div></div>
+        <div class="stance-card" data-value="Washington's Farewell Address"><div class="sc-t">Washington's Farewell Address</div><div class="sc-d">Advice, and the reasons under it.</div></div>
+        <div class="stance-card" data-value="FDR's Four Freedoms"><div class="sc-t">FDR's Four Freedoms</div><div class="sc-d">A promise widened to the world.</div></div>
+      </div>
+      <p><strong>Your story.</strong></p>
+      <div class="stance-cards" data-key="lit" data-label="My story" data-project="lit" data-required>
+        <div class="stance-card" data-value="Electra"><div class="sc-t">Electra</div><div class="sc-d">Justice in a house with no court.</div></div>
+        <div class="stance-card" data-value="Sir Gawain and the Green Knight"><div class="sc-t">Sir Gawain and the Green Knight</div><div class="sc-d">A broken vow, worn as evidence.</div></div>
+        <div class="stance-card" data-value="The Canterbury Tales"><div class="sc-t">The Canterbury Tales</div><div class="sc-d">Pilgrims sizing up who deserves an office.</div></div>
+        <div class="stance-card" data-value="Shakespeare's sonnets"><div class="sc-t">Shakespeare's sonnets</div><div class="sc-d">Promises made to one person, in fourteen lines.</div></div>
+        <div class="stance-card" data-value="A Module 5 short story"><div class="sc-t">A Module 5 short story</div><div class="sc-d">A single story you read in Module 5.</div></div>
+        <div class="stance-card" data-value="The Scarlet Letter"><div class="sc-t">The Scarlet Letter</div><div class="sc-d">A scaffold, a crowd, and secrets.</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="activity bl-navy">
+    <div class="activity-head"><div class="activity-num">6</div><div><div class="activity-title">What each one promises</div><div class="activity-sub">One sentence each</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Now say, in one sentence each, what promise or standard each text is about. This is the ground your question will grow from.</div></div>
+      <div class="q"><div class="q-prompt">The document is about this promise or standard<div class="q-hint">One sentence. Example: a nation says it holds a standard, then is measured against it.</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="docPromise" data-label="The promise or standard in my document" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">The story is about this promise or standard<div class="q-hint">One sentence. Name a character who is measured against a standard.</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="litPromise" data-label="The promise or standard in my story" data-required></textarea></div>
+      <div class="coach"><span class="ci">&#9679;</span><div>Look at your two sentences. Do they point at the same kind of problem? If they do, you have a pair. If they do not, change one of your choices.</div></div>
+      <div class="choices" data-key="fit" data-label="How well my two texts fit together">
+        <button class="choice" type="button" data-value="Close" data-fb="Good. That is the best case. Your question can sit right in the middle.">They are about the same problem</button>
+        <button class="choice" type="button" data-value="Partly" data-fb="That works. Your question can live in the overlap. You will mark it in The Sources.">They overlap in one place</button>
+        <button class="choice" type="button" data-value="Not yet" data-fb="Fine for now. Try another story from the list, or read the Preamble again beside your story. You can switch in The Sources.">I cannot see a link yet</button>
+      </div>
+      <div class="choice-fb"></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="question">Continue: your question &#8594;</button>
+</div>
+
+<!-- ===== question ===== -->
+<div class="tab-panel" id="tab-question">
+  <div class="activity bl-cyan">
+    <div class="activity-head"><div class="activity-num">7</div><div><div class="activity-title">What a researchable question looks like</div><div class="activity-sub">Too broad, too small, just right</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Your question decides the paper. If it is too wide, you can only summarize. If it is too small, one fact answers it. Run any question through these four rows (the same test you learned in Module 5).</div></div>
+      <div class="goals">
+        <div class="goal"><div class="goal-w"><b>Broad</b><span>verdict</span></div><div class="goal-b"><div class="goal-t">WAS THE AMERICAN REVOLUTION JUSTIFIED?</div><div class="goal-d">Libraries have been written on it. You could only summarize.</div></div></div>
+        <div class="goal"><div class="goal-w"><b>Small</b><span>verdict</span></div><div class="goal-b"><div class="goal-t">WHAT YEAR WAS THE DECLARATION SIGNED?</div><div class="goal-d">One fact. This is a search, not research.</div></div></div>
+        <div class="goal"><div class="goal-w"><b>Answerable</b><span>verdict</span></div><div class="goal-b"><div class="goal-t">DID THE DECLARATION'S ARGUMENT ABOUT CONSENT SHAPE HOW THE CONSTITUTION HANDLED REPRESENTATION?</div><div class="goal-d">Narrow enough to research, open enough that informed people disagree.</div></div></div>
+        <div class="goal"><div class="goal-w"><b>Unsettled</b><span>verdict</span></div><div class="goal-b"><div class="goal-t">WAS JEFFERSON A GOOD PERSON?</div><div class="goal-d">No evidence could settle it. Rewrite it about actions or effects.</div></div></div>
+      </div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">Which question can you research and argue?</div>
+        <div class="check-row">
+          <div class="opts">
+            <button class="opt" data-correct="true" data-fb="Yes. It can be researched in sources, and informed people can disagree about the answer.">Did the Gettysburg Address change what Americans meant by 'created equal'?</button>
+            <button class="opt" data-correct="false" data-fb="That has a fact for an answer. There is nothing to argue.">What year was the Gettysburg Address given, and how long did Lincoln speak?</button>
+            <button class="opt" data-correct="false" data-fb="Too wide and too much a matter of opinion for evidence to settle.">Was the Civil War a good thing for the whole country, looking back today?</button>
+          </div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+    </div>
+  </div>
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">8</div><div><div class="activity-title">Write your first question</div><div class="activity-sub">Revise it as many times as it needs</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Good questions usually come from something that did not add up while you were reading. Two starting points from Week 1: the Declaration gives no reasons for the King's actions, and there is a gap between 'all men are created equal' and who signed it. Where did your question come from?</div></div>
+      <div class="q"><div class="q-prompt">Where did my question come from?<div class="q-hint">Two or three sentences. What did you read that made you ask it?</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="qWhere" data-label="Where my question came from" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">My research question<div class="q-hint">One question. Start with How, Why, Did, or To what extent. It should name or point to both of your texts.</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="question" data-label="My research question" data-project="question" data-required placeholder="Did / How / Why / To what extent..."></textarea></div>
+      <div class="coach"><span class="ci">&#9679;</span><div>The first version never has to be final. You will revise it in The Draft. The final paper must state it in the introduction, and the thesis must answer it.</div></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="hunt">Continue: the source hunt &#8594;</button>
+</div>
+
+<!-- ===== hunt ===== -->
+<div class="tab-panel" id="tab-hunt">
+  <div class="activity bl-burgundy">
+    <div class="activity-head"><div class="activity-num">9</div><div><div class="activity-title">Hunt for three candidate sources</div><div class="activity-sub">One scholarly, one primary, one of your choosing</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Feeder 1 asks for three candidate sources. They do not have to be the ones you end up using. This is a hunt, not a promise. Each must be real, you must have opened it yourself, and you must write the citation at the moment you find it.</div></div>
+      <div class="flow">
+        <div class="flow-step"><div class="flow-n">1</div><div class="flow-t">Scholarly</div><div class="flow-d">A peer-reviewed article on JSTOR. Read the abstract first.</div></div>
+        <div class="flow-step"><div class="flow-n">2</div><div class="flow-t">Primary</div><div class="flow-d">Written at the time by someone who was there: a letter, speech, newspaper page, or record.</div></div>
+        <div class="flow-step"><div class="flow-n">3</div><div class="flow-t">Your choice</div><div class="flow-d">Anything you can defend. General reference, like an encyclopedia, is allowed here only.</div></div>
+      </div>
+      <div class="textpanel"><div class="tp-k">WHERE TO LOOK</div>Scholarly: JSTOR. Open the Start Here module in Canvas and find the page called "Research &amp; JStor Access." The shared login is kept there, not on this page. Primary: <a href="https://www.archives.gov/founding-docs" target="_blank" rel="noopener">National Archives Founding Documents</a>, <a href="https://avalon.law.yale.edu/" target="_blank" rel="noopener">the Avalon Project</a>, <a href="https://founders.archives.gov/" target="_blank" rel="noopener">Founders Online</a>, or <a href="https://chroniclingamerica.loc.gov/" target="_blank" rel="noopener">Chronicling America</a>.</div>
+      <div class="notebook"><div class="nb-title">A MODEL CITATION (DIFFERENT TOPIC)</div><div class="nb-line">Maier, Pauline. <em>American Scripture: Making the Declaration of Independence</em>. Knopf, 1997.</div></div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">Which of these is a primary source for a paper on the Declaration?</div>
+        <div class="check-row">
+          <div class="opts">
+            <button class="opt" data-correct="false" data-fb="That is a scholarly source. It was written long after the events, about them.">A 2005 JSTOR article about how the Declaration was written</button>
+            <button class="opt" data-correct="true" data-fb="Yes. It was written at the time by someone who was there.">A letter written in 1776 by a signer, found on Founders Online</button>
+            <button class="opt" data-correct="false" data-fb="That is a general reference source. It is useful to get oriented, but it is not primary.">An encyclopedia entry on the American Revolution</button>
+          </div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+    </div>
+  </div>
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">10</div><div><div class="activity-title">Log your three sources</div><div class="activity-sub">Opened by you, cited as you found them</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Now log your three. For each, write the full citation and one sentence about what you expect it to give you.</div></div>
+      <div class="q"><div class="q-prompt">Source 1, scholarly: full citation<div class="q-hint">Author. Title. Publication, year. Copy it from the source.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="src1cite" data-label="Source 1 (scholarly) citation" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">Source 1: what I expect it to give me<div class="q-hint">One sentence.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="src1use" data-label="Source 1: what I expect from it" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">Source 2, primary: full citation<span class="saved-dot"></span></div><textarea class="answer" data-key="src2cite" data-label="Source 2 (primary) citation" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">Source 2: what I expect it to give me<div class="q-hint">One sentence.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="src2use" data-label="Source 2: what I expect from it" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">Source 3, your choice: full citation<span class="saved-dot"></span></div><textarea class="answer" data-key="src3cite" data-label="Source 3 (my choice) citation" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">Source 3: what I expect it to give me<div class="q-hint">One sentence.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="src3use" data-label="Source 3: what I expect from it" data-required></textarea></div>
+      <div class="callout-gold"><strong>Worth knowing.</strong> An AI tool can help turn a vague wondering into two or three search terms. It cannot find your sources. AI tools often produce article titles, author names, and page numbers that look real and do not exist. Every source on your list must be one you opened yourself. A fabricated citation is treated like any other false statement in academic work.</div>
+    </div>
+  </div>
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">11</div><div><div class="activity-title">Check your work against the assignment</div><div class="activity-sub"><span class="cname">Feeder 1: Research Question and Source Hunt</span>, 15 points, due in Week 1</div></div></div>
+    <div class="activity-body">
+      <div class="action"><div class="ak">PURPOSE</div><!--verbatim--><p style="margin:0;font-size:15px;line-height:1.6;">The module project is a research-based argument and depends on the question chosen now: not so broad that it can only be summarized, not so narrow that it has one answer.</p><!--/verbatim--></div><!--verbatim--><div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHAT A RESEARCHABLE QUESTION LOOKS LIKE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Module 5 test applies to a bigger subject. Run any candidate question through these four rows:</p>
+        <div style="overflow-x: auto;"><table style="width: 100%; border-collapse: collapse; min-width: 460px;">
+            <thead><tr style="background: #0E1C42;"><th style="padding: 10px 12px; font-size: 13px; color: #fff; text-align: left; border: 1px solid #3B4E8C;">The question</th><th style="padding: 10px 12px; font-size: 13px; color: #fff; text-align: left; border: 1px solid #3B4E8C;">Verdict</th></tr></thead>
+            <tbody><tr><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;"><em>Was the American Revolution justified?</em></td><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;"><strong>Too broad.</strong> Libraries have been written on it. You would only be able to summarize.</td></tr><tr style="background: #EEF1F8;"><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;"><em>What year was the Declaration signed?</em></td><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;"><strong>Too small.</strong> One fact, no argument. This is a search, not research.</td></tr><tr><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;"><em>Did the Declaration's argument about consent influence how the Constitution handled representation?</em></td><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;"><strong>Answerable.</strong> Narrow enough to research, open enough that informed people disagree.</td></tr><tr style="background: #EEF1F8;"><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;"><em>Was Jefferson a good person?</em></td><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;"><strong>Not researchable as written.</strong> No evidence could settle it. Rewrite it as a question about actions or effects.</td></tr></tbody>
+        </table></div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Where good questions come from</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Almost always from something that did not add up while reading. Two starting points from the grievances lesson: the document gives no reasons for the King's actions, and there is a gap between <em>all men are created equal</em> and who signed it. Either is the beginning of a real question.</p>
+        <div style="background: #EEF1F8; border-left: 5px solid #3B4E8C; border-radius: 6px; padding: 16px 20px; margin: 16px 0;">
+            <div style="font-size: 11px; color: #3B4E8C; margin-bottom: 8px;">&#128279; CONNECTING TO YOUR PROJECT</div>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.65;">Your final paper puts one of these documents in conversation with a work of literature you read this year &mdash; <em>Electra</em>, <em>Sir Gawain</em>, the <em>Canterbury Tales</em>, or a Semester 2 text. The literary text does not need to be named yet.</div>
+        </div>
+    </div><!--/verbatim--><!--verbatim--><div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE SOURCE HUNT</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Find <strong>three</strong> candidate sources. They do not have to be the ones you end up using; this is a hunt, not a commitment. What matters is that each one is real, that you opened it yourself, and that you wrote the citation down at the moment you found it.</p>
+        <div style="overflow-x: auto;"><table style="width: 100%; border-collapse: collapse; min-width: 520px;">
+            <thead><tr style="background: #0E1C42;"><th style="padding: 10px 12px; font-size: 13px; color: #fff; text-align: left; border: 1px solid #3B4E8C;">You need</th><th style="padding: 10px 12px; font-size: 13px; color: #fff; text-align: left; border: 1px solid #3B4E8C;">Where to look</th><th style="padding: 10px 12px; font-size: 13px; color: #fff; text-align: left; border: 1px solid #3B4E8C;">What counts</th></tr></thead>
+            <tbody><tr><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;"><strong>One scholarly source</strong></td><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;">JSTOR (sign in through the <strong>Research &amp; JStor Access</strong> page in the Start Here module)</td><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;">A peer-reviewed article. Read the abstract before you decide.</td></tr><tr style="background: #EEF1F8;"><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;"><strong>One primary source</strong></td><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;">National Archives Founding Documents; the Avalon Project; Founders Online; Chronicling America</td><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;">A document written at the time by someone who was there: a letter, a speech, a newspaper page, an official record.</td></tr><tr><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;"><strong>One source of your choosing</strong></td><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;">Britannica; Library of Congress; the Miller Center; a university library guide</td><td style="padding: 10px 12px; font-size: 15px; color: #1a2340; border: 1px solid #D0D9E8;">Anything you can defend. General reference is allowed here, and only here.</td></tr></tbody>
+        </table></div>
+    </div><!--/verbatim--><div class="action"><div class="ak">THE STEPS (3 MOVES)</div><ol style="margin:6px 0 0 20px;padding:0;"><li><b>Narrow a question.</b> Turn something you wondered about into a question research could actually settle.</li><li><b>Hunt three sources.</b> One scholarly, one primary, one of your choosing &mdash; with citations written out.</li><li><b>Submit.</b> Download this week&rsquo;s work as a PDF and upload it to Feeder 1.</li></ol></div><div class="turn-in" style="margin-bottom:14px;"><div class="turn-in-head"><div class="gk">SUCCESS CRITERIA</div><div class="gt">Check each line before you download</div></div><!--verbatim--><div class="turn-in-body"><div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">One research question, written as a question, narrow enough to answer and open enough to argue.</div></div><div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">Two or three sentences saying where the question came from &mdash; what you read that made you ask it.</div></div><div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">Three sources listed with full citations: one scholarly, one primary, one of your choosing.</div></div><div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">One sentence per source saying what you expect it to give you.</div></div></div><!--/verbatim--></div><p>Graded on completeness against the criteria above. Worth 15 points.</p>
+    </div>
+  </div>
+  <div class="activity bl-green checkpoint">
+  <div class="activity-head"><div class="activity-num">12</div><div><div class="activity-title">Turn in <span class="cname">Feeder 1: Research Question and Source Hunt</span></div><div class="activity-sub">Week 1 &middot; 15 points</div></div></div>
+  <div class="activity-body">
+    <p>Download this week's work as a PDF. Name it LastName_FirstName_Feeder1_ELA9.pdf and upload it to <b><span class="cname">Feeder 1: Research Question and Source Hunt</span></b> in Canvas.</p>
+    <div class="gathered-actions"><button class="gbtn pdf" data-action="pdf" data-tabs="project,model,pair,question,hunt" data-pdf-title="Feeder 1: Research Question and Source Hunt" data-status="A print window opened. Choose Save as PDF, then upload the file to Feeder 1: Research Question and Source Hunt." type="button">Download for Research Question and Source Hunt</button></div>
+    <div class="gstatus"></div>
+  </div>
+</div>
+  <button class="tab-next" data-next="wrap">Continue: wrap up &#8594;</button>
+</div>
+
+<!-- ===== wrap ===== -->
+<div class="tab-panel" id="tab-wrap">
+  <div class="project-strip" data-fields="question,thesis"></div>
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">13</div><div><div class="activity-title">Your work from The Pair, on one page</div><div class="activity-sub">Download it and keep it. You will use it in every lesson that follows.</div></div></div>
+    <div class="activity-body">
+      <div class="gathered">
+        <div class="gathered-head"><div><div class="gk">ALL YOUR WORK FROM THIS LESSON</div><div class="gt">Review, copy, or download</div></div></div>
+        <div class="gathered-body">
+          <textarea class="gathered-output" id="gathered" readonly></textarea>
+          <div class="gathered-actions">
+            <button class="gbtn pdf" data-action="pdf" type="button">Download as PDF</button>
+            <button class="gbtn ghost" data-action="copy" type="button">Copy the text</button>
+          </div>
+          <div class="gstatus" id="gstatus"></div>
+        </div>
+      </div>
+      <div class="turn-in">
+        <div class="turn-in-head"><div class="gk">BEFORE YOU MOVE ON</div><div class="gt">Check each line</div></div>
+        <div class="turn-in-body">
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I wrote the project in my own words.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I chose one document and one story, and said what each is about.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I wrote a first research question and said where it came from.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I logged three candidate sources with full citations.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I uploaded my Feeder 1 PDF to <span class="cname">Feeder 1: Research Question and Source Hunt</span> in Canvas, and I saved this whole-lesson PDF as LastName_PromiseLesson1_ELA9 in OneDrive: Optima &rarr; ELA &rarr; ELA9 &rarr; Module 7B.</div></div>
+        </div>
+      </div>
+      <div class="callout-gold" style="margin-top:14px;"><strong>Next.</strong> In Week 2, open <a href="promise-lesson-2-the-sources.html">The Sources</a> beside Feeder 2.</div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="f1"><span>Optima Academy Online</span> &middot; ENGLISH 1 &middot; Module 7B &middot; American Seminal Documents</div>
+  <div class="f2">The Promise and the Story &middot; Part 1 of 4 &middot; The Pair</div>
+  <div class="f3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>window.PROJECT_LABELS = { question: "Your question", doc: "Your document", lit: "Your story", thesis: "Your thesis" };</script>
+<script src="project.js"></script>
+</body>
+</html>

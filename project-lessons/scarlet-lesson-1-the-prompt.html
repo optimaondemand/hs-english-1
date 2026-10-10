@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Literary Essay: The Prompt</title>
+<link rel="stylesheet" href="project.css" />
+</head>
+<body data-ns="eng1.scarlet" data-lesson="L1" data-title="Literary Essay: The Prompt" data-course="English 1" data-project-name="Literary Analysis Essay: The Scarlet Letter" data-assignment="Module 6 Project: Literary Analysis Essay" data-code="ELA9">
+<div class="frame" id="pageTop">
+
+<div class="progress-wrap"><span class="progress-label">LESSON PROGRESS</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
+
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" /></div>
+    <div><div class="header-org">Optima Academy Online</div><div class="header-tag">An Education Experience Company</div></div>
+  </div>
+  <div class="header-course">ENGLISH 1</div>
+</div>
+<div class="strip">
+  <div class="strip-cell"><div class="strip-k">Module 6 Project</div><div class="strip-v">Literary Analysis Essay</div><div class="strip-s">The Scarlet Letter</div></div>
+  <div class="strip-cell"><div class="strip-k">Part</div><div class="strip-v">1 of 4 &middot; The Prompt</div><div class="strip-s">Module 6, Weeks 1 to 2</div></div>
+  <div class="strip-cell"><div class="strip-k">You make</div><div class="strip-v">A prompt choice and a first claim</div><div class="strip-s">Saved as a PDF</div></div>
+  <div class="strip-cell"><div class="strip-k">Turn in</div><div class="strip-v">This PDF goes to <span class="cname">Project Feeder 1: Source Note</span></div><div class="strip-s">Week 2, with your PDF from The Evidence</div></div>
+</div>
+
+<div style="padding: 18px 28px 0 28px;">
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+</div>
+
+<div class="intro">
+  <div class="title-card">
+    <div class="title-k">Literary Essay</div>
+    <div class="title-h">The Prompt</div>
+    <div class="title-s">At the end of this module you will write a literary analysis essay about The Scarlet Letter: 900 to 1,200 words, worth 100 points. Today you see how the project works, choose your prompt, read a model, and write a first claim.</div>
+  </div>
+  <div class="path">
+    <div class="path-title">YOUR PATH TODAY</div>
+    <div class="path-steps">
+      <span class="path-step">See the project</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Choose a prompt</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Read a model</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Write a first claim</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Download your PDF for Feeder 1</span>
+    </div>
+  </div>
+  <div class="need-strip"><span class="need-label">You will need:</span><span class="need-chip">About 35 minutes</span><span class="need-chip">Chapters I to III read, or in progress</span><span class="need-chip">The novel (link in <em>The Evidence</em>)</span></div>
+  <div class="project-strip" data-fields="prompt,claim"></div>
+  <div class="q plain" style="max-width:420px;"><div class="q-prompt">Your last name<span class="saved-dot"></span></div><input class="answer" type="text" data-key="name" data-project="name" data-label="Name" placeholder="LastName" /></div>
+</div>
+
+<div class="tab-bar">
+  <button class="tab-btn" data-tab="project"><span class="tab-n">1</span>The project</button>
+  <button class="tab-btn" data-tab="prompt"><span class="tab-n">2</span>Your prompt</button>
+  <button class="tab-btn" data-tab="model"><span class="tab-n">3</span>A model</button>
+  <button class="tab-btn" data-tab="claim"><span class="tab-n">4</span>First claim</button>
+  <button class="tab-btn" data-tab="wrap"><span class="tab-n">5</span>Wrap up</button>
+</div>
+<div class="reset-row"><button class="reset-btn">Start this lesson over</button></div>
+
+<div class="tab-panel" id="tab-project">
+  <div class="activity bl-navy">
+    <div class="activity-head"><div class="activity-num">1</div><div><div class="activity-title">How the project works</div><div class="activity-sub">Four steps across five weeks, four lessons to guide you</div></div></div>
+    <div class="activity-body">
+<div class="coach"><span class="ci">&#9679;</span><div>You do not write this essay in one sitting. Three smaller steps come first, and each one builds a piece of the essay. These four lessons hold those steps: <em>The Evidence</em> holds <span class="cname">Project Feeder 1: Source Note</span> and <span class="cname">Project Feeder 2: Thesis and Evidence</span>, and <em>The Draft</em> holds <span class="cname">Project Feeder 3: Outline</span>. The Quick Writes stay separate. Quick Write 1 and Quick Write 4 are also good practice at quoting the novel.</div></div>
+      <div class="flow">
+        <div class="flow-step now"><div class="flow-n">1</div><div class="flow-t">Source Note</div><div class="flow-d">One researched source, judged</div><div class="flow-when">WEEK 2</div></div>
+        <div class="flow-step now"><div class="flow-n">2</div><div class="flow-t">Thesis and Evidence</div><div class="flow-d">Your claim and three quotations</div><div class="flow-when">WEEK 3</div></div>
+        <div class="flow-step"><div class="flow-n">3</div><div class="flow-t">Outline</div><div class="flow-d">A paragraph-by-paragraph plan</div><div class="flow-when">WEEK 4</div></div>
+        <div class="flow-step"><div class="flow-n">4</div><div class="flow-t">Literary Analysis Essay</div><div class="flow-d">900 to 1,200 words, 100 points</div><div class="flow-when">WEEK 5</div></div>
+      </div>
+      <div class="flow-end"><div class="fe-k">WEEK 5</div><div class="fe-t">One finished essay, saved as LastName_FirstName_LiteraryEssay_ELA9_Final and turned in through the OneDrive tab in Canvas.</div></div>
+    </div>
+  </div>
+  <div class="activity bl-cyan">
+    <div class="activity-head"><div class="activity-num">2</div><div><div class="activity-title">What the essay looks like</div><div class="activity-sub">A literary analysis essay argues one idea about the novel and proves it with the novel's own words</div></div></div>
+    <div class="activity-body">
+<div class="coach"><span class="ci">&#9679;</span><div>Your essay has six parts. Every part has a job, and every part pushes the same single claim, called the thesis. The thesis is one sentence that answers your prompt and can be argued with.</div></div>
+      <svg viewBox="0 0 640 150" role="img" aria-label="The essay as a bar: introduction 100 to 150 words, three body paragraphs of 200 to 250 words each, counterclaim 100 to 150, conclusion 100 to 150" style="display:block;max-width:680px;width:100%;margin:6px auto 14px;">
+        <rect x="0" y="0" width="640" height="150" rx="12" fill="#F4F1EA"/>
+        <g font-family="Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle">
+          <rect x="20" y="30" width="72" height="56" fill="#0E1C42"/><text x="56" y="63" fill="#FFFFFF">Intro</text>
+          <rect x="92" y="30" width="129" height="56" fill="#8A2E3B"/><text x="156" y="63" fill="#FFFFFF">Body 1</text>
+          <rect x="221" y="30" width="129" height="56" fill="#8A2E3B" stroke="#F4F1EA" stroke-width="2"/><text x="285" y="63" fill="#FFFFFF">Body 2</text>
+          <rect x="350" y="30" width="129" height="56" fill="#8A2E3B" stroke="#F4F1EA" stroke-width="2"/><text x="414" y="63" fill="#FFFFFF">Body 3</text>
+          <rect x="479" y="30" width="72" height="56" fill="#C7922C"/><text x="515" y="63" fill="#0E1C42">Counter</text>
+          <rect x="551" y="30" width="72" height="56" fill="#0E1C42"/><text x="587" y="63" fill="#FFFFFF">Close</text>
+          <g fill="#0E1C42" font-size="12">
+            <text x="56" y="106">100&ndash;150</text><text x="156" y="106">200&ndash;250</text><text x="285" y="106">200&ndash;250</text><text x="414" y="106">200&ndash;250</text><text x="515" y="106">100&ndash;150</text><text x="587" y="106">100&ndash;150</text>
+          </g>
+          <text x="320" y="20" fill="#0E1C42" font-size="13" font-weight="bold">900 to 1,200 words, not counting the Works Cited page</text>
+          <text x="320" y="132" fill="#8A2E3B" font-size="12">Researched source enters one of the body paragraphs. Counter = counterclaim.</text>
+        </g>
+      </svg>
+      <div class="action"><div class="ak">THE ESSAY MUST HAVE</div><ul>
+        <li>One thesis in the introduction.</li>
+        <li>At least three quotations from the novel, each introduced and cited by chapter, like this: (Hawthorne, ch. 6).</li>
+        <li>One researched source beyond the novel, used in your argument, cited in the text, and listed on a Works Cited page.</li>
+        <li>One counterclaim paragraph: the strongest view against yours, with a fair concession and a rebuttal.</li>
+        <li>MLA format: Times New Roman 12 point, double-spaced, your last name and page number in the header, a heading block, a title, and a Works Cited page.</li>
+      </ul></div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">Which is a thesis, not a summary?</div>
+        <div class="check-row">
+          <div class="opts">
+            <button class="opt" data-correct="true" data-fb="Yes. It takes a position, names a reason, and a reader could argue the other way.">Hawthorne shows that a town's judgment can shape a person but cannot decide who she becomes.</button>
+            <button class="opt" data-correct="false" data-fb="This retells events. A reader has nothing to argue with.">Hester sews for the town, raises Pearl, and stands on the scaffold more than once.</button>
+            <button class="opt" data-correct="false" data-fb="This is a fact, not a claim. Nobody can disagree with it.">Hawthorne wrote The Scarlet Letter in 1850, after working at the Salem Custom House.</button>
+          </div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+    </div>
+  </div>
+  <div class="activity bl-gold">
+    <div class="activity-head"><div class="activity-num">3</div><div><div class="activity-title">What your teacher looks for</div><div class="activity-sub">The four rows of the rubric, 100 points in all</div></div></div>
+    <div class="activity-body">
+      <div class="goals">
+        <div class="goal"><div class="goal-w"><b>30</b><span>pts</span></div><div class="goal-b"><div class="goal-t">THESIS AND ARGUMENT</div><div class="goal-d">An arguable, specific thesis. Every paragraph advances it. The counterclaim is stated fairly and answered with evidence.</div></div></div>
+        <div class="goal"><div class="goal-w"><b>25</b><span>pts</span></div><div class="goal-b"><div class="goal-t">TEXTUAL EVIDENCE AND QUOTATION</div><div class="goal-d">At least three well-chosen quotations: accurate, introduced, cited by chapter, and explained.</div></div></div>
+        <div class="goal"><div class="goal-w"><b>25</b><span>pts</span></div><div class="goal-b"><div class="goal-t">RESEARCHED SOURCE AND MLA</div><div class="goal-d">A credible source, woven into the argument, cited in the text, and correct in Works Cited.</div></div></div>
+        <div class="goal"><div class="goal-w"><b>20</b><span>pts</span></div><div class="goal-b"><div class="goal-t">ORGANIZATION AND CONVENTIONS</div><div class="goal-d">Clear introduction, body, and conclusion; transitions; MLA format and length met; nearly error-free.</div></div></div>
+      </div>
+      <div class="q"><div class="q-prompt">In your own words, what will you make?<div class="q-hint">Two sentences. Say it the way you would explain it to a friend: what you will argue, and what you will use to prove it.</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="projectOwnWords" data-label="The project in my own words" data-required></textarea></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="prompt">Continue: choose your prompt &#8594;</button>
+</div>
+
+<div class="tab-panel" id="tab-prompt">
+  <div class="activity bl-navy">
+    <div class="activity-head"><div class="activity-num">4</div><div><div class="activity-title">Three prompts, one choice</div><div class="activity-sub">You will write about one. Pick the one that pulls you.</div></div></div>
+    <div class="activity-body">
+<div class="coach"><span class="ci">&#9679;</span><div>Each prompt asks a question the novel does not answer for you. You will confirm your choice in Week 3, so choose the one you want to keep thinking about. You can still change your mind in <em>The Evidence</em>.</div></div>
+      <div class="stance-cards" data-key="prompt" data-project="prompt" data-label="My prompt" data-required>
+        <div class="stance-card" data-value="A. The letter"><div class="sc-t">A. The letter</div><div class="sc-d">Hawthorne lets the meaning of the scarlet letter change. What changes it: the community or Hester?</div></div>
+        <div class="stance-card" data-value="B. The minister"><div class="sc-t">B. The minister</div><div class="sc-d">Does Dimmesdale's public confession redeem him, or does it come too late?</div></div>
+        <div class="stance-card" data-value="C. The theme"><div class="sc-t">C. The theme</div><div class="sc-d">What does a community owe the person it judges, and what does a person owe the truth? Argue what the novel answers.</div></div>
+      </div>
+      <div class="q"><div class="q-prompt">Why this prompt?<div class="q-hint">One or two sentences. What about it made you want to argue it?</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="promptWhy" data-label="Why I chose this prompt" data-required></textarea></div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">Which question can an essay argue?</div>
+        <div class="check-row">
+          <div class="opts">
+            <button class="opt" data-correct="false" data-fb="The novel simply tells you. There is nothing to argue.">Who is Pearl's mother?</button>
+            <button class="opt" data-correct="true" data-fb="Yes. Smart readers can answer this either way, and each answer needs evidence from the novel.">Is Pearl a punishment to Hester, or a gift?</button>
+            <button class="opt" data-correct="false" data-fb="That is a fact you can look up. An essay needs a question with more than one good answer.">How old is Pearl when the story begins?</button>
+          </div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+    </div>
+  </div>
+  <div class="activity bl-burgundy">
+    <div class="activity-head"><div class="activity-num">5</div><div><div class="activity-title">Where each prompt lives in the novel</div><div class="activity-sub">Chapter numbers, so you know what to watch for as you read</div></div></div>
+    <div class="activity-body">
+<div class="coach"><span class="ci">&#9679;</span><div>You are reading Chapters I to VI this week, and the rest over the next three weeks. Keep your prompt in mind as you read. The moments you notice now will become your quotations in <em>The Evidence</em>.</div></div>
+      <div class="action"><div class="ak">WATCH FOR, BY PROMPT</div><ul>
+        <li><b>A. The letter:</b> the crowd at the scaffold (Chapters II and III), Hester's needlework and Pearl (Chapters V and VI), the town's changed view of her (Chapter XIII), and the forest (Chapters XVII to XIX).</li>
+        <li><b>B. The minister:</b> his silence and his suffering (Chapters IX to XII), the forest meeting (Chapter XVII), and the scaffold and the Conclusion (Chapters XXIII and XXIV).</li>
+        <li><b>C. The theme:</b> the hearing at the governor's hall (Chapters VII and VIII), Chillingworth's role (Chapters IX and X), and the whole arc of the town's judgment, start to finish.</li>
+      </ul></div>
+      <div class="q"><div class="q-prompt">One thing you have noticed already<div class="q-hint">Chapters I to III count if you have read them. One sentence about a person, a place, or a moment that seems to matter for your prompt.</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="noticing" data-label="One thing I noticed so far"></textarea></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="model">Continue: a model &#8594;</button>
+</div>
+
+<div class="tab-panel" id="tab-model">
+  <div class="activity bl-burgundy">
+    <div class="activity-head"><div class="activity-num">6</div><div><div class="activity-title">A model paragraph, on a different claim</div><div class="activity-sub">Read it once for what it says, once for how it is built</div></div></div>
+    <div class="activity-body">
+<div class="coach"><span class="ci">&#9679;</span><div>This model argues about Pearl, a character you will meet in Chapter VI, so it will not give you your own claim. Notice the four layers of the body paragraph below.</div></div>
+      <svg viewBox="0 0 640 170" role="img" aria-label="Every body paragraph has four layers: a claim, a lead-in, a quotation, and your explanation" style="display:block;max-width:680px;width:100%;margin:6px auto 14px;">
+        <rect x="0" y="0" width="640" height="170" rx="12" fill="#F4F1EA"/>
+        <g font-family="Segoe UI, Arial, sans-serif" font-size="13">
+          <rect x="20" y="16" width="600" height="30" rx="6" fill="#0E1C42"/><text x="34" y="36" fill="#FFFFFF">1. Claim: one sentence that pushes your thesis forward</text>
+          <rect x="20" y="52" width="600" height="30" rx="6" fill="#4F6F52"/><text x="34" y="72" fill="#FFFFFF">2. Lead-in: your own words that set up the moment, with the chapter</text>
+          <rect x="20" y="88" width="600" height="30" rx="6" fill="#8A2E3B"/><text x="34" y="108" fill="#FFFFFF">3. Quotation: the novel's exact words, in quotation marks</text>
+          <rect x="20" y="124" width="600" height="30" rx="6" fill="#C7922C"/><text x="34" y="144" fill="#0E1C42">4. Explanation: what the words show, and why that proves your claim</text>
+        </g>
+      </svg>
+      <div class="parchment">
+        <div class="pm-title">CHAPTER VI &middot; PEARL</div>
+        <div class="pm-line">"The child could not be made amenable to rules. In giving her existence, a great law had been broken; and the result was a being whose elements were perhaps beautiful and brilliant, but all in disorder"</div>
+        <div class="pm-cite">Hawthorne, The Scarlet Letter, ch. 6 (Project Gutenberg)</div>
+      </div>
+      <div class="notebook"><div class="nb-title">A MODEL BODY PARAGRAPH</div><div class="nb-line"><b>Claim.</b> Hawthorne shows that a town can punish a mother but cannot make her child obey its rules.</div><div class="nb-line"><b>Lead-in.</b> When the narrator describes Pearl's nature in Chapter VI, he admits that she does not fit the rules around her.</div><div class="nb-line"><b>Quotation.</b> He writes that "The child could not be made amenable to rules" (Hawthorne, ch. 6).</div><div class="nb-line"><b>Explanation.</b> The word "amenable" means willing to be guided. Hawthorne does not blame Pearl for refusing. He sets "beautiful and brilliant" beside "disorder," so the reader sees a child who is not bad but is simply beyond the town's reach.</div></div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">In the model, which sentence is the explanation?</div>
+        <div class="check-row">
+          <div class="opts">
+            <button class="opt" data-correct="false" data-fb="That sentence is the quotation. The explanation comes after it.">He writes that "The child could not be made amenable to rules" (Hawthorne, ch. 6).</button>
+            <button class="opt" data-correct="true" data-fb="Yes. It says what the words mean and what they show, and it ties back to the claim.">The word "amenable" means willing to be guided. Hawthorne does not blame Pearl for refusing...</button>
+            <button class="opt" data-correct="false" data-fb="That is the lead-in. It sets up the moment but does not yet explain it.">When the narrator describes Pearl's nature in Chapter VI, he admits that she does not fit the rules around her.</button>
+          </div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+    </div>
+  </div>
+  <div class="activity bl-cyan">
+    <div class="activity-head"><div class="activity-num">7</div><div><div class="activity-title">A model counterclaim</div><div class="activity-sub">Say what is true in the other view, then answer it</div></div></div>
+    <div class="activity-body">
+<div class="coach"><span class="ci">&#9679;</span><div>A counterclaim paragraph states the strongest view against your thesis. First it concedes what is true in that view. Then it rebuts it, using the novel.</div></div>
+      <div class="parchment">
+        <div class="pm-title">CHAPTER VI &middot; THE OTHER SIDE</div>
+        <div class="pm-line">"Pearl was a born outcast of the infantile world."</div>
+        <div class="pm-cite">Hawthorne, The Scarlet Letter, ch. 6 (Project Gutenberg)</div>
+      </div>
+      <div class="notebook"><div class="nb-title">A MODEL COUNTERCLAIM (SAME CLAIM ABOUT PEARL)</div><div class="nb-line"><b>The opposing view.</b> A reader could say the town's rules do reach Pearl, because the other children shut her out.</div><div class="nb-line"><b>Concession.</b> That is true: the narrator says she "was a born outcast of the infantile world" (Hawthorne, ch. 6).</div><div class="nb-line"><b>Rebuttal.</b> But being shut out is not the same as being ruled. The children can keep her away, yet Chapter VI says nothing that shows she has taken their rules into herself.</div></div>
+      <div class="q"><div class="q-prompt">What did the model concede, and what did it keep?<div class="q-hint">One or two sentences. This is the move you will make in Week 4.</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="modelNotice" data-label="What the model counterclaim conceded and kept" data-required></textarea></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="claim">Continue: your first claim &#8594;</button>
+</div>
+
+<div class="tab-panel" id="tab-claim">
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">8</div><div><div class="activity-title">A first claim</div><div class="activity-sub">You will change it. Commit to one now so you have something to test.</div></div></div>
+    <div class="activity-body">
+<div class="coach"><span class="ci">&#9679;</span><div>You have not finished the novel, and that is fine. A first claim gives you something to test as you read. Watch for moments that support it and moments that push against it. A claim answers your prompt, gives a reason, and can be argued with.</div></div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">Which claim is strongest for a prompt about Pearl?</div>
+        <div class="check-row">
+          <div class="opts">
+            <button class="opt" data-correct="false" data-fb="True, but nobody could argue with it. It does not take a position.">Pearl is a child who is often alone, and she plays apart from the other children in town.</button>
+            <button class="opt" data-correct="true" data-fb="Yes. It takes a position, gives a reason, and a reader could answer back.">Hawthorne makes Pearl a living reminder of Hester's choice, so the town cannot punish only one.</button>
+            <button class="opt" data-correct="false" data-fb="This is about how often she appears, not about what the novel shows.">Pearl appears in many chapters, and the narrator describes her in nearly every one of them.</button>
+          </div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+      <div class="seeds" data-fill="claim0">
+        <button class="seed" type="button">Hawthorne shows that the meaning of the scarlet letter changes because...</button>
+        <button class="seed" type="button">Dimmesdale's confession does / does not redeem him, because...</button>
+        <button class="seed" type="button">The novel answers that a community owes the person it judges..., because...</button>
+      </div>
+      <div class="q"><div class="q-prompt">My first claim<div class="q-hint">One sentence. Click a starter above if it helps, then make it yours.</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="claim0" data-project="claim" data-label="My first claim" data-required placeholder="Hawthorne shows that..."></textarea></div>
+      <div class="q"><div class="q-prompt">What would make you change your mind?<div class="q-hint">Name one thing the novel could show you. This is where your counterclaim will come from.</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="changeMind" data-label="What would change my mind"></textarea></div>
+      <div class="q"><div class="q-prompt">What will you look for as you read?<div class="q-hint">Two or three things: a character, a scene, or a kind of moment.</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="lookFor" data-label="What I will look for as I read" data-required></textarea></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="wrap">Continue: wrap up &#8594;</button>
+</div>
+
+<div class="tab-panel" id="tab-wrap">
+  <div class="project-strip" data-fields="prompt,claim"></div>
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">9</div><div><div class="activity-title">Your work, on one page</div><div class="activity-sub">Download it and keep it. You will use it in every lesson that follows.</div></div></div>
+    <div class="activity-body">
+      <div class="gathered">
+        <div class="gathered-head"><div><div class="gk">ALL YOUR WORK FROM THIS LESSON</div><div class="gt">Review, copy, or download</div></div></div>
+        <div class="gathered-body">
+          <textarea class="gathered-output" id="gathered" readonly></textarea>
+          <div class="gathered-actions">
+            <button class="gbtn pdf" data-action="pdf" type="button">Download as PDF</button>
+            <button class="gbtn ghost" data-action="copy" type="button">Copy the text</button>
+          </div>
+          <div class="gstatus" id="gstatus"></div>
+        </div>
+      </div>
+      <div class="turn-in">
+        <div class="turn-in-head"><div class="gk">BEFORE YOU MOVE ON</div><div class="gt">Check each line</div></div>
+        <div class="turn-in-body">
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I chose a prompt and said why.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I wrote a first claim and one thing that would change my mind.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I know the four steps and when each one is due.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I saved the PDF as LastName_ScarletLesson1_ELA9 in OneDrive: Optima &rarr; ELA &rarr; ELA9 &rarr; Module 6. In Week 2 I will upload it to <span class="cname">Project Feeder 1: Source Note</span> in Canvas, in the same submission as my PDF from The Evidence.</div></div>
+        </div>
+      </div>
+      <div class="callout-gold" style="margin-top:14px;"><strong>Next.</strong> Open <a href="scarlet-lesson-2-the-evidence.html">The Evidence</a> at the start of Week 2. It walks you through the Source Note in Week 2 and Thesis and Evidence in Week 3.</div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="f1"><span>Optima Academy Online</span> &middot; ENGLISH 1 &middot; Module 6 &middot; The Scarlet Letter</div>
+  <div class="f2">Literary Analysis Essay &middot; Part 1 of 4 &middot; The Prompt</div>
+  <div class="f3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>window.PROJECT_LABELS = { prompt: "Your prompt", claim: "Your claim", thesis: "Your thesis", source: "Your source" };</script>
+<script src="project.js"></script>
+</body>
+</html>

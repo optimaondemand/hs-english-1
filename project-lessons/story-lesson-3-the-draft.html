@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Original Short Story: The Draft</title>
+<link rel="stylesheet" href="project.css" />
+</head>
+<body data-ns="eng1.story" data-lesson="L3" data-title="Original Short Story: The Draft" data-course="English 1" data-project-name="What Can a Small Story Hold? An Original Short Story" data-assignment="Module 5 Project: Final Story + Craft Reflection" data-code="ELA9">
+<div class="frame" id="pageTop">
+
+<div class="progress-wrap"><span class="progress-label">LESSON PROGRESS</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
+
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" /></div>
+    <div><div class="header-org">Optima Academy Online</div><div class="header-tag">An Education Experience Company</div></div>
+  </div>
+  <div class="header-course">ENGLISH 1</div>
+</div>
+<div class="strip">
+  <div class="strip-cell"><div class="strip-k">Module 5 Project</div><div class="strip-v">What Can a Small Story Hold?</div><div class="strip-s">An original short story</div></div>
+  <div class="strip-cell"><div class="strip-k">Part</div><div class="strip-v">3 of 4 &middot; The Draft</div><div class="strip-s">Module 5, Week 7</div></div>
+  <div class="strip-cell"><div class="strip-k">You make</div><div class="strip-v">A chosen ending, scene plan, technique log</div><div class="strip-s">Saved as a PDF</div></div>
+  <div class="strip-cell"><div class="strip-k">Turn in</div><div class="strip-v"><span class="cname">Project Feeder 4: Full Draft</span></div><div class="strip-s">Your Word draft, with this lesson&rsquo;s PDF in the same submission</div></div>
+</div>
+
+<div style="padding: 18px 28px 0 28px;">
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &mdash; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+</div>
+
+<div class="intro">
+  <div class="title-card">
+    <div class="title-k">Original Short Story</div>
+    <div class="title-h">The Draft</div>
+    <div class="title-s">This is the week you write the whole story, from your opening to the last line. Today you choose your ending, plan the middle so both costs show on the page, decide where irony goes, and pick the three techniques you will name in your craft reflection. Then you draft in Word.</div>
+  </div>
+  <div class="path">
+    <div class="path-title">YOUR PATH TODAY</div>
+    <div class="path-steps">
+      <span class="path-step">Choose your ending</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Plan the middle</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Place irony, plan the last line</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Log your techniques</span><span class="path-arrow">&#8594;</span>
+      <span class="path-step">Turn in Feeder 4</span>
+    </div>
+  </div>
+  <div class="need-strip"><span class="need-label">You will need:</span><span class="need-chip">About 45 minutes</span><span class="need-chip">Your Story Seed, Dilemma, and Opening</span><span class="need-chip">Your Foreshadowing Plan from <em>The Look-Up</em></span></div>
+  <div class="project-strip" data-fields="hero,choice,ending"></div>
+  <div class="q plain" style="max-width:420px;"><div class="q-prompt">Your last name<span class="saved-dot"></span></div><input class="answer" type="text" data-key="name" data-project="name" data-label="Name" placeholder="LastName" /></div>
+</div>
+
+<div class="tab-bar">
+  <button class="tab-btn" data-tab="pieces"><span class="tab-n">1</span>Your pieces</button>
+  <button class="tab-btn" data-tab="middle"><span class="tab-n">2</span>The middle</button>
+  <button class="tab-btn" data-tab="irony"><span class="tab-n">3</span>Irony and the ending</button>
+  <button class="tab-btn" data-tab="log"><span class="tab-n">4</span>Technique log</button>
+  <button class="tab-btn" data-tab="wrap"><span class="tab-n">5</span>Wrap up</button>
+</div>
+<div class="reset-row"><button class="reset-btn">Start this lesson over</button></div>
+
+<div class="tab-panel" id="tab-pieces">
+  <div class="activity bl-navy">
+    <div class="activity-head"><div class="activity-num">1</div><div><div class="activity-title">Your three pieces and your ending</div><div class="activity-sub">Choose it on purpose</div></div></div>
+    <div class="activity-body">
+      <svg viewBox="0 0 460 250" role="img" aria-label="A story line that rises through pressure to the choice, then branches into three endings: resolved, twist, and open" style="display:block;max-width:460px;width:100%;margin:4px auto 14px;">
+        <rect x="0" y="0" width="460" height="250" rx="12" fill="#0E1C42"/>
+        <path d="M30,190 L130,160 L230,100 L300,55" fill="none" stroke="#55C8E8" stroke-width="3" stroke-linejoin="round"/>
+        <g fill="none" stroke="#C7922C" stroke-width="3"><path d="M300,55 L420,40"/><path d="M300,55 L420,110"/><path d="M300,55 L420,190"/></g>
+        <g fill="#C7922C"><circle cx="30" cy="190" r="6"/><circle cx="130" cy="160" r="6"/><circle cx="230" cy="100" r="6"/><circle cx="300" cy="55" r="7"/></g>
+        <g font-family="Segoe UI, Arial, sans-serif" fill="#FFFFFF" font-size="13"><text x="30" y="218">Opening</text><text x="105" y="190">Pressure</text><text x="212" y="130">Pressure</text><text x="254" y="36">The choice</text><text x="352" y="30" fill="#55C8E8">Resolved</text><text x="352" y="104" fill="#55C8E8">Twist</text><text x="352" y="204" fill="#55C8E8">Open</text></g>
+        <text x="230" y="240" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#55C8E8">Three pieces done. Now the middle, the choice, and the ending.</text>
+      </svg>
+      <div class="coach"><span class="ci">&#9679;</span><div>You are not starting from scratch. You already have a Story Seed, a Dilemma, and an Opening with three plants. Today you add the middle: events that push your protagonist toward the choice, the choice itself, and an ending you picked on purpose.</div></div>
+      <div class="carry" data-from="L1.heroName" data-k="Your protagonist (The Small Story)"></div>
+      <div class="carry" data-from="L1.choice" data-k="Your choice (The Small Story)"></div>
+      <div class="carry" data-from="L2.plant1" data-k="Your first plant (The Look-Up)"></div>
+      <div class="carry" data-from="L2.pay1" data-k="Where it pays off (The Look-Up)"></div>
+      <p>Pick the ending your story can earn. Any of the three can be right. What is graded is that you chose it on purpose and built the story to deserve it.</p>
+      <div class="stance-cards" data-key="ending" data-project="ending" data-label="My ending type" data-required>
+        <div class="stance-card" data-value="Resolved"><div class="sc-t">Resolved</div><div class="sc-d">The knot is untied and the reader knows how it came out. Model: &ldquo;The Gift of the Magi.&rdquo;</div></div>
+        <div class="stance-card" data-value="A twist"><div class="sc-t">A twist</div><div class="sc-d">The last turn changes what the reader thought they knew, and the groundwork was there. Model: &ldquo;An Occurrence at Owl Creek Bridge.&rdquo;</div></div>
+        <div class="stance-card" data-value="Deliberately ambiguous"><div class="sc-t">Deliberately ambiguous</div><div class="sc-d">The story stops on the question and trusts the reader. Model: &ldquo;The Lady, or the Tiger?&rdquo;</div></div>
+      </div>
+      <div class="q"><div class="q-prompt">Why does this ending fit your story?<div class="q-hint">One or two sentences. Name what in your story makes it fair.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="endWhy" data-label="Why this ending fits my story" data-required></textarea></div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">A twist ending works best when...</div>
+        <div class="check-row">
+          <div class="opts">
+            <button class="opt" data-correct="false" data-fb="A twist with no groundwork feels like a trick. It has to be earned.">nothing earlier hints at it, so the reader is truly shocked.</button>
+            <button class="opt" data-correct="false" data-fb="That is an ambiguous ending, not a twist.">the story ends before anything is explained.</button>
+            <button class="opt" data-correct="true" data-fb="Yes. This is what your planted details are for.">the reader can look back and see the clues that were always there.</button>
+          </div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="middle">Continue: the middle &#8594;</button>
+</div>
+
+<div class="tab-panel" id="tab-middle">
+  <div class="activity bl-navy">
+    <div class="activity-head"><div class="activity-num">2</div><div><div class="activity-title">Build the middle</div><div class="activity-sub">Pressure, then the choice</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>The middle has two jobs. First, pressure: events that push your protagonist toward the choice. Then the choice, with the cost of each option visible on the page. Your planted details go to work somewhere in here.</div></div>
+      <div class="q"><div class="q-prompt">Pressure event 1: what happens that makes the choice closer?<span class="saved-dot"></span></div><textarea class="answer" data-key="e1" data-label="Pressure event 1" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">Pressure event 2: what makes it harder?<span class="saved-dot"></span></div><textarea class="answer" data-key="e2" data-label="Pressure event 2" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">Pressure event 3: what leaves no way out?<span class="saved-dot"></span></div><textarea class="answer" data-key="e3" data-label="Pressure event 3" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">The choice scene: what does your protagonist choose, and what does it cost?<div class="q-hint">Show the cost in what happens and what they see, not in a sentence that explains it.</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="choiceScene" data-label="The choice scene" data-required></textarea></div>
+    </div>
+  </div>
+  <div class="activity bl-cyan">
+    <div class="activity-head"><div class="activity-num">3</div><div><div class="activity-title">Dialogue that shows character</div><div class="activity-sub">One revision pass</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Revise your dialogue before you move on. Four moves turn lines that only trade information into lines that also show who is talking.</div></div>
+      <div class="flow">
+        <div class="flow-step"><div class="flow-n">1</div><div class="flow-t">Their word</div><div class="flow-d">Swap the general word for the character's word.</div></div>
+        <div class="flow-step"><div class="flow-n">2</div><div class="flow-t">Let them dodge</div><div class="flow-d">People rarely answer the question asked.</div></div>
+        <div class="flow-step"><div class="flow-n">3</div><div class="flow-t">Cut the warm-up</div><div class="flow-d">Start where the meaning starts.</div></div>
+        <div class="flow-step"><div class="flow-n">4</div><div class="flow-t">Action, not adverb</div><div class="flow-d">Give them something to do instead of &ldquo;angrily.&rdquo;</div></div>
+      </div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">Test every line: could anyone else in the story say this? Which line passes?</div>
+        <div class="check-row">
+          <div class="opts">
+            <button class="opt" data-correct="false" data-fb="Anyone could say it. It reveals nobody.">&ldquo;I am going to be honest with you about how I feel.&rdquo;</button>
+            <button class="opt" data-correct="true" data-fb="Yes. Short, careful, and a little nervous. It sounds like one person.">&ldquo;Just water, thank you. And the bill, when you have it.&rdquo;</button>
+            <button class="opt" data-correct="false" data-fb="The warm-up hides the line that matters.">&ldquo;Well, I was just thinking that maybe we could possibly talk.&rdquo;</button>
+          </div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+      <div class="q plain"><div class="q-prompt">Write one line of dialogue only your protagonist could say<div class="q-hint">Put it in quotation marks, with a comma inside the closing mark if a tag follows.</div><span class="saved-dot"></span></div><input class="answer" type="text" data-key="dlg" data-label="A line of dialogue only my character could say" data-required /></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="irony">Continue: irony and the ending &#8594;</button>
+</div>
+
+<div class="tab-panel" id="tab-irony">
+  <div class="activity bl-burgundy">
+    <div class="activity-head"><div class="activity-num">4</div><div><div class="activity-title">Place your irony</div><div class="activity-sub">One form, used for a reason</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Irony does quiet work when it serves the story. Three forms: verbal irony, where words mean something other than what they say. Situational irony, where what happens is the opposite of what was expected. Dramatic irony, where the reader knows something a character does not.</div></div>
+      <div class="parchment">
+        <div class="pm-title">"THE CASK OF AMONTILLADO" &middot; A GREETING</div>
+        <div class="pm-line">"My dear Fortunato, you are luckily met. How remarkably well you are looking to-day!"</div>
+        <div class="pm-cite">Edgar Allan Poe, 1846. Montresor greets the man he has vowed to ruin. Public domain.</div>
+      </div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">Why is Montresor's greeting ironic?</div>
+        <div class="check-row">
+          <div class="opts">
+            <button class="opt" data-correct="false" data-fb="The greeting is about Fortunato, not the weather.">The weather outside is the opposite of what his greeting says it is.</button>
+            <button class="opt" data-correct="true" data-fb="Yes. The warmth is the irony.">The reader knows he plans revenge, so his warm words work against his meaning.</button>
+            <button class="opt" data-correct="false" data-fb="Look at who is speaking and what he means.">Fortunato is the one lying to Montresor, so the warm greeting hides a plot.</button>
+          </div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+      <p>Which form will your story use? Choose the main one.</p>
+      <div class="choices" data-key="ironyForm" data-label="My main form of irony" data-required>
+        <button class="choice" type="button" data-value="Verbal irony" data-fb="Good. Decide which character says it and what they mean instead.">Verbal irony</button>
+        <button class="choice" type="button" data-value="Situational irony" data-fb="Good. Decide what your protagonist expects and what happens.">Situational irony</button>
+        <button class="choice" type="button" data-value="Dramatic irony" data-fb="Good. Decide what the reader knows that your protagonist does not.">Dramatic irony</button>
+      </div>
+      <div class="choice-fb"></div>
+      <div class="q"><div class="q-prompt">Where in your story does it appear, and what does it do for the reader?<span class="saved-dot"></span></div><textarea class="answer" data-key="ironyWhere" data-label="Where the irony appears" data-required></textarea></div>
+    </div>
+  </div>
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">5</div><div><div class="activity-title">Plan the last line</div><div class="activity-sub">The ending you chose</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Your last paragraph should land with intent. Decide it now so the whole story points at it.</div></div>
+      <div class="parchment">
+        <div class="pm-title">"THE LADY, OR THE TIGER?" &middot; THE LAST LINE</div>
+        <div class="pm-line">"Which came out of the opened door,&mdash;the lady, or the tiger?"</div>
+        <div class="pm-cite">Frank R. Stockton, 1882. Public domain.</div>
+      </div>
+      <div class="check">
+        <div class="check-k">QUICK CHECK &middot; NOT GRADED</div>
+        <div class="check-q">What kind of ending is Stockton's?</div>
+        <div class="check-row">
+          <div class="opts">
+            <button class="opt" data-correct="true" data-fb="Yes. The story is built to make you decide.">Deliberately ambiguous: the story stops on the question.</button>
+            <button class="opt" data-correct="false" data-fb="The story stops before anyone learns what came out of the door.">Resolved: the reader learns exactly what happened.</button>
+            <button class="opt" data-correct="false" data-fb="No clue gives the answer. The open question is the point.">A twist: a clue hidden earlier gives the answer.</button>
+          </div>
+          <div class="opt-fb"></div>
+        </div>
+        <button class="check-reset" type="button">Reset</button>
+      </div>
+      <div class="q"><div class="q-prompt">Write the last line of your story, as you plan it now<div class="q-hint">You can change it while you draft.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="lastLine" data-label="My last line" data-required></textarea></div>
+      <div class="q"><div class="q-prompt">What should the reader be left thinking or feeling?<span class="saved-dot"></span></div><textarea class="answer" data-key="lastFeel" data-label="What the reader should be left thinking" data-required></textarea></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="log">Continue: technique log &#8594;</button>
+</div>
+
+<div class="tab-panel" id="tab-log">
+  <div class="activity bl-burgundy">
+    <div class="activity-head"><div class="activity-num">6</div><div><div class="activity-title">Your technique log</div><div class="activity-sub">Three techniques, where, and who taught you</div></div></div>
+    <div class="activity-body">
+      <div class="coach"><span class="ci">&#9679;</span><div>Your craft reflection, due with your final story, names at least three techniques you used, says where each one appears in your story, and credits the studied story that taught it. Log them now while you are drafting.</div></div>
+      <p>Techniques you can choose from:</p>
+      <div class="chips" data-key="techOptions" data-label="Techniques I might use">
+        <button class="chip" type="button" data-value="Foreshadowing">Foreshadowing</button>
+        <button class="chip" type="button" data-value="Verbal irony">Verbal irony</button>
+        <button class="chip" type="button" data-value="Situational irony">Situational irony</button>
+        <button class="chip" type="button" data-value="Dramatic irony">Dramatic irony</button>
+        <button class="chip" type="button" data-value="An unreliable narrator">An unreliable narrator</button>
+        <button class="chip" type="button" data-value="An ambiguous ending">An ambiguous ending</button>
+        <button class="chip" type="button" data-value="A twist ending">A twist ending</button>
+        <button class="chip" type="button" data-value="Juxtaposition">Juxtaposition</button>
+        <button class="chip" type="button" data-value="Sensory detail">Sensory detail</button>
+        <button class="chip" type="button" data-value="A strong final sentence">A strong final sentence</button>
+      </div>
+      <div class="two">
+        <div>
+      <div class="q plain"><div class="q-prompt">Technique 1<span class="saved-dot"></span></div><input class="answer" type="text" data-key="tech1" data-label="Technique 1" data-required /></div>
+        </div>
+        <div>
+      <div class="q plain"><div class="q-prompt">The story that taught it<div class="q-hint">One of the seven.</div><span class="saved-dot"></span></div><input class="answer" type="text" data-key="from1" data-label="Technique 1: the story that taught it" data-required /></div>
+        </div>
+      </div>
+      <div class="q plain"><div class="q-prompt">Where it appears in your story<div class="q-hint">A scene, a paragraph, or a line.</div><span class="saved-dot"></span></div><input class="answer" type="text" data-key="where1" data-label="Technique 1: where it appears" data-required /></div>
+      <div class="two">
+        <div>
+      <div class="q plain"><div class="q-prompt">Technique 2<span class="saved-dot"></span></div><input class="answer" type="text" data-key="tech2" data-label="Technique 2" data-required /></div>
+        </div>
+        <div>
+      <div class="q plain"><div class="q-prompt">The story that taught it<div class="q-hint">One of the seven.</div><span class="saved-dot"></span></div><input class="answer" type="text" data-key="from2" data-label="Technique 2: the story that taught it" data-required /></div>
+        </div>
+      </div>
+      <div class="q plain"><div class="q-prompt">Where it appears in your story<div class="q-hint">A scene, a paragraph, or a line.</div><span class="saved-dot"></span></div><input class="answer" type="text" data-key="where2" data-label="Technique 2: where it appears" data-required /></div>
+      <div class="two">
+        <div>
+      <div class="q plain"><div class="q-prompt">Technique 3<span class="saved-dot"></span></div><input class="answer" type="text" data-key="tech3" data-label="Technique 3" data-required /></div>
+        </div>
+        <div>
+      <div class="q plain"><div class="q-prompt">The story that taught it<div class="q-hint">One of the seven.</div><span class="saved-dot"></span></div><input class="answer" type="text" data-key="from3" data-label="Technique 3: the story that taught it" data-required /></div>
+        </div>
+      </div>
+      <div class="q plain"><div class="q-prompt">Where it appears in your story<div class="q-hint">A scene, a paragraph, or a line.</div><span class="saved-dot"></span></div><input class="answer" type="text" data-key="where3" data-label="Technique 3: where it appears" data-required /></div>
+      <p>Before you revise, reread the one studied story whose technique you are borrowing. Every story you read this module is free and linked in its lesson.</p>
+    </div>
+  </div>
+  <button class="tab-next" data-next="wrap">Continue: wrap up &#8594;</button>
+</div>
+
+<div class="tab-panel" id="tab-wrap">
+  <div class="project-strip" data-fields="hero,choice,ending"></div>
+  <div class="activity bl-green">
+    <div class="activity-head"><div class="activity-num">7</div><div><div class="activity-title">Your work, on one page</div><div class="activity-sub">Download it and keep it. You will use your choices in <em>The Finish</em>.</div></div></div>
+    <div class="activity-body">
+      <div class="action"><div class="ak">IN WORD</div><ul>
+        <li>Open Word from your school account. Start a new draft file and paste your Opening as the story's beginning.</li>
+        <li>Write the middle, then the ending you chose, all the way to the last line. Do not polish; finish. Rough sentences are allowed. A missing ending is not.</li>
+        <li>At the bottom, after the story, add one label line with your ending type.</li>
+        <li>Save the file in OneDrive: Optima &rarr; ELA &rarr; ELA9 &rarr; Module 5, named LastName_FirstName_StoryDraft_ELA9. Keep it as its own file: next week&rsquo;s revised copy is named LastName_FirstName_OriginalStory_ELA9_Final.</li>
+        <li>Turn in your Word draft to <b><span class="cname">Project Feeder 4: Full Draft</span></b> in Canvas. Then upload this lesson&rsquo;s PDF to the same submission.</li>
+      </ul></div>
+      <div class="gathered">
+        <div class="gathered-head"><div><div class="gk">ALL YOUR WORK FROM THIS LESSON</div><div class="gt">Review, copy, or download</div></div></div>
+        <div class="gathered-body">
+          <textarea class="gathered-output" id="gathered" readonly></textarea>
+          <div class="gathered-actions">
+            <button class="gbtn pdf" data-action="pdf" type="button">Download as PDF</button>
+            <button class="gbtn ghost" data-action="copy" type="button">Copy the text</button>
+          </div>
+          <div class="gstatus" id="gstatus"></div>
+        </div>
+      </div>
+      <div class="turn-in">
+        <div class="turn-in-head"><div class="gk">BEFORE YOU MOVE ON</div><div class="gt">Check each line</div></div>
+        <div class="turn-in-body">
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">My draft runs from the opening to a real last line, about 1,000 to 1,500 words.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">The dilemma is faced on the page, with the cost of each option visible.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">At least two of my planted details pay off, and at least one form of irony is at work.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">My ending is the type I chose, and I labeled it at the bottom of the file.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I turned in my Word draft to <span class="cname">Project Feeder 4: Full Draft</span> in Canvas and uploaded this lesson&rsquo;s PDF to the same submission.</div></div>
+          <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">I saved this PDF as LastName_StoryLesson3_ELA9 in OneDrive: Optima &rarr; ELA &rarr; ELA9 &rarr; Module 5, and uploaded it to <span class="cname">Project Feeder 4: Full Draft</span>.</div></div>
+        </div>
+      </div>
+      <div class="callout-gold" style="margin-top:14px;"><strong>Next.</strong> In Week 8, after you read &ldquo;The Gift of the Magi,&rdquo; open <a href="story-lesson-4-the-finish.html">The Finish</a> to revise, add your craft reflection and Source Note, and turn in your final story.</div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="f1"><span>Optima Academy Online</span> &middot; ENGLISH 1 &middot; Module 5 &middot; Short Story Explorations</div>
+  <div class="f2">Original Short Story &middot; Part 3 of 4 &middot; The Draft</div>
+  <div class="f3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script>window.PROJECT_LABELS = { hero: "Your protagonist", choice: "The choice", ending: "Your ending" };</script>
+<script src="project.js"></script>
+</body>
+</html>
