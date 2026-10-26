@@ -276,7 +276,7 @@
   document.querySelectorAll("[data-action='copy']").forEach(function (b) {
     b.addEventListener("click", function () {
       gather(); var g = document.getElementById("gathered"); var st = document.getElementById("gstatus");
-      function ok() { if (st) st.textContent = "Copied. Paste it into your Word document or your notebook file."; }
+      function ok() { if (st) st.textContent = "Copied. Paste it into your Word document."; }
       function fail() { g.select(); if (st) st.textContent = "Select the text above and copy it (Ctrl+C)."; }
       if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(g.value).then(ok, fail); else fail();
     });
