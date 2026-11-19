@@ -1,0 +1,1716 @@
+{
+ "version": 1,
+ "module": "The Scarlet Letter",
+ "made": "2026-11-18",
+ "lessons": [
+  {
+   "page": "w1-lesson1-the-prison-door.html",
+   "week": 1,
+   "lesson": 1,
+   "title": "The Prison Door",
+   "folder": "Week 1/Lesson 1 - The Prison Door",
+   "combined": {
+    "path": "Week 1/Lesson 1 - The Prison Door/Lesson 1 - all cards.pdf",
+    "bytes": 499680
+   },
+   "files": [
+    {
+     "path": "Week 1/Lesson 1 - The Prison Door/Who Stands Where/01 - Sign - The balcony.pdf",
+     "thumb": "thumbs/Week 1/Lesson 1 - The Prison Door/Who Stands Where/01 - Sign - The balcony.jpg",
+     "activity": "Who Stands Where",
+     "label": "The balcony",
+     "bytes": 16990
+    },
+    {
+     "path": "Week 1/Lesson 1 - The Prison Door/Who Stands Where/02 - Sign - The scaffold.pdf",
+     "thumb": "thumbs/Week 1/Lesson 1 - The Prison Door/Who Stands Where/02 - Sign - The scaffold.jpg",
+     "activity": "Who Stands Where",
+     "label": "The scaffold",
+     "bytes": 16899
+    },
+    {
+     "path": "Week 1/Lesson 1 - The Prison Door/Who Stands Where/03 - Sign - The street.pdf",
+     "thumb": "thumbs/Week 1/Lesson 1 - The Prison Door/Who Stands Where/03 - Sign - The street.jpg",
+     "activity": "Who Stands Where",
+     "label": "The street",
+     "bytes": 16203
+    },
+    {
+     "path": "Week 1/Lesson 1 - The Prison Door/Who Stands Where/04 - Governor Bellingham.pdf",
+     "thumb": "thumbs/Week 1/Lesson 1 - The Prison Door/Who Stands Where/04 - Governor Bellingham.jpg",
+     "activity": "Who Stands Where",
+     "label": "Governor Bellingham",
+     "bytes": 60141
+    },
+    {
+     "path": "Week 1/Lesson 1 - The Prison Door/Who Stands Where/05 - Mr. Wilson.pdf",
+     "thumb": "thumbs/Week 1/Lesson 1 - The Prison Door/Who Stands Where/05 - Mr. Wilson.jpg",
+     "activity": "Who Stands Where",
+     "label": "Mr. Wilson",
+     "bytes": 53781
+    },
+    {
+     "path": "Week 1/Lesson 1 - The Prison Door/Who Stands Where/06 - Mr. Dimmesdale.pdf",
+     "thumb": "thumbs/Week 1/Lesson 1 - The Prison Door/Who Stands Where/06 - Mr. Dimmesdale.jpg",
+     "activity": "Who Stands Where",
+     "label": "Mr. Dimmesdale",
+     "bytes": 45696
+    },
+    {
+     "path": "Week 1/Lesson 1 - The Prison Door/Who Stands Where/07 - Hester, with the infant.pdf",
+     "thumb": "thumbs/Week 1/Lesson 1 - The Prison Door/Who Stands Where/07 - Hester, with the infant.jpg",
+     "activity": "Who Stands Where",
+     "label": "Hester, with the infant",
+     "bytes": 52822
+    },
+    {
+     "path": "Week 1/Lesson 1 - The Prison Door/Who Stands Where/08 - The gossiping women.pdf",
+     "thumb": "thumbs/Week 1/Lesson 1 - The Prison Door/Who Stands Where/08 - The gossiping women.jpg",
+     "activity": "Who Stands Where",
+     "label": "The gossiping women",
+     "bytes": 105189
+    },
+    {
+     "path": "Week 1/Lesson 1 - The Prison Door/Who Stands Where/09 - The young wife.pdf",
+     "thumb": "thumbs/Week 1/Lesson 1 - The Prison Door/Who Stands Where/09 - The young wife.jpg",
+     "activity": "Who Stands Where",
+     "label": "The young wife",
+     "bytes": 68663
+    },
+    {
+     "path": "Week 1/Lesson 1 - The Prison Door/Who Stands Where/10 - The stranger.pdf",
+     "thumb": "thumbs/Week 1/Lesson 1 - The Prison Door/Who Stands Where/10 - The stranger.jpg",
+     "activity": "Who Stands Where",
+     "label": "The stranger",
+     "bytes": 56607
+    },
+    {
+     "path": "Week 1/Lesson 1 - The Prison Door/Read/01 - The Prison Door.pdf",
+     "thumb": "thumbs/Week 1/Lesson 1 - The Prison Door/Read/01 - The Prison Door.jpg",
+     "activity": "Read",
+     "label": "The Prison Door.",
+     "bytes": 105537
+    },
+    {
+     "path": "Week 1/Lesson 1 - The Prison Door/Read/02 - Standing on the.pdf",
+     "thumb": "thumbs/Week 1/Lesson 1 - The Prison Door/Read/02 - Standing on the.jpg",
+     "activity": "Read",
+     "label": "Standing on the miserable eminence.",
+     "bytes": 101832
+    }
+   ]
+  },
+  {
+   "page": "w1-lesson2-three-bonds.html",
+   "week": 1,
+   "lesson": 2,
+   "title": "Three Bonds",
+   "folder": "Week 1/Lesson 2 - Three Bonds",
+   "combined": {
+    "path": "Week 1/Lesson 2 - Three Bonds/Lesson 2 - all cards.pdf",
+    "bytes": 628653
+   },
+   "files": [
+    {
+     "path": "Week 1/Lesson 2 - Three Bonds/Acts and Words/01 - Sign - What he does.pdf",
+     "thumb": "thumbs/Week 1/Lesson 2 - Three Bonds/Acts and Words/01 - Sign - What he does.jpg",
+     "activity": "Acts and Words",
+     "label": "What he does",
+     "bytes": 16473
+    },
+    {
+     "path": "Week 1/Lesson 2 - Three Bonds/Acts and Words/02 - Sign - What he says.pdf",
+     "thumb": "thumbs/Week 1/Lesson 2 - Three Bonds/Acts and Words/02 - Sign - What he says.jpg",
+     "activity": "Acts and Words",
+     "label": "What he says",
+     "bytes": 16532
+    },
+    {
+     "path": "Week 1/Lesson 2 - Three Bonds/Acts and Words/03 - Moment 1 - He soothes the.pdf",
+     "thumb": "thumbs/Week 1/Lesson 2 - Three Bonds/Acts and Words/03 - Moment 1 - He soothes the.jpg",
+     "activity": "Acts and Words",
+     "label": "He soothes the sick child with medicine",
+     "bytes": 18099
+    },
+    {
+     "path": "Week 1/Lesson 2 - Three Bonds/Acts and Words/04 - Moment 2 - Thou and thine.pdf",
+     "thumb": "thumbs/Week 1/Lesson 2 - Three Bonds/Acts and Words/04 - Moment 2 - Thou and thine.jpg",
+     "activity": "Acts and Words",
+     "label": "Thou and thine, Hester Prynne, belong to me.",
+     "bytes": 20852
+    },
+    {
+     "path": "Week 1/Lesson 2 - Three Bonds/Acts and Words/05 - Moment 3 - he laid his.pdf",
+     "thumb": "thumbs/Week 1/Lesson 2 - Three Bonds/Acts and Words/05 - Moment 3 - he laid his.jpg",
+     "activity": "Acts and Words",
+     "label": "he laid his long forefinger on the scarlet letter",
+     "bytes": 19204
+    },
+    {
+     "path": "Week 1/Lesson 2 - Three Bonds/Acts and Words/06 - Moment 4 - He vows to.pdf",
+     "thumb": "thumbs/Week 1/Lesson 2 - Three Bonds/Acts and Words/06 - Moment 4 - He vows to.jpg",
+     "activity": "Acts and Words",
+     "label": "He vows to find the man Hester will not name",
+     "bytes": 18943
+    },
+    {
+     "path": "Week 1/Lesson 2 - Three Bonds/Acts and Words/07 - Moment 5 - He presented the.pdf",
+     "thumb": "thumbs/Week 1/Lesson 2 - Three Bonds/Acts and Words/07 - Moment 5 - He presented the.jpg",
+     "activity": "Acts and Words",
+     "label": "He presented the cup to Hester",
+     "bytes": 19285
+    },
+    {
+     "path": "Week 1/Lesson 2 - Three Bonds/Acts and Words/08 - Moment 6 - Breathe not to.pdf",
+     "thumb": "thumbs/Week 1/Lesson 2 - Three Bonds/Acts and Words/08 - Moment 6 - Breathe not to.jpg",
+     "activity": "Acts and Words",
+     "label": "Breathe not, to any human soul, that thou didst ever call me husband!",
+     "bytes": 20686
+    },
+    {
+     "path": "Week 1/Lesson 2 - Three Bonds/Who Wears Her Work/01 - The Governor's ruff.pdf",
+     "thumb": "thumbs/Week 1/Lesson 2 - Three Bonds/Who Wears Her Work/01 - The Governor's ruff.jpg",
+     "activity": "Who Wears Her Work?",
+     "label": "The Governor’s ruff",
+     "bytes": 89801
+    },
+    {
+     "path": "Week 1/Lesson 2 - Three Bonds/Who Wears Her Work/02 - The soldiers' scarfs.pdf",
+     "thumb": "thumbs/Week 1/Lesson 2 - Three Bonds/Who Wears Her Work/02 - The soldiers' scarfs.jpg",
+     "activity": "Who Wears Her Work?",
+     "label": "The soldiers’ scarfs",
+     "bytes": 56844
+    },
+    {
+     "path": "Week 1/Lesson 2 - Three Bonds/Who Wears Her Work/03 - The minister's band.pdf",
+     "thumb": "thumbs/Week 1/Lesson 2 - Three Bonds/Who Wears Her Work/03 - The minister's band.jpg",
+     "activity": "Who Wears Her Work?",
+     "label": "The minister’s band",
+     "bytes": 64050
+    },
+    {
+     "path": "Week 1/Lesson 2 - Three Bonds/Who Wears Her Work/04 - The baby's cap.pdf",
+     "thumb": "thumbs/Week 1/Lesson 2 - Three Bonds/Who Wears Her Work/04 - The baby's cap.jpg",
+     "activity": "Who Wears Her Work?",
+     "label": "The baby’s cap",
+     "bytes": 51853
+    },
+    {
+     "path": "Week 1/Lesson 2 - Three Bonds/Who Wears Her Work/05 - The coffins of the dead.pdf",
+     "thumb": "thumbs/Week 1/Lesson 2 - Three Bonds/Who Wears Her Work/05 - The coffins of the dead.jpg",
+     "activity": "Who Wears Her Work?",
+     "label": "The coffins of the dead",
+     "bytes": 126099
+    },
+    {
+     "path": "Week 1/Lesson 2 - Three Bonds/Who Wears Her Work/06 - The bride's veil.pdf",
+     "thumb": "thumbs/Week 1/Lesson 2 - Three Bonds/Who Wears Her Work/06 - The bride's veil.jpg",
+     "activity": "Who Wears Her Work?",
+     "label": "The bride’s veil",
+     "bytes": 30811
+    },
+    {
+     "path": "Week 1/Lesson 2 - Three Bonds/Read/01 - The Wrinkled Scholar.pdf",
+     "thumb": "thumbs/Week 1/Lesson 2 - Three Bonds/Read/01 - The Wrinkled Scholar.jpg",
+     "activity": "Read",
+     "label": "The Wrinkled Scholar.",
+     "bytes": 168515
+    },
+    {
+     "path": "Week 1/Lesson 2 - Three Bonds/Read/02 - Pearl's Hand.pdf",
+     "thumb": "thumbs/Week 1/Lesson 2 - Three Bonds/Read/02 - Pearl's Hand.jpg",
+     "activity": "Read",
+     "label": "Pearl’s Hand.",
+     "bytes": 166579
+    }
+   ]
+  },
+  {
+   "page": "w1-lesson3-writers-desk.html",
+   "week": 1,
+   "lesson": 3,
+   "title": "The Writer’s Desk",
+   "folder": "Week 1/Lesson 3 - The Writer's Desk",
+   "combined": {
+    "path": "Week 1/Lesson 3 - The Writer's Desk/Lesson 3 - all cards.pdf",
+    "bytes": 33154
+   },
+   "files": [
+    {
+     "path": "Week 1/Lesson 3 - The Writer's Desk/Participial/01 - Moment 1 - Knowing well her.pdf",
+     "thumb": "thumbs/Week 1/Lesson 3 - The Writer's Desk/Participial/01 - Moment 1 - Knowing well her.jpg",
+     "activity": "Participial Phrases",
+     "label": "Knowing well her part, she ascended a flight of wooden steps, and was thus displayed to the surrounding multitude, at about the height of a man’s shoulders above the street.",
+     "bytes": 22257
+    },
+    {
+     "path": "Week 1/Lesson 3 - The Writer's Desk/Participial/02 - Moment 2 - Involved in these.pdf",
+     "thumb": "thumbs/Week 1/Lesson 3 - The Writer's Desk/Participial/02 - Moment 2 - Involved in these.jpg",
+     "activity": "Participial Phrases",
+     "label": "Involved in these thoughts, she scarcely heard a voice behind her, until it had repeated her name more than once, in a loud and solemn tone, audible to the whole multitude.",
+     "bytes": 21601
+    },
+    {
+     "path": "Week 1/Lesson 3 - The Writer's Desk/Participial/03 - Moment 3 - Discerning the.pdf",
+     "thumb": "thumbs/Week 1/Lesson 3 - The Writer's Desk/Participial/03 - Moment 3 - Discerning the.jpg",
+     "activity": "Participial Phrases",
+     "label": "Discerning the impracticable state of the poor culprit’s mind, the elder clergyman",
+     "bytes": 21304
+    },
+    {
+     "path": "Week 1/Lesson 3 - The Writer's Desk/Participial/04 - Moment 4 - Brooding over all.pdf",
+     "thumb": "thumbs/Week 1/Lesson 3 - The Writer's Desk/Participial/04 - Moment 4 - Brooding over all.jpg",
+     "activity": "Participial Phrases",
+     "label": "Brooding over all these matters, the mother felt like one who has evoked a spirit",
+     "bytes": 21431
+    },
+    {
+     "path": "Week 1/Lesson 3 - The Writer's Desk/Participial/05 - Moment 5 - Walking toward the.pdf",
+     "thumb": "thumbs/Week 1/Lesson 3 - The Writer's Desk/Participial/05 - Moment 5 - Walking toward the.jpg",
+     "activity": "Participial Phrases",
+     "label": "Walking toward the scaffold, the crowd pressed in around Hester.",
+     "bytes": 19851
+    },
+    {
+     "path": "Week 1/Lesson 3 - The Writer's Desk/Participial/06 - Moment 6 - Embroidered in gold.pdf",
+     "thumb": "thumbs/Week 1/Lesson 3 - The Writer's Desk/Participial/06 - Moment 6 - Embroidered in gold.jpg",
+     "activity": "Participial Phrases",
+     "label": "Embroidered in gold thread, the townspeople stared at the letter.",
+     "bytes": 19585
+    },
+    {
+     "path": "Week 1/Lesson 3 - The Writer's Desk/Participial/07 - Moment 7 - Leaning over the.pdf",
+     "thumb": "thumbs/Week 1/Lesson 3 - The Writer's Desk/Participial/07 - Moment 7 - Leaning over the.jpg",
+     "activity": "Participial Phrases",
+     "label": "Leaning over the balcony, Hester heard Mr. Dimmesdale’s plea.",
+     "bytes": 20333
+    },
+    {
+     "path": "Week 1/Lesson 3 - The Writer's Desk/Semicolons/01 - Moment 1 - It was in.pdf",
+     "thumb": "thumbs/Week 1/Lesson 3 - The Writer's Desk/Semicolons/01 - Moment 1 - It was in.jpg",
+     "activity": "Semicolons in Balance",
+     "label": "It was, in short, the platform of the pillory; and above it rose the framework of that instrument of discipline",
+     "bytes": 21287
+    },
+    {
+     "path": "Week 1/Lesson 3 - The Writer's Desk/Semicolons/02 - Moment 2 - Hester stitched the.pdf",
+     "thumb": "thumbs/Week 1/Lesson 3 - The Writer's Desk/Semicolons/02 - Moment 2 - Hester stitched the.jpg",
+     "activity": "Semicolons in Balance",
+     "label": "Hester stitched the letter herself, the beadle only cleared the way.",
+     "bytes": 19184
+    },
+    {
+     "path": "Week 1/Lesson 3 - The Writer's Desk/Semicolons/03 - Moment 3 - Hester held the.pdf",
+     "thumb": "thumbs/Week 1/Lesson 3 - The Writer's Desk/Semicolons/03 - Moment 3 - Hester held the.jpg",
+     "activity": "Semicolons in Balance",
+     "label": "Hester held the child close; because the crowd was watching.",
+     "bytes": 19153
+    },
+    {
+     "path": "Week 1/Lesson 3 - The Writer's Desk/Semicolons/04 - Moment 4 - The magistrates.pdf",
+     "thumb": "thumbs/Week 1/Lesson 3 - The Writer's Desk/Semicolons/04 - Moment 4 - The magistrates.jpg",
+     "activity": "Semicolons in Balance",
+     "label": "The magistrates watched from the balcony; the crowd pressed close below.",
+     "bytes": 20053
+    }
+   ]
+  },
+  {
+   "page": "w1-lesson4-who-stands-trial.html",
+   "week": 1,
+   "lesson": 4,
+   "title": "Who Stands Trial?",
+   "folder": "Week 1/Lesson 4 - Who Stands Trial",
+   "combined": {
+    "path": "Week 1/Lesson 4 - Who Stands Trial/Lesson 4 - all cards.pdf",
+    "bytes": 28371
+   },
+   "files": [
+    {
+     "path": "Week 1/Lesson 4 - Who Stands Trial/The Town/01 - Sign - The prison door.pdf",
+     "thumb": "thumbs/Week 1/Lesson 4 - Who Stands Trial/The Town/01 - Sign - The prison door.jpg",
+     "activity": "The Town",
+     "label": "The prison door",
+     "bytes": 16421
+    },
+    {
+     "path": "Week 1/Lesson 4 - Who Stands Trial/The Town/02 - Sign - The scaffold.pdf",
+     "thumb": "thumbs/Week 1/Lesson 4 - Who Stands Trial/The Town/02 - Sign - The scaffold.jpg",
+     "activity": "The Town",
+     "label": "The scaffold",
+     "bytes": 16101
+    },
+    {
+     "path": "Week 1/Lesson 4 - Who Stands Trial/The Town/03 - Sign - The meeting-house balcony.pdf",
+     "thumb": "thumbs/Week 1/Lesson 4 - Who Stands Trial/The Town/03 - Sign - The meeting-house balcony.jpg",
+     "activity": "The Town",
+     "label": "The meeting-house balcony",
+     "bytes": 17932
+    },
+    {
+     "path": "Week 1/Lesson 4 - Who Stands Trial/The Town/04 - Sign - Hester's cottage.pdf",
+     "thumb": "thumbs/Week 1/Lesson 4 - Who Stands Trial/The Town/04 - Sign - Hester's cottage.jpg",
+     "activity": "The Town",
+     "label": "Hester’s cottage",
+     "bytes": 16112
+    },
+    {
+     "path": "Week 1/Lesson 4 - Who Stands Trial/The Town/05 - Moment 1 - What do we.pdf",
+     "thumb": "thumbs/Week 1/Lesson 4 - Who Stands Trial/The Town/05 - Moment 1 - What do we.jpg",
+     "activity": "The Town",
+     "label": "What do we talk of marks and brands, whether on the bodice of her gown, or the flesh of her forehead?",
+     "bytes": 19958
+    },
+    {
+     "path": "Week 1/Lesson 4 - Who Stands Trial/The Town/06 - Moment 2 - Thus she will.pdf",
+     "thumb": "thumbs/Week 1/Lesson 4 - Who Stands Trial/The Town/06 - Moment 2 - Thus she will.jpg",
+     "activity": "The Town",
+     "label": "Thus she will be a living sermon against sin",
+     "bytes": 19737
+    },
+    {
+     "path": "Week 1/Lesson 4 - Who Stands Trial/The Town/07 - Moment 3 - Woman transgress not.pdf",
+     "thumb": "thumbs/Week 1/Lesson 4 - Who Stands Trial/The Town/07 - Moment 3 - Woman transgress not.jpg",
+     "activity": "The Town",
+     "label": "Woman, transgress not beyond the limits of Heaven’s mercy!",
+     "bytes": 20965
+    },
+    {
+     "path": "Week 1/Lesson 4 - Who Stands Trial/The Town/08 - Moment 4 - In all her.pdf",
+     "thumb": "thumbs/Week 1/Lesson 4 - Who Stands Trial/The Town/08 - Moment 4 - In all her.jpg",
+     "activity": "The Town",
+     "label": "In all her intercourse with society, however, there was nothing that made her feel as if she belonged to it.",
+     "bytes": 21033
+    }
+   ]
+  },
+  {
+   "page": "w2-lesson1-the-governors-hall.html",
+   "week": 2,
+   "lesson": 1,
+   "title": "The Governor’s Hall",
+   "folder": "Week 2/Lesson 1 - The Governor's Hall",
+   "combined": {
+    "path": "Week 2/Lesson 1 - The Governor's Hall/Lesson 1 - all cards.pdf",
+    "bytes": 343936
+   },
+   "files": [
+    {
+     "path": "Week 2/Lesson 1 - The Governor's Hall/Four Voices/01 - Sign - Governor Bellingham.pdf",
+     "thumb": "thumbs/Week 2/Lesson 1 - The Governor's Hall/Four Voices/01 - Sign - Governor Bellingham.jpg",
+     "activity": "Four Voices",
+     "label": "Governor Bellingham",
+     "bytes": 18995
+    },
+    {
+     "path": "Week 2/Lesson 1 - The Governor's Hall/Four Voices/02 - Sign - Mr. Wilson.pdf",
+     "thumb": "thumbs/Week 2/Lesson 1 - The Governor's Hall/Four Voices/02 - Sign - Mr. Wilson.jpg",
+     "activity": "Four Voices",
+     "label": "Mr. Wilson",
+     "bytes": 17321
+    },
+    {
+     "path": "Week 2/Lesson 1 - The Governor's Hall/Four Voices/03 - Sign - Mr. Dimmesdale.pdf",
+     "thumb": "thumbs/Week 2/Lesson 1 - The Governor's Hall/Four Voices/03 - Sign - Mr. Dimmesdale.jpg",
+     "activity": "Four Voices",
+     "label": "Mr. Dimmesdale",
+     "bytes": 18479
+    },
+    {
+     "path": "Week 2/Lesson 1 - The Governor's Hall/Four Voices/04 - Sign - Hester Prynne.pdf",
+     "thumb": "thumbs/Week 2/Lesson 1 - The Governor's Hall/Four Voices/04 - Sign - Hester Prynne.jpg",
+     "activity": "Four Voices",
+     "label": "Hester Prynne",
+     "bytes": 17645
+    },
+    {
+     "path": "Week 2/Lesson 1 - The Governor's Hall/Four Voices/05 - Moment 1 - I can teach.pdf",
+     "thumb": "thumbs/Week 2/Lesson 1 - The Governor's Hall/Four Voices/05 - Moment 1 - I can teach.jpg",
+     "activity": "Four Voices",
+     "label": "I can teach my little Pearl what I have learned from this!",
+     "bytes": 20550
+    },
+    {
+     "path": "Week 2/Lesson 1 - The Governor's Hall/Four Voices/06 - Moment 2 - Woman it is.pdf",
+     "thumb": "thumbs/Week 2/Lesson 1 - The Governor's Hall/Four Voices/06 - Moment 2 - Woman it is.jpg",
+     "activity": "Four Voices",
+     "label": "Woman, it is thy badge of shame!",
+     "bytes": 20458
+    },
+    {
+     "path": "Week 2/Lesson 1 - The Governor's Hall/Four Voices/07 - Moment 3 - It was meant.pdf",
+     "thumb": "thumbs/Week 2/Lesson 1 - The Governor's Hall/Four Voices/07 - Moment 3 - It was meant.jpg",
+     "activity": "Four Voices",
+     "label": "It was meant for a blessing; for the one blessing of her life!",
+     "bytes": 20704
+    },
+    {
+     "path": "Week 2/Lesson 1 - The Governor's Hall/Four Voices/08 - Moment 4 - Canst thou tell.pdf",
+     "thumb": "thumbs/Week 2/Lesson 1 - The Governor's Hall/Four Voices/08 - Moment 4 - Canst thou tell.jpg",
+     "activity": "Four Voices",
+     "label": "Canst thou tell me, my child, who made thee?",
+     "bytes": 20639
+    },
+    {
+     "path": "Week 2/Lesson 1 - The Governor's Hall/Four Voices/09 - Moment 5 - Pearl keeps me.pdf",
+     "thumb": "thumbs/Week 2/Lesson 1 - The Governor's Hall/Four Voices/09 - Moment 5 - Pearl keeps me.jpg",
+     "activity": "Four Voices",
+     "label": "Pearl keeps me here in life! Pearl punishes me too!",
+     "bytes": 20158
+    },
+    {
+     "path": "Week 2/Lesson 1 - The Governor's Hall/Four Voices/10 - Moment 6 - let us leave.pdf",
+     "thumb": "thumbs/Week 2/Lesson 1 - The Governor's Hall/Four Voices/10 - Moment 6 - let us leave.jpg",
+     "activity": "Four Voices",
+     "label": "let us leave them as Providence hath seen fit to place them!",
+     "bytes": 20758
+    },
+    {
+     "path": "Week 2/Lesson 1 - The Governor's Hall/Four Voices/11 - Moment 7 - Here is a.pdf",
+     "thumb": "thumbs/Week 2/Lesson 1 - The Governor's Hall/Four Voices/11 - Moment 7 - Here is a.jpg",
+     "activity": "Four Voices",
+     "label": "Here is a child of three years old, and she cannot tell who made her!",
+     "bytes": 20740
+    },
+    {
+     "path": "Week 2/Lesson 1 - The Governor's Hall/Four Voices/12 - Moment 8 - I feared the.pdf",
+     "thumb": "thumbs/Week 2/Lesson 1 - The Governor's Hall/Four Voices/12 - Moment 8 - I feared the.jpg",
+     "activity": "Four Voices",
+     "label": "I feared the woman had no better thought than to make a mountebank of her child!",
+     "bytes": 20811
+    },
+    {
+     "path": "Week 2/Lesson 1 - The Governor's Hall/Read/01 - The Governor's.pdf",
+     "thumb": "thumbs/Week 2/Lesson 1 - The Governor's Hall/Read/01 - The Governor's.jpg",
+     "activity": "Read",
+     "label": "The Governor’s Breastplate.",
+     "bytes": 169833
+    },
+    {
+     "path": "Week 2/Lesson 1 - The Governor's Hall/Read/02 - Look thou to.pdf",
+     "thumb": "thumbs/Week 2/Lesson 1 - The Governor's Hall/Read/02 - Look thou to.jpg",
+     "activity": "Read",
+     "label": "Look thou to it! I will not lose the child!",
+     "bytes": 179032
+    }
+   ]
+  },
+  {
+   "page": "w2-lesson2-the-leech.html",
+   "week": 2,
+   "lesson": 2,
+   "title": "The Leech and His Patient",
+   "folder": "Week 2/Lesson 2 - The Leech and His Patient",
+   "combined": {
+    "path": "Week 2/Lesson 2 - The Leech and His Patient/Lesson 2 - all cards.pdf",
+    "bytes": 440529
+   },
+   "files": [
+    {
+     "path": "Week 2/Lesson 2 - The Leech and His Patient/The Descent/01 - Sign - The judge.pdf",
+     "thumb": "thumbs/Week 2/Lesson 2 - The Leech and His Patient/The Descent/01 - Sign - The judge.jpg",
+     "activity": "The Descent",
+     "label": "The judge",
+     "bytes": 17206
+    },
+    {
+     "path": "Week 2/Lesson 2 - The Leech and His Patient/The Descent/02 - Sign - The miner.pdf",
+     "thumb": "thumbs/Week 2/Lesson 2 - The Leech and His Patient/The Descent/02 - Sign - The miner.jpg",
+     "activity": "The Descent",
+     "label": "The miner",
+     "bytes": 16326
+    },
+    {
+     "path": "Week 2/Lesson 2 - The Leech and His Patient/The Descent/03 - Sign - The sexton.pdf",
+     "thumb": "thumbs/Week 2/Lesson 2 - The Leech and His Patient/The Descent/03 - Sign - The sexton.jpg",
+     "activity": "The Descent",
+     "label": "The sexton",
+     "bytes": 16100
+    },
+    {
+     "path": "Week 2/Lesson 2 - The Leech and His Patient/The Descent/04 - Sign - The thief.pdf",
+     "thumb": "thumbs/Week 2/Lesson 2 - The Leech and His Patient/The Descent/04 - Sign - The thief.jpg",
+     "activity": "The Descent",
+     "label": "The thief",
+     "bytes": 16143
+    },
+    {
+     "path": "Week 2/Lesson 2 - The Leech and His Patient/The Descent/05 - Sign - The actor.pdf",
+     "thumb": "thumbs/Week 2/Lesson 2 - The Leech and His Patient/The Descent/05 - Sign - The actor.jpg",
+     "activity": "The Descent",
+     "label": "The actor",
+     "bytes": 15615
+    },
+    {
+     "path": "Week 2/Lesson 2 - The Leech and His Patient/The Descent/06 - Moment 1 - possibly in quest.pdf",
+     "thumb": "thumbs/Week 2/Lesson 2 - The Leech and His Patient/The Descent/06 - Moment 1 - possibly in quest.jpg",
+     "activity": "The Descent",
+     "label": "possibly in quest of a jewel that had been buried on the dead man’s bosom",
+     "bytes": 21739
+    },
+    {
+     "path": "Week 2/Lesson 2 - The Leech and His Patient/The Descent/07 - Moment 2 - He could play.pdf",
+     "thumb": "thumbs/Week 2/Lesson 2 - The Leech and His Patient/The Descent/07 - Moment 2 - He could play.jpg",
+     "activity": "The Descent",
+     "label": "He could play upon him as he chose.",
+     "bytes": 20077
+    },
+    {
+     "path": "Week 2/Lesson 2 - The Leech and His Patient/The Descent/08 - Moment 3 - desirous only of.pdf",
+     "thumb": "thumbs/Week 2/Lesson 2 - The Leech and His Patient/The Descent/08 - Moment 3 - desirous only of.jpg",
+     "activity": "The Descent",
+     "label": "desirous only of truth, even as if the question involved no more than the air-drawn lines and figures of a geometrical problem",
+     "bytes": 22543
+    },
+    {
+     "path": "Week 2/Lesson 2 - The Leech and His Patient/The Descent/09 - Moment 4 - In spite of.pdf",
+     "thumb": "thumbs/Week 2/Lesson 2 - The Leech and His Patient/The Descent/09 - Moment 4 - In spite of.jpg",
+     "activity": "The Descent",
+     "label": "In spite of his premeditated carefulness, the floor would now and then creak",
+     "bytes": 20627
+    },
+    {
+     "path": "Week 2/Lesson 2 - The Leech and His Patient/The Descent/10 - Moment 5 - Let us dig.pdf",
+     "thumb": "thumbs/Week 2/Lesson 2 - The Leech and His Patient/The Descent/10 - Moment 5 - Let us dig.jpg",
+     "activity": "The Descent",
+     "label": "Let us dig a little further in the direction of this vein!",
+     "bytes": 19496
+    },
+    {
+     "path": "Week 2/Lesson 2 - The Leech and His Patient/Read/01 - The Minister and Leech.pdf",
+     "thumb": "thumbs/Week 2/Lesson 2 - The Leech and His Patient/Read/01 - The Minister and Leech.jpg",
+     "activity": "Read",
+     "label": "The Minister and Leech.",
+     "bytes": 154974
+    },
+    {
+     "path": "Week 2/Lesson 2 - The Leech and His Patient/Read/02 - The Leech and.pdf",
+     "thumb": "thumbs/Week 2/Lesson 2 - The Leech and His Patient/Read/02 - The Leech and.jpg",
+     "activity": "Read",
+     "label": "The Leech and his Patient.",
+     "bytes": 169343
+    },
+    {
+     "path": "Week 2/Lesson 2 - The Leech and His Patient/Read/03 - The Virgins of.pdf",
+     "thumb": "thumbs/Week 2/Lesson 2 - The Leech and His Patient/Read/03 - The Virgins of.jpg",
+     "activity": "Read",
+     "label": "The Virgins of the Church.",
+     "bytes": 59967
+    },
+    {
+     "path": "Week 2/Lesson 2 - The Leech and His Patient/Read/04 - They stood in.pdf",
+     "thumb": "thumbs/Week 2/Lesson 2 - The Leech and His Patient/Read/04 - They stood in.jpg",
+     "activity": "Read",
+     "label": "They stood in the noon of that strange splendor.",
+     "bytes": 99625
+    }
+   ]
+  },
+  {
+   "page": "w2-lesson3-writers-desk.html",
+   "week": 2,
+   "lesson": 3,
+   "title": "The Writer’s Desk",
+   "folder": "Week 2/Lesson 3 - The Writer's Desk",
+   "combined": {
+    "path": "Week 2/Lesson 3 - The Writer's Desk/Lesson 3 - all cards.pdf",
+    "bytes": 34663
+   },
+   "files": [
+    {
+     "path": "Week 2/Lesson 3 - The Writer's Desk/Absolute Phrases/01 - Moment 1 - The affair being.pdf",
+     "thumb": "thumbs/Week 2/Lesson 3 - The Writer's Desk/Absolute Phrases/01 - Moment 1 - The affair being.jpg",
+     "activity": "Absolute Phrases",
+     "label": "The affair being so satisfactorily concluded, Hester Prynne, with Pearl, departed from the house.",
+     "bytes": 22382
+    },
+    {
+     "path": "Week 2/Lesson 3 - The Writer's Desk/Absolute Phrases/02 - Moment 2 - This purpose once.pdf",
+     "thumb": "thumbs/Week 2/Lesson 3 - The Writer's Desk/Absolute Phrases/02 - Moment 2 - This purpose once.jpg",
+     "activity": "Absolute Phrases",
+     "label": "This purpose once effected, new interests would immediately spring up, and likewise a new purpose",
+     "bytes": 21548
+    },
+    {
+     "path": "Week 2/Lesson 3 - The Writer's Desk/Absolute Phrases/03 - Moment 3 - He going home.pdf",
+     "thumb": "thumbs/Week 2/Lesson 3 - The Writer's Desk/Absolute Phrases/03 - Moment 3 - He going home.jpg",
+     "activity": "Absolute Phrases",
+     "label": "He going home to a better world, I, likewise, was on my way homeward, when this strange light shone out.",
+     "bytes": 21516
+    },
+    {
+     "path": "Week 2/Lesson 3 - The Writer's Desk/Absolute Phrases/04 - Moment 4 - Lifting the iron.pdf",
+     "thumb": "thumbs/Week 2/Lesson 3 - The Writer's Desk/Absolute Phrases/04 - Moment 4 - Lifting the iron.jpg",
+     "activity": "Absolute Phrases",
+     "label": "Lifting the iron hammer that hung at the portal, Hester Prynne gave a summons",
+     "bytes": 21533
+    },
+    {
+     "path": "Week 2/Lesson 3 - The Writer's Desk/Absolute Phrases/05 - Moment 5 - Hester stood before.pdf",
+     "thumb": "thumbs/Week 2/Lesson 3 - The Writer's Desk/Absolute Phrases/05 - Moment 5 - Hester stood before.jpg",
+     "activity": "Absolute Phrases",
+     "label": "Hester stood before the Governor her hand resting on the letter.",
+     "bytes": 19483
+    },
+    {
+     "path": "Week 2/Lesson 3 - The Writer's Desk/Absolute Phrases/06 - Moment 6 - The minister's voice.pdf",
+     "thumb": "thumbs/Week 2/Lesson 3 - The Writer's Desk/Absolute Phrases/06 - Moment 6 - The minister's voice.jpg",
+     "activity": "Absolute Phrases",
+     "label": "The minister’s voice was trembling, the hall rang with his plea.",
+     "bytes": 19815
+    },
+    {
+     "path": "Week 2/Lesson 3 - The Writer's Desk/Absolute Phrases/07 - Moment 7 - Pearl ran down.pdf",
+     "thumb": "thumbs/Week 2/Lesson 3 - The Writer's Desk/Absolute Phrases/07 - Moment 7 - Pearl ran down.jpg",
+     "activity": "Absolute Phrases",
+     "label": "Pearl ran down the hall her tiptoes barely touching the floor.",
+     "bytes": 20036
+    },
+    {
+     "path": "Week 2/Lesson 3 - The Writer's Desk/Parallel/01 - Moment 1 - I could be.pdf",
+     "thumb": "thumbs/Week 2/Lesson 3 - The Writer's Desk/Parallel/01 - Moment 1 - I could be.jpg",
+     "activity": "Parallel Structure",
+     "label": "I could be well content, that my labors, and my sorrows, and my sins, and my pains, should shortly end with me",
+     "bytes": 21392
+    },
+    {
+     "path": "Week 2/Lesson 3 - The Writer's Desk/Parallel/02 - Moment 2 - it was observed.pdf",
+     "thumb": "thumbs/Week 2/Lesson 3 - The Writer's Desk/Parallel/02 - Moment 2 - it was observed.jpg",
+     "activity": "Parallel Structure",
+     "label": "it was observed that he gathered herbs, and the blossoms of wild-flowers, and dug up roots, and plucked off twigs from the forest-trees",
+     "bytes": 21990
+    },
+    {
+     "path": "Week 2/Lesson 3 - The Writer's Desk/Parallel/03 - Moment 3 - Clad soberly.pdf",
+     "thumb": "thumbs/Week 2/Lesson 3 - The Writer's Desk/Parallel/03 - Moment 3 - Clad soberly.jpg",
+     "activity": "Parallel Structure",
+     "label": "Clad soberly, disciplined strictly, and someone should teach her.",
+     "bytes": 19569
+    },
+    {
+     "path": "Week 2/Lesson 3 - The Writer's Desk/Parallel/04 - Moment 4 - Chillingworth.pdf",
+     "thumb": "thumbs/Week 2/Lesson 3 - The Writer's Desk/Parallel/04 - Moment 4 - Chillingworth.jpg",
+     "activity": "Parallel Structure",
+     "label": "Chillingworth gathered herbs, studied his patient, and was watching the minister’s face.",
+     "bytes": 20913
+    },
+    {
+     "path": "Week 2/Lesson 3 - The Writer's Desk/Parallel/05 - Moment 5 - Hester came to.pdf",
+     "thumb": "thumbs/Week 2/Lesson 3 - The Writer's Desk/Parallel/05 - Moment 5 - Hester came to.jpg",
+     "activity": "Parallel Structure",
+     "label": "Hester came to deliver the gloves, to plead for her child, and for keeping Pearl at home.",
+     "bytes": 20207
+    },
+    {
+     "path": "Week 2/Lesson 3 - The Writer's Desk/Parallel/06 - Moment 6 - The minister.pdf",
+     "thumb": "thumbs/Week 2/Lesson 3 - The Writer's Desk/Parallel/06 - Moment 6 - The minister.jpg",
+     "activity": "Parallel Structure",
+     "label": "The minister suffered not only from his illness but also the town’s praise hurt him.",
+     "bytes": 20081
+    }
+   ]
+  },
+  {
+   "page": "w2-lesson4-what-is-he-owed.html",
+   "week": 2,
+   "lesson": 4,
+   "title": "What Is He Owed?",
+   "folder": "Week 2/Lesson 4 - What Is He Owed",
+   "combined": {
+    "path": "Week 2/Lesson 4 - What Is He Owed/Lesson 4 - all cards.pdf",
+    "bytes": 28463
+   },
+   "files": [
+    {
+     "path": "Week 2/Lesson 4 - What Is He Owed/Claim and Fire/01 - Sign - The claim what was done to him.pdf",
+     "thumb": "thumbs/Week 2/Lesson 4 - What Is He Owed/Claim and Fire/01 - Sign - The claim what was done to him.jpg",
+     "activity": "The Claim and the Fire",
+     "label": "The claim: what was done to him",
+     "bytes": 19242
+    },
+    {
+     "path": "Week 2/Lesson 4 - What Is He Owed/Claim and Fire/02 - Sign - The fire what he does with it.pdf",
+     "thumb": "thumbs/Week 2/Lesson 4 - What Is He Owed/Claim and Fire/02 - Sign - The fire what he does with it.jpg",
+     "activity": "The Claim and the Fire",
+     "label": "The fire: what he does with it",
+     "bytes": 19059
+    },
+    {
+     "path": "Week 2/Lesson 4 - What Is He Owed/Claim and Fire/03 - Moment 1 - We have wronged.pdf",
+     "thumb": "thumbs/Week 2/Lesson 4 - What Is He Owed/Claim and Fire/03 - Moment 1 - We have wronged.jpg",
+     "activity": "The Claim and the Fire",
+     "label": "We have wronged each other",
+     "bytes": 18990
+    },
+    {
+     "path": "Week 2/Lesson 4 - What Is He Owed/Claim and Fire/04 - Moment 2 - wrongs inflicted on.pdf",
+     "thumb": "thumbs/Week 2/Lesson 4 - What Is He Owed/Claim and Fire/04 - Moment 2 - wrongs inflicted on.jpg",
+     "activity": "The Claim and the Fire",
+     "label": "wrongs inflicted on himself",
+     "bytes": 19454
+    },
+    {
+     "path": "Week 2/Lesson 4 - What Is He Owed/Claim and Fire/05 - Moment 3 - a quiet depth.pdf",
+     "thumb": "thumbs/Week 2/Lesson 4 - What Is He Owed/Claim and Fire/05 - Moment 3 - a quiet depth.jpg",
+     "activity": "The Claim and the Fire",
+     "label": "a quiet depth of malice, hitherto latent, but active now",
+     "bytes": 21579
+    },
+    {
+     "path": "Week 2/Lesson 4 - What Is He Owed/Claim and Fire/06 - Moment 4 - to him the.pdf",
+     "thumb": "thumbs/Week 2/Lesson 4 - What Is He Owed/Claim and Fire/06 - Moment 4 - to him the.jpg",
+     "activity": "The Claim and the Fire",
+     "label": "to him, the Pitiless, to him, the Unforgiving!",
+     "bytes": 20046
+    }
+   ]
+  },
+  {
+   "page": "w3-lesson1-another-view.html",
+   "week": 3,
+   "lesson": 1,
+   "title": "Another View of Hester",
+   "folder": "Week 3/Lesson 1 - Another View of Hester",
+   "combined": {
+    "path": "Week 3/Lesson 1 - Another View of Hester/Lesson 1 - all cards.pdf",
+    "bytes": 509361
+   },
+   "files": [
+    {
+     "path": "Week 3/Lesson 1 - Another View of Hester/Three Doors/01 - Sign - The people.pdf",
+     "thumb": "thumbs/Week 3/Lesson 1 - Another View of Hester/Three Doors/01 - Sign - The people.jpg",
+     "activity": "Three Doors",
+     "label": "The people",
+     "bytes": 16351
+    },
+    {
+     "path": "Week 3/Lesson 1 - Another View of Hester/Three Doors/02 - Sign - The rulers.pdf",
+     "thumb": "thumbs/Week 3/Lesson 1 - Another View of Hester/Three Doors/02 - Sign - The rulers.jpg",
+     "activity": "Three Doors",
+     "label": "The rulers",
+     "bytes": 16355
+    },
+    {
+     "path": "Week 3/Lesson 1 - Another View of Hester/Three Doors/03 - Sign - Hester herself.pdf",
+     "thumb": "thumbs/Week 3/Lesson 1 - Another View of Hester/Three Doors/03 - Sign - Hester herself.jpg",
+     "activity": "Three Doors",
+     "label": "Hester herself",
+     "bytes": 16278
+    },
+    {
+     "path": "Week 3/Lesson 1 - Another View of Hester/Three Doors/04 - Moment 1 - They said that.pdf",
+     "thumb": "thumbs/Week 3/Lesson 1 - Another View of Hester/Three Doors/04 - Moment 1 - They said that.jpg",
+     "activity": "Three Doors",
+     "label": "They said that it meant Able",
+     "bytes": 19978
+    },
+    {
+     "path": "Week 3/Lesson 1 - Another View of Hester/Three Doors/05 - Moment 2 - who is so.pdf",
+     "thumb": "thumbs/Week 3/Lesson 1 - Another View of Hester/Three Doors/05 - Moment 2 - who is so.jpg",
+     "activity": "Three Doors",
+     "label": "who is so kind to the poor, so helpful to the sick, so comfortable to the afflicted!",
+     "bytes": 21405
+    },
+    {
+     "path": "Week 3/Lesson 1 - Another View of Hester/Three Doors/06 - Moment 3 - were longer in.pdf",
+     "thumb": "thumbs/Week 3/Lesson 1 - Another View of Hester/Three Doors/06 - Moment 3 - were longer in.jpg",
+     "activity": "Three Doors",
+     "label": "were longer in acknowledging the influence of Hester’s good qualities than the people",
+     "bytes": 21453
+    },
+    {
+     "path": "Week 3/Lesson 1 - Another View of Hester/Three Doors/07 - Moment 4 - fortified in.pdf",
+     "thumb": "thumbs/Week 3/Lesson 1 - Another View of Hester/Three Doors/07 - Moment 4 - fortified in.jpg",
+     "activity": "Three Doors",
+     "label": "fortified in themselves by an iron framework of reasoning",
+     "bytes": 21503
+    },
+    {
+     "path": "Week 3/Lesson 1 - Another View of Hester/Three Doors/08 - Moment 5 - It lies not.pdf",
+     "thumb": "thumbs/Week 3/Lesson 1 - Another View of Hester/Three Doors/08 - Moment 5 - It lies not.jpg",
+     "activity": "Three Doors",
+     "label": "It lies not in the pleasure of the magistrates to take off this badge",
+     "bytes": 21541
+    },
+    {
+     "path": "Week 3/Lesson 1 - Another View of Hester/Three Doors/09 - Moment 6 - Were I worthy.pdf",
+     "thumb": "thumbs/Week 3/Lesson 1 - Another View of Hester/Three Doors/09 - Moment 6 - Were I worthy.jpg",
+     "activity": "Three Doors",
+     "label": "Were I worthy to be quit of it, it would fall away of its own nature",
+     "bytes": 21229
+    },
+    {
+     "path": "Week 3/Lesson 1 - Another View of Hester/Read/01 - Hester in the.pdf",
+     "thumb": "thumbs/Week 3/Lesson 1 - Another View of Hester/Read/01 - Hester in the.jpg",
+     "activity": "Read",
+     "label": "Hester in the House of Mourning.",
+     "bytes": 163880
+    },
+    {
+     "path": "Week 3/Lesson 1 - Another View of Hester/Read/02 - Mandrake.pdf",
+     "thumb": "thumbs/Week 3/Lesson 1 - Another View of Hester/Read/02 - Mandrake.jpg",
+     "activity": "Read",
+     "label": "Mandrake.",
+     "bytes": 41513
+    },
+    {
+     "path": "Week 3/Lesson 1 - Another View of Hester/Read/03 - He gathered herbs.pdf",
+     "thumb": "thumbs/Week 3/Lesson 1 - Another View of Hester/Read/03 - He gathered herbs.jpg",
+     "activity": "Read",
+     "label": "He gathered herbs here and there.",
+     "bytes": 174345
+    },
+    {
+     "path": "Week 3/Lesson 1 - Another View of Hester/Read/04 - Pearl on the Sea-Shore.pdf",
+     "thumb": "thumbs/Week 3/Lesson 1 - Another View of Hester/Read/04 - Pearl on the Sea-Shore.jpg",
+     "activity": "Read",
+     "label": "Pearl on the Sea-Shore.",
+     "bytes": 174165
+    }
+   ]
+  },
+  {
+   "page": "w3-lesson2-the-forest.html",
+   "week": 3,
+   "lesson": 2,
+   "title": "The Forest",
+   "folder": "Week 3/Lesson 2 - The Forest",
+   "combined": {
+    "path": "Week 3/Lesson 2 - The Forest/Lesson 2 - all cards.pdf",
+    "bytes": 494240
+   },
+   "files": [
+    {
+     "path": "Week 3/Lesson 2 - The Forest/Two Roads/01 - Sign - Hester's road.pdf",
+     "thumb": "thumbs/Week 3/Lesson 2 - The Forest/Two Roads/01 - Sign - Hester's road.jpg",
+     "activity": "Two Roads",
+     "label": "Hester’s road",
+     "bytes": 16554
+    },
+    {
+     "path": "Week 3/Lesson 2 - The Forest/Two Roads/02 - Sign - The minister's road.pdf",
+     "thumb": "thumbs/Week 3/Lesson 2 - The Forest/Two Roads/02 - Sign - The minister's road.jpg",
+     "activity": "Two Roads",
+     "label": "The minister’s road",
+     "bytes": 16936
+    },
+    {
+     "path": "Week 3/Lesson 2 - The Forest/Two Roads/03 - Moment 1 - She had wandered.pdf",
+     "thumb": "thumbs/Week 3/Lesson 2 - The Forest/Two Roads/03 - Moment 1 - She had wandered.jpg",
+     "activity": "Two Roads",
+     "label": "She had wandered, without rule or guidance, in a moral wilderness",
+     "bytes": 21080
+    },
+    {
+     "path": "Week 3/Lesson 2 - The Forest/Two Roads/04 - Moment 2 - The scarlet letter.pdf",
+     "thumb": "thumbs/Week 3/Lesson 2 - The Forest/Two Roads/04 - Moment 2 - The scarlet letter.jpg",
+     "activity": "Two Roads",
+     "label": "The scarlet letter was her passport into regions where other women dared not tread.",
+     "bytes": 20775
+    },
+    {
+     "path": "Week 3/Lesson 2 - The Forest/Two Roads/05 - Moment 3 - Shame Despair.pdf",
+     "thumb": "thumbs/Week 3/Lesson 2 - The Forest/Two Roads/05 - Moment 3 - Shame Despair.jpg",
+     "activity": "Two Roads",
+     "label": "Shame, Despair, Solitude! These had been her teachers",
+     "bytes": 21078
+    },
+    {
+     "path": "Week 3/Lesson 2 - The Forest/Two Roads/06 - Moment 4 - had never gone.pdf",
+     "thumb": "thumbs/Week 3/Lesson 2 - The Forest/Two Roads/06 - Moment 4 - had never gone.jpg",
+     "activity": "Two Roads",
+     "label": "had never gone through an experience calculated to lead him beyond the scope of generally received laws",
+     "bytes": 23068
+    },
+    {
+     "path": "Week 3/Lesson 2 - The Forest/Two Roads/07 - Moment 5 - As a priest.pdf",
+     "thumb": "thumbs/Week 3/Lesson 2 - The Forest/Two Roads/07 - Moment 5 - As a priest.jpg",
+     "activity": "Two Roads",
+     "label": "As a priest, the framework of his order inevitably hemmed him in.",
+     "bytes": 22044
+    },
+    {
+     "path": "Week 3/Lesson 2 - The Forest/Read/01 - Wilt thou yet.pdf",
+     "thumb": "thumbs/Week 3/Lesson 2 - The Forest/Read/01 - Wilt thou yet.jpg",
+     "activity": "Read",
+     "label": "Wilt thou yet forgive me?",
+     "bytes": 202122
+    },
+    {
+     "path": "Week 3/Lesson 2 - The Forest/Read/02 - A Gleam of Sunshine.pdf",
+     "thumb": "thumbs/Week 3/Lesson 2 - The Forest/Read/02 - A Gleam of Sunshine.jpg",
+     "activity": "Read",
+     "label": "A Gleam of Sunshine.",
+     "bytes": 127284
+    },
+    {
+     "path": "Week 3/Lesson 2 - The Forest/Read/03 - The Child at.pdf",
+     "thumb": "thumbs/Week 3/Lesson 2 - The Forest/Read/03 - The Child at.jpg",
+     "activity": "Read",
+     "label": "The Child at the Brook-Side.",
+     "bytes": 190994
+    },
+    {
+     "path": "Week 3/Lesson 2 - The Forest/The Walk/01 - Sign - The forest path.pdf",
+     "thumb": "thumbs/Week 3/Lesson 2 - The Forest/The Walk/01 - Sign - The forest path.jpg",
+     "activity": "The Walk",
+     "label": "The forest path",
+     "bytes": 16554
+    },
+    {
+     "path": "Week 3/Lesson 2 - The Forest/The Walk/02 - Sign - The fallen tree.pdf",
+     "thumb": "thumbs/Week 3/Lesson 2 - The Forest/The Walk/02 - Sign - The fallen tree.jpg",
+     "activity": "The Walk",
+     "label": "The fallen tree",
+     "bytes": 16147
+    },
+    {
+     "path": "Week 3/Lesson 2 - The Forest/The Walk/03 - Sign - The letter in the leaves.pdf",
+     "thumb": "thumbs/Week 3/Lesson 2 - The Forest/The Walk/03 - Sign - The letter in the leaves.jpg",
+     "activity": "The Walk",
+     "label": "The letter in the leaves",
+     "bytes": 16401
+    },
+    {
+     "path": "Week 3/Lesson 2 - The Forest/The Walk/04 - Sign - The brook-side.pdf",
+     "thumb": "thumbs/Week 3/Lesson 2 - The Forest/The Walk/04 - Sign - The brook-side.jpg",
+     "activity": "The Walk",
+     "label": "The brook-side",
+     "bytes": 16906
+    }
+   ]
+  },
+  {
+   "page": "w3-lesson3-writers-desk.html",
+   "week": 3,
+   "lesson": 3,
+   "title": "The Writer’s Desk",
+   "folder": "Week 3/Lesson 3 - The Writer's Desk",
+   "combined": {
+    "path": "Week 3/Lesson 3 - The Writer's Desk/Lesson 3 - all cards.pdf",
+    "bytes": 29760
+   },
+   "files": [
+    {
+     "path": "Week 3/Lesson 3 - The Writer's Desk/Inverted Order/01 - Moment 1 - Never did mortal.pdf",
+     "thumb": "thumbs/Week 3/Lesson 3 - The Writer's Desk/Inverted Order/01 - Moment 1 - Never did mortal.jpg",
+     "activity": "Inverted Word Order",
+     "label": "Never did mortal suffer what this man has suffered.",
+     "bytes": 20746
+    },
+    {
+     "path": "Week 3/Lesson 3 - The Writer's Desk/Inverted Order/02 - Moment 2 - Happy are you.pdf",
+     "thumb": "thumbs/Week 3/Lesson 3 - The Writer's Desk/Inverted Order/02 - Moment 2 - Happy are you.jpg",
+     "activity": "Inverted Word Order",
+     "label": "Happy are you, Hester, that wear the scarlet letter openly upon your bosom!",
+     "bytes": 21385
+    },
+    {
+     "path": "Week 3/Lesson 3 - The Writer's Desk/Inverted Order/03 - Moment 3 - All at once.pdf",
+     "thumb": "thumbs/Week 3/Lesson 3 - The Writer's Desk/Inverted Order/03 - Moment 3 - All at once.jpg",
+     "activity": "Inverted Word Order",
+     "label": "All at once, as with a sudden smile of heaven, forth burst the sunshine, pouring a very flood into the obscure forest",
+     "bytes": 22650
+    },
+    {
+     "path": "Week 3/Lesson 3 - The Writer's Desk/Inverted Order/04 - Moment 4 - Never Hester had.pdf",
+     "thumb": "thumbs/Week 3/Lesson 3 - The Writer's Desk/Inverted Order/04 - Moment 4 - Never Hester had.jpg",
+     "activity": "Inverted Word Order",
+     "label": "Never Hester had felt so free in seven years.",
+     "bytes": 18430
+    },
+    {
+     "path": "Week 3/Lesson 3 - The Writer's Desk/Inverted Order/05 - Moment 5 - Hardly the minister.pdf",
+     "thumb": "thumbs/Week 3/Lesson 3 - The Writer's Desk/Inverted Order/05 - Moment 5 - Hardly the minister.jpg",
+     "activity": "Inverted Word Order",
+     "label": "Hardly the minister had spoken when he sank down on the leaves.",
+     "bytes": 19305
+    },
+    {
+     "path": "Week 3/Lesson 3 - The Writer's Desk/Rhetorical/01 - Moment 1 - And who told.pdf",
+     "thumb": "thumbs/Week 3/Lesson 3 - The Writer's Desk/Rhetorical/01 - Moment 1 - And who told.jpg",
+     "activity": "Rhetorical Questions",
+     "label": "And who told you this story, Pearl?",
+     "bytes": 20713
+    },
+    {
+     "path": "Week 3/Lesson 3 - The Writer's Desk/Rhetorical/02 - Moment 2 - What choice had.pdf",
+     "thumb": "thumbs/Week 3/Lesson 3 - The Writer's Desk/Rhetorical/02 - Moment 2 - What choice had.jpg",
+     "activity": "Rhetorical Questions",
+     "label": "What choice had you?",
+     "bytes": 19487
+    },
+    {
+     "path": "Week 3/Lesson 3 - The Writer's Desk/Rhetorical/03 - Moment 3 - Why doth the.pdf",
+     "thumb": "thumbs/Week 3/Lesson 3 - The Writer's Desk/Rhetorical/03 - Moment 3 - Why doth the.jpg",
+     "activity": "Rhetorical Questions",
+     "label": "Why doth the minister sit yonder?",
+     "bytes": 19050
+    }
+   ]
+  },
+  {
+   "page": "w3-lesson4-the-letters-office.html",
+   "week": 3,
+   "lesson": 4,
+   "title": "The Letter’s Office",
+   "folder": "Week 3/Lesson 4 - The Letter's Office",
+   "combined": {
+    "path": "Week 3/Lesson 4 - The Letter's Office/Lesson 4 - all cards.pdf",
+    "bytes": 29525
+   },
+   "files": [
+    {
+     "path": "Week 3/Lesson 4 - The Letter's Office/The Sampler/01 - Sign - XIII The sick-chamber.pdf",
+     "thumb": "thumbs/Week 3/Lesson 4 - The Letter's Office/The Sampler/01 - Sign - XIII The sick-chamber.jpg",
+     "activity": "The Sampler",
+     "label": "XIII The sick-chamber",
+     "bytes": 18309
+    },
+    {
+     "path": "Week 3/Lesson 4 - The Letter's Office/The Sampler/02 - Sign - XV Pearl's question.pdf",
+     "thumb": "thumbs/Week 3/Lesson 4 - The Letter's Office/The Sampler/02 - Sign - XV Pearl's question.jpg",
+     "activity": "The Sampler",
+     "label": "XV Pearl’s question",
+     "bytes": 18455
+    },
+    {
+     "path": "Week 3/Lesson 4 - The Letter's Office/The Sampler/03 - Sign - XVIII Among the leaves.pdf",
+     "thumb": "thumbs/Week 3/Lesson 4 - The Letter's Office/The Sampler/03 - Sign - XVIII Among the leaves.jpg",
+     "activity": "The Sampler",
+     "label": "XVIII Among the leaves",
+     "bytes": 18757
+    },
+    {
+     "path": "Week 3/Lesson 4 - The Letter's Office/The Sampler/04 - Sign - XIX At the brook.pdf",
+     "thumb": "thumbs/Week 3/Lesson 4 - The Letter's Office/The Sampler/04 - Sign - XIX At the brook.jpg",
+     "activity": "The Sampler",
+     "label": "XIX At the brook",
+     "bytes": 17487
+    },
+    {
+     "path": "Week 3/Lesson 4 - The Letter's Office/The Sampler/05 - Moment 1 - a broken charm.pdf",
+     "thumb": "thumbs/Week 3/Lesson 4 - The Letter's Office/The Sampler/05 - Moment 1 - a broken charm.jpg",
+     "activity": "The Sampler",
+     "label": "a broken charm",
+     "bytes": 17479
+    },
+    {
+     "path": "Week 3/Lesson 4 - The Letter's Office/The Sampler/06 - Moment 2 - a question.pdf",
+     "thumb": "thumbs/Week 3/Lesson 4 - The Letter's Office/The Sampler/06 - Moment 2 - a question.jpg",
+     "activity": "The Sampler",
+     "label": "a question unanswered",
+     "bytes": 18579
+    },
+    {
+     "path": "Week 3/Lesson 4 - The Letter's Office/The Sampler/07 - Moment 3 - a weight set.pdf",
+     "thumb": "thumbs/Week 3/Lesson 4 - The Letter's Office/The Sampler/07 - Moment 3 - a weight set.jpg",
+     "activity": "The Sampler",
+     "label": "a weight set down",
+     "bytes": 18039
+    },
+    {
+     "path": "Week 3/Lesson 4 - The Letter's Office/The Sampler/08 - Moment 4 - a lost jewel.pdf",
+     "thumb": "thumbs/Week 3/Lesson 4 - The Letter's Office/The Sampler/08 - Moment 4 - a lost jewel.jpg",
+     "activity": "The Sampler",
+     "label": "a lost jewel",
+     "bytes": 17249
+    },
+    {
+     "path": "Week 3/Lesson 4 - The Letter's Office/The Sampler/09 - Moment 5 - a misery come.pdf",
+     "thumb": "thumbs/Week 3/Lesson 4 - The Letter's Office/The Sampler/09 - Moment 5 - a misery come.jpg",
+     "activity": "The Sampler",
+     "label": "a misery come back",
+     "bytes": 17948
+    }
+   ]
+  },
+  {
+   "page": "w4-lesson1-the-holiday.html",
+   "week": 4,
+   "lesson": 1,
+   "title": "The Holiday",
+   "folder": "Week 4/Lesson 1 - The Holiday",
+   "combined": {
+    "path": "Week 4/Lesson 1 - The Holiday/Lesson 1 - all cards.pdf",
+    "bytes": 128118
+   },
+   "files": [
+    {
+     "path": "Week 4/Lesson 1 - The Holiday/Road from Forest/01 - Sign - An old deacon.pdf",
+     "thumb": "thumbs/Week 4/Lesson 1 - The Holiday/Road from Forest/01 - Sign - An old deacon.jpg",
+     "activity": "The Road from the Forest",
+     "label": "An old deacon",
+     "bytes": 17250
+    },
+    {
+     "path": "Week 4/Lesson 1 - The Holiday/Road from Forest/02 - Sign - The eldest church member, a widow.pdf",
+     "thumb": "thumbs/Week 4/Lesson 1 - The Holiday/Road from Forest/02 - Sign - The eldest church member, a widow.jpg",
+     "activity": "The Road from the Forest",
+     "label": "The eldest church member, a widow",
+     "bytes": 19329
+    },
+    {
+     "path": "Week 4/Lesson 1 - The Holiday/Road from Forest/03 - Sign - The youngest sister of the church.pdf",
+     "thumb": "thumbs/Week 4/Lesson 1 - The Holiday/Road from Forest/03 - Sign - The youngest sister of the church.jpg",
+     "activity": "The Road from the Forest",
+     "label": "The youngest sister of the church",
+     "bytes": 18735
+    },
+    {
+     "path": "Week 4/Lesson 1 - The Holiday/Road from Forest/04 - Sign - Small children at play.pdf",
+     "thumb": "thumbs/Week 4/Lesson 1 - The Holiday/Road from Forest/04 - Sign - Small children at play.jpg",
+     "activity": "The Road from the Forest",
+     "label": "Small children at play",
+     "bytes": 18793
+    },
+    {
+     "path": "Week 4/Lesson 1 - The Holiday/Road from Forest/05 - Sign - A drunken seaman.pdf",
+     "thumb": "thumbs/Week 4/Lesson 1 - The Holiday/Road from Forest/05 - Sign - A drunken seaman.jpg",
+     "activity": "The Road from the Forest",
+     "label": "A drunken seaman",
+     "bytes": 18114
+    },
+    {
+     "path": "Week 4/Lesson 1 - The Holiday/Road from Forest/06 - Moment 1 - teach some very.pdf",
+     "thumb": "thumbs/Week 4/Lesson 1 - The Holiday/Road from Forest/06 - Moment 1 - teach some very.jpg",
+     "activity": "The Road from the Forest",
+     "label": "teach some very wicked words to a knot of little Puritan children",
+     "bytes": 20727
+    },
+    {
+     "path": "Week 4/Lesson 1 - The Holiday/Road from Forest/07 - Moment 2 - certain blasphemous.pdf",
+     "thumb": "thumbs/Week 4/Lesson 1 - The Holiday/Road from Forest/07 - Moment 2 - certain blasphemous.jpg",
+     "activity": "The Road from the Forest",
+     "label": "certain blasphemous suggestions that rose into his mind, respecting the communion supper",
+     "bytes": 20606
+    },
+    {
+     "path": "Week 4/Lesson 1 - The Holiday/Road from Forest/08 - Moment 3 - a volley of.pdf",
+     "thumb": "thumbs/Week 4/Lesson 1 - The Holiday/Road from Forest/08 - Moment 3 - a volley of.jpg",
+     "activity": "The Road from the Forest",
+     "label": "a volley of good, round, solid, satisfactory, and heaven-defying oaths",
+     "bytes": 20630
+    },
+    {
+     "path": "Week 4/Lesson 1 - The Holiday/Road from Forest/09 - Moment 4 - he held his.pdf",
+     "thumb": "thumbs/Week 4/Lesson 1 - The Holiday/Road from Forest/09 - Moment 4 - he held his.jpg",
+     "activity": "The Road from the Forest",
+     "label": "he held his Geneva cloak before his face, and hurried onward",
+     "bytes": 20420
+    },
+    {
+     "path": "Week 4/Lesson 1 - The Holiday/Road from Forest/10 - Moment 5 - unanswerable.pdf",
+     "thumb": "thumbs/Week 4/Lesson 1 - The Holiday/Road from Forest/10 - Moment 5 - unanswerable.jpg",
+     "activity": "The Road from the Forest",
+     "label": "unanswerable argument against the immortality of the human soul",
+     "bytes": 20659
+    },
+    {
+     "path": "Week 4/Lesson 1 - The Holiday/Read/01 - Smile with a.pdf",
+     "thumb": "thumbs/Week 4/Lesson 1 - The Holiday/Read/01 - Smile with a.jpg",
+     "activity": "Read",
+     "label": "Smile with a sinister meaning.",
+     "bytes": 84047
+    },
+    {
+     "path": "Week 4/Lesson 1 - The Holiday/Read/02 - New England Worthies.pdf",
+     "thumb": "thumbs/Week 4/Lesson 1 - The Holiday/Read/02 - New England Worthies.jpg",
+     "activity": "Read",
+     "label": "New England Worthies.",
+     "bytes": 51172
+    }
+   ]
+  },
+  {
+   "page": "w4-lesson2-the-revelation.html",
+   "week": 4,
+   "lesson": 2,
+   "title": "The Revelation",
+   "folder": "Week 4/Lesson 2 - The Revelation",
+   "combined": {
+    "path": "Week 4/Lesson 2 - The Revelation/Lesson 2 - all cards.pdf",
+    "bytes": 270688
+   },
+   "files": [
+    {
+     "path": "Week 4/Lesson 2 - The Revelation/Noon Scaffold/01 - Moment 1 - Support me up.pdf",
+     "thumb": "thumbs/Week 4/Lesson 2 - The Revelation/Noon Scaffold/01 - Moment 1 - Support me up.jpg",
+     "activity": "Noon on the Scaffold",
+     "label": "Support me up yonder scaffold!",
+     "bytes": 20372
+    },
+    {
+     "path": "Week 4/Lesson 2 - The Revelation/Noon Scaffold/02 - Moment 2 - Pearl kissed his.pdf",
+     "thumb": "thumbs/Week 4/Lesson 2 - The Revelation/Noon Scaffold/02 - Moment 2 - Pearl kissed his.jpg",
+     "activity": "Noon on the Scaffold",
+     "label": "Pearl kissed his lips. A spell was broken.",
+     "bytes": 20109
+    },
+    {
+     "path": "Week 4/Lesson 2 - The Revelation/Noon Scaffold/03 - Moment 3 - come hither Come.pdf",
+     "thumb": "thumbs/Week 4/Lesson 2 - The Revelation/Noon Scaffold/03 - Moment 3 - come hither Come.jpg",
+     "activity": "Noon on the Scaffold",
+     "label": "come hither! Come, my little Pearl!",
+     "bytes": 19772
+    },
+    {
+     "path": "Week 4/Lesson 2 - The Revelation/Noon Scaffold/04 - Moment 4 - behold me here.pdf",
+     "thumb": "thumbs/Week 4/Lesson 2 - The Revelation/Noon Scaffold/04 - Moment 4 - behold me here.jpg",
+     "activity": "Noon on the Scaffold",
+     "label": "behold me here, the one sinner of the world!",
+     "bytes": 20178
+    },
+    {
+     "path": "Week 4/Lesson 2 - The Revelation/Noon Scaffold/05 - Moment 5 - repelled the old.pdf",
+     "thumb": "thumbs/Week 4/Lesson 2 - The Revelation/Noon Scaffold/05 - Moment 5 - repelled the old.jpg",
+     "activity": "Noon on the Scaffold",
+     "label": "repelled the old man’s arm",
+     "bytes": 19502
+    },
+    {
+     "path": "Week 4/Lesson 2 - The Revelation/Noon Scaffold/06 - Moment 6 - Madman hold what.pdf",
+     "thumb": "thumbs/Week 4/Lesson 2 - The Revelation/Noon Scaffold/06 - Moment 6 - Madman hold what.jpg",
+     "activity": "Noon on the Scaffold",
+     "label": "Madman, hold! what is your purpose?",
+     "bytes": 21063
+    },
+    {
+     "path": "Week 4/Lesson 2 - The Revelation/The Headstone/01 - Sign - The shield's ground.pdf",
+     "thumb": "thumbs/Week 4/Lesson 2 - The Revelation/The Headstone/01 - Sign - The shield's ground.jpg",
+     "activity": "The Headstone",
+     "label": "The shield’s ground",
+     "bytes": 17917
+    },
+    {
+     "path": "Week 4/Lesson 2 - The Revelation/The Headstone/02 - Sign - The letter on it.pdf",
+     "thumb": "thumbs/Week 4/Lesson 2 - The Revelation/The Headstone/02 - Sign - The letter on it.jpg",
+     "activity": "The Headstone",
+     "label": "The letter on it",
+     "bytes": 16415
+    },
+    {
+     "path": "Week 4/Lesson 2 - The Revelation/The Headstone/03 - Sign - The stone.pdf",
+     "thumb": "thumbs/Week 4/Lesson 2 - The Revelation/The Headstone/03 - Sign - The stone.jpg",
+     "activity": "The Headstone",
+     "label": "The stone",
+     "bytes": 16189
+    },
+    {
+     "path": "Week 4/Lesson 2 - The Revelation/The Headstone/04 - Sign - The space between the graves.pdf",
+     "thumb": "thumbs/Week 4/Lesson 2 - The Revelation/The Headstone/04 - Sign - The space between the graves.jpg",
+     "activity": "The Headstone",
+     "label": "The space between the graves",
+     "bytes": 18270
+    },
+    {
+     "path": "Week 4/Lesson 2 - The Revelation/The Headstone/05 - Moment 1 - yet with a.pdf",
+     "thumb": "thumbs/Week 4/Lesson 2 - The Revelation/The Headstone/05 - Moment 1 - yet with a.jpg",
+     "activity": "The Headstone",
+     "label": "yet with a space between, as if the dust of the two sleepers had no right to mingle",
+     "bytes": 21918
+    },
+    {
+     "path": "Week 4/Lesson 2 - The Revelation/The Headstone/06 - Moment 2 - ON A FIELD.pdf",
+     "thumb": "thumbs/Week 4/Lesson 2 - The Revelation/The Headstone/06 - Moment 2 - ON A FIELD.jpg",
+     "activity": "The Headstone",
+     "label": "ON A FIELD, SABLE",
+     "bytes": 18809
+    },
+    {
+     "path": "Week 4/Lesson 2 - The Revelation/The Headstone/07 - Moment 3 - Yet one tombstone.pdf",
+     "thumb": "thumbs/Week 4/Lesson 2 - The Revelation/The Headstone/07 - Moment 3 - Yet one tombstone.jpg",
+     "activity": "The Headstone",
+     "label": "Yet one tombstone served for both.",
+     "bytes": 20237
+    },
+    {
+     "path": "Week 4/Lesson 2 - The Revelation/The Headstone/08 - Moment 4 - THE LETTER A.pdf",
+     "thumb": "thumbs/Week 4/Lesson 2 - The Revelation/The Headstone/08 - Moment 4 - THE LETTER A.jpg",
+     "activity": "The Headstone",
+     "label": "THE LETTER A, GULES",
+     "bytes": 19401
+    },
+    {
+     "path": "Week 4/Lesson 2 - The Revelation/Read/01 - Shall we not meet again.pdf",
+     "thumb": "thumbs/Week 4/Lesson 2 - The Revelation/Read/01 - Shall we not meet again.jpg",
+     "activity": "Read",
+     "label": "Shall we not meet again?",
+     "bytes": 159641
+    },
+    {
+     "path": "Week 4/Lesson 2 - The Revelation/Read/02 - Hester's Return.pdf",
+     "thumb": "thumbs/Week 4/Lesson 2 - The Revelation/Read/02 - Hester's Return.jpg",
+     "activity": "Read",
+     "label": "Hester’s Return.",
+     "bytes": 113647
+    }
+   ]
+  },
+  {
+   "page": "w4-lesson3-writers-desk.html",
+   "week": 4,
+   "lesson": 3,
+   "title": "The Writer’s Desk",
+   "folder": "Week 4/Lesson 3 - The Writer's Desk",
+   "combined": {
+    "path": "Week 4/Lesson 3 - The Writer's Desk/Lesson 3 - all cards.pdf",
+    "bytes": 31496
+   },
+   "files": [
+    {
+     "path": "Week 4/Lesson 3 - The Writer's Desk/Antithesis/01 - Moment 1 - at once a.pdf",
+     "thumb": "thumbs/Week 4/Lesson 3 - The Writer's Desk/Antithesis/01 - Moment 1 - at once a.jpg",
+     "activity": "Antithesis and Chiasmus",
+     "label": "at once a shadow and a splendor",
+     "bytes": 19242
+    },
+    {
+     "path": "Week 4/Lesson 3 - The Writer's Desk/Antithesis/02 - Moment 2 - At every step.pdf",
+     "thumb": "thumbs/Week 4/Lesson 3 - The Writer's Desk/Antithesis/02 - Moment 2 - At every step.jpg",
+     "activity": "Antithesis and Chiasmus",
+     "label": "At every step he was incited to do some strange, wild, wicked thing or other, with a sense that it would be at once involuntary and intentional",
+     "bytes": 22222
+    },
+    {
+     "path": "Week 4/Lesson 3 - The Writer's Desk/Antithesis/03 - Moment 3 - Philosophically.pdf",
+     "thumb": "thumbs/Week 4/Lesson 3 - The Writer's Desk/Antithesis/03 - Moment 3 - Philosophically.jpg",
+     "activity": "Antithesis and Chiasmus",
+     "label": "Philosophically considered, therefore, the two passions seem essentially the same, except that one happens to be seen in a celestial radiance, and the other in a dusky and lurid glow.",
+     "bytes": 22896
+    },
+    {
+     "path": "Week 4/Lesson 3 - The Writer's Desk/Antithesis/04 - Moment 4 - Never from the.pdf",
+     "thumb": "thumbs/Week 4/Lesson 3 - The Writer's Desk/Antithesis/04 - Moment 4 - Never from the.jpg",
+     "activity": "Antithesis and Chiasmus",
+     "label": "Never, from the soil of New England, had gone up such a shout! Never, on New England soil, had stood the man so honored by his mortal brethren as the preacher!",
+     "bytes": 22309
+    },
+    {
+     "path": "Week 4/Lesson 3 - The Writer's Desk/Antithesis/05 - Moment 5 - Hester was shamed.pdf",
+     "thumb": "thumbs/Week 4/Lesson 3 - The Writer's Desk/Antithesis/05 - Moment 5 - Hester was shamed.jpg",
+     "activity": "Antithesis and Chiasmus",
+     "label": "Hester was shamed in the market-place, but the minister was praised although he had sinned too.",
+     "bytes": 20551
+    },
+    {
+     "path": "Week 4/Lesson 3 - The Writer's Desk/Antithesis/06 - Moment 6 - He kept his.pdf",
+     "thumb": "thumbs/Week 4/Lesson 3 - The Writer's Desk/Antithesis/06 - Moment 6 - He kept his.jpg",
+     "activity": "Antithesis and Chiasmus",
+     "label": "He kept his secret, and in the end the secret ruled him.",
+     "bytes": 19005
+    },
+    {
+     "path": "Week 4/Lesson 3 - The Writer's Desk/Antithesis/07 - Moment 7 - The town judged.pdf",
+     "thumb": "thumbs/Week 4/Lesson 3 - The Writer's Desk/Antithesis/07 - Moment 7 - The town judged.jpg",
+     "activity": "Antithesis and Chiasmus",
+     "label": "The town judged Hester; later Hester was the one judging.",
+     "bytes": 19129
+    },
+    {
+     "path": "Week 4/Lesson 3 - The Writer's Desk/Words/01 - Moment 1 - ceased to be.pdf",
+     "thumb": "thumbs/Week 4/Lesson 3 - The Writer's Desk/Words/01 - Moment 1 - ceased to be.jpg",
+     "activity": "Words for the Letter",
+     "label": "ceased to be a stigma which attracted the world’s scorn and bitterness, and became a type of something to be sorrowed over",
+     "bytes": 22226
+    }
+   ]
+  },
+  {
+   "page": "w4-lesson4-the-reader-may-choose.html",
+   "week": 4,
+   "lesson": 4,
+   "title": "The Reader May Choose",
+   "folder": "Week 4/Lesson 4 - The Reader May Choose",
+   "combined": {
+    "path": "Week 4/Lesson 4 - The Reader May Choose/Lesson 4 - all cards.pdf",
+    "bytes": 21544
+   },
+   "files": [
+    {
+     "path": "Week 4/Lesson 4 - The Reader May Choose/Narrators Hand/01 - Moment 1 - The reader may.pdf",
+     "thumb": "thumbs/Week 4/Lesson 4 - The Reader May Choose/Narrators Hand/01 - Moment 1 - The reader may.jpg",
+     "activity": "The Narrator’s Hand",
+     "label": "The reader may choose among these theories.",
+     "bytes": 19824
+    },
+    {
+     "path": "Week 4/Lesson 4 - The Reader May Choose/Narrators Hand/02 - Moment 2 - Be true Be.pdf",
+     "thumb": "thumbs/Week 4/Lesson 4 - The Reader May Choose/Narrators Hand/02 - Moment 2 - Be true Be.jpg",
+     "activity": "The Narrator’s Hand",
+     "label": "Be true! Be true! Be true!",
+     "bytes": 18598
+    }
+   ]
+  },
+  {
+   "page": "w5-lesson1-three-scaffolds.html",
+   "week": 5,
+   "lesson": 1,
+   "title": "Three Scaffolds",
+   "folder": "Week 5/Lesson 1 - Three Scaffolds",
+   "combined": {
+    "path": "Week 5/Lesson 1 - Three Scaffolds/Lesson 1 - all cards.pdf",
+    "bytes": 244980
+   },
+   "files": [
+    {
+     "path": "Week 5/Lesson 1 - Three Scaffolds/Three Skies/01 - Sign - Noon Ch. IIIII.pdf",
+     "thumb": "thumbs/Week 5/Lesson 1 - Three Scaffolds/Three Skies/01 - Sign - Noon Ch. IIIII.jpg",
+     "activity": "Three Skies",
+     "label": "Noon · Ch. II–III",
+     "bytes": 16811
+    },
+    {
+     "path": "Week 5/Lesson 1 - Three Scaffolds/Three Skies/02 - Sign - Midnight Ch. XII.pdf",
+     "thumb": "thumbs/Week 5/Lesson 1 - Three Scaffolds/Three Skies/02 - Sign - Midnight Ch. XII.jpg",
+     "activity": "Three Skies",
+     "label": "Midnight · Ch. XII",
+     "bytes": 18319
+    },
+    {
+     "path": "Week 5/Lesson 1 - Three Scaffolds/Three Skies/03 - Sign - Just past noon Ch. XXIII.pdf",
+     "thumb": "thumbs/Week 5/Lesson 1 - Three Scaffolds/Three Skies/03 - Sign - Just past noon Ch. XXIII.jpg",
+     "activity": "Three Skies",
+     "label": "Just past noon · Ch. XXIII",
+     "bytes": 17853
+    },
+    {
+     "path": "Week 5/Lesson 1 - Three Scaffolds/Read/01 - They stood in.pdf",
+     "thumb": "thumbs/Week 5/Lesson 1 - Three Scaffolds/Read/01 - They stood in.jpg",
+     "activity": "Read",
+     "label": "They stood in the noon of that strange splendor.",
+     "bytes": 99791
+    },
+    {
+     "path": "Week 5/Lesson 1 - Three Scaffolds/Read/02 - Shall we not meet again.pdf",
+     "thumb": "thumbs/Week 5/Lesson 1 - Three Scaffolds/Read/02 - Shall we not meet again.jpg",
+     "activity": "Read",
+     "label": "Shall we not meet again?",
+     "bytes": 159564
+    }
+   ]
+  },
+  {
+   "page": "w5-lesson2-the-letter-across.html",
+   "week": 5,
+   "lesson": 2,
+   "title": "The Letter Across the Novel",
+   "folder": "Week 5/Lesson 2 - The Letter Across the Novel",
+   "combined": {
+    "path": "Week 5/Lesson 2 - The Letter Across the Novel/Lesson 2 - all cards.pdf",
+    "bytes": 262725
+   },
+   "files": [
+    {
+     "path": "Week 5/Lesson 2 - The Letter Across the Novel/Read/01 - Hester in the.pdf",
+     "thumb": "thumbs/Week 5/Lesson 2 - The Letter Across the Novel/Read/01 - Hester in the.jpg",
+     "activity": "Read",
+     "label": "Hester in the House of Mourning.",
+     "bytes": 164139
+    },
+    {
+     "path": "Week 5/Lesson 2 - The Letter Across the Novel/Read/02 - Hester's Return.pdf",
+     "thumb": "thumbs/Week 5/Lesson 2 - The Letter Across the Novel/Read/02 - Hester's Return.jpg",
+     "activity": "Read",
+     "label": "Hester’s Return.",
+     "bytes": 113834
+    },
+    {
+     "path": "Week 5/Lesson 2 - The Letter Across the Novel/Places/01 - Sign - The prison door.pdf",
+     "thumb": "thumbs/Week 5/Lesson 2 - The Letter Across the Novel/Places/01 - Sign - The prison door.jpg",
+     "activity": "The Letter’s Places",
+     "label": "The prison door",
+     "bytes": 17548
+    },
+    {
+     "path": "Week 5/Lesson 2 - The Letter Across the Novel/Places/02 - Sign - The sea-shore.pdf",
+     "thumb": "thumbs/Week 5/Lesson 2 - The Letter Across the Novel/Places/02 - Sign - The sea-shore.jpg",
+     "activity": "The Letter’s Places",
+     "label": "The sea-shore",
+     "bytes": 16646
+    },
+    {
+     "path": "Week 5/Lesson 2 - The Letter Across the Novel/Places/03 - Sign - The brook-side.pdf",
+     "thumb": "thumbs/Week 5/Lesson 2 - The Letter Across the Novel/Places/03 - Sign - The brook-side.jpg",
+     "activity": "The Letter’s Places",
+     "label": "The brook-side",
+     "bytes": 17601
+    },
+    {
+     "path": "Week 5/Lesson 2 - The Letter Across the Novel/Places/04 - Sign - The burial-ground.pdf",
+     "thumb": "thumbs/Week 5/Lesson 2 - The Letter Across the Novel/Places/04 - Sign - The burial-ground.jpg",
+     "activity": "The Letter’s Places",
+     "label": "The burial-ground",
+     "bytes": 18509
+    }
+   ]
+  },
+  {
+   "page": "w5-lesson3-writers-desk.html",
+   "week": 5,
+   "lesson": 3,
+   "title": "The Writer’s Desk",
+   "folder": "Week 5/Lesson 3 - The Writer's Desk",
+   "combined": {
+    "path": "Week 5/Lesson 3 - The Writer's Desk/Lesson 3 - all cards.pdf",
+    "bytes": 31790
+   },
+   "files": [
+    {
+     "path": "Week 5/Lesson 3 - The Writer's Desk/Quoting/01 - Moment 1 - The scarlet letter.pdf",
+     "thumb": "thumbs/Week 5/Lesson 3 - The Writer's Desk/Quoting/01 - Moment 1 - The scarlet letter.jpg",
+     "activity": "Quoting Inside a Sentence",
+     "label": "The scarlet letter had not done its office.",
+     "bytes": 18974
+    },
+    {
+     "path": "Week 5/Lesson 3 - The Writer's Desk/Quoting/02 - Moment 2 - And as for.pdf",
+     "thumb": "thumbs/Week 5/Lesson 3 - The Writer's Desk/Quoting/02 - Moment 2 - And as for.jpg",
+     "activity": "Quoting Inside a Sentence",
+     "label": "And as for the scarlet letter, I wear it for the sake of its gold-thread.",
+     "bytes": 20983
+    },
+    {
+     "path": "Week 5/Lesson 3 - The Writer's Desk/Quoting/03 - Moment 3 - the scarlet letter.pdf",
+     "thumb": "thumbs/Week 5/Lesson 3 - The Writer's Desk/Quoting/03 - Moment 3 - the scarlet letter.jpg",
+     "activity": "Quoting Inside a Sentence",
+     "label": "the scarlet letter ceased to be a stigma which attracted the world’s scorn and bitterness, and became a type of something to be sorrowed over",
+     "bytes": 22411
+    },
+    {
+     "path": "Week 5/Lesson 3 - The Writer's Desk/Quoting/04 - Moment 4 - The narrator says.pdf",
+     "thumb": "thumbs/Week 5/Lesson 3 - The Writer's Desk/Quoting/04 - Moment 4 - The narrator says.jpg",
+     "activity": "Quoting Inside a Sentence",
+     "label": "The narrator says that, “Be true! Be true! Be true!” (Ch. XXIV).",
+     "bytes": 20159
+    },
+    {
+     "path": "Week 5/Lesson 3 - The Writer's Desk/Conceding/01 - Moment 1 - This might be.pdf",
+     "thumb": "thumbs/Week 5/Lesson 3 - The Writer's Desk/Conceding/01 - Moment 1 - This might be.jpg",
+     "activity": "Conceding and Answering",
+     "label": "This might be pride, but was so like humility, that it produced all the softening influence of the latter quality on the public mind.",
+     "bytes": 22369
+    },
+    {
+     "path": "Week 5/Lesson 3 - The Writer's Desk/Conceding/02 - Moment 2 - Then it is.pdf",
+     "thumb": "thumbs/Week 5/Lesson 3 - The Writer's Desk/Conceding/02 - Moment 2 - Then it is.jpg",
+     "activity": "Conceding and Answering",
+     "label": "Then, it is true, the propensity of human nature to tell the very worst of itself, when embodied in the person of another, would constrain them to whisper the black scandal of bygone years.",
+     "bytes": 22390
+    },
+    {
+     "path": "Week 5/Lesson 3 - The Writer's Desk/Conceding/03 - Moment 3 - Although the town.pdf",
+     "thumb": "thumbs/Week 5/Lesson 3 - The Writer's Desk/Conceding/03 - Moment 3 - Although the town.jpg",
+     "activity": "Conceding and Answering",
+     "label": "Although the town scorned Hester, but she nursed its sick.",
+     "bytes": 19398
+    },
+    {
+     "path": "Week 5/Lesson 3 - The Writer's Desk/Conceding/04 - Moment 4 - It is true.pdf",
+     "thumb": "thumbs/Week 5/Lesson 3 - The Writer's Desk/Conceding/04 - Moment 4 - It is true.jpg",
+     "activity": "Conceding and Answering",
+     "label": "It is true that the rulers were slow to soften, however many people said the A meant Able.",
+     "bytes": 20960
+    },
+    {
+     "path": "Week 5/Lesson 3 - The Writer's Desk/Conceding/05 - Moment 5 - While the minister.pdf",
+     "thumb": "thumbs/Week 5/Lesson 3 - The Writer's Desk/Conceding/05 - Moment 5 - While the minister.jpg",
+     "activity": "Conceding and Answering",
+     "label": "While the minister stood on the scaffold at midnight. Mr. Wilson walked past without seeing him.",
+     "bytes": 19445
+    }
+   ]
+  },
+  {
+   "page": "w5-lesson4-what-the-secrets-cost.html",
+   "week": 5,
+   "lesson": 4,
+   "title": "What the Secrets Cost",
+   "folder": "Week 5/Lesson 4 - What the Secrets Cost",
+   "combined": {
+    "path": "Week 5/Lesson 4 - What the Secrets Cost/Lesson 4 - all cards.pdf",
+    "bytes": 33752
+   },
+   "files": [
+    {
+     "path": "Week 5/Lesson 4 - What the Secrets Cost/Three Seals/01 - Sign - The minister's secret.pdf",
+     "thumb": "thumbs/Week 5/Lesson 4 - What the Secrets Cost/Three Seals/01 - Sign - The minister's secret.jpg",
+     "activity": "Three Seals",
+     "label": "The minister’s secret",
+     "bytes": 16648
+    },
+    {
+     "path": "Week 5/Lesson 4 - What the Secrets Cost/Three Seals/02 - Sign - Hester's oath.pdf",
+     "thumb": "thumbs/Week 5/Lesson 4 - What the Secrets Cost/Three Seals/02 - Sign - Hester's oath.jpg",
+     "activity": "Three Seals",
+     "label": "Hester’s oath",
+     "bytes": 15921
+    },
+    {
+     "path": "Week 5/Lesson 4 - What the Secrets Cost/Three Seals/03 - Sign - The physician's disguise.pdf",
+     "thumb": "thumbs/Week 5/Lesson 4 - What the Secrets Cost/Three Seals/03 - Sign - The physician's disguise.jpg",
+     "activity": "Three Seals",
+     "label": "The physician’s disguise",
+     "bytes": 18294
+    },
+    {
+     "path": "Week 5/Lesson 4 - What the Secrets Cost/Three Seals/04 - Moment 1 - He had spoken.pdf",
+     "thumb": "thumbs/Week 5/Lesson 4 - What the Secrets Cost/Three Seals/04 - Moment 1 - He had spoken.jpg",
+     "activity": "Three Seals",
+     "label": "He had spoken the very truth, and transformed it into the veriest falsehood.",
+     "bytes": 21475
+    },
+    {
+     "path": "Week 5/Lesson 4 - What the Secrets Cost/Three Seals/05 - Moment 2 - She remembered her.pdf",
+     "thumb": "thumbs/Week 5/Lesson 4 - What the Secrets Cost/Three Seals/05 - Moment 2 - She remembered her.jpg",
+     "activity": "Three Seals",
+     "label": "She remembered her oath, and was silent.",
+     "bytes": 20264
+    },
+    {
+     "path": "Week 5/Lesson 4 - What the Secrets Cost/Three Seals/06 - Moment 3 - under the semblance.pdf",
+     "thumb": "thumbs/Week 5/Lesson 4 - What the Secrets Cost/Three Seals/06 - Moment 3 - under the semblance.jpg",
+     "activity": "Three Seals",
+     "label": "under the semblance of a friend and helper",
+     "bytes": 20860
+    },
+    {
+     "path": "Week 5/Lesson 4 - What the Secrets Cost/Three Seals/07 - Moment 4 - all the dread.pdf",
+     "thumb": "thumbs/Week 5/Lesson 4 - What the Secrets Cost/Three Seals/07 - Moment 4 - all the dread.jpg",
+     "activity": "Three Seals",
+     "label": "all the dread of public exposure, that had so long been the anguish of his life",
+     "bytes": 21104
+    },
+    {
+     "path": "Week 5/Lesson 4 - What the Secrets Cost/Three Seals/08 - Moment 5 - In all things.pdf",
+     "thumb": "thumbs/Week 5/Lesson 4 - What the Secrets Cost/Three Seals/08 - Moment 5 - In all things.jpg",
+     "activity": "Three Seals",
+     "label": "In all things else, I have striven to be true!",
+     "bytes": 20303
+    },
+    {
+     "path": "Week 5/Lesson 4 - What the Secrets Cost/Three Seals/09 - Moment 6 - Thou hast escaped.pdf",
+     "thumb": "thumbs/Week 5/Lesson 4 - What the Secrets Cost/Three Seals/09 - Moment 6 - Thou hast escaped.jpg",
+     "activity": "Three Seals",
+     "label": "Thou hast escaped me!",
+     "bytes": 20004
+    },
+    {
+     "path": "Week 5/Lesson 4 - What the Secrets Cost/Three Seals/10 - Moment 7 - a defect of.pdf",
+     "thumb": "thumbs/Week 5/Lesson 4 - What the Secrets Cost/Three Seals/10 - Moment 7 - a defect of.jpg",
+     "activity": "Three Seals",
+     "label": "a defect of truth, courage, and loyalty, on her own part",
+     "bytes": 21224
+    },
+    {
+     "path": "Week 5/Lesson 4 - What the Secrets Cost/Three Seals/11 - Moment 8 - there was no.pdf",
+     "thumb": "thumbs/Week 5/Lesson 4 - What the Secrets Cost/Three Seals/11 - Moment 8 - there was no.jpg",
+     "activity": "Three Seals",
+     "label": "there was no more Devil’s work on earth for him to do",
+     "bytes": 20966
+    }
+   ]
+  }
+ ]
+}

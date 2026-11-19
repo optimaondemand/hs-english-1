@@ -1,0 +1,1537 @@
+{
+ "module": "The Scarlet Letter",
+ "note": "Weeks 1-5 (20 lessons). Signs (the places an activity sorts into), numbered moments (the lines students handle, each cited by chapter) and the few pictures the lessons show: the 1878 Mary Hallock Foote engravings (public domain) and the AI engraving-style figures, credited on the card. Header art and the teacher's portrait are left out. Nothing depicts or describes the mark on the minister's breast.",
+ "look": {
+  "accent": "#A3202A",
+  "paper": "#FBFAF7",
+  "ink": "#1F2A33",
+  "muted": "#5A6670"
+ },
+ "lessons": [
+  {
+   "page": "w1-lesson1-the-prison-door.html",
+   "title": "The Prison Door",
+   "week": 1,
+   "lesson": 1,
+   "activities": [
+    {
+     "name": "Who Stands Where",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "The balcony"
+      },
+      {
+       "type": "sign",
+       "label": "The scaffold"
+      },
+      {
+       "type": "sign",
+       "label": "The street"
+      },
+      {
+       "type": "picture",
+       "img": "who_gov",
+       "label": "Governor Bellingham",
+       "credit": "AI-generated illustrations in the style of a nineteenth-century wood engraving.",
+       "alt": "Engraving-style figure of a grey-bearded man in a plumed hat and an embroidered cloak, standing with a tall staff of office."
+      },
+      {
+       "type": "picture",
+       "img": "who_wil",
+       "label": "Mr. Wilson",
+       "credit": "AI-generated illustrations in the style of a nineteenth-century wood engraving.",
+       "alt": "Engraving-style figure of a white-bearded minister in a long dark gown and white bands, one hand raised as he speaks."
+      },
+      {
+       "type": "picture",
+       "img": "who_dim",
+       "label": "Mr. Dimmesdale",
+       "credit": "AI-generated illustrations in the style of a nineteenth-century wood engraving.",
+       "alt": "Engraving-style figure of a slender young clergyman in a black gown and white bands, with a downcast look."
+      },
+      {
+       "type": "picture",
+       "img": "who_hes",
+       "label": "Hester, with the infant",
+       "credit": "AI-generated illustrations in the style of a nineteenth-century wood engraving.",
+       "alt": "Engraving-style figure of a young woman in a dark gown and white cap holding an infant, with a red letter A on her bodice."
+      },
+      {
+       "type": "picture",
+       "img": "who_gos",
+       "label": "The gossiping women",
+       "credit": "AI-generated illustrations in the style of a nineteenth-century wood engraving.",
+       "alt": "Engraving-style figure of three older women in white caps and aprons, standing close together and talking."
+      },
+      {
+       "type": "picture",
+       "img": "who_wif",
+       "label": "The young wife",
+       "credit": "AI-generated illustrations in the style of a nineteenth-century wood engraving.",
+       "alt": "Engraving-style figure of a young woman in a plain dark dress and white cap, holding a small girl by the hand."
+      },
+      {
+       "type": "picture",
+       "img": "who_str",
+       "label": "The stranger",
+       "credit": "AI-generated illustrations in the style of a nineteenth-century wood engraving.",
+       "alt": "Engraving-style figure of a lean, weathered man in a wide-brimmed hat, with a fringed cloth over one shoulder and tall boots."
+      }
+     ]
+    },
+    {
+     "name": "Read",
+     "cards": [
+      {
+       "type": "picture",
+       "img": "door",
+       "label": "The Prison Door.",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: an iron-studded prison door with a wild rose-bush in bloom beside it."
+      },
+      {
+       "type": "picture",
+       "img": "eminence",
+       "label": "Standing on the miserable eminence.",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: Hester Prynne on the scaffold holding her infant, with the crowd below.",
+       "short": "Standing on the"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w1-lesson2-three-bonds.html",
+   "title": "Three Bonds",
+   "week": 1,
+   "lesson": 2,
+   "activities": [
+    {
+     "name": "Acts and Words",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "What he does"
+      },
+      {
+       "type": "sign",
+       "label": "What he says"
+      },
+      {
+       "type": "moment",
+       "text": "He soothes the sick child with medicine",
+       "short": "He soothes the"
+      },
+      {
+       "type": "moment",
+       "text": "Thou and thine, Hester Prynne, belong to me.",
+       "short": "Thou and thine",
+       "cite": "(Ch. IV)"
+      },
+      {
+       "type": "moment",
+       "text": "he laid his long forefinger on the scarlet letter",
+       "short": "he laid his",
+       "cite": "(Ch. IV)"
+      },
+      {
+       "type": "moment",
+       "text": "He vows to find the man Hester will not name",
+       "short": "He vows to"
+      },
+      {
+       "type": "moment",
+       "text": "He presented the cup to Hester",
+       "short": "He presented the",
+       "cite": "(Ch. IV)"
+      },
+      {
+       "type": "moment",
+       "text": "Breathe not, to any human soul, that thou didst ever call me husband!",
+       "short": "Breathe not to",
+       "cite": "(Ch. IV)"
+      }
+     ]
+    },
+    {
+     "name": "Who Wears Her Work?",
+     "cards": [
+      {
+       "type": "picture",
+       "img": "wear_gov",
+       "label": "The Governor’s ruff",
+       "credit": "AI-generated illustrations in the style of a nineteenth-century wood engraving.",
+       "alt": "Engraving-style picture of a pleated white lace ruff, the stiff round collar of a governor."
+      },
+      {
+       "type": "picture",
+       "img": "wear_mil",
+       "label": "The soldiers’ scarfs",
+       "credit": "AI-generated illustrations in the style of a nineteenth-century wood engraving.",
+       "alt": "Engraving-style picture of an embroidered silk scarf with fringed ends, like the scarfs soldiers wore."
+      },
+      {
+       "type": "picture",
+       "img": "wear_min",
+       "label": "The minister’s band",
+       "credit": "AI-generated illustrations in the style of a nineteenth-century wood engraving.",
+       "alt": "Engraving-style picture of a minister's white collar with two long front tabs, called bands."
+      },
+      {
+       "type": "picture",
+       "img": "wear_bab",
+       "label": "The baby’s cap",
+       "credit": "AI-generated illustrations in the style of a nineteenth-century wood engraving.",
+       "alt": "Engraving-style picture of a baby's lace-trimmed white cap with ribbon ties."
+      },
+      {
+       "type": "picture",
+       "img": "wear_cof",
+       "label": "The coffins of the dead",
+       "credit": "AI-generated illustrations in the style of a nineteenth-century wood engraving.",
+       "alt": "Engraving-style picture of a plain wooden coffin with an embroidered cloth laid across the lid."
+      },
+      {
+       "type": "picture",
+       "img": "wear_vei",
+       "label": "The bride’s veil",
+       "credit": "AI-generated illustrations in the style of a nineteenth-century wood engraving.",
+       "alt": "Engraving-style picture of a sheer white bridal veil hanging from a hook."
+      }
+     ],
+     "folder": "Who Wears Her Work"
+    },
+    {
+     "name": "Read",
+     "cards": [
+      {
+       "type": "picture",
+       "img": "scholar",
+       "label": "The Wrinkled Scholar.",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: a stooped, wrinkled scholar in a dark cloak looking intently at Hester in the prison room."
+      },
+      {
+       "type": "picture",
+       "img": "pearl",
+       "label": "Pearl’s Hand.",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: Hester in the cottage, with the infant Pearl reaching a small hand toward the letter on her breast."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w1-lesson3-writers-desk.html",
+   "title": "The Writer’s Desk",
+   "week": 1,
+   "lesson": 3,
+   "activities": [
+    {
+     "name": "Participial Phrases",
+     "cards": [
+      {
+       "type": "moment",
+       "text": "Knowing well her part, she ascended a flight of wooden steps, and was thus displayed to the surrounding multitude, at about the height of a man’s shoulders above the street.",
+       "short": "Knowing well her",
+       "cite": "(Ch. II)"
+      },
+      {
+       "type": "moment",
+       "text": "Involved in these thoughts, she scarcely heard a voice behind her, until it had repeated her name more than once, in a loud and solemn tone, audible to the whole multitude.",
+       "short": "Involved in these",
+       "cite": "(Ch. III)"
+      },
+      {
+       "type": "moment",
+       "text": "Discerning the impracticable state of the poor culprit’s mind, the elder clergyman",
+       "short": "Discerning the",
+       "cite": "(Ch. III)"
+      },
+      {
+       "type": "moment",
+       "text": "Brooding over all these matters, the mother felt like one who has evoked a spirit",
+       "short": "Brooding over all",
+       "cite": "(Ch. VI)"
+      },
+      {
+       "type": "moment",
+       "text": "Walking toward the scaffold, the crowd pressed in around Hester.",
+       "short": "Walking toward the"
+      },
+      {
+       "type": "moment",
+       "text": "Embroidered in gold thread, the townspeople stared at the letter.",
+       "short": "Embroidered in gold"
+      },
+      {
+       "type": "moment",
+       "text": "Leaning over the balcony, Hester heard Mr. Dimmesdale’s plea.",
+       "short": "Leaning over the"
+      }
+     ],
+     "folder": "Participial"
+    },
+    {
+     "name": "Semicolons in Balance",
+     "cards": [
+      {
+       "type": "moment",
+       "text": "It was, in short, the platform of the pillory; and above it rose the framework of that instrument of discipline",
+       "short": "It was in",
+       "cite": "(Ch. II)"
+      },
+      {
+       "type": "moment",
+       "text": "Hester stitched the letter herself, the beadle only cleared the way.",
+       "short": "Hester stitched the"
+      },
+      {
+       "type": "moment",
+       "text": "Hester held the child close; because the crowd was watching.",
+       "short": "Hester held the"
+      },
+      {
+       "type": "moment",
+       "text": "The magistrates watched from the balcony; the crowd pressed close below.",
+       "short": "The magistrates"
+      }
+     ],
+     "folder": "Semicolons"
+    }
+   ]
+  },
+  {
+   "page": "w1-lesson4-who-stands-trial.html",
+   "title": "Who Stands Trial?",
+   "week": 1,
+   "lesson": 4,
+   "activities": [
+    {
+     "name": "The Town",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "The prison door"
+      },
+      {
+       "type": "sign",
+       "label": "The scaffold"
+      },
+      {
+       "type": "sign",
+       "label": "The meeting-house balcony"
+      },
+      {
+       "type": "sign",
+       "label": "Hester’s cottage"
+      },
+      {
+       "type": "moment",
+       "text": "What do we talk of marks and brands, whether on the bodice of her gown, or the flesh of her forehead?",
+       "short": "What do we",
+       "cite": "(Ch. II)"
+      },
+      {
+       "type": "moment",
+       "text": "Thus she will be a living sermon against sin",
+       "short": "Thus she will",
+       "cite": "(Ch. III)"
+      },
+      {
+       "type": "moment",
+       "text": "Woman, transgress not beyond the limits of Heaven’s mercy!",
+       "short": "Woman transgress not",
+       "cite": "(Ch. III)"
+      },
+      {
+       "type": "moment",
+       "text": "In all her intercourse with society, however, there was nothing that made her feel as if she belonged to it.",
+       "short": "In all her",
+       "cite": "(Ch. V)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w2-lesson1-the-governors-hall.html",
+   "title": "The Governor’s Hall",
+   "week": 2,
+   "lesson": 1,
+   "activities": [
+    {
+     "name": "Four Voices",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "Governor Bellingham"
+      },
+      {
+       "type": "sign",
+       "label": "Mr. Wilson"
+      },
+      {
+       "type": "sign",
+       "label": "Mr. Dimmesdale"
+      },
+      {
+       "type": "sign",
+       "label": "Hester Prynne"
+      },
+      {
+       "type": "moment",
+       "text": "I can teach my little Pearl what I have learned from this!",
+       "short": "I can teach",
+       "cite": "(Ch. VIII)"
+      },
+      {
+       "type": "moment",
+       "text": "Woman, it is thy badge of shame!",
+       "short": "Woman it is",
+       "cite": "(Ch. VIII)"
+      },
+      {
+       "type": "moment",
+       "text": "It was meant for a blessing; for the one blessing of her life!",
+       "short": "It was meant",
+       "cite": "(Ch. VIII)"
+      },
+      {
+       "type": "moment",
+       "text": "Canst thou tell me, my child, who made thee?",
+       "short": "Canst thou tell",
+       "cite": "(Ch. VIII)"
+      },
+      {
+       "type": "moment",
+       "text": "Pearl keeps me here in life! Pearl punishes me too!",
+       "short": "Pearl keeps me",
+       "cite": "(Ch. VIII)"
+      },
+      {
+       "type": "moment",
+       "text": "let us leave them as Providence hath seen fit to place them!",
+       "short": "let us leave",
+       "cite": "(Ch. VIII)"
+      },
+      {
+       "type": "moment",
+       "text": "Here is a child of three years old, and she cannot tell who made her!",
+       "short": "Here is a",
+       "cite": "(Ch. VIII)"
+      },
+      {
+       "type": "moment",
+       "text": "I feared the woman had no better thought than to make a mountebank of her child!",
+       "short": "I feared the",
+       "cite": "(Ch. VIII)"
+      }
+     ]
+    },
+    {
+     "name": "Read",
+     "cards": [
+      {
+       "type": "picture",
+       "img": "breastplate",
+       "label": "The Governor’s Breastplate.",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: Hester in a long cloak with a scarlet letter on her bodice, holding Pearl by the hand in a paneled hall beside a suit of armor on the wall.",
+       "short": "The Governor’s"
+      },
+      {
+       "type": "picture",
+       "img": "lookthou",
+       "label": "Look thou to it! I will not lose the child!",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: Hester kneeling in a beam of light, one arm raised, holding Pearl on her lap as three seated men and a standing man look on.",
+       "short": "Look thou to"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w2-lesson2-the-leech.html",
+   "title": "The Leech and His Patient",
+   "week": 2,
+   "lesson": 2,
+   "activities": [
+    {
+     "name": "The Descent",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "The judge"
+      },
+      {
+       "type": "sign",
+       "label": "The miner"
+      },
+      {
+       "type": "sign",
+       "label": "The sexton"
+      },
+      {
+       "type": "sign",
+       "label": "The thief"
+      },
+      {
+       "type": "sign",
+       "label": "The actor"
+      },
+      {
+       "type": "moment",
+       "text": "possibly in quest of a jewel that had been buried on the dead man’s bosom",
+       "short": "possibly in quest",
+       "cite": "(Ch. X)"
+      },
+      {
+       "type": "moment",
+       "text": "He could play upon him as he chose.",
+       "short": "He could play",
+       "cite": "(Ch. XI)"
+      },
+      {
+       "type": "moment",
+       "text": "desirous only of truth, even as if the question involved no more than the air-drawn lines and figures of a geometrical problem",
+       "short": "desirous only of",
+       "cite": "(Ch. X)"
+      },
+      {
+       "type": "moment",
+       "text": "In spite of his premeditated carefulness, the floor would now and then creak",
+       "short": "In spite of",
+       "cite": "(Ch. X)"
+      },
+      {
+       "type": "moment",
+       "text": "Let us dig a little further in the direction of this vein!",
+       "short": "Let us dig",
+       "cite": "(Ch. X)"
+      }
+     ]
+    },
+    {
+     "name": "Read",
+     "cards": [
+      {
+       "type": "picture",
+       "img": "minleech",
+       "label": "The Minister and Leech.",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: a man in a tall black hat and a bent old man in a cloak stand talking on a rocky shore with marsh behind them."
+      },
+      {
+       "type": "picture",
+       "img": "leechpat",
+       "label": "The Leech and his Patient.",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: a young man sits at a table with a hand on an open book while a bearded old man in a cloak leans in beside him.",
+       "short": "The Leech and"
+      },
+      {
+       "type": "picture",
+       "img": "virgins",
+       "label": "The Virgins of the Church.",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: a young woman in a white cap sits in a church pew while a bearded man, a hatted man and a girl in a cap look on behind her.",
+       "short": "The Virgins of"
+      },
+      {
+       "type": "picture",
+       "img": "splendor",
+       "label": "They stood in the noon of that strange splendor.",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: a man, a woman and a small child stand together on a platform in front of a wooden pillory, under rays of light from above.",
+       "short": "They stood in"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w2-lesson3-writers-desk.html",
+   "title": "The Writer’s Desk",
+   "week": 2,
+   "lesson": 3,
+   "activities": [
+    {
+     "name": "Absolute Phrases",
+     "cards": [
+      {
+       "type": "moment",
+       "text": "The affair being so satisfactorily concluded, Hester Prynne, with Pearl, departed from the house.",
+       "short": "The affair being",
+       "cite": "(Ch. VIII)"
+      },
+      {
+       "type": "moment",
+       "text": "This purpose once effected, new interests would immediately spring up, and likewise a new purpose",
+       "short": "This purpose once",
+       "cite": "(Ch. IX)"
+      },
+      {
+       "type": "moment",
+       "text": "He going home to a better world, I, likewise, was on my way homeward, when this strange light shone out.",
+       "short": "He going home",
+       "cite": "(Ch. XII)"
+      },
+      {
+       "type": "moment",
+       "text": "Lifting the iron hammer that hung at the portal, Hester Prynne gave a summons",
+       "short": "Lifting the iron",
+       "cite": "(Ch. VII)"
+      },
+      {
+       "type": "moment",
+       "text": "Hester stood before the Governor her hand resting on the letter.",
+       "short": "Hester stood before"
+      },
+      {
+       "type": "moment",
+       "text": "The minister’s voice was trembling, the hall rang with his plea.",
+       "short": "The minister’s voice"
+      },
+      {
+       "type": "moment",
+       "text": "Pearl ran down the hall her tiptoes barely touching the floor.",
+       "short": "Pearl ran down"
+      }
+     ]
+    },
+    {
+     "name": "Parallel Structure",
+     "cards": [
+      {
+       "type": "moment",
+       "text": "I could be well content, that my labors, and my sorrows, and my sins, and my pains, should shortly end with me",
+       "short": "I could be",
+       "cite": "(Ch. IX)"
+      },
+      {
+       "type": "moment",
+       "text": "it was observed that he gathered herbs, and the blossoms of wild-flowers, and dug up roots, and plucked off twigs from the forest-trees",
+       "short": "it was observed",
+       "cite": "(Ch. IX)"
+      },
+      {
+       "type": "moment",
+       "text": "Clad soberly, disciplined strictly, and someone should teach her.",
+       "short": "Clad soberly"
+      },
+      {
+       "type": "moment",
+       "text": "Chillingworth gathered herbs, studied his patient, and was watching the minister’s face.",
+       "short": "Chillingworth"
+      },
+      {
+       "type": "moment",
+       "text": "Hester came to deliver the gloves, to plead for her child, and for keeping Pearl at home.",
+       "short": "Hester came to"
+      },
+      {
+       "type": "moment",
+       "text": "The minister suffered not only from his illness but also the town’s praise hurt him.",
+       "short": "The minister"
+      }
+     ],
+     "folder": "Parallel"
+    }
+   ]
+  },
+  {
+   "page": "w2-lesson4-what-is-he-owed.html",
+   "title": "What Is He Owed?",
+   "week": 2,
+   "lesson": 4,
+   "activities": [
+    {
+     "name": "The Claim and the Fire",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "The claim: what was done to him"
+      },
+      {
+       "type": "sign",
+       "label": "The fire: what he does with it"
+      },
+      {
+       "type": "moment",
+       "text": "We have wronged each other",
+       "short": "We have wronged",
+       "cite": "(Ch. IV)"
+      },
+      {
+       "type": "moment",
+       "text": "wrongs inflicted on himself",
+       "short": "wrongs inflicted on",
+       "cite": "(Ch. X)"
+      },
+      {
+       "type": "moment",
+       "text": "a quiet depth of malice, hitherto latent, but active now",
+       "short": "a quiet depth",
+       "cite": "(Ch. XI)"
+      },
+      {
+       "type": "moment",
+       "text": "to him, the Pitiless, to him, the Unforgiving!",
+       "short": "to him the",
+       "cite": "(Ch. XI)"
+      }
+     ],
+     "folder": "Claim and Fire"
+    }
+   ]
+  },
+  {
+   "page": "w3-lesson1-another-view.html",
+   "title": "Another View of Hester",
+   "week": 3,
+   "lesson": 1,
+   "activities": [
+    {
+     "name": "Three Doors",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "The people"
+      },
+      {
+       "type": "sign",
+       "label": "The rulers"
+      },
+      {
+       "type": "sign",
+       "label": "Hester herself"
+      },
+      {
+       "type": "moment",
+       "text": "They said that it meant Able",
+       "short": "They said that",
+       "cite": "(Ch. XIII)"
+      },
+      {
+       "type": "moment",
+       "text": "who is so kind to the poor, so helpful to the sick, so comfortable to the afflicted!",
+       "short": "who is so",
+       "cite": "(Ch. XIII)"
+      },
+      {
+       "type": "moment",
+       "text": "were longer in acknowledging the influence of Hester’s good qualities than the people",
+       "short": "were longer in",
+       "cite": "(Ch. XIII)"
+      },
+      {
+       "type": "moment",
+       "text": "fortified in themselves by an iron framework of reasoning",
+       "short": "fortified in",
+       "cite": "(Ch. XIII)"
+      },
+      {
+       "type": "moment",
+       "text": "It lies not in the pleasure of the magistrates to take off this badge",
+       "short": "It lies not",
+       "cite": "(Ch. XIV)"
+      },
+      {
+       "type": "moment",
+       "text": "Were I worthy to be quit of it, it would fall away of its own nature",
+       "short": "Were I worthy",
+       "cite": "(Ch. XIV)"
+      }
+     ]
+    },
+    {
+     "name": "Read",
+     "cards": [
+      {
+       "type": "picture",
+       "img": "mourning",
+       "label": "Hester in the House of Mourning.",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: an old woman sits with a hand to her forehead beside a figure lying on a couch while Hester measures medicine with a spoon at a table.",
+       "short": "Hester in the"
+      },
+      {
+       "type": "picture",
+       "img": "mandrake",
+       "label": "Mandrake.",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: a leafy mandrake plant with a small white blossom growing close to the ground."
+      },
+      {
+       "type": "picture",
+       "img": "herbs",
+       "label": "He gathered herbs here and there.",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: a bent, bearded old man in a long robe walks with a staff along a shore, holding a handful of plant stems.",
+       "short": "He gathered herbs"
+      },
+      {
+       "type": "picture",
+       "img": "seashore",
+       "label": "Pearl on the Sea-Shore.",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: a young girl sits on a rock at the water's edge with one bare foot in the water and gulls flying over the shore behind her."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w3-lesson2-the-forest.html",
+   "title": "The Forest",
+   "week": 3,
+   "lesson": 2,
+   "activities": [
+    {
+     "name": "Two Roads",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "Hester’s road"
+      },
+      {
+       "type": "sign",
+       "label": "The minister’s road"
+      },
+      {
+       "type": "moment",
+       "text": "She had wandered, without rule or guidance, in a moral wilderness",
+       "short": "She had wandered",
+       "cite": "(Ch. XVIII)"
+      },
+      {
+       "type": "moment",
+       "text": "The scarlet letter was her passport into regions where other women dared not tread.",
+       "short": "The scarlet letter",
+       "cite": "(Ch. XVIII)"
+      },
+      {
+       "type": "moment",
+       "text": "Shame, Despair, Solitude! These had been her teachers",
+       "short": "Shame Despair",
+       "cite": "(Ch. XVIII)"
+      },
+      {
+       "type": "moment",
+       "text": "had never gone through an experience calculated to lead him beyond the scope of generally received laws",
+       "short": "had never gone",
+       "cite": "(Ch. XVIII)"
+      },
+      {
+       "type": "moment",
+       "text": "As a priest, the framework of his order inevitably hemmed him in.",
+       "short": "As a priest",
+       "cite": "(Ch. XVIII)"
+      }
+     ]
+    },
+    {
+     "name": "Read",
+     "cards": [
+      {
+       "type": "picture",
+       "img": "forgive",
+       "label": "Wilt thou yet forgive me?",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: in a forest, a woman in a dark cloak holds a bowed man who sits against a fallen log beside a tree trunk.",
+       "short": "Wilt thou yet"
+      },
+      {
+       "type": "picture",
+       "img": "sunshine",
+       "label": "A Gleam of Sunshine.",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: a dense wood of slender trees with a fallen birch trunk crossing toward a small brook in the foreground."
+      },
+      {
+       "type": "picture",
+       "img": "brookside",
+       "label": "The Child at the Brook-Side.",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: a girl holding a bunch of leaves stands at a brook in the woods while a woman holds out her hands to her and a man sits crouched at the right.",
+       "short": "The Child at"
+      }
+     ]
+    },
+    {
+     "name": "The Walk",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "The forest path"
+      },
+      {
+       "type": "sign",
+       "label": "The fallen tree"
+      },
+      {
+       "type": "sign",
+       "label": "The letter in the leaves"
+      },
+      {
+       "type": "sign",
+       "label": "The brook-side"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w3-lesson3-writers-desk.html",
+   "title": "The Writer’s Desk",
+   "week": 3,
+   "lesson": 3,
+   "activities": [
+    {
+     "name": "Inverted Word Order",
+     "cards": [
+      {
+       "type": "moment",
+       "text": "Never did mortal suffer what this man has suffered.",
+       "short": "Never did mortal",
+       "cite": "(Ch. XIV)"
+      },
+      {
+       "type": "moment",
+       "text": "Happy are you, Hester, that wear the scarlet letter openly upon your bosom!",
+       "short": "Happy are you",
+       "cite": "(Ch. XVII)"
+      },
+      {
+       "type": "moment",
+       "text": "All at once, as with a sudden smile of heaven, forth burst the sunshine, pouring a very flood into the obscure forest",
+       "short": "All at once",
+       "cite": "(Ch. XVIII)"
+      },
+      {
+       "type": "moment",
+       "text": "Never Hester had felt so free in seven years.",
+       "short": "Never Hester had"
+      },
+      {
+       "type": "moment",
+       "text": "Hardly the minister had spoken when he sank down on the leaves.",
+       "short": "Hardly the minister"
+      }
+     ],
+     "folder": "Inverted Order"
+    },
+    {
+     "name": "Rhetorical Questions",
+     "cards": [
+      {
+       "type": "moment",
+       "text": "And who told you this story, Pearl?",
+       "short": "And who told",
+       "cite": "(Ch. XVI)"
+      },
+      {
+       "type": "moment",
+       "text": "What choice had you?",
+       "short": "What choice had",
+       "cite": "(Ch. XIV)"
+      },
+      {
+       "type": "moment",
+       "text": "Why doth the minister sit yonder?",
+       "short": "Why doth the",
+       "cite": "(Ch. XIX)"
+      }
+     ],
+     "folder": "Rhetorical"
+    }
+   ]
+  },
+  {
+   "page": "w3-lesson4-the-letters-office.html",
+   "title": "The Letter’s Office",
+   "week": 3,
+   "lesson": 4,
+   "activities": [
+    {
+     "name": "The Sampler",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "XIII The sick-chamber"
+      },
+      {
+       "type": "sign",
+       "label": "XV Pearl’s question"
+      },
+      {
+       "type": "sign",
+       "label": "XVIII Among the leaves"
+      },
+      {
+       "type": "sign",
+       "label": "XIX At the brook"
+      },
+      {
+       "type": "moment",
+       "text": "a broken charm",
+       "short": "a broken charm"
+      },
+      {
+       "type": "moment",
+       "text": "a question unanswered",
+       "short": "a question"
+      },
+      {
+       "type": "moment",
+       "text": "a weight set down",
+       "short": "a weight set"
+      },
+      {
+       "type": "moment",
+       "text": "a lost jewel",
+       "short": "a lost jewel"
+      },
+      {
+       "type": "moment",
+       "text": "a misery come back",
+       "short": "a misery come"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w4-lesson1-the-holiday.html",
+   "title": "The Holiday",
+   "week": 4,
+   "lesson": 1,
+   "activities": [
+    {
+     "name": "The Road from the Forest",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "An old deacon"
+      },
+      {
+       "type": "sign",
+       "label": "The eldest church member, a widow"
+      },
+      {
+       "type": "sign",
+       "label": "The youngest sister of the church"
+      },
+      {
+       "type": "sign",
+       "label": "Small children at play"
+      },
+      {
+       "type": "sign",
+       "label": "A drunken seaman"
+      },
+      {
+       "type": "moment",
+       "text": "teach some very wicked words to a knot of little Puritan children",
+       "short": "teach some very",
+       "cite": "(Ch. XX)"
+      },
+      {
+       "type": "moment",
+       "text": "certain blasphemous suggestions that rose into his mind, respecting the communion supper",
+       "short": "certain blasphemous",
+       "cite": "(Ch. XX)"
+      },
+      {
+       "type": "moment",
+       "text": "a volley of good, round, solid, satisfactory, and heaven-defying oaths",
+       "short": "a volley of",
+       "cite": "(Ch. XX)"
+      },
+      {
+       "type": "moment",
+       "text": "he held his Geneva cloak before his face, and hurried onward",
+       "short": "he held his",
+       "cite": "(Ch. XX)"
+      },
+      {
+       "type": "moment",
+       "text": "unanswerable argument against the immortality of the human soul",
+       "short": "unanswerable",
+       "cite": "(Ch. XX)"
+      }
+     ],
+     "folder": "Road from Forest"
+    },
+    {
+     "name": "Read",
+     "cards": [
+      {
+       "type": "picture",
+       "img": "smile",
+       "label": "Smile with a sinister meaning.",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: a bearded old man in a dark cap and long cloak stands holding a staff, with a sharp sidelong look.",
+       "short": "Smile with a"
+      },
+      {
+       "type": "picture",
+       "img": "worthies",
+       "label": "New England Worthies.",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: a group of men in tall hats, ruffs and cloaks stand close together, one resting a hand on a sword hilt."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w4-lesson2-the-revelation.html",
+   "title": "The Revelation",
+   "week": 4,
+   "lesson": 2,
+   "activities": [
+    {
+     "name": "Noon on the Scaffold",
+     "cards": [
+      {
+       "type": "moment",
+       "text": "Support me up yonder scaffold!",
+       "short": "Support me up",
+       "cite": "(Ch. XXIII)"
+      },
+      {
+       "type": "moment",
+       "text": "Pearl kissed his lips. A spell was broken.",
+       "short": "Pearl kissed his",
+       "cite": "(Ch. XXIII)"
+      },
+      {
+       "type": "moment",
+       "text": "come hither! Come, my little Pearl!",
+       "short": "come hither Come",
+       "cite": "(Ch. XXIII)"
+      },
+      {
+       "type": "moment",
+       "text": "behold me here, the one sinner of the world!",
+       "short": "behold me here",
+       "cite": "(Ch. XXIII)"
+      },
+      {
+       "type": "moment",
+       "text": "repelled the old man’s arm",
+       "short": "repelled the old",
+       "cite": "(Ch. XXIII)"
+      },
+      {
+       "type": "moment",
+       "text": "Madman, hold! what is your purpose?",
+       "short": "Madman hold what",
+       "cite": "(Ch. XXIII)"
+      }
+     ],
+     "folder": "Noon Scaffold"
+    },
+    {
+     "name": "The Headstone",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "The shield’s ground"
+      },
+      {
+       "type": "sign",
+       "label": "The letter on it"
+      },
+      {
+       "type": "sign",
+       "label": "The stone"
+      },
+      {
+       "type": "sign",
+       "label": "The space between the graves"
+      },
+      {
+       "type": "moment",
+       "text": "yet with a space between, as if the dust of the two sleepers had no right to mingle",
+       "short": "yet with a",
+       "cite": "(Ch. XXIV)"
+      },
+      {
+       "type": "moment",
+       "text": "ON A FIELD, SABLE",
+       "short": "ON A FIELD",
+       "cite": "(Ch. XXIV)"
+      },
+      {
+       "type": "moment",
+       "text": "Yet one tombstone served for both.",
+       "short": "Yet one tombstone",
+       "cite": "(Ch. XXIV)"
+      },
+      {
+       "type": "moment",
+       "text": "THE LETTER A, GULES",
+       "short": "THE LETTER A",
+       "cite": "(Ch. XXIV)"
+      }
+     ]
+    },
+    {
+     "name": "Read",
+     "cards": [
+      {
+       "type": "picture",
+       "img": "meet",
+       "label": "Shall we not meet again?",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: on a scaffold a woman holds a man who has sunk to his knees while a tall old man in a long cloak stands beside a post, a child at the right and a crowd below."
+      },
+      {
+       "type": "picture",
+       "img": "return",
+       "label": "Hester’s Return.",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: a woman in a long cloak and cap looks back over her shoulder as she stands at a cottage door with a hand on the latch, vines and weeds around her."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w4-lesson3-writers-desk.html",
+   "title": "The Writer’s Desk",
+   "week": 4,
+   "lesson": 3,
+   "activities": [
+    {
+     "name": "Antithesis and Chiasmus",
+     "cards": [
+      {
+       "type": "moment",
+       "text": "at once a shadow and a splendor",
+       "short": "at once a",
+       "cite": "(Ch. XXIII)"
+      },
+      {
+       "type": "moment",
+       "text": "At every step he was incited to do some strange, wild, wicked thing or other, with a sense that it would be at once involuntary and intentional",
+       "short": "At every step",
+       "cite": "(Ch. XX)"
+      },
+      {
+       "type": "moment",
+       "text": "Philosophically considered, therefore, the two passions seem essentially the same, except that one happens to be seen in a celestial radiance, and the other in a dusky and lurid glow.",
+       "short": "Philosophically",
+       "cite": "(Ch. XXIV)"
+      },
+      {
+       "type": "moment",
+       "text": "Never, from the soil of New England, had gone up such a shout! Never, on New England soil, had stood the man so honored by his mortal brethren as the preacher!",
+       "short": "Never from the",
+       "cite": "(Ch. XXIII)"
+      },
+      {
+       "type": "moment",
+       "text": "Hester was shamed in the market-place, but the minister was praised although he had sinned too.",
+       "short": "Hester was shamed"
+      },
+      {
+       "type": "moment",
+       "text": "He kept his secret, and in the end the secret ruled him.",
+       "short": "He kept his"
+      },
+      {
+       "type": "moment",
+       "text": "The town judged Hester; later Hester was the one judging.",
+       "short": "The town judged"
+      }
+     ],
+     "folder": "Antithesis"
+    },
+    {
+     "name": "Words for the Letter",
+     "cards": [
+      {
+       "type": "moment",
+       "text": "ceased to be a stigma which attracted the world’s scorn and bitterness, and became a type of something to be sorrowed over",
+       "short": "ceased to be",
+       "cite": "(Ch. XXIV)"
+      }
+     ],
+     "folder": "Words"
+    }
+   ]
+  },
+  {
+   "page": "w4-lesson4-the-reader-may-choose.html",
+   "title": "The Reader May Choose",
+   "week": 4,
+   "lesson": 4,
+   "activities": [
+    {
+     "name": "The Narrator’s Hand",
+     "cards": [
+      {
+       "type": "moment",
+       "text": "The reader may choose among these theories.",
+       "short": "The reader may",
+       "cite": "(Ch. XXIV)"
+      },
+      {
+       "type": "moment",
+       "text": "Be true! Be true! Be true!",
+       "short": "Be true Be",
+       "cite": "(Ch. XXIV)"
+      }
+     ],
+     "folder": "Narrators Hand"
+    }
+   ]
+  },
+  {
+   "page": "w5-lesson1-three-scaffolds.html",
+   "title": "Three Scaffolds",
+   "week": 5,
+   "lesson": 1,
+   "activities": [
+    {
+     "name": "Three Skies",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "Noon · Ch. II–III"
+      },
+      {
+       "type": "sign",
+       "label": "Midnight · Ch. XII"
+      },
+      {
+       "type": "sign",
+       "label": "Just past noon · Ch. XXIII"
+      }
+     ]
+    },
+    {
+     "name": "Read",
+     "cards": [
+      {
+       "type": "picture",
+       "img": "splendor",
+       "label": "They stood in the noon of that strange splendor.",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: a man, a woman and a small child stand together on a platform in front of a wooden pillory, under rays of light from above.",
+       "short": "They stood in"
+      },
+      {
+       "type": "picture",
+       "img": "meet",
+       "label": "Shall we not meet again?",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: on a scaffold a woman holds a man who has sunk to his knees while a tall old man in a long cloak stands beside a post, a child at the right and a crowd below."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w5-lesson2-the-letter-across.html",
+   "title": "The Letter Across the Novel",
+   "week": 5,
+   "lesson": 2,
+   "activities": [
+    {
+     "name": "Read",
+     "cards": [
+      {
+       "type": "picture",
+       "img": "mourning",
+       "label": "Hester in the House of Mourning.",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: an old woman sits with a hand to her forehead beside a figure lying on a couch while Hester measures medicine with a spoon at a table.",
+       "short": "Hester in the"
+      },
+      {
+       "type": "picture",
+       "img": "return",
+       "label": "Hester’s Return.",
+       "caption": "Mary Hallock Foote, engraving for the 1878 edition.",
+       "alt": "Engraving: a woman in a long cloak and cap looks back over her shoulder as she stands at a cottage door with a hand on the latch, vines and weeds around her."
+      }
+     ]
+    },
+    {
+     "name": "The Letter’s Places",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "The prison door"
+      },
+      {
+       "type": "sign",
+       "label": "The sea-shore"
+      },
+      {
+       "type": "sign",
+       "label": "The brook-side"
+      },
+      {
+       "type": "sign",
+       "label": "The burial-ground"
+      }
+     ],
+     "folder": "Places"
+    }
+   ]
+  },
+  {
+   "page": "w5-lesson3-writers-desk.html",
+   "title": "The Writer’s Desk",
+   "week": 5,
+   "lesson": 3,
+   "activities": [
+    {
+     "name": "Quoting Inside a Sentence",
+     "cards": [
+      {
+       "type": "moment",
+       "text": "The scarlet letter had not done its office.",
+       "short": "The scarlet letter",
+       "cite": "(Ch. XIII)"
+      },
+      {
+       "type": "moment",
+       "text": "And as for the scarlet letter, I wear it for the sake of its gold-thread.",
+       "short": "And as for",
+       "cite": "(Ch. XV)"
+      },
+      {
+       "type": "moment",
+       "text": "the scarlet letter ceased to be a stigma which attracted the world’s scorn and bitterness, and became a type of something to be sorrowed over",
+       "short": "the scarlet letter",
+       "cite": "(Ch. XXIV)"
+      },
+      {
+       "type": "moment",
+       "text": "The narrator says that, “Be true! Be true! Be true!” (Ch. XXIV).",
+       "short": "The narrator says"
+      }
+     ],
+     "folder": "Quoting"
+    },
+    {
+     "name": "Conceding and Answering",
+     "cards": [
+      {
+       "type": "moment",
+       "text": "This might be pride, but was so like humility, that it produced all the softening influence of the latter quality on the public mind.",
+       "short": "This might be",
+       "cite": "(Ch. XIII)"
+      },
+      {
+       "type": "moment",
+       "text": "Then, it is true, the propensity of human nature to tell the very worst of itself, when embodied in the person of another, would constrain them to whisper the black scandal of bygone years.",
+       "short": "Then it is",
+       "cite": "(Ch. XIII)"
+      },
+      {
+       "type": "moment",
+       "text": "Although the town scorned Hester, but she nursed its sick.",
+       "short": "Although the town"
+      },
+      {
+       "type": "moment",
+       "text": "It is true that the rulers were slow to soften, however many people said the A meant Able.",
+       "short": "It is true"
+      },
+      {
+       "type": "moment",
+       "text": "While the minister stood on the scaffold at midnight. Mr. Wilson walked past without seeing him.",
+       "short": "While the minister"
+      }
+     ],
+     "folder": "Conceding"
+    }
+   ]
+  },
+  {
+   "page": "w5-lesson4-what-the-secrets-cost.html",
+   "title": "What the Secrets Cost",
+   "week": 5,
+   "lesson": 4,
+   "activities": [
+    {
+     "name": "Three Seals",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "The minister’s secret"
+      },
+      {
+       "type": "sign",
+       "label": "Hester’s oath"
+      },
+      {
+       "type": "sign",
+       "label": "The physician’s disguise"
+      },
+      {
+       "type": "moment",
+       "text": "He had spoken the very truth, and transformed it into the veriest falsehood.",
+       "short": "He had spoken",
+       "cite": "(Ch. XI)"
+      },
+      {
+       "type": "moment",
+       "text": "She remembered her oath, and was silent.",
+       "short": "She remembered her",
+       "cite": "(Ch. XII)"
+      },
+      {
+       "type": "moment",
+       "text": "under the semblance of a friend and helper",
+       "short": "under the semblance",
+       "cite": "(Ch. XIII)"
+      },
+      {
+       "type": "moment",
+       "text": "all the dread of public exposure, that had so long been the anguish of his life",
+       "short": "all the dread",
+       "cite": "(Ch. XII)"
+      },
+      {
+       "type": "moment",
+       "text": "In all things else, I have striven to be true!",
+       "short": "In all things",
+       "cite": "(Ch. XVII)"
+      },
+      {
+       "type": "moment",
+       "text": "Thou hast escaped me!",
+       "short": "Thou hast escaped",
+       "cite": "(Ch. XXIII)"
+      },
+      {
+       "type": "moment",
+       "text": "a defect of truth, courage, and loyalty, on her own part",
+       "short": "a defect of",
+       "cite": "(Ch. XIII)"
+      },
+      {
+       "type": "moment",
+       "text": "there was no more Devil’s work on earth for him to do",
+       "short": "there was no",
+       "cite": "(Ch. XXIV)"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
